@@ -1,0 +1,22 @@
+GameProject {
+ ID "NQDYZimnitritaMissions"
+ GUID "61C2718AE16F9742"
+ TITLE "NQDY_ZimnitritaMissions"
+ Dependencies {
+  "58D0FB3206B6F859" "5D6EA74A94173EDF" "5D6EBC81EB1842EF" "597697D81A1EA202" "5E8EB849F3CF691C" "5F0D245931200FD1" "5DE612963E4B005A" "5D84C738432BFE6A"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

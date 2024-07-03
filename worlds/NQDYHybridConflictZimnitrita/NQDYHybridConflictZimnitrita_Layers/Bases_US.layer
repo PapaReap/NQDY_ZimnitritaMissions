@@ -1,0 +1,612 @@
+$grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ US_01_Base_n {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 15390.303 12.112 15398.15
+  angleY 136.145
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_01 {
+    ID "5CCED514A5908822"
+   }
+   SCR_CampaignSpawnPointGroup AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_01 {
+    ID "5C6696731466AF36"
+   }
+  }
+ }
+ US_02_Base_nw {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 14620.582 10.186 15645.175
+  angleY -161.075
+  {
+   GenericEntity {
+    ID "5EEEC471C30578EB"
+    coords -0.113 0.707 12.167
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_02 {
+    ID "5CCED514A5908822"
+    coords -42.717 2.304 27.162
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_02 {
+    ID "606078EE23DE48AC"
+    coords 1.888 2.574 29.165
+   }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords 1.89 0.96 15.166
+   }
+  }
+ }
+ SP07x_Kappeliniemi {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 115
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 8119.969 8.05 13963.779
+  angleY 92.037
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_03x {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_03x {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ SP06_Notkonhelli {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 9120.064 3.525 14414.14
+  angleY 175.75
+  {
+   GenericEntity {
+    ID "5EEEC471C30578EB"
+    coords 40.107 1.305 -9.645
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_04 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_04 {
+    ID "606078EE23DE48AC"
+   }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords 16 1.154 49.724
+   }
+  }
+ }
+ US_04_Base_Valadim {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 325
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 16045.54 7.264 5954.389
+  angleY -110.183
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_05 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_05 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_05_Base_ne_coast {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 16086.292 22.781 3079.33
+  angleY 93.878
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_06 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_06 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_06_Base_Glochy {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 15033.044 27.969 290.543
+  angleY 61.788
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_07 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_07 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_11_Base_Detrany {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 10161.236 7.844 3062.422
+  angleY -24.743
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_08 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_08 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_03_Base_ne {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 16069.089 30.691 12257.287
+  angleY 117.39
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_03 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_03 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_07_Base_trainstation {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 13795.084 27.97 534.771
+  angleY -0.724
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_2 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_2 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_08_Base_Szarlota {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 12334.073 5.554 2236.942
+  angleY 91.528
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_3 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_3 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_09_Base_s {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 11733.381 6.146 3413.306
+  angleY 27.96
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_4 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_4 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+ US_10_Base_Gruwice_s {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 1200
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 11185.831 6.013 3652.106
+  angleY 129.84
+  {
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrol_sp_5 {
+    ID "5CCED514A5908822"
+   }
+   GenericEntity AmbientPatrolSpawnpoint_ussr_patrolBackup_sp_5 {
+    ID "606078EE23DE48AC"
+   }
+  }
+ }
+}
