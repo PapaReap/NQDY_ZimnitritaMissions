@@ -28,6 +28,7 @@ SCR_AIWorld AIWorld_Gogland : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et"
   }
  }
  coords 14304.408 49.566 12916.513
+ Flags 2097155
  LimitOfSpawnedAIAgents 2000
  "Max number of cached BTs" 90
  m_iActiveAILimit 600
