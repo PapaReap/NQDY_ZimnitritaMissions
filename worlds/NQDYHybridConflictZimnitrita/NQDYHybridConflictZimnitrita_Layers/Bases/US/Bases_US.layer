@@ -16,7 +16,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -74,7 +74,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -140,7 +140,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -162,9 +162,19 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   {
    GenericEntity US_15_Base_Kromzova_sw_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
    }
    GenericEntity US_15_Base_Kromzova_sw_APS_ussr_patrolBackup_01 {
     ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
    }
   }
  }
@@ -182,7 +192,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -246,7 +256,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -302,7 +312,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -358,7 +368,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -414,7 +424,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -436,6 +446,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   {
    GenericEntity US_11_Base_Detrany_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
    }
    GenericEntity US_11_Base_Detrany_APS_ussr_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -465,7 +480,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -503,7 +518,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
  }
- US_07_Base_trainstation {
+ US_07_Base_TrainStation {
   components {
    SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
     m_iRadius 130
@@ -521,7 +536,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -577,7 +592,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -633,7 +648,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -689,7 +704,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -745,7 +760,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -801,7 +816,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -857,7 +872,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1
@@ -913,7 +928,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
     Transceivers {
      RelayTransceiver "{5C669673E8C94083}" {
-      "Transmitting Range" 1200
+      "Transmitting Range" 500
      }
     }
     m_bIsSource 1

@@ -1,0 +1,827 @@
+$grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ USSR_22_Base_Gruwice_militarybase {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 300
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 10534.741 16.595 4595.96
+  {
+   GenericEntity USSR_22_Base_Gruwice_militarybase_APS_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 49.977 -1.001 12
+   }
+   GenericEntity USSR_22_Base_Gruwice_militarybase_APS_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+     }
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -22.48 -0.68 -43.281
+   }
+   $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+    USSR_22_Base_Gruwice_militarybase_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+      }
+      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+       "faction affiliation" "USSR"
+      }
+     }
+     coords -117.441 3.06 169.508
+    }
+    USSR_22_Base_Gruwice_militarybase_APS_patrolBackup_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+       "faction affiliation" "USSR"
+      }
+     }
+     coords -105.184 6.088 47.07
+    }
+   }
+  }
+ }
+ USSR_21_Base_Vrana {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 8919.179 56.021 5270.922
+  angleY 135.113
+  {
+   GenericEntity USSR_21_Base_Vrana_APS_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+     }
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -44.554 -5.795 76.557
+   }
+   GenericEntity USSR_21_Base_Vrana_APS_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+     }
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -114.763 -6.583 -80.373
+   }
+   GenericEntity USSR_21_Base_Vrana_PR_APS_partol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_eGroupType TEAM_MG
+     }
+    }
+    coords -91.273 -6.615 79.58
+    {
+     SCR_AIWaypoint USSR_21_Base_Vrana_WP_01 {
+      ID "60E2393A8223D17F"
+      coords 8.341 0 30.041
+      CompletionRadius 2
+     }
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_21_Base_Vrana_WP_02 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 52.883 0.512 153.173
+       CompletionRadius 2
+      }
+      USSR_21_Base_Vrana_WP_03 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 139.163 4.917 190.772
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_04 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 338.309 4.945 189.884
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_05 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 377.988 9.62 56.429
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_06 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 329.499 3.998 -16.428
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_07 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 228.389 0.312 -45.929
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_08 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 60.441 2.062 -19.719
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_09 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 26.595 0.804 -39.313
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_10 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -9.073 0.03 -32.162
+       CompletionRadius 1
+      }
+      USSR_21_Base_Vrana_WP_11 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -0.356 0.001 1.085
+       CompletionRadius 1
+      }
+     }
+    }
+   }
+   GenericEntity USSR_21_Base_Vrana_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+      m_eGroupType FIRETEAM
+     }
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -529.814 11.99 -5.38
+    angleY -135.113
+   }
+  }
+ }
+ USSR_18_Base_Gruwice_n {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 10225.606 10.323 5941.433
+  angleY -138.374
+  {
+   GenericEntity USSR_18_Base_Gruwice_n_APS_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 26.349 0.952 186.41
+   }
+   GenericEntity USSR_18_Base_Gruwice_n_APS_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 83.431 2.266 43.607
+   }
+   GenericEntity USSR_18_Base_Gruwice_n_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_eGroupType TEAM_MG
+     }
+    }
+    coords -85.25 -0.323 79.581
+    {
+     SCR_AIWaypoint USSR_18_Base_Gruwice_n_WP_01 {
+      ID "60E2393A8223D17F"
+      coords -15.218 0.001 35.801
+      CompletionRadius 2
+     }
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_18_Base_Gruwice_n_WP_07 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 195.362 4.741 144.031
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_02 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -19.683 0.001 83.707
+       CompletionRadius 2
+      }
+      USSR_18_Base_Gruwice_n_WP_03 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 11.769 0 107.511
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_04 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 11.796 0.119 138.138
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_05 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 26.154 0 136.369
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_06 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 31.764 0 149.292
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_08 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 227.099 0.131 89.977
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_09 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 205.511 0.126 -6.98
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_10 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 177.382 0 -51.643
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_11 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 109.753 0 -61.409
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_12 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 43.819 0 -55.66
+       angleY 138.374
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_13 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -2.999 0 -9.254
+       angleY 138.374
+       CompletionRadius 1
+      }
+      USSR_18_Base_Gruwice_n_WP_14 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 0.022 0.001 14.54
+       angleY 138.374
+       CompletionRadius 1
+      }
+     }
+     AIWaypointCycle USSR_18_Base_Gruwice_n_Cycle_WP : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+      components {
+       Hierarchy "{61C80B04BD05A706}" {
+       }
+      }
+      coords -32.754 27.051 12.872
+      angleX -2.604
+      angleY 135.512
+      angleZ 0.13
+     }
+    }
+   }
+  }
+ }
+ USSR_19_Base_RailwayGruwice_ne {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 260
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 11707.554 19.641 5763.205
+  angleY 160.372
+  {
+   GenericEntity USSR_19_Base_RailwayGruwice_ne_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -81.029 1.234 11.98
+   }
+   GenericEntity USSR_19_Base_RailwayGruwice_ne_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -71.814 0.846 82.717
+   }
+   GenericEntity USSR_19_Base_RailwayGruwice_ne_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
+    coords 88.144 0.437 52.324
+    {
+     SCR_AIWaypoint USSR_19_Base_RailwayGruwice_ne_WP_01 {
+      ID "60E2393A8223D17F"
+      coords -51.127 -0.382 16.04
+      CompletionRadius 2
+     }
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_19_Base_RailwayGruwice_ne_WP_02 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -27.356 -3.66 106.871
+       CompletionRadius 2
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_03 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -88.383 1.167 119.291
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_04 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -105.517 2.234 114.642
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_05 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -188.8 2.426 114.735
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_06 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -247.971 3.391 119.022
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_07 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -274.855 -0.245 67.752
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_08 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -281.247 -0.855 -9.748
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_09 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -184.062 -0.14 -7.982
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_10 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -109.466 -0.071 1.18
+       CompletionRadius 1
+      }
+      USSR_19_Base_RailwayGruwice_ne_WP_11 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords -76.103 -0.078 -4.25
+       CompletionRadius 1
+      }
+     }
+     AIWaypointCycle USSR_19_Base_RailwayGruwice_ne_Cycle_WP : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+      components {
+       Hierarchy "{61C80B04BD05A706}" {
+       }
+      }
+      coords -56.352 -0.078 1.538
+      angleX -2.604
+      angleY -163.234
+      angleZ 0.13
+     }
+    }
+   }
+  }
+ }
+ USSR_23_Base_Varpadany {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 200
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 15399.394 52.429 4625.452
+  {
+   GenericEntity USSR_23_Base_Varpadany_APS_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -50.688 0.936 67.897
+   }
+   GenericEntity USSR_23_Base_Varpadany_APS_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 69.195 -0.304 -86.211
+   }
+   GenericEntity USSR_23_Base_Varpadany_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
+    coords -97.696 1.463 90.459
+    {
+     SCR_AIWaypoint USSR_23_Base_Varpadany_WP_01 {
+      ID "60E2393A8223D17F"
+      coords 115.49 -1.379 -88.505
+      CompletionRadius 2
+     }
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_23_Base_Varpadany_WP_02 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 132.985 -1.768 -151.464
+       CompletionRadius 2
+      }
+      USSR_23_Base_Varpadany_WP_03 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 173.585 -1.766 -171.559
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_04 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 146.679 -1.766 -268.184
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_05 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 140.795 -1.765 -305.731
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_06 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 267.89 -1.767 -290.497
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_07 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 261.865 -1.767 -229.821
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_08 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 231.879 -1.767 -234.09
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_09 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 225.406 -1.767 -182.148
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_10 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 135.941 -1.767 -154.783
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_11 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 119.487 -1.437 -90.206
+       CompletionRadius 1
+      }
+      USSR_23_Base_Varpadany_WP_12 {
+       components {
+        Hierarchy "{60E2393A8529B0B0}" {
+        }
+       }
+       coords 47.186 -0.741 -38.525
+       CompletionRadius 1
+      }
+     }
+     AIWaypointCycle USSR_23_Base_Varpadany_Cycle_WP : "{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et" {
+      components {
+       Hierarchy "{61C80B04AC473B37}" {
+       }
+      }
+      coords 82.937 -1.02 -56.6
+      angleX 5.467
+      angleY 169.381
+      angleZ -4.662
+     }
+    }
+   }
+  }
+ }
+ USSR_20_Base_Valadim {
+  components {
+   SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
+    m_fBuildingRadius 150
+   }
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 150
+    m_bIsControlPoint 1
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    m_bIgnoreNonPlayableAttackers 0
+    m_bShowNotifications 1
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 75
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 400
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "USSR"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 15258.426 62.031 6212.645
+  {
+   GenericEntity USSR_20_base_Valadim_APS_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 0 0.044 -111.219
+   }
+   GenericEntity USSR_20_base_Valadim_APS_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 0 0.034 71.546
+   }
+  }
+ }
+}

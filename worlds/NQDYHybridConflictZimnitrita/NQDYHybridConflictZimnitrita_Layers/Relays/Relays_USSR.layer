@@ -1,0 +1,45 @@
+GenericEntity RelayTemplate : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
+ components {
+  SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+   m_sBaseName ""
+   m_sBaseNameUpper ""
+  }
+  SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+   Transceivers {
+    RelayTransceiver "{5C727AD73024FB39}" {
+     "Transmitting Range" 1000
+    }
+   }
+  }
+  SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+   "faction affiliation" "USSR"
+  }
+ }
+ coords 4993.44 15.085 9584.426
+ angleY -147.737
+ Flags 2098179
+ {
+  GenericEntity {
+   ID "5C727AD606EB0C1C"
+   components {
+    SCR_AISmartActionComponent "{61B553C317A548F7}" {
+     AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
+     Tags {
+      "CapturePoint_Relay02"
+     }
+    }
+    ActionsManagerComponent "{5C727AD65C3206FA}" {
+     additionalActions {
+      SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
+       Duration 25
+       CanAggregate 1
+      }
+     }
+    }
+   }
+   coords -1.19 0.833 9.854
+   angleY -122.9
+   Flags 2098179
+  }
+ }
+}

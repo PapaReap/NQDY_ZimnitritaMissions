@@ -1,6 +1,6 @@
 $grp PR_AIPatrolTrigger {
  Set_01_N_Rogue_Trigger {
-  coords 5127.298 100.532 7950.105
+  coords 12755.865 36.575 15768.449
   TriggerShapeType Sphere
   TriggerActivationType "First change"
   PeriodicQueries 1
@@ -327,7 +327,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_02_C_Rogue_Trigger {
-  coords 6417.635 23.315 4820.797
+  coords 14932.508 70.243 7999.724
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -582,7 +582,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_03_S_Rogue_Trigger {
-  coords 6976.248 95.442 2211.714
+  coords 15324.937 64.156 1801.361
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10

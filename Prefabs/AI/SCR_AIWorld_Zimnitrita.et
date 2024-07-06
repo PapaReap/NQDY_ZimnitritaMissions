@@ -1,0 +1,251 @@
+SCR_AIWorld {
+ ID "61CB362050D9E73E"
+ components {
+  AIBirdManagerComponent "{61CB362050D9E761}" {
+   AnimalPrefabsToUse {
+    AIAnimalData "{61CB362050D9E75C}" {
+     PrefabToUse "{BF8A3171E5AF74E7}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_DomesticPigeon.et"
+     Tags {
+      1 2 3
+     }
+    }
+    AIAnimalData "{61CB362050D9E754}" {
+     PrefabToUse "{0D55D10CD196EA77}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_WoodPigeon.et"
+     Tags {
+      2
+     }
+     Weight 0.5
+    }
+    AIAnimalData "{61CB362050D9E74B}" {
+     PrefabToUse "{EB419793F72FCE41}Prefabs/Animals/Birds/Larus_argentatus/BirdFlock_Seagull.et"
+     Tags {
+      0
+     }
+    }
+    AIAnimalData "{61CB362050D9E749}" {
+     PrefabToUse "{0D55D10CD196EA77}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_WoodPigeon.et"
+     Tags {
+      1 3
+     }
+     Weight 3
+    }
+   }
+   AnimalToAnimalSpawnRange 180
+   CheckAnimalTime 5
+   TreeHeightThreshold 8.72
+  }
+  CoverManagerComponent "{61CB362050D9E74D}" {
+   MinDistanceBetweenCovers 1.25
+   CoverLineProbeStep 0.625
+  }
+  NavmeshWorldComponent "{61CB362050D9E743}" {
+   WorldSettings NavmeshWorldParams "{61CB362050D9E741}" {
+    TileSize 51
+   }
+   NavmeshSettings NavmeshWorld "{61CB362050D9E747}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" : "{43CE6A21F4C7E552}Config/Navmesh/Navmesh_GM_Zimnitrita_Soldier.conf" {
+    }
+    RecastConfig NavmeshRecastConfig "{61CB362050D9E4BA}" {
+     CellSize 0.15
+     WalkableHeight 3
+     WalkableClimb 0.9
+     WalkableRadius 0
+    }
+    NavmeshProject "LowRes"
+    AbsoluteAreas {
+     "Water"
+    }
+    FilterObjectDuringGeneration 1
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E4BF}" {
+   WorldSettings NavmeshWorldParams "{61CB362050D9E4BD}" {
+    TileSize 51
+   }
+   NavmeshSettings NavmeshWorld "{61CB362050D9E4B2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{610ECD2394DCF6C6}" : "{85227B19147B1336}Config/Navmesh/Navmesh_LowRes_GM_Zimnitrita_Soldier.conf" {
+    }
+    RecastConfig NavmeshRecastConfig "{61CB362050D9E4AA}" {
+     CellHeight 0.1
+     WalkableSlopeAngle 50
+     WalkableHeight 1.8
+     MaxSimplificationError 1.8
+    }
+    UsePathSmoothing 0
+    NavmeshProject "Soldiers"
+    AbsoluteAreas {
+     "Water"
+    }
+    UseNavmeshStreaming 1
+    LowResolutionNavmesh "LowRes"
+    GenerateCoverPoints 1
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E4AF}" {
+   Enabled 0
+   WorldSettings NavmeshWorldParams "{61CB362050D9E4AD}" {
+    TileSize 51
+   }
+   NavmeshSettings ChimeraNavmeshWorld "{61CB362050D9E4A0}" {
+    RecastConfig NavmeshRecastConfig "{61CB362050D9E4A1}" {
+     WalkableSlopeAngle 10
+     WalkableHeight 3
+     WalkableClimb 0.1
+     WalkableRadius 5.5
+     MaxSimplificationError 1.5
+     MinRegionSize 40
+     MergeRegionSize 360
+    }
+    NavmeshProject "BTRlike"
+    AbsoluteAreas {
+     "Water"
+    }
+    UseNavmeshStreaming 1
+    LowResolutionNavmesh "LowRes"
+    "Destructible Area Type" "Destructible"
+   }
+  }
+  SCR_AISettingsComponent "{61CB362050D9E49A}" {
+   Enabled 1
+  }
+  RplComponent "{61CB362050D9E498}" {
+   "Rpl State Override" None
+   Streamable Disabled
+  }
+ }
+ coords 7.375 1 19.454
+ Formations {
+  AIFormationDefinition "{61CB362050D9E49F}" {
+   Name "Line"
+   Offsets {
+    0 0 0 3 0 0 -3 0 0 6 0 0 -6 0 0 9 0 0 -9 0 0 12 0 0 -12 0 0 15 0 0 -15 0 0
+   }
+  }
+  AIFormationDefinition "{61CB362050D9E49D}" {
+   Name "StaggeredColumn"
+   Offsets {
+    0 0 0 3 0 -3 0 0 -6 3 0 -9 0 0 -12 3 0 -15 0 0 -18 3 0 -21 0 0 -24 3 0 -27 0 0 -30
+   }
+  }
+  AIFormationDefinition "{61CB362050D9E492}" {
+   Name "Wedge"
+   Offsets {
+    0 0 0 3 0 -3 -3 0 -3 6 0 -6 -6 0 -6 9 0 -9 -9 0 -9 12 0 -12 -12 0 -12 15 0 -15 -15 0 -15
+   }
+  }
+  AIFormationDefinition "{61CB362050D9E493}" {
+   Name "Column"
+   Offsets {
+    0 0 0 0 0 -3 0 0 -6 0 0 -9 0 0 -12 0 0 -15 0 0 -18 0 0 -21 0 0 -24 0 0 -27 0 0 -30
+   }
+  }
+ }
+ "Initialize Road Network" 0
+ "Accepted Road Types" 14
+ LimitOfSpawnedAIAgents 1500
+ m_aGoalMessages {
+  SCR_AIMessage_Attack "{61CB362050D9E48C}" {
+   m_eUIType ATTACK
+  }
+  SCR_AIMessage_Flee "{61CB362050D9E482}" {
+   m_eUIType FLEE
+  }
+  SCR_AIMessage_GetIn "{61CB362050D9E483}" {
+   m_eUIType GET_IN_VEHICLE
+  }
+  SCR_AIMessage_GetOut "{61CB362050D9E480}" {
+   m_eUIType GET_OUT_VEHICLE
+  }
+  SCR_AIMessage_Heal "{61CB362050D9A00D}" {
+   m_eUIType HEAL
+  }
+  SCR_AIMessage_HealWait "{61CB362050D9A00B}" {
+   m_eUIType HEAL_WAIT
+  }
+  SCR_AIMessage_KeepFormation "{61CB362050D9A00A}" {
+   m_eUIType MOVE_IN_FORMATION
+  }
+  SCR_AIMessage_Move "{61CB362050DE0809}" {
+   m_eUIType MOVE
+  }
+  SCR_AIMessage_SeekAndDestroy "{61CB362050DE080A}" {
+   m_eUIType SEEK_DESTROY
+  }
+  SCR_AIMessage_Defend "{61CB362050DE080B}" {
+   m_eUIType DEFEND
+  }
+  SCR_AIMessage_Cancel "{61CB362050DE9661}" {
+   m_eUIType CANCEL
+  }
+  SCR_AIMessage_PerformAction "{61CB362050DE961E}" {
+   m_eUIType PERFORM_ACTION
+  }
+  SCR_AIMessage_Follow "{61CB362050DE961F}" {
+   m_eUIType FOLLOW
+  }
+  SCR_AIMessage_Investigate "{61CB362050DE961C}" {
+   m_eUIType INVESTIGATE
+  }
+  SCR_AIMessage_Retreat "{61CB362050DE961D}" {
+   m_eUIType RETREAT
+  }
+  SCR_AIMessage_ThrowGrenadeTo "{61CB362050DE961A}" {
+   m_eUIType THROW_GRENADE_TO
+  }
+  SCR_AIMessage_ProvideAmmo "{61CB362050DE961B}" {
+   m_eUIType PROVIDE_AMMO
+  }
+  SCR_AIMessage_PickupInventoryItems "{61CB362050DE9618}" {
+   m_eUIType PICKUP_INVENTORY_ITEMS
+  }
+ }
+ m_aInfoMessages {
+  SCR_AIMessage_FoundCorpse "{61CB362050DE9619}" {
+   m_eUIType FOUND_CORPSE
+  }
+  SCR_AIMessage_NoAmmo "{61CB362050DE9616}" {
+   m_eUIType NO_AMMO
+  }
+  SCR_AIMessage_SitRep "{61CB362050DF5B2F}" {
+   m_eUIType SIT_REP
+  }
+  SCR_AIMessage_UnderFire "{61CB362050DF5B2C}" {
+   m_eUIType UNDER_FIRE
+  }
+  SCR_AIMessage_Wounded "{61CB362050DF5B3F}" {
+   m_eUIType WOUNDED
+  }
+  SCR_AIMessage_ActionFailed "{61CB362050DF5B3D}" {
+   m_eUIType ACTION_FAILED
+  }
+  SCR_AIMessage_HealFailed "{61CB362050DF5B3C}" {
+   m_eUIType HEAL_FAILED
+  }
+ }
+ m_aOrders {
+  SCR_AIOrder_AIState "{61CB362050DF5B39}" {
+   m_eUIType AI_STATE
+  }
+  SCR_AIOrder_CombatType "{61CB362050DF5B38}" {
+   m_eUIType COMBAT_TYPE
+  }
+  SCR_AIOrder_MovementType "{61CB362050DF5B07}" {
+   m_eUIType MOVEMENT_TYPE
+  }
+  SCR_AIOrder_ReturnToDefault "{61CB362050DF5B05}" {
+   m_eUIType BACK_TO_DEFAULT
+  }
+  SCR_AIOrder_Stance "{61CB362050DF5B04}" {
+   m_eUIType STANCE
+  }
+  SCR_AIOrder_Unit_State "{61CB362050DF5B03}" {
+   m_eUIType UNIT_STATE
+  }
+  SCR_AIOrder_WeaponRaised "{61CB362050DF5B02}" {
+   m_eUIType WEAPON_RAISED
+  }
+  SCR_AIOrder_WeaponType "{61CB362050DF2A2E}" {
+   m_eUIType WEAPON_TYPE
+  }
+ }
+}

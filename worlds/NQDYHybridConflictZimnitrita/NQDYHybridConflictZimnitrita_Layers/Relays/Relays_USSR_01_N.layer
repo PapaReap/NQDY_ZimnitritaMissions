@@ -1,5 +1,5 @@
 $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
- RelayTemplate {
+ USSR_01_Relay_Kromzova_e_tower {
   components {
    SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
     m_sBaseName ""
@@ -8,7 +8,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
    SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
     Transceivers {
      RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1000
+      "Transmitting Range" 1200
      }
     }
    }
@@ -16,9 +16,8 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
     "faction affiliation" "USSR"
    }
   }
-  coords 4993.44 15.085 9584.426
-  angleY -147.737
-  Flags 2098179
+  coords 11211.229 70.685 14913.084
+  angleY -65.409
   {
    GenericEntity {
     ID "5C727AD606EB0C1C"
@@ -26,7 +25,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CapturePoint_Relay02"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -38,13 +37,439 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       }
      }
     }
-    coords -1.19 0.833 9.854
-    angleY -122.9
-    Flags 2098179
+    coords 1.826 1.716 0.141
+    angleY 155.717
+   }
+   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    USSR_01_Relay_Kromzova_e_tower_APS_patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 10.523 -0.475 15.144
+    }
+    USSR_01_Relay_Kromzova_e_tower_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 257.488 -20.216 -125.646
+    }
+    USSR_01_Relay_Kromzova_e_tower_APS_patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -219.03 -60.049 39.532
+    }
+    USSR_01_Relay_Kromzova_e_tower_APS_patrol_04 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 199.953 -27.929 77.131
+    }
    }
   }
  }
- USSR_01_Relay_Airport_tower {
+ USSR_03_Relay_Kromzova_e_tower {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName ""
+    m_sBaseNameUpper ""
+   }
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "USSR"
+   }
+  }
+  coords 12060.087 3.285 14103.5
+  angleY -133.881
+  {
+   GenericEntity {
+    ID "5C727AD606EB0C1C"
+    components {
+     SCR_AISmartActionComponent "{61B553C317A548F7}" {
+      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
+      Tags {
+       "CaptureRelay_Relay03"
+      }
+     }
+     ActionsManagerComponent "{5C727AD65C3206FA}" {
+      additionalActions {
+       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
+        Duration 25
+        CanAggregate 1
+       }
+      }
+     }
+    }
+    coords 1.912 1.671 -0.061
+    angleY 155.717
+   }
+   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
+    coords 1.578 0.47 0.748
+    angleY -23.949
+   }
+   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    USSR_03_Relay_Kromzova_e_tower_APS_Patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -4.31 0.022 -0.517
+    }
+    USSR_03_Relay_Kromzova_e_tower_APS_Patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 104.41 0.17 -108.724
+    }
+    USSR_03_Relay_Kromzova_e_tower_APS_Patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -310.316 2.005 -55.183
+    }
+    USSR_03_Relay_Kromzova_e_tower_APS_Patrol_04 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 50.849 5.006 160.985
+    }
+   }
+  }
+ }
+ USSR_05_Relay_Lake_w_tower {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName ""
+    m_sBaseNameUpper ""
+   }
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "USSR"
+   }
+  }
+  coords 8639.412 67.252 13108.31
+  angleY 17.692
+  {
+   GenericEntity {
+    ID "5C727AD606EB0C1C"
+    components {
+     SCR_AISmartActionComponent "{61B553C317A548F7}" {
+      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
+      Tags {
+       "CaptureRelay_Relay03"
+      }
+     }
+     ActionsManagerComponent "{5C727AD65C3206FA}" {
+      additionalActions {
+       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
+        Duration 25
+        CanAggregate 1
+       }
+      }
+     }
+    }
+    coords 1.912 1.671 -0.061
+    angleY 155.717
+   }
+   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
+    coords 1.578 0.47 0.748
+    angleY -23.949
+   }
+   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    USSR_05_Relay_Lake_w_tower_APS_patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 5.533 -0.196 -4.102
+    }
+    USSR_05_Relay_Lake_w_tower_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 83.577 -20.75 -108.723
+    }
+    USSR_05_Relay_Lake_w_tower_APS_patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -201.105 -20.03 -48.889
+    }
+    USSR_05_Relay_Lake_w_tower_APS_patrol_04 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 2.186 -4.265 115.703
+    }
+   }
+  }
+ }
+ USSR_06_Relay_Lake_w_tower {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName ""
+    m_sBaseNameUpper ""
+   }
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "USSR"
+   }
+  }
+  coords 9688.071 57.77 13219.3
+  angleY 96.94
+  {
+   GenericEntity {
+    ID "5C727AD606EB0C1C"
+    components {
+     SCR_AISmartActionComponent "{61B553C317A548F7}" {
+      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
+      Tags {
+       "CaptureRelay_Relay03"
+      }
+     }
+     ActionsManagerComponent "{5C727AD65C3206FA}" {
+      additionalActions {
+       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
+        Duration 25
+        CanAggregate 1
+       }
+      }
+     }
+    }
+    coords 1.912 1.671 -0.061
+    angleY 155.717
+   }
+   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
+    coords 1.578 0.47 0.748
+    angleY -23.949
+   }
+   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    USSR_06_Relay_Lake_w_tower_APS_patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 8.92 -0.304 -4.895
+    }
+    USSR_06_Relay_Lake_w_tower_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 86.705 -27.551 -91.128
+    }
+    USSR_06_Relay_Lake_w_tower_APS_patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -149.785 -9.22 -112.679
+    }
+    USSR_06_Relay_Lake_w_tower_APS_patrol_04 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 118.734 2.074 60.267
+    }
+   }
+  }
+ }
+ USSR_02_Relay_Sokyyiv_shed {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
+    m_sBaseName ""
+    m_sBaseNameUpper ""
+   }
+   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
+    Transceivers {
+     RelayTransceiver "{5C727AD73024FB39}" {
+      "Transmitting Range" 1200
+     }
+    }
+   }
+   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
+    "faction affiliation" "USSR"
+   }
+  }
+  coords 13823.858 34.789 14692.662
+  angleY 121.617
+  {
+   GenericEntity {
+    ID "5C727AD606EB0C1C"
+    components {
+     SCR_AISmartActionComponent "{61B553C317A548F7}" {
+      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
+      Tags {
+       "CaptureRelay_08"
+      }
+     }
+     ActionsManagerComponent "{5C727AD65C3206FA}" {
+      additionalActions {
+       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
+        Duration 25
+        CanAggregate 1
+       }
+      }
+     }
+    }
+    coords -0.001 1.287 0.001
+   }
+   GameEntity : "{2CB0AA2A87842C18}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_military_USSR.et" {
+    coords -0.584 1.029 0.238
+    angleY -129.621
+   }
+   GenericEntity : "{5BA978B9D36641DD}Prefabs/Props/Military/Compositions/USSR/Antenna_01_USSR.et" {
+    components {
+     ScriptedRadioComponent "{5CB8818C71F12C73}" {
+      Transceivers {
+       RelayTransceiver "{5CB8819A2D055A05}" {
+        "Transmitting Range" 1200
+       }
+      }
+     }
+    }
+    coords 8.805 0 -7.615
+    angleY 79.248
+   }
+   SCR_DestructibleBuildingEntity : "{9498ADA13BCDB218}Prefabs/Structures/Military/Houses/GuardBox_01/GuardBox_01_Base.et" {
+    coords -0.168 0.31 0.471
+    angleY 44.285
+    Flags 3
+    {
+     GenericEntity : "{B8BBA7227B4433B6}Prefabs/Props/Furniture/TableWorkshop_01.et" {
+      coords 0.189 -0.022 -0.31
+      angleX 0.47
+      angleY 3.796
+      angleZ 1.175
+      Flags 3
+     }
+    }
+   }
+   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    USSR_02_Relay_Sokyyiv_shed_APS_patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType SQUAD_RIFLE
+      }
+     }
+     coords 16.916 -12.261 9.61
+     angleY -175.065
+    }
+    USSR_02_Relay_Sokyyiv_shed_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords 167.797 -8.209 -36.485
+     angleY -121.617
+    }
+    USSR_02_Relay_Sokyyiv_shed_APS_patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -2.549 -7.902 -162.36
+     angleY -121.617
+    }
+    USSR_02_Relay_Sokyyiv_shed_APS_patrol_04 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+      }
+     }
+     coords -188.108 -5.851 86.366
+     angleY -121.617
+    }
+   }
+  }
+ }
+ USSR_04_Relay_Airport_tower {
   components {
    SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
     m_sBaseName ""
@@ -136,414 +561,6 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      coords -2.192 -0.001 3.208
      angleY 3.442
     }
-   }
-  }
- }
- USSR_02_Relay_Airport_tower {
-  components {
-   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-    m_sBaseName ""
-    m_sBaseNameUpper ""
-   }
-   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-    Transceivers {
-     RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1200
-     }
-    }
-   }
-   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-    "faction affiliation" "USSR"
-   }
-  }
-  coords 15006.897 50.906 12241.184
-  angleY -9.196
-  {
-   GenericEntity {
-    ID "5C727AD606EB0C1C"
-    components {
-     SCR_AISmartActionComponent "{61B553C317A548F7}" {
-      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
-      Tags {
-       "CaptureRelay_Relay03"
-      }
-     }
-     ActionsManagerComponent "{5C727AD65C3206FA}" {
-      additionalActions {
-       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
-        Duration 25
-        CanAggregate 1
-       }
-      }
-     }
-    }
-    coords 1.912 1.671 -0.061
-    angleY 155.717
-   }
-   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
-    coords 1.578 0.47 0.748
-    angleY -23.949
-   }
-   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_02_Relay_Airport_tower_APS_ussr_patrol_01 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords -6.104 0.001 121.901
-     angleY 3.442
-    }
-    USSR_02_Relay_Airport_tower_APS_ussr_patrol_02 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords 277.007 0.156 -32.993
-     angleY 3.442
-    }
-    USSR_02_Relay_Airport_tower_APS_ussr_patrol_03 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords -178.377 -0.002 -78.61
-     angleY 3.442
-    }
-    USSR_02_Relay_Airport_tower_APS_ussr_patrol_04 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords -30.205 -0.005 -181.649
-     angleY 3.442
-    }
-   }
-  }
- }
- USSR_02a_Relay_Airport_tower {
-  components {
-   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-    m_sBaseName ""
-    m_sBaseNameUpper ""
-   }
-   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-    Transceivers {
-     RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1200
-     }
-    }
-   }
-   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-    "faction affiliation" "USSR"
-   }
-  }
-  coords 13323.592 68.767 11474.733
-  angleY -9.196
-  {
-   GenericEntity {
-    ID "5C727AD606EB0C1C"
-    components {
-     SCR_AISmartActionComponent "{61B553C317A548F7}" {
-      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
-      Tags {
-       "CaptureRelay_Relay03"
-      }
-     }
-     ActionsManagerComponent "{5C727AD65C3206FA}" {
-      additionalActions {
-       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
-        Duration 25
-        CanAggregate 1
-       }
-      }
-     }
-    }
-    coords 1.912 1.671 -0.061
-    angleY 155.717
-   }
-   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
-    coords 1.578 0.47 0.748
-    angleY -23.949
-   }
-   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_02a_Relay_Airport_tower_APS_ussr_patrol_01 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords -191.797 -9.065 -85.135
-     angleY 3.442
-    }
-    USSR_02a_Relay_Airport_tower_APS_ussr_patrol_02 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords -61.065 -5.721 63.095
-     angleY 3.442
-    }
-    USSR_02a_Relay_Airport_tower_APS_ussr_patrol_03 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords 132.991 -11.705 -27.73
-     angleY 3.442
-    }
-    USSR_02a_Relay_Airport_tower_APS_ussr_patrol_04 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords 2.536 -0.689 -13.442
-     angleY 3.442
-    }
-   }
-  }
- }
- USSR_03_Relay_Airport_tower {
-  components {
-   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-    m_sBaseName ""
-    m_sBaseNameUpper ""
-   }
-   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-    Transceivers {
-     RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1200
-     }
-    }
-   }
-   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-    "faction affiliation" "USSR"
-   }
-  }
-  coords 15152.499 146.612 11272.314
-  angleY 163.472
-  {
-   GenericEntity {
-    ID "5C727AD606EB0C1C"
-    components {
-     SCR_AISmartActionComponent "{61B553C317A548F7}" {
-      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
-      Tags {
-       "CaptureRelay_Relay03"
-      }
-     }
-     ActionsManagerComponent "{5C727AD65C3206FA}" {
-      additionalActions {
-       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
-        Duration 25
-        CanAggregate 1
-       }
-      }
-     }
-    }
-    coords 1.912 1.671 -0.061
-    angleY 155.717
-   }
-   StaticModelEntity : "{6A004A8F0571D456}Prefabs/Structures/Infrastructure/Towers/TransmitterTower_01/TransmitterTower_01_small.et" {
-    coords 1.578 0.47 0.748
-    angleY -23.949
-   }
-   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_03_Relay_Airport_tower_APS_patrol_01 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords 6.388 1.184 3.112
-     angleY 3.442
-    }
-    USSR_03_Relay_Airport_tower_APS_patrol_02 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords 173.927 -33.678 -12.978
-     angleY 3.442
-    }
-    USSR_03_Relay_Airport_tower_APS_patrol_03 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-       m_bBalanceOnPlayersCount 1
-      }
-     }
-     coords -109.583 -50.068 -83.743
-     angleY 3.442
-    }
-    USSR_03_Relay_Airport_tower_APS_patrol_04 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords -24.432 -20.44 234.794
-     angleY 3.442
-    }
-   }
-  }
- }
- USSR_03a_Relay_ne_castle_antenna {
-  components {
-   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
-    m_sBaseName ""
-    m_sBaseNameUpper ""
-   }
-   SCR_CoverageRadioComponent "{5C727AD73024FB2A}" {
-    Transceivers {
-     RelayTransceiver "{5C727AD73024FB39}" {
-      "Transmitting Range" 1200
-     }
-    }
-   }
-   SCR_FactionAffiliationComponent "{5C727AD73024FB13}" {
-    "faction affiliation" "USSR"
-   }
-  }
-  coords 16154.584 301.481 9566.722
-  angleY -4.067
-  {
-   GenericEntity {
-    ID "5C727AD606EB0C1C"
-    components {
-     SCR_AISmartActionComponent "{61B553C317A548F7}" {
-      AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
-      Tags {
-       "CaptureRelay_07"
-      }
-     }
-     ActionsManagerComponent "{5C727AD65C3206FA}" {
-      additionalActions {
-       SCR_CampaignReconfigureRelayUserAction "{5C727AD67B0A97A0}" {
-        Duration 25
-        CanAggregate 1
-       }
-      }
-     }
-    }
-    coords 2.761 1.009 0.262
-    angleY -95.344
-   }
-   GenericEntity : "{063451452B71ED11}Prefabs/Props/Military/Antennas/Antenna_R142/Antenna_R142_01.et" {
-    coords 2.27 5.493 -0.533
-    angleY -81.283
-   }
-   GameEntity : "{2CB0AA2A87842C18}Prefabs/Props/Civilian/LampKerosene_01/LampKerosene_01_military_USSR.et" {
-    coords 2.743 1.011 0.67
-    angleY -78.18
-   }
-   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_01 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords 71.722 -45.887 -13.012
-     angleY 3.442
-    }
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_02 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType TEAM_AT
-      }
-     }
-     coords -40.828 -46.101 -35.275
-     angleY 3.442
-    }
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_03 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords 11.287 -88.614 165.324
-     angleY 3.442
-    }
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_04 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType TEAM_MG
-      }
-     }
-     coords -202.599 -48.229 -60.181
-     angleY 3.442
-    }
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_05 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType SQUAD_RIFLE
-      }
-     }
-     coords -261.686 -50.237 15.072
-     angleY -15.05
-    }
-    USSR_03a_Relay_ne_castle_antenna_APS_patrol_06 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType TEAM_MG
-       m_bPickRandomGroupType 1
-      }
-     }
-     coords -14.267 -166.062 -250.51
-     angleY 7.509
-    }
-   }
-   GenericEntity : "{B8BBA7227B4433B6}Prefabs/Props/Furniture/TableWorkshop_01.et" {
-    coords 3.043 -0 0.363
-    angleX -0.034
-    angleY 8.644
-    angleZ 1.265
-    Flags 3
    }
   }
  }

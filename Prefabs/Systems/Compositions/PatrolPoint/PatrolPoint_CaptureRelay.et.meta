@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{BED1C583E2B866B8}Prefabs/Weapons/Rifles/M16/Variants/Rifle_M16A2_carbine_M203_OliveGreen_Sand_Stripes.et"
+ Name "{1E1A11F4CFED925C}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_CaptureRelay.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

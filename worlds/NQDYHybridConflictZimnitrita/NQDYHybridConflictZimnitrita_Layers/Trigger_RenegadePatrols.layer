@@ -1,6 +1,6 @@
 $grp PR_AIPatrolTrigger {
  Set_01_N_WP_Trigger {
-  coords 4994.42 18.404 9340.773
+  coords 13272.19 9.152 15760.449
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -57,23 +57,23 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF32C3C7F07}" {
      }
     }
-    coords 33.285 -5.627 293.77
+    coords -2.913 0.539 8.93
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
-      WP_01_01_Patrol {
+      WP_01_01_Patrol_Base_SokyyivMedical {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -657.845 -7.891 1015.616
+       coords -1556.398 21.117 72.832
        CompletionRadius 10
       }
-      WP_01_02_Patrol {
+      WP_01_02_Patrol_Base_Kromzova_n {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -470.447 -10.177 1363.472
+       coords -2868.536 2.451 -581.358
        CompletionRadius 10
       }
       WP_01_05_Patrol {
@@ -81,39 +81,15 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -226.502 14.931 299.123
+       coords -772.629 -3.613 -1441.704
        CompletionRadius 10
       }
-      WP_01_06_Patrol {
+      WP_01_07_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -81.049 -0.299 -205.475
-       CompletionRadius 10
-      }
-      WP_01_08_Patrol {
-       components {
-        Hierarchy "{61061E09F5DC31C0}" {
-        }
-       }
-       coords 146.187 4.127 80.259
-       CompletionRadius 10
-      }
-      WP_01_14_Patrol {
-       components {
-        Hierarchy "{61061E09F5DC31C0}" {
-        }
-       }
-       coords -307.973 31.43 84.917
-       CompletionRadius 10
-      }
-      WP_01_16_Patrol {
-       components {
-        Hierarchy "{61061E09F5DC31C0}" {
-        }
-       }
-       coords -177.84 12.367 318.928
+       coords 824.925 39.872 -2038.184
        CompletionRadius 10
       }
       WP_01_03_Patrol {
@@ -121,35 +97,29 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -281.287 -12.009 1172.466
+       coords -2569.728 16.586 -1081.733
+       CompletionRadius 10
       }
       WP_01_09_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -423.733 9.662 -660.898
+       coords 717.446 18.22 -852.79
       }
       WP_01_10_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -504.335 7.674 -709.747
+       coords 111.177 7.981 -262.541
       }
       WP_01_12_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -513.046 6.96 -712.789
-      }
-      WP_01_13_Patrol {
-       components {
-        Hierarchy "{61061E09F5DC31C0}" {
-        }
-       }
-       coords -418.879 10.4 -655.324
+       coords -1068.278 31.963 -170.711
       }
      }
      SCR_AIWaypoint WP_01_00_Spawn : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
@@ -157,59 +127,75 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F364A765D4182B}" {
        }
       }
-      coords -956.312 -6.2 840.057
+      coords -487.956 15.306 -349.56
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
      }
      $grp SCR_TimedWaypoint : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
-      WP_01_04_SD_Rivinkallio {
+      WP_01_06_SD_Base_Sokyyiv {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -289.923 -9.186 1143.88
+       coords -373.526 -5.006 -963.565
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
       }
-      WP_01_11_SD_ArmeijanVarikko {
+      WP_01_08_SD_Base_village_nw {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -502.757 -5.875 -811.402
+       coords 1472.947 40.048 -1341.699
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 100
+       }
       }
-      WP_01_15_SD_Suurkyla {
+      WP_01_11_SD_Base_Harbor_w {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 508.413 -11.121 -519.959
+       coords -98.479 1.743 77.91
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       Autocomplete 1
+       CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 300
+       }
+      }
+      WP_01_04_SD_Base_Kromzova {
+       components {
+        Hierarchy "{6120496DC986D784}" {
+        }
+       }
+       coords -2957.775 -4.565 -1488.325
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
       }
      }
-     SCR_SmartActionWaypoint WP_01_07_CaptureRelay_Kotokallio : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
+     SCR_SmartActionWaypoint WP_01_07_CaptureRelay_Kromzova_e_tower : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
       components {
        Hierarchy "{60F61A462CDAB87F}" {
        }
       }
-      coords 70.957 64.456 -1321.162
+      coords -2056.694 60.872 -854.43
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
       CompletionRadius 1.5
       Autocomplete 1
-      m_sStaticEntityName "Relay03_Kotokallio_tower"
-      m_sSmartActionTag "CaptureRelay_Relay03"
+      m_sStaticEntityName "USSR_01_Relay_Kromzova_e_tower"
+      m_sSmartActionTag "CaptureRelay"
      }
     }
    }
   }
  }
  Set_02_NC_WP_Trigger {
-  coords 5400.221 95.946 7593.189
+  coords 13361.237 64.841 12203.505
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -336,7 +322,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_03_C_WP_Trigger {
-  coords 6095.211 61.223 5793.365
+  coords 14945.138 70.251 8007.678
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -448,7 +434,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_04_SC_WP_Trigger {
-  coords 6935.038 57.672 3708.412
+  coords 15365.51 63.111 5489.762
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -572,7 +558,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_05_S_WP_Trigger {
-  coords 6965.99 97.97 1936.738
+  coords 15349.594 64.204 1751.892
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -716,5 +702,30 @@ $grp PR_AIPatrolTrigger {
     }
    }
   }
+ }
+}
+$grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+ WP_01_14_Patrol {
+  components {
+   Hierarchy "{61061E09F5DC31C0}" {
+   }
+  }
+  coords 12997.503 34.955 16139.136
+  CompletionRadius 10
+ }
+ WP_01_16_Patrol {
+  components {
+   Hierarchy "{61061E09F5DC31C0}" {
+   }
+  }
+  coords 13127.636 15.892 16373.146
+  CompletionRadius 10
+ }
+ WP_01_13_Patrol {
+  components {
+   Hierarchy "{61061E09F5DC31C0}" {
+   }
+  }
+  coords 12886.597 13.925 15398.895
  }
 }
