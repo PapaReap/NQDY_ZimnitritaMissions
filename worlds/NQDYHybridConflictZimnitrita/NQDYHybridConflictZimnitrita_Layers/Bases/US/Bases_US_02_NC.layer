@@ -1,0 +1,158 @@
+$grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMilitaryBase.et" {
+ US_06_Base_Airport_e {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 500
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 16069.089 30.691 12257.287
+  angleY 117.39
+  {
+   GenericEntity US_06_Base_Airport_e_APS_ussr_patrol_01 {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -0.001 -0.413 12
+    angleX -1.015
+    angleY -0.018
+    angleZ 0.987
+   }
+   GenericEntity US_03_Base_ne_APS_ussr_patrolBackup_01 {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -0.002 -0.452 14
+    angleX -1.207
+    angleY -0.008
+    angleZ 0.383
+   }
+   GenericEntity {
+    ID "5EEEC471C30578EB"
+    coords -2 0.2 -3
+    angleX -3.218
+    angleY -0.076
+    angleZ 1.357
+   }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords -0.001 0 0
+    angleX -2.424
+    angleY -0.075
+    angleZ 1.768
+   }
+  }
+ }
+ US_05_Base_Lake_w {
+  components {
+   SCR_CampaignMilitaryBaseComponent "{5AFC974A70234D1C}" {
+    m_iRadius 130
+    m_bCanBeHQ 1
+    m_sBaseName "#AR-Campaign_MapLocation_MOB"
+    m_sBaseNameUpper "#AR-Campaign_MapLocation_MOB-UC"
+   }
+   SCR_CampaignSeizingComponent "{5C66967235FBEEA3}" {
+    Enabled 0
+   }
+   SCR_CampaignSuppliesComponent "{5C6696724F524DA2}" {
+    m_iSupplies 125
+    m_fOperationalRadius 50
+   }
+   SCR_CoverageRadioComponent "{5C669673C2A82A2B}" {
+    Transceivers {
+     RelayTransceiver "{5C669673E8C94083}" {
+      "Transmitting Range" 500
+     }
+    }
+    m_bIsSource 1
+   }
+   SCR_FactionAffiliationComponent "{5AFC974A2595F05D}" {
+    "faction affiliation" "US"
+   }
+   SCR_ResourceComponent "{5D587B89D3599C99}" {
+    m_aGenerators {
+     SCR_ResourceGenerator "{5D587B8946012988}" {
+      m_fResourceMultiplier 1
+      m_fStorageRange 2
+     }
+    }
+   }
+  }
+  coords 7843.721 3.158 12440.705
+  angleY -59.898
+  {
+   GenericEntity US_05_Base_Lake_w_APS_ussr_patrol {
+    ID "5CCED514A5908822"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords -0 1.024 12
+    angleX 3.882
+    angleY -0.337
+    angleZ -4.972
+   }
+   GenericEntity US_05_Base_Lake_w_APS_ussr_patrolBackup {
+    ID "606078EE23DE48AC"
+    components {
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
+    }
+    coords 0 1.153 14
+    angleX 3.329
+    angleY -0.338
+    angleZ -5.799
+   }
+   GenericEntity {
+    ID "5EEEC471C30578EB"
+    coords -2 -0.484 -3
+    angleX 6.791
+    angleY -0.451
+    angleZ -3.81
+   }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords -0 0 0
+    angleX 5.638
+    angleY -0.44
+    angleZ -4.475
+   }
+  }
+ }
+}

@@ -1,5 +1,5 @@
 $grp GenericEntity {
- Supplies02_USSR_05_Base_village_nw {
+ Supplies02_USSR_01_Base_village_nw {
   components {
    RplComponent "{60E64494539F9BA7}" {
    }
@@ -834,106 +834,6 @@ $grp GenericEntity {
   }
   coords 15653.36 64.791 1447.12
   {
-   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
-    coords 7.094 -0.111 -2.997
-    angleX -0.881
-    angleY 100.342
-    angleZ -0.161
-    {
-     GenericEntity {
-      ID "60E76A929DAA1F1D"
-      {
-       GenericEntity {
-        ID "60E76A929DB5D34A"
-        coords -1.793 -1.676 -0.665
-        {
-         GenericEntity {
-          ID "60E76A929DB5D34F"
-          coords -0.33 -0.021 0.729
-         }
-         GenericEntity {
-          ID "60E76A929DB5D341"
-          coords -5.606 -0.474 4.292
-          angleY 36.034
-         }
-        }
-       }
-       GenericEntity {
-        ID "60E76A929DAA1F11"
-        coords -3.813 -1.52 2.872
-        angleX 1.448
-        angleY -7.426
-        angleZ -0.523
-       }
-       GenericEntity {
-        ID "60E76A929DB51600"
-        coords 3.366 -1.723 3.372
-        angleY 0.819
-       }
-       GenericEntity {
-        ID "60E76A929DB5D349"
-        coords -4.775 -1.746 -2.394
-        angleY 93.613
-       }
-       GenericEntity {
-        ID "60E76A929DB5161E"
-        coords -4.342 -1.699 -2.422
-        angleY -89.335
-       }
-       GenericEntity {
-        ID "60E76A929DAA80BB"
-        coords 0.228 -1.725 -4.986
-        angleY -0.492
-       }
-       GenericEntity {
-        ID "60E76A929DB5161B"
-        coords 0.209 -1.717 -3.81
-        angleY -3.43
-       }
-       GenericEntity {
-        ID "60E76A929DAA80B9"
-        coords -10.211 -2.292 6.057
-        angleY 44.447
-       }
-       GenericEntity {
-        ID "60E76A929DAA00DF"
-        coords 2.961 -1.736 1.637
-        angleY -90
-       }
-       GenericEntity {
-        ID "60E76A929DAA80B6"
-        coords 3.121 -1.732 -1.777
-        angleY 176.173
-       }
-       GenericEntity {
-        ID "60E76A929DAAC528"
-        coords 3.061 -1.735 0.141
-        angleY -88.159
-       }
-       GenericEntity {
-        ID "60E76A929DAA00DA"
-        coords 5.926 -1.743 1.213
-        angleY -0.097
-       }
-       GenericEntity {
-        ID "60E76A929DAA00D9"
-        coords -4.919 -1.681 3.252
-        angleY -88.08
-       }
-       GenericEntity {
-        ID "60E76A929DAA00A7"
-        coords 1.536 -1.725 1.691
-        angleY 116.995
-       }
-       GenericEntity {
-        ID "60E76A929DAA1F16"
-        coords 1.274 -1.446 0.594
-        angleY -83.606
-       }
-      }
-     }
-    }
-   }
    GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
     coords -390.03 -3.762 105.254
     angleY 10.103
@@ -1186,6 +1086,1900 @@ $grp GenericEntity {
    GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
     coords 0.76 0 1.126
     angleY 172.6
+   }
+  }
+ }
+ Supplies02_USSR_100_Base_Sokyyiv_w {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 13292.91 3.001 16193.466
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords -96.437 -0.076 84.153
+    angleX -0.001
+    angleY 179.907
+    angleZ -0.896
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.051 1.677 -0.614
+      angleX 0.001
+      angleZ 0.896
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.676 -0.665
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.813 -1.52 2.872
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 3.366 -1.723 3.372
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -4.775 -1.746 -2.394
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.342 -1.699 -2.422
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.228 -1.725 -4.986
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords 0.209 -1.717 -3.81
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.211 -2.292 6.057
+        angleY 44.447
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 2.961 -1.736 1.637
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 3.121 -1.732 -1.777
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.061 -1.735 0.141
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 5.908 -1.743 11.536
+        angleY -0.097
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.932 -1.559 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 1.536 -1.725 1.691
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords 668.623 13.094 -62.787
+    angleY -77.213
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords -0.736 1.439 -1.343
+        angleY 2.353
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.205 0 0
+        {
+         GenericEntity {
+          ID "60E64490D77B3438"
+          coords -0.111 0 -1.204
+         }
+         GenericEntity {
+          ID "60E64490D77B343D"
+          coords -1.197 0 0.239
+         }
+         GenericEntity {
+          ID "60E64490D77B343E"
+          coords 1.536 0 -0.686
+          angleY -18.597
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_11_Base_Gruwice_militarybase {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 10635.418 16.018 4581.484
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords 2.994 -0.039 -8.216
+    angleX 0.854
+    angleY -107.592
+    angleZ -0.27
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.051 1.677 -0.614
+      angleX 0.001
+      angleZ 0.896
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.676 -0.665
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.813 -1.52 2.872
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 3.366 -1.723 3.372
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -4.775 -1.746 -2.394
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.342 -1.699 -2.422
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.208 -1.725 -2.578
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords 0.023 -1.717 -0.711
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.211 -2.292 6.057
+        angleY 44.447
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 2.961 -1.736 1.637
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 3.121 -1.732 -1.777
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.061 -1.735 0.141
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 9.501 -1.743 -3.834
+        angleY -0.097
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.932 -1.559 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 0.791 -1.725 2.071
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords -285.819 1.145 105.826
+    angleY -92.921
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords -0.736 1.439 -1.343
+        angleY 2.353
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.205 0 0
+        {
+         GenericEntity {
+          ID "60E64490D77B3438"
+          coords -0.111 0 -1.204
+         }
+         GenericEntity {
+          ID "60E64490D77B343D"
+          coords -1.197 0 0.239
+         }
+         GenericEntity {
+          ID "60E64490D77B343E"
+          coords -2.099 0 -0.955
+          angleY -18.597
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_12_Base_Gruwice_n {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 10091.431 14.394 5758.774
+  {
+   GenericEntity : "{143D136C1F361AC4}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_400.et" {
+    coords -78.541 -4.344 176.247
+    angleY 144.49
+    {
+     GenericEntity {
+      ID "60E64490A337AA4A"
+      {
+       GenericEntity {
+        ID "60E64490A337AA47"
+        coords 1.891 1.358 1.213
+        angleY -91.247
+       }
+       GenericEntity {
+        ID "60E64490A337AA45"
+        {
+         GenericEntity {
+          ID "60E64490A3341050"
+          coords -1.673 0 1.353
+          angleY 176.906
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{5DE506736DF06EAE}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_300.et" {
+    coords -30.146 5.371 256.854
+    angleY -92.958
+    {
+     GenericEntity {
+      ID "60E64490C1758212"
+      {
+       GenericEntity {
+        ID "60E64490C1758216"
+        coords -1.53 1.358 -1.445
+        angleY 1.841
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{87C8FA714D84DD66}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_160.et" {
+    coords -174.132 -4.394 177.827
+    angleY 32.033
+   }
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords -373.206 -10.936 -125.696
+    angleX 0.889
+    angleY -97.102
+    angleZ -0.111
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.676 -0.665
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.813 -1.52 2.872
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords -0.022 -1.723 3.421
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -3.151 -1.986 23.356
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.325 -1.699 -0.999
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords -6.23 -1.725 -1.184
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords -7.9 -1.659 -1.229
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords 0.075 -2.292 8.152
+        angleY 2.032
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 4.697 -1.933 21.609
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 1.559 -1.952 21.567
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.809 -1.967 23.395
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 7.537 -1.743 7.445
+        angleY -0.097
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.919 -1.681 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 1.521 -1.669 1.57
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords -163.074 -4.394 -35.472
+    angleY -92.164
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords 1.914 1.066 1.199
+        angleY -90
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{E03554F412EB72B0}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_500.et" {
+    coords -151.989 0.584 -103.994
+    angleY 91.249
+    {
+     GenericEntity {
+      ID "60E6449173A707AF"
+      coords 0 0 0.621
+      {
+       GenericEntity {
+        ID "60E6449173A707AB"
+        coords -1.521 1.358 -1.972
+        angleY 0.678
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_12a_Relay_HarborElectrical {
+  coords 9620.048 76.219 4294.252
+  {
+   GenericEntity {
+    coords -38.036 -0.163 47.358
+    angleY -75.124
+   }
+   GenericEntity : "{69DC2B60A4C10386}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_140.et" {
+    coords 11.514 0 37.951
+    angleY 35.194
+    {
+     GenericEntity {
+      ID "60E64493ECC174C9"
+      {
+       GenericEntity {
+        ID "60E64493ECC174C1"
+        coords -0.218 0.78 -0.175
+        angleY -83.13
+       }
+       GenericEntity {
+        ID "60E64493ECC174C3"
+        {
+         GenericEntity {
+          ID "60E64493ECC17539"
+          coords -0.821 0 -0.68
+          angleY 99.226
+         }
+         GenericEntity {
+          ID "60E64493ECC174C7"
+          coords -0.481 -0.001 0.998
+          angleY 5.212
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords -34.695 0 47.099
+    angleY -6.183
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords 1.753 1.358 -2.164
+        angleY -87.023
+       }
+       GenericEntity {
+        ID "5EC6AD54D7748573"
+        {
+         GenericEntity {
+          ID "5DB6D40C0070DFF0"
+          coords -2.857 -0.173 1.96
+          angleY 90.403
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_13_Base_Vrana {
+  coords 9050.183 49.488 5311.063
+  {
+   GenericEntity : "{69DC2B60A4C10386}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_140.et" {
+    coords -2.066 0.094 3.473
+    angleY -125.358
+    {
+     GenericEntity {
+      ID "60E64493ECC174C9"
+      {
+       GenericEntity {
+        ID "60E64493ECC174C1"
+        coords -0.218 0.78 -0.175
+        angleY -83.13
+       }
+       GenericEntity {
+        ID "60E64493ECC174C3"
+        {
+         GenericEntity {
+          ID "60E64493ECC17539"
+          coords -0.821 0 -0.68
+          angleY 99.226
+         }
+         GenericEntity {
+          ID "60E64493ECC174C7"
+          coords -0.481 -0.001 0.998
+          angleY 5.212
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords -166.707 5.612 -22.888
+    angleY 0.697
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords -2.678 1.358 1.392
+        angleY 91.434
+       }
+       GenericEntity {
+        ID "5EC6AD54D7748573"
+        coords -3.27 0 -2.179
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies05_USSR_13_Relay_GruwiceElectrical_tower {
+  coords 8564.582 108.186 6253.221
+  {
+   GenericEntity : "{87C8FA714D84DD66}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_160.et" {
+    coords -1.106 0.096 0.184
+    angleY 147.608
+    {
+     GenericEntity {
+      ID "60E64490197CC651"
+      {
+       GenericEntity {
+        ID "60E64490197CC655"
+        coords -1.558 1.358 0.801
+       }
+       GenericEntity {
+        ID "60E64490197CC657"
+        coords 0 0 0.407
+        {
+         GenericEntity {
+          ID "60E64490197CC64A"
+          coords 0.89 0 -0.688
+          angleY 167.724
+         }
+         GenericEntity {
+          ID "60E64490197CC64F"
+          coords 1.511 0 -0.836
+          angleY -117.276
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_13a_Relay_ElectricRelay_tower {
+  coords 10020.719 122.812 7001.388
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords 1.271 0 -7.023
+    angleY 0.102
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.686 -0.724
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords 0.096 -1.768 1.393
+        angleX 1.491
+        angleY -2.007
+        angleZ -0.384
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 0.778 -1.68 18.044
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -5.322 -1.781 -2.361
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.34 -1.785 -2.425
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords -10.093 -2.173 -5.082
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords -11.442 -2.267 -5.715
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -12.951 -2.292 12.117
+        angleY 2.514
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords -1.405 -1.68 17.363
+        angleY -69.041
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords -0.61 -1.68 19.141
+        angleY 105.849
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 1.291 -1.68 22.07
+        angleY -67.928
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords -15.876 -1.908 -2.151
+        angleY 4.594
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.919 -1.605 3.25
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 1.537 -1.435 1.686
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_13b_Relay_Gruwice_n_tower {
+  coords 11083.503 7.267 6594.794
+  {
+   GenericEntity : "{69DC2B60A4C10386}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_140.et" {
+    coords -3.093 0 76.675
+    angleY -98.563
+    {
+     GenericEntity {
+      ID "60E64493ECC174C9"
+      {
+       GenericEntity {
+        ID "60E64493ECC174C1"
+        coords -0.218 0.78 -0.175
+        angleY -83.13
+       }
+       GenericEntity {
+        ID "60E64493ECC174C3"
+        {
+         GenericEntity {
+          ID "60E64493ECC17539"
+          coords -0.778 -0.397 -0.006
+          angleY 99.226
+         }
+         GenericEntity {
+          ID "60E64493ECC174C7"
+          coords -0.297 -0.392 1.939
+          angleY 94.222
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords 19.374 -4.024 -213.717
+    angleY 87.531
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords 1.952 0.882 -2.963
+        angleY -85.916
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_14b_Relay_tower {
+  coords 8876.878 106.531 9151.455
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords 1.687 0.001 -4.06
+    angleX -0.895
+    angleY 87.761
+    angleZ 0.035
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.795 -1.602 5.366
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.814 -1.52 2.872
+        angleX -1.467
+        angleY -149.84
+        angleZ -0.469
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords -9.988 -1.635 3.574
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -5.853 -1.595 6.011
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -5.366 -1.594 6.015
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords -21.627 -1.725 -0.647
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords -24.196 -1.717 0.024
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.211 -1.597 6.061
+        angleY 44.447
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords -15.201 -1.815 -7.76
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords -17.337 -1.827 -8.424
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords -12.541 -1.787 -6.044
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords -9.15 -1.81 -7.664
+        angleY 54.633
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.919 -1.681 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 0.527 -1.65 2.211
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords -0.842 -1.673 0.834
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords 75.963 0.18 80.02
+    angleY -69.514
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords -3.233 0.577 1.187
+        angleY 92.164
+       }
+       GenericEntity {
+        ID "5EC6AD54D7748573"
+        {
+         GenericEntity {
+          ID "5DB6D40C0070DFF0"
+          coords 2.334 0.38 -0.408
+          angleY 90.403
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies03_USSR_15_Base_MilitaryBarracks {
+  coords 10587.053 70.07 8769.277
+  {
+   GenericEntity : "{69DC2B60A4C10386}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_140.et" {
+    coords -6.47 0.094 -3.473
+    angleY -144.599
+    {
+     GenericEntity {
+      ID "60E64493ECC174C9"
+      coords 0 -0.06 0
+      {
+       GenericEntity {
+        ID "60E64493ECC174C1"
+        coords -0.497 1.072 -2.382
+        angleY -81.269
+       }
+       GenericEntity {
+        ID "60E64493ECC174C3"
+        {
+         GenericEntity {
+          ID "60E64493ECC17539"
+          coords -0.821 0 -0.68
+          angleY 99.226
+         }
+         GenericEntity {
+          ID "60E64493ECC174C7"
+          coords -0.481 -0.001 0.998
+          angleY 5.212
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords -1.14 0 3.464
+    angleY -137.41
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords -1.176 1.179 0.582
+        angleY -85.755
+       }
+       GenericEntity {
+        ID "5EC6AD54D7748573"
+        coords -3.27 0 -2.179
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_16_Base_IndustrialZone {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 12282.331 32 8730.33
+  {
+   $grp GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    {
+     coords -355.318 -23.856 -240.979
+     angleX -0.895
+     angleY 87.761
+     angleZ 0.035
+     {
+      GenericEntity {
+       ID "60E76A929DAA1F1D"
+       {
+        GenericEntity {
+         ID "60E76A929DB5D34A"
+         coords -1.793 -1.676 -0.665
+         {
+          GenericEntity {
+           ID "60E76A929DB5D34F"
+           coords -0.33 -0.021 0.729
+          }
+          GenericEntity {
+           ID "60E76A929DB5D341"
+           coords -5.606 -0.474 4.292
+           angleY 36.034
+          }
+         }
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F11"
+         coords -3.813 -1.52 2.872
+         angleX 1.448
+         angleY -7.426
+         angleZ -0.523
+        }
+        GenericEntity {
+         ID "60E76A929DB51600"
+         coords 3.366 -1.723 3.372
+         angleY 0.819
+        }
+        GenericEntity {
+         ID "60E76A929DB5D349"
+         coords -4.775 -1.746 -2.394
+         angleY 93.613
+        }
+        GenericEntity {
+         ID "60E76A929DB5161E"
+         coords -4.342 -1.699 -2.422
+         angleY -89.335
+        }
+        GenericEntity {
+         ID "60E76A929DAA80BB"
+         coords 0.228 -1.725 -4.986
+         angleY -0.492
+        }
+        GenericEntity {
+         ID "60E76A929DB5161B"
+         coords 0.209 -1.717 -3.81
+         angleY -3.43
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B9"
+         coords -10.211 -2.292 6.057
+         angleY 44.447
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DF"
+         coords 2.961 -1.736 1.637
+         angleY -90
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B6"
+         coords 3.121 -1.732 -1.777
+         angleY 176.173
+        }
+        GenericEntity {
+         ID "60E76A929DAAC528"
+         coords 3.061 -1.735 0.141
+         angleY -88.159
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DA"
+         coords 5.926 -1.743 1.213
+         angleY -0.097
+        }
+        GenericEntity {
+         ID "60E76A929DAA00D9"
+         coords -4.919 -1.681 3.252
+         angleY -88.08
+        }
+        GenericEntity {
+         ID "60E76A929DAA00A7"
+         coords 1.536 -1.725 1.691
+         angleY 116.995
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F16"
+         coords 1.274 -1.446 0.594
+         angleY -83.606
+        }
+       }
+      }
+     }
+    }
+    {
+     coords -506.287 -0.183 380.587
+     angleX 0.001
+     angleY -179.911
+     angleZ -0.896
+     {
+      GenericEntity {
+       ID "60E76A929DAA1F1D"
+       {
+        GenericEntity {
+         ID "60E76A929DB5D34A"
+         coords -1.793 -1.676 -0.665
+         {
+          GenericEntity {
+           ID "60E76A929DB5D34F"
+           coords -0.329 0.086 0.729
+          }
+          GenericEntity {
+           ID "60E76A929DB5D341"
+           coords -4.859 0.157 -10.317
+           angleY 3.536
+          }
+         }
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F11"
+         coords -3.813 -1.52 2.872
+         angleX 1.448
+         angleY -7.426
+         angleZ -0.523
+        }
+        GenericEntity {
+         ID "60E76A929DB51600"
+         coords 2.77 -1.665 -38.104
+         angleY 0.819
+        }
+        GenericEntity {
+         ID "60E76A929DB5D349"
+         coords -1.642 -1.597 -29.895
+         angleY 93.613
+        }
+        GenericEntity {
+         ID "60E76A929DB5161E"
+         coords -1.273 -1.602 -29.824
+         angleY -89.335
+        }
+        GenericEntity {
+         ID "60E76A929DAA80BB"
+         coords -1.936 -1.592 -22.317
+         angleY -0.492
+        }
+        GenericEntity {
+         ID "60E76A929DB5161B"
+         coords -0.585 -1.613 -22.161
+         angleY -3.43
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B9"
+         coords -0.153 -1.62 -36.9
+         angleY 44.447
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DF"
+         coords 2.959 -1.668 -33.104
+         angleY -90
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B6"
+         coords 2.731 -1.665 -29.258
+         angleY 89.921
+        }
+        GenericEntity {
+         ID "60E76A929DAAC528"
+         coords 2.909 -1.735 -31.215
+         angleY -88.159
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DA"
+         coords 5.975 -1.716 -26.891
+         angleY -0.097
+        }
+        GenericEntity {
+         ID "60E76A929DAA00D9"
+         coords -4.919 -1.681 3.252
+         angleY -88.08
+        }
+        GenericEntity {
+         ID "60E76A929DAA00A7"
+         coords 1.536 -1.725 1.691
+         angleY 116.995
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F16"
+         coords 1.274 -1.446 0.594
+         angleY -83.606
+        }
+       }
+      }
+     }
+    }
+   }
+   $grp GenericEntity : "{E03554F412EB72B0}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_500.et" {
+    {
+     coords -139.509 0.237 98.246
+     angleY -95.743
+     {
+      GenericEntity {
+       ID "60E6449173A707AF"
+       coords 0 0 0.621
+       {
+        GenericEntity {
+         ID "60E6449173A707AB"
+         coords 2.518 1.324 2.225
+         angleX -0.139
+         angleY -84.814
+         angleZ 1.765
+        }
+        GenericEntity {
+         ID "60E6449173A707A9"
+         {
+          GenericEntity {
+           ID "60E6449173A707A2"
+           coords 1.138 0 -2.496
+           angleY 139.161
+          }
+          GenericEntity {
+           ID "60E6449173A707A0"
+           coords -0.063 0 -2.63
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    {
+     coords -65.356 0.387 -20.936
+     angleY 179.791
+     {
+      GenericEntity {
+       ID "60E6449173A707AF"
+       coords 0 0 0.621
+       {
+        GenericEntity {
+         ID "60E6449173A707AB"
+         coords 2.09 1.336 1.851
+         angleX 0.054
+         angleY -91.067
+         angleZ 1.77
+        }
+        GenericEntity {
+         ID "60E6449173A707A9"
+         {
+          GenericEntity {
+           ID "60E6449173A707A2"
+           coords 1.138 0 -2.496
+           angleY 139.161
+          }
+          GenericEntity {
+           ID "60E6449173A707A0"
+           coords -0.063 0 -2.63
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_16_Relay_Andruhanov_tower {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 12404.688 55.063 9671.161
+  {
+   $grp GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    {
+     coords 1.529 -0.026 3.869
+     angleX -0.895
+     angleY 87.761
+     angleZ 0.035
+     {
+      GenericEntity {
+       ID "60E76A929DAA1F1D"
+       coords 8.28 1.68 -0.608
+       {
+        GenericEntity {
+         ID "60E76A929DB5D34A"
+         coords -4.541 -1.676 -2.316
+         angleY 93.78
+         {
+          GenericEntity {
+           ID "60E76A929DB5D34F"
+           coords -0.33 -0.021 0.729
+          }
+          GenericEntity {
+           ID "60E76A929DB5D341"
+           coords -5.606 -0.474 4.292
+           angleY 36.034
+          }
+         }
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F11"
+         coords -0.949 -1.593 -0.575
+         angleX 0.21
+         angleY 94.605
+         angleZ 1.525
+        }
+        GenericEntity {
+         ID "60E76A929DB51600"
+         coords -16.784 -1.662 0.487
+         angleY 0.819
+        }
+        GenericEntity {
+         ID "60E76A929DB5D349"
+         coords -10.7 -1.626 4.063
+         angleY -176.4
+        }
+        GenericEntity {
+         ID "60E76A929DB5161E"
+         coords -10.564 -1.609 3.608
+         angleY -89.335
+        }
+        GenericEntity {
+         ID "60E76A929DAA80BB"
+         coords -7.763 -1.682 -1.189
+         angleY -0.492
+        }
+        GenericEntity {
+         ID "60E76A929DB5161B"
+         coords -7.696 -1.702 -2.435
+         angleY -3.43
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B9"
+         coords -14.027 -1.606 3.93
+         angleY 93.716
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DF"
+         coords -11.312 -1.674 -0.508
+         angleY -90
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B6"
+         coords -9.243 -1.662 -0.565
+         angleY 176.173
+        }
+        GenericEntity {
+         ID "60E76A929DAAC528"
+         coords -11.501 -1.649 1.084
+         angleY -88.159
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DA"
+         coords -18.339 -1.652 1.17
+         angleY -0.097
+        }
+        GenericEntity {
+         ID "60E76A929DAA00D9"
+         coords -4.919 -1.611 3.25
+         angleY -88.08
+        }
+        GenericEntity {
+         ID "60E76A929DAA00A7"
+         coords 1.536 -1.632 1.689
+         angleY 116.995
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F16"
+         coords 1.274 -1.535 0.595
+         angleY -83.606
+        }
+       }
+      }
+     }
+    }
+    {
+     coords -79.866 -30.12 341.285
+     angleX 0.515
+     angleY -35.082
+     angleZ 0.733
+     {
+      GenericEntity {
+       ID "60E76A929DAA1F1D"
+       {
+        GenericEntity {
+         ID "60E76A929DB5D34A"
+         coords -1.794 -1.676 -0.665
+         angleY -3.798
+         {
+          GenericEntity {
+           ID "60E76A929DB5D34F"
+           coords -0.329 0.086 0.729
+          }
+          GenericEntity {
+           ID "60E76A929DB5D341"
+           coords -4.859 0.157 -10.317
+           angleY 3.536
+          }
+         }
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F11"
+         coords -3.801 -1.528 2.562
+         angleX -0.401
+         angleY -92.654
+         angleZ -1.486
+        }
+        GenericEntity {
+         ID "60E76A929DB51600"
+         coords -2.415 -1.489 -6.293
+         angleY 0.819
+        }
+        GenericEntity {
+         ID "60E76A929DB5D349"
+         coords -0.115 -1.343 -5.744
+         angleY 93.613
+        }
+        GenericEntity {
+         ID "60E76A929DB5161E"
+         coords -2.449 -1.468 -6.103
+         angleY -89.335
+        }
+        GenericEntity {
+         ID "60E76A929DAA80BB"
+         coords -4.149 -1.456 -12.407
+         angleY -0.492
+        }
+        GenericEntity {
+         ID "60E76A929DB5161B"
+         coords -4.283 -1.468 -11.312
+         angleY -3.43
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B9"
+         coords -13.715 -1.572 -13.101
+         angleY 87.881
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DF"
+         coords 2.959 -1.668 -5.533
+         angleY -90
+        }
+        GenericEntity {
+         ID "60E76A929DAA80B6"
+         coords 2.699 -1.665 -7.327
+         angleY 89.921
+        }
+        GenericEntity {
+         ID "60E76A929DAAC528"
+         coords 2.717 -1.735 -8.809
+         angleY -88.159
+        }
+        GenericEntity {
+         ID "60E76A929DAA00DA"
+         coords 5.754 -1.475 3.776
+         angleY 85.601
+        }
+        GenericEntity {
+         ID "60E76A929DAA00D9"
+         coords -4.919 -1.681 3.252
+         angleY -88.08
+        }
+        GenericEntity {
+         ID "60E76A929DAA00A7"
+         coords -0.329 -1.725 -0.014
+         angleY 116.995
+        }
+        GenericEntity {
+         ID "60E76A929DAA1F16"
+         coords -0.264 -1.446 0.766
+         angleY -83.606
+        }
+       }
+      }
+     }
+    }
+   }
+   $grp GenericEntity : "{E03554F412EB72B0}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_500.et" {
+    {
+     coords -114.3 -29.869 517.731
+     angleY -179.909
+     {
+      GenericEntity {
+       ID "60E6449173A707AF"
+       coords 0 0 0.621
+       {
+        GenericEntity {
+         ID "60E6449173A707AB"
+         coords -1.167 0.96 -2.427
+         angleX -1.762
+         angleY 6.321
+         angleZ -0.174
+        }
+        GenericEntity {
+         ID "60E6449173A707A9"
+         {
+          GenericEntity {
+           ID "60E6449173A707A2"
+           coords 1.301 0.888 -0.665
+           angleY 139.161
+          }
+          GenericEntity {
+           ID "60E6449173A707A0"
+           coords 0.207 0 -0.743
+           angleY 90.403
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    {
+     coords -232.474 -29.836 673.963
+     angleY 179.791
+     {
+      GenericEntity {
+       ID "60E6449173A707AF"
+       coords 0 0 0.621
+       {
+        GenericEntity {
+         ID "60E6449173A707AB"
+         coords 2.09 1.336 1.851
+         angleX 0.054
+         angleY -91.067
+         angleZ 1.77
+        }
+        GenericEntity {
+         ID "60E6449173A707A9"
+         {
+          GenericEntity {
+           ID "60E6449173A707A2"
+           coords 1.138 0 -2.496
+           angleY 139.161
+          }
+          GenericEntity {
+           ID "60E6449173A707A0"
+           coords -0.063 0 -2.63
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies12_USSR_17_Base_Andruhanov_n {
+  coords 12272.945 30.258 10770.633
+  {
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords 13.019 3.057 -12.343
+    angleY 122.243
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords -0.749 1.358 2.896
+        angleY -165.693
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.249 0 -0.001
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies07_USSR_18_Base_SartavaHarbor {
+  coords 8270.573 5.393 10098.367
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords -11.429 0.183 4.219
+    angleY -2.76
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.057 0 -0.608
+      {
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 9.146 -0.171 -3.026
+        angleY 0.819
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.228 0.02 -4.991
+        angleY -0.492
+        Flags 2622467
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        Flags 2622467
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 1.119 0 1.658
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 1.279 0 -1.756
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 1.218 0 0.163
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        Flags 2098179
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -0.473 0.023 1.882
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords 3.596 0 2.966
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 3.834 0 0.516
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 3.784 0 0.314
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_20_Base_Soperk {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 11384.5 24.793 11313.986
+  {
+   GenericEntity : "{143D136C1F361AC4}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_400.et" {
+    coords -21.781 9.298 -64.883
+    angleY -2.264
+    {
+     GenericEntity {
+      ID "60E64490A337AA4A"
+      {
+       GenericEntity {
+        ID "60E64490A337AA47"
+        coords -2.444 1.358 4.159
+        angleY -177.157
+       }
+       GenericEntity {
+        ID "60E64490A337AA45"
+        {
+         GenericEntity {
+          ID "60E64490A3341050"
+          coords -1.673 0 1.353
+          angleY 176.906
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{5DE506736DF06EAE}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_300.et" {
+    coords -11.439 0 2.625
+    angleY -175.813
+    {
+     GenericEntity {
+      ID "60E64490C1758212"
+      {
+       GenericEntity {
+        ID "60E64490C1758216"
+        coords -1.465 1.358 -1.653
+        angleY -2.419
+       }
+       GenericEntity {
+        ID "60E64490C1758208"
+        coords -0.858 0 0.001
+        {
+         GenericEntity {
+          ID "60E64490C175820D"
+          coords 1.58 0 -0.112
+         }
+         GenericEntity {
+          ID "60E64490C1758201"
+          coords 0.122 0 -0.735
+         }
+         GenericEntity {
+          ID "60E64490C1758203"
+          coords 0.371 0 0.255
+         }
+         GenericEntity {
+          ID "60E64490C1758204"
+          coords 1.214 0 0.473
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ Supplies02_USSR_99_Base_Sokyyiv {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 13333.021 34.123 14551.265
+  angleY 138.066
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords 2.994 -0.039 -8.216
+    angleX 0.854
+    angleY -107.592
+    angleZ -0.27
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.051 1.677 -0.614
+      angleX 0.001
+      angleZ 0.896
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.676 -0.665
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.813 -1.52 2.872
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 3.366 -1.723 3.372
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -4.775 -1.746 -2.394
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.342 -1.699 -2.422
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.208 -1.725 -2.578
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords 0.023 -1.717 -0.711
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.211 -2.292 6.057
+        angleY 44.447
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 2.961 -1.736 1.637
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 3.121 -1.732 -1.777
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.061 -1.735 0.141
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 9.501 -1.743 -3.834
+        angleY -0.097
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.932 -1.559 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 0.791 -1.725 2.071
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords -340.604 -6.682 140.767
+    angleY 119.651
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords 0.045 1.439 -1.378
+        angleY -87.367
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.23 0 -0.001
+        {
+         GenericEntity {
+          ID "60E64490D77B3438"
+          coords 0.007 0.551 -0.612
+          angleY -93.597
+         }
+         GenericEntity {
+          ID "60E64490D77B343D"
+          coords 0.61 4.28 0.434
+          angleY 90.403
+         }
+         GenericEntity {
+          ID "60E64490D77B343E"
+          coords -0.863 0 0.366
+          angleY -18.597
+         }
+         GenericEntity {
+          ID "60E64490D77B343B"
+          coords -0.309 0 -0.709
+         }
+        }
+       }
+      }
+     }
+    }
    }
   }
  }

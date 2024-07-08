@@ -55,9 +55,9 @@ SCR_GameModeCampaign PR_GameMode_CampaignSF1 : "{AB5079F60DAECFBF}Prefabs/MP/Mod
    }
   }
   SCR_TimeAndWeatherHandlerComponent "{60FD5890E2137752}" {
+   m_iStartingHours 6
    m_bRandomStartingDaytime 0
    m_fDayTimeAcceleration 1
-   m_bRandomStartingWeather 0
   }
   SCR_XPHandlerComponent "{60FD5890E214D77E}" {
    m_iVeterancyXPAwardThreshold 150
@@ -79,6 +79,19 @@ SCR_CampaignFactionManager CampaignFactionManager1 : "{F1AC26310BAE3788}Prefabs/
    }
   }
   SCR_CampaignFaction "{50B30C3ADB052C80}" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EE815FA292}" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{6056BD5F6A436153}" {
+       m_aEntities {
+        SCR_EntityCatalogEntry "{5DF69575F4160EE2}" {
+         m_sEntityPrefab "{8D89B17BCFBFAE44}Prefabs/Characters/Campaign/Final/Campaign_US_Player.et"
+        }
+       }
+      }
+     }
+    }
+   }
    m_aBaseCallsigns {
     SCR_MilitaryBaseCallsign "{60EF51B673614AAB}" {
      m_sCallsign "Point Yellostone"

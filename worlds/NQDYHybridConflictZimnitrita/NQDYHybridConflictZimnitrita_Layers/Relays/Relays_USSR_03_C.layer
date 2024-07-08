@@ -1,5 +1,5 @@
 $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
- USSR_13_Relay_tower {
+ USSR_13_Relay_ElectricPowerStation_tower {
   components {
    SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
     m_sBaseName ""
@@ -25,7 +25,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_10"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -45,7 +45,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
     angleY -23.949
    }
    $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_13_Relay_tower_APS_partol_01 {
+    USSR_13_Relay_ElectricPowerStation_tower_APS_partol_01 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -55,7 +55,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords -9.944 0 -2.89
     }
-    USSR_13_Relay_tower_APS_partol_02 {
+    USSR_13_Relay_ElectricPowerStation_tower_APS_partol_02 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -65,7 +65,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords -121.378 -0.049 -36.574
     }
-    USSR_13_Relay_tower_APS_partol_03 {
+    USSR_13_Relay_ElectricPowerStation_tower_APS_partol_03 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -75,7 +75,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords -2.54 -34.059 175.539
     }
-    USSR_13_Relay_tower_APS_partol_04 {
+    USSR_13_Relay_ElectricPowerStation_tower_APS_partol_04 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -114,7 +114,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -203,7 +203,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -292,7 +292,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_07"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -389,7 +389,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
    }
   }
  }
- USSR_17_Relay_tower {
+ USSR_17_Relay_Nienia_ne_tower {
   components {
    SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {
     m_sBaseName ""
@@ -415,7 +415,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_10"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -435,7 +435,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
     angleY -23.949
    }
    $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_17_Relay_tower_APS_partol_01 {
+    USSR_17_Relay_Nienia_ne_tower_APS_partol_01 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -445,7 +445,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords 8.618 -0.683 -5.196
     }
-    USSR_17_Relay_tower_APS_partol_02 {
+    USSR_17_Relay_Nienia_ne_tower_APS_partol_02 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -455,7 +455,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords -40.248 17.447 212.564
     }
-    USSR_17_Relay_tower_APS_partol_03 {
+    USSR_17_Relay_Nienia_ne_tower_APS_partol_03 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -465,7 +465,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
      coords 182.554 21.593 -54.656
     }
-    USSR_17_Relay_tower_APS_partol_04 {
+    USSR_17_Relay_Nienia_ne_tower_APS_partol_04 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -503,7 +503,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -593,7 +593,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_06"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -682,7 +682,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -768,7 +768,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_06"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {

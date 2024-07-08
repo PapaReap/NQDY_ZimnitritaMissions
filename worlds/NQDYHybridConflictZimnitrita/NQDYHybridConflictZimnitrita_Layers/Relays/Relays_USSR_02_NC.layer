@@ -25,7 +25,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -114,7 +114,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -203,7 +203,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -297,7 +297,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -392,7 +392,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_Relay03"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {
@@ -488,7 +488,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AISmartActionComponent "{61B553C317A548F7}" {
       AIBehaviorTree "{5650FFC80B622F10}AI/BehaviorTrees/SmartActions/SA_CaptureRelay.bt"
       Tags {
-       "CaptureRelay_08"
+       "CaptureRelay"
       }
      }
      ActionsManagerComponent "{5C727AD65C3206FA}" {

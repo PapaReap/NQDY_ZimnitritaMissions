@@ -1,4 +1,14 @@
 SCR_AIWorld : "{551907F0C9AE6F12}Prefabs/AI/SCR_AIWorld_Zimnitrita.et" {
+ components {
+  NavmeshWorldComponent "{610ECD235C57BE64}" {
+   Enabled 1
+   NavmeshSettings ChimeraNavmeshWorld "{610ECD235C57BCC9}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{61CE17B5C8B26746}" {
+     NavmeshFile "{FDDCD33CDB4E8BD8}World/Data/Vehicle_NavmeshZimnitrita.nmn"
+    }
+   }
+  }
+ }
  coords 14304.14 49.563 12916.365
 }
 PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {

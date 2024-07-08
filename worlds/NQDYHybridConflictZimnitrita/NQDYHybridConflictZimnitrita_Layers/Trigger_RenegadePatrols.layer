@@ -84,14 +84,6 @@ $grp PR_AIPatrolTrigger {
        coords -772.629 -3.613 -1441.704
        CompletionRadius 10
       }
-      WP_01_07_Patrol {
-       components {
-        Hierarchy "{61061E09F5DC31C0}" {
-        }
-       }
-       coords 824.925 39.872 -2038.184
-       CompletionRadius 10
-      }
       WP_01_03_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
@@ -100,26 +92,26 @@ $grp PR_AIPatrolTrigger {
        coords -2569.728 16.586 -1081.733
        CompletionRadius 10
       }
-      WP_01_09_Patrol {
+      WP_01_10_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
        coords 717.446 18.22 -852.79
       }
-      WP_01_10_Patrol {
+      WP_01_11_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords 111.177 7.981 -262.541
+       coords 327.121 12.175 -866.883
       }
-      WP_01_12_Patrol {
+      WP_01_13_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -1068.278 31.963 -170.711
+       coords -822.656 -9.356 -1017.677
       }
      }
      SCR_AIWaypoint WP_01_00_Spawn : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
@@ -141,7 +133,7 @@ $grp PR_AIPatrolTrigger {
        Autocomplete 1
        CompletionType Any
       }
-      WP_01_08_SD_Base_village_nw {
+      WP_01_09_SD_Base_village_nw {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
@@ -154,7 +146,7 @@ $grp PR_AIPatrolTrigger {
         m_holdingTime 100
        }
       }
-      WP_01_11_SD_Base_Harbor_w {
+      WP_01_12_SD_Base_Harbor_w {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
@@ -178,24 +170,38 @@ $grp PR_AIPatrolTrigger {
        CompletionType Any
       }
      }
-     SCR_SmartActionWaypoint WP_01_07_CaptureRelay_Kromzova_e_tower : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
-      components {
-       Hierarchy "{60F61A462CDAB87F}" {
+     $grp SCR_SmartActionWaypoint : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
+      WP_01_07_CaptureRelay_Kromzova_e_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
        }
+       coords -2056.694 60.872 -854.43
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_01_Relay_Kromzova_e_tower"
+       m_sSmartActionTag "CaptureRelay"
       }
-      coords -2056.694 60.872 -854.43
-      AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-      CompletionRadius 1.5
-      Autocomplete 1
-      m_sStaticEntityName "USSR_01_Relay_Kromzova_e_tower"
-      m_sSmartActionTag "CaptureRelay"
+      WP_01_08_CaptureRelay_Airport_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords 776.217 39.871 -2138.762
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_04_Relay_Airport_tower"
+       m_sSmartActionTag "CaptureRelay"
+      }
      }
     }
    }
   }
  }
  Set_02_NC_WP_Trigger {
-  coords 13361.237 64.841 12203.505
+  coords 13913.38 49.56 13442.268
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -252,7 +258,7 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF331A32A28}" {
      }
     }
-    coords -182.133 5.179 338.423
+    coords -4033.51 25.189 -1908.83
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       WP_02_01_Patrol {
@@ -260,18 +266,52 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords 219.345 -0.253 -210.716
+       coords -613.135 -15.817 622.801
        CompletionRadius 10
        Autocomplete 1
+      }
+      WP_02_04_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords -1502.04 -67.342 1142.737
+       CompletionRadius 10
+       Autocomplete 1
+      }
+      WP_02_05_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords -1627.293 -64.564 671.735
+       CompletionRadius 10
+      }
+      WP_02_08_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords -331.932 -67.244 -1405.282
+       CompletionRadius 10
       }
       WP_02_03_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -230.21 -64.624 -898.271
+       coords -1401.516 -22.436 1582.172
+      }
+      WP_03_07_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords 684.258 19.723 -3785.147
+       angleX 0.448
+       angleY 0.004
+       angleZ 0.448
        CompletionRadius 10
-       Autocomplete 1
       }
      }
      SCR_AIWaypoint WP_02_00_Spawn : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
@@ -279,50 +319,70 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F364A765D4182B}" {
        }
       }
-      coords -79.956 -2.74 -13.744
+      coords -8.167 0.496 5.239
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
       Autocomplete 1
      }
      $grp SCR_TimedWaypoint : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
-      WP_02_02_SD_Niemenkyla {
+      WP_02_06_SD_ElectricRelay {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 1071.042 -93.282 -339.179
+       coords -797.904 59.064 -430.212
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 200
+       }
       }
-      WP_02_05_SD_Jokela {
+      WP_02_07_SD_SartavaHarbor {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -204.228 -95.64 -1510.663
+       coords -1447.963 -69.454 -1395.18
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 120
+       }
       }
      }
-     SCR_SmartActionWaypoint WP_02_04_CaptureRelay_Makiinpaallys_tower : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
-      components {
-       Hierarchy "{60F61A462CDAB87F}" {
+     $grp SCR_SmartActionWaypoint : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
+      WP_02_02_CaptureRelay_Lake_w_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
        }
+       coords -192.483 -16.968 1683.809
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_06_Relay_Lake_w_tower"
+       m_sSmartActionTag "CaptureRelay"
       }
-      coords 175.127 -7.069 -347.692
-      AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-      CompletionRadius 3
-      Autocomplete 1
-      m_sStaticEntityName "Relay04_Makiinpaallys_tower"
-      m_sSmartActionTag "CapturePoint_Relay04"
+      WP_02_09_CaptureRelay_Soperk_w_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords 465.741 -57.901 406.713
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_08_Relay_Soperk_w_tower"
+       m_sSmartActionTag "CaptureRelay"
+      }
      }
     }
    }
   }
  }
  Set_03_C_WP_Trigger {
-  coords 14945.138 70.251 8007.678
+  coords 10767.424 79.495 8232.123
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -379,7 +439,7 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF335C72F01}" {
      }
     }
-    coords 703.179 -52.336 571.167
+    coords 2.795 -0.499 2.258
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       WP_03_01_Patrol {
@@ -387,15 +447,45 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -478.561 46.519 -120.007
+       coords -1791.479 -32.479 -827.012
+       angleZ -1.343
        CompletionRadius 10
       }
-      WP_03_04_Patrol {
+      WP_03_05_Patrol {
        components {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -378.666 37.302 -1020.41
+       coords -1023.222 -5.626 -735.818
+       angleX 0.448
+       angleY 0.004
+       angleZ 0.448
+       CompletionRadius 10
+      }
+      WP_03_03_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords -1266.111 -5.019 -686.415
+       CompletionRadius 10
+      }
+      WP_03_08_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords 865.727 -19.113 1000.854
+       angleZ -1.343
+       CompletionRadius 10
+      }
+      WP_03_09_Patrol {
+       components {
+        Hierarchy "{61061E09F5DC31C0}" {
+        }
+       }
+       coords -814.907 -13.022 497.924
+       angleZ -1.343
        CompletionRadius 10
       }
      }
@@ -404,29 +494,104 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F364A765D4182B}" {
        }
       }
-      coords 81.867 -5.633 29.078
+      coords -2089.783 -24.097 -426.576
+      angleX 11.398
+      angleY -0.993
+      angleZ -5.011
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
      }
      $grp SCR_TimedWaypoint : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
-      WP_03_02_SD_Haukkavuori {
+      WP_03_04_SD_Barachuk {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -1257.259 114.519 471.625
+       coords -799.16 -5.342 -99.556
+       angleX 5.693
+       angleY 0.687
+       angleZ 6.892
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 300
+       }
       }
       WP_03_03_SD_Kiiskinkyla {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 343.836 -2.593 -1139.157
+       coords 343.836 -103.776 -1139.156
+       angleX -30.621
+       angleY -5.387
+       angleZ 10.489
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
+      }
+      WP_03_07_SD_MilitaryBarracks {
+       components {
+        Hierarchy "{6120496DC986D784}" {
+        }
+       }
+       coords -103.03 -5.816 563.955
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       Autocomplete 1
+       CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 180
+       }
+      }
+     }
+     $grp SCR_SmartActionWaypoint : "{EAAE93F98ED5D218}Prefabs/AI/Waypoints/AIWaypoint_CaptureRelay.et" {
+      WP_03_02_CaptureRelay_DarkForest_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords -1910.504 12.52 -1011.582
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_19_Relay_DarkForest_tower"
+       m_sSmartActionTag "CaptureRelay"
+      }
+      WP_03_06_CaptureRelay_ElectricRelay_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords -783.406 43.817 -1146.775
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_20_Relay_ElectricRelay_tower"
+       m_sSmartActionTag "CaptureRelay"
+      }
+      WP_03_10_CaptureRelay_ElectricPowerStation_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords -1875.209 27.535 963.251
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_13_Relay_ElectricPowerStation_tower"
+       m_sSmartActionTag "CaptureRelay"
+      }
+      WP_03_11_CaptureRelay_Nienia_ne_tower {
+       components {
+        Hierarchy "{60F61A462CDAB87F}" {
+        }
+       }
+       coords -2117.461 -30.362 11.053
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+       Autocomplete 1
+       m_sStaticEntityName "USSR_17_Relay_Nienia_ne_tower"
+       m_sSmartActionTag "CaptureRelay"
       }
      }
     }
@@ -491,7 +656,10 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF3384F5D64}" {
      }
     }
-    coords -97.073 7.739 56.848
+    coords -97.073 7.988 56.848
+    angleX 18.819
+    angleY -4.429
+    angleZ -13.5
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       WP_04_01_Patrol {
@@ -499,7 +667,9 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords 39.423 -52.046 934.347
+       coords 36.336 -326.07 875.79
+       angleX -19.315
+       angleZ 14.555
        CompletionRadius 10
       }
       WP_04_03_Patrol {
@@ -507,7 +677,10 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -945.445 6.613 546.151
+       coords -924.076 8.176 581.592
+       angleX -18.877
+       angleY 0.097
+       angleZ 11.839
        CompletionRadius 10
       }
      }
@@ -516,7 +689,10 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F364A765D4182B}" {
        }
       }
-      coords 611.963 -54.896 618.164
+      coords 583.71 -386.751 519.48
+      angleX -18.889
+      angleY 0.14
+      angleZ 17.187
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
      }
      $grp SCR_TimedWaypoint : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
@@ -525,7 +701,10 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 165.776 29.117 238.023
+       coords 162.238 -110.962 213.328
+       angleX -21.06
+       angleY -0.424
+       angleZ 12.912
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
@@ -535,7 +714,9 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 653.286 -52.782 -602.596
+       coords 628.571 27.408 -628.931
+       angleX -19.315
+       angleZ 19.449
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
@@ -546,7 +727,9 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F61A462CDAB87F}" {
        }
       }
-      coords -529.137 -20.663 1228.273
+      coords -518.041 -304.189 1194.916
+      angleX -19.315
+      angleZ 12.766
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
       CompletionRadius 3
       Autocomplete 1
@@ -615,7 +798,7 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF33C9871EA}" {
      }
     }
-    coords -68.785 -6.595 131.305
+    coords -68.785 -0.016 131.305
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       WP_05_03_Patrol {
@@ -623,7 +806,7 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords 324.835 -54.705 -570.223
+       coords 324.835 0.344 -570.223
        CompletionRadius 10
        Autocomplete 1
       }
@@ -632,7 +815,10 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{61061E09F5DC31C0}" {
         }
        }
-       coords -209.423 6.659 40.627
+       coords -209.423 4.136 40.627
+       angleX -7.882
+       angleY 0.992
+       angleZ -7.193
        CompletionRadius 10
        Autocomplete 1
       }
@@ -651,7 +837,8 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F364A765D4182B}" {
        }
       }
-      coords 461.828 -3.353 -45.95
+      coords 461.828 -0.496 -45.95
+      angleX -2.684
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
       Autocomplete 1
      }
@@ -661,7 +848,10 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -793.558 -83.412 -563.702
+       coords -793.558 6.914 -563.702
+       angleX -2.236
+       angleY 0.035
+       angleZ -0.896
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
@@ -671,7 +861,10 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 405.869 -85.936 -1000.805
+       coords 405.869 -35.884 -1000.805
+       angleX 1.783
+       angleY -0.112
+       angleZ -3.578
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
@@ -681,7 +874,7 @@ $grp PR_AIPatrolTrigger {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 1104.064 -86.374 -38.226
+       coords 1104.065 -64.188 -38.226
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        Autocomplete 1
        CompletionType Any
@@ -692,7 +885,10 @@ $grp PR_AIPatrolTrigger {
        Hierarchy "{60F61A462CDAB87F}" {
        }
       }
-      coords -62.853 50.49 468.284
+      coords -62.852 -3.773 468.284
+      angleX 2.683
+      angleY 0.042
+      angleZ 0.896
       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
       CompletionRadius 3
       Autocomplete 1
@@ -702,30 +898,5 @@ $grp PR_AIPatrolTrigger {
     }
    }
   }
- }
-}
-$grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
- WP_01_14_Patrol {
-  components {
-   Hierarchy "{61061E09F5DC31C0}" {
-   }
-  }
-  coords 12997.503 34.955 16139.136
-  CompletionRadius 10
- }
- WP_01_16_Patrol {
-  components {
-   Hierarchy "{61061E09F5DC31C0}" {
-   }
-  }
-  coords 13127.636 15.892 16373.146
-  CompletionRadius 10
- }
- WP_01_13_Patrol {
-  components {
-   Hierarchy "{61061E09F5DC31C0}" {
-   }
-  }
-  coords 12886.597 13.925 15398.895
  }
 }
