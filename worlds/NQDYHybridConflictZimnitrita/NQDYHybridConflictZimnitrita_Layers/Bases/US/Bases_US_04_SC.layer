@@ -34,8 +34,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 8171.261 4.634 5141.858
-  angleY -130.639
+  coords 8171.261 4.634 5141.857
   {
    GenericEntity US_10_Base_Vrana_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -100,8 +99,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 16045.54 7.264 5954.389
-  angleY -110.183
+  coords 16047.306 6.779 5964.289
   {
    GenericEntity US_09_Base_Valadim_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"

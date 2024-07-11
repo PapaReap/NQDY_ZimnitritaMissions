@@ -615,12 +615,12 @@ GenericEntity : "{D4DDD345A352E97B}Prefabs/Compositions/Slotted/SlotFlatSmall/He
     SCR_ResourceComponent "{5E3298BE225F0743}" {
      m_aConsumers {
       SCR_ResourceConsumer "{5E3298A9D628A54F}" {
-       m_fResourceRange 3.5
+       m_fResourceRange 4.5
       }
      }
      m_aGenerators {
       SCR_ResourceGenerator "{5E3298A9DB3BDCA7}" {
-       m_fStorageRange 3.5
+       m_fStorageRange 4.5
       }
      }
     }

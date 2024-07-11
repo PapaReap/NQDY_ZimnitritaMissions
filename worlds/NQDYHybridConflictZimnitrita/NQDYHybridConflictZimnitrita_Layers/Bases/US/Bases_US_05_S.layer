@@ -35,7 +35,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 11185.831 6.013 3652.106
-  angleY 129.84
   {
    GenericEntity US_11_Base_Gruwice_s_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -101,7 +100,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 11733.381 4.796 3413.306
-  angleY 27.96
   {
    GenericEntity US_12_Base_Gruwice_se_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -167,7 +165,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 10161.236 7.844 3062.422
-  angleY -24.743
   {
    GenericEntity US_13_Base_Detrany_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -233,7 +230,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 16086.292 22.781 3079.33
-  angleY 93.878
   {
    GenericEntity US_14_Base_Varpadany_se_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -299,7 +295,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 12334.073 5.554 2236.942
-  angleY 91.528
   {
    GenericEntity US_15_Base_Szarlota_w_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -317,7 +312,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -0 0.135 14
+    coords 0 0.135 14
    }
    GenericEntity {
     ID "5EEEC471C30578EB"
@@ -365,7 +360,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 13795.084 27.969 534.771
-  angleY -0.724
   {
    GenericEntity US_16_Base_TrainStation_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -431,7 +425,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 15033.044 27.969 290.543
-  angleY 61.788
   {
    GenericEntity US_17_Base_Glochy_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"

@@ -33,7 +33,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 10534.741 16.595 4595.96
+  coords 10534.741 15.594 4598.102
   {
    GenericEntity USSR_22_Base_Gruwice_militarybase_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -42,7 +42,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 69.404 -1.032 -21.508
+    coords 69.404 -0.032 -21.508
    }
    GenericEntity USSR_22_Base_Gruwice_militarybase_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -54,7 +54,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 113.577 0.545 -45.672
+    coords 113.577 1.447 -45.672
    }
    $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     USSR_22_Base_Gruwice_militarybase_APS_patrol_02 {
@@ -67,7 +67,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords -117.441 3.06 169.508
+     coords -117.441 3.575 169.508
     }
     USSR_22_Base_Gruwice_militarybase_APS_patrolBackup_02 {
      components {
@@ -80,9 +80,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords -6.332 4.406 111.046
+     coords -6.332 5.297 111.046
     }
-    {
+    USSR_22_Base_Gruwice_militarybase_APS_patrol_03 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
@@ -130,7 +130,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 8919.179 56.021 5270.922
-  angleY 135.113
   {
    GenericEntity USSR_21_Base_Vrana_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -142,7 +141,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -44.554 -5.795 76.557
+    coords 100.636 -6.599 -28.182
    }
    GenericEntity USSR_21_Base_Vrana_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -154,7 +153,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -114.763 -6.583 -80.373
+    coords 25.56 -6.583 136.249
    }
    GenericEntity USSR_21_Base_Vrana_PR_APS_partol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
     components {
@@ -162,7 +161,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       m_eGroupType TEAM_MG
      }
     }
-    coords -91.273 -6.615 79.58
+    coords 120.827 -6.615 8.029
+    angleY 135.113
     {
      SCR_AIWaypoint USSR_21_Base_Vrana_WP_01 {
       ID "60E2393A8223D17F"
@@ -263,8 +263,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -529.814 11.99 -5.38
-    angleY -135.113
+    coords 371.576 11.99 377.707
    }
   }
  }
@@ -299,8 +298,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 10225.606 10.323 5941.433
-  angleY -138.374
+  coords 10222.731 10.348 5942.138
   {
    GenericEntity USSR_18_Base_Gruwice_n_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -326,7 +324,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       m_eGroupType TEAM_MG
      }
     }
-    coords -85.25 -0.323 79.581
+    coords -82.376 -0.348 78.876
     {
      SCR_AIWaypoint USSR_18_Base_Gruwice_n_WP_01 {
       ID "60E2393A8223D17F"
@@ -491,7 +489,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 11707.554 19.641 5763.205
-  angleY 160.372
   {
    GenericEntity USSR_19_Base_RailwayGruwice_ne_patrol_01 {
     ID "5CCED514A5908822"
@@ -509,10 +506,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -71.814 0.846 82.717
+    coords 59.901 -2.056 56.958
    }
    GenericEntity USSR_19_Base_RailwayGruwice_ne_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords 88.144 0.437 52.324
+    coords -65.447 0.437 -78.893
+    angleY 160.372
     {
      SCR_AIWaypoint USSR_19_Base_RailwayGruwice_ne_WP_01 {
       ID "60E2393A8223D17F"

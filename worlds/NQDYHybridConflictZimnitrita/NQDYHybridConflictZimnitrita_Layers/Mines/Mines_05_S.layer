@@ -1,388 +1,191 @@
-$grp PR_SpawnPrefabTrigger {
- Mines_05_S_Trigger {
-  coords 6959.247 100.541 1970.824
-  TriggerShapeType Sphere
-  SphereRadius 5
-  ShapeColor 0.046 0 1 0.078
-  TriggerActivationType "First change"
-  PeriodicQueries 1
-  UpdatePeriod 1.1
-  m_bRefreshToggle 1
-  m_bDebugLogs 1
-  m_bUsePersistence 1
-  m_sPersistentObject "PR_PersistObject_Mines_05_S"
-  m_bNeutralizePersistentObject 1
-  m_aOverrideOptions {
-   PR_OverrideTriggerActivation "{617470800EE7ED8F}" {
-    m_bOverrideActivationPresence 1
-   }
-  }
-  m_aPrefabDetails {
-   PR_PrefabDetails "{6174709767F5E7C6}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_01_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
-   }
-   PR_PrefabDetails "{6174709A6CA8B8AF}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_02_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
-   }
-   PR_PrefabDetails "{61756167A74DDA5B}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_03_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
-   }
-  }
-  {
-   GenericEntity PR_PersistObject_Mines_05_S : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    components {
-     SCR_MineInventoryItemComponent "{61755BB46F93131A}" {
-      Enabled 0
-     }
-    }
-    coords 7.309 0.012 -6.182
-   }
-   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Set_01_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
-      }
-     }
-     coords -1.966 -3.684 1170.557
-     {
-      $grp GenericEntity {
-       Set_01_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -376.685 -21.066 -963.795
-       }
-       Set_01_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 1.584 -1.171 -1107.704
-       }
-       Set_01_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 257.167 -56.246 -1608.294
-       }
-       Set_01_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 847.653 -86.861 -1473.398
-       }
-       Set_01_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -737.386 -48.42 -933.849
-       }
-      }
-     }
-    }
-    Set_02_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
-      }
-     }
-     coords -77.909 0.001 116.641
-     {
-      $grp GenericEntity {
-       Set_02_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 783.366 -94.806 -658.541
-       }
-       Set_02_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 648.119 -60.781 -409.151
-       }
-       Set_02_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 416.135 -76.787 -811.945
-       }
-       Set_02_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -742.811 -86.344 -322.217
-       }
-       Set_02_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 1012.706 -92.367 -145.656
-       }
-      }
-     }
-    }
-    Set_03_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
-      }
-     }
-     coords 120.112 -3.19 -840.575
-     {
-      $grp GenericEntity {
-       Set_03_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 373.948 -63.666 376.387
-       }
-       Set_03_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 27.188 -26.336 1139.64
-       }
-       Set_03_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 159.687 -21.588 1170.143
-       }
-       Set_03_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 540.993 -31.748 1413.714
-       }
-       Set_03_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -497.993 -49.674 517.465
-       }
-      }
-     }
-    }
-   }
+PR_SpawnPrefabTrigger Mines_05_S_Trigger {
+ coords 6959.247 100.541 1970.824
+ TriggerShapeType Sphere
+ SphereRadius 5
+ ShapeColor 0.046 0 1 0.078
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 1.1
+ m_bRefreshToggle 1
+ m_bDebugLogs 1
+ m_bUsePersistence 1
+ m_sPersistentObject "PR_PersistObject_Mines_05_S"
+ m_bNeutralizePersistentObject 1
+ m_aOverrideOptions {
+  PR_OverrideTriggerActivation "{617470800EE7ED8F}" {
+   m_bOverrideActivationPresence 1
   }
  }
- Mines_05_S_Trigger {
-  coords 6959.247 100.541 1970.824
-  TriggerShapeType Sphere
-  SphereRadius 5
-  ShapeColor 0.046 0 1 0.078
-  TriggerActivationType "First change"
-  PeriodicQueries 1
-  UpdatePeriod 1.1
-  m_bRefreshToggle 1
-  m_bDebugLogs 1
-  m_bUsePersistence 1
-  m_sPersistentObject "PR_PersistObject_Mines_05_S"
-  m_bNeutralizePersistentObject 1
-  m_aOverrideOptions {
-   PR_OverrideTriggerActivation "{617470800EE7ED8F}" {
-    m_bOverrideActivationPresence 1
+ m_aPrefabDetails {
+  PR_PrefabDetails "{6174709767F5E7C6}" {
+   m_PrefabType "AT Mine USSR"
+   m_aObjectLocationsToSpawnOn {
+    "Set_01_S_Mines"
    }
+   m_bUseRandomPositions 1
+   m_fRandomPercentage 40
   }
-  m_aPrefabDetails {
-   PR_PrefabDetails "{6174709767F5E7C6}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_01_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
+  PR_PrefabDetails "{6174709A6CA8B8AF}" {
+   m_PrefabType "AT Mine USSR"
+   m_aObjectLocationsToSpawnOn {
+    "Set_02_S_Mines"
    }
-   PR_PrefabDetails "{6174709A6CA8B8AF}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_02_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
-   }
-   PR_PrefabDetails "{61756167A74DDA5B}" {
-    m_PrefabType "AT Mine USSR"
-    m_aObjectLocationsToSpawnOn {
-     "Set_03_S_Mines"
-    }
-    m_bUseRandomPositions 1
-    m_fRandomPercentage 40
-   }
+   m_bUseRandomPositions 1
+   m_fRandomPercentage 40
   }
-  {
-   GenericEntity PR_PersistObject_Mines_05_S : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+  PR_PrefabDetails "{61756167A74DDA5B}" {
+   m_PrefabType "AT Mine USSR"
+   m_aObjectLocationsToSpawnOn {
+    "Set_03_S_Mines"
+   }
+   m_bUseRandomPositions 1
+   m_fRandomPercentage 40
+  }
+ }
+ {
+  GenericEntity PR_PersistObject_Mines_05_S : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   components {
+    SCR_MineInventoryItemComponent "{61755BB46F93131A}" {
+     Enabled 0
+    }
+   }
+   coords 7.309 0.012 -6.182
+  }
+  $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+   Set_01_S_Mines {
     components {
-     SCR_MineInventoryItemComponent "{61755BB46F93131A}" {
-      Enabled 0
+     Hierarchy "{6174708CEDBE04F7}" {
      }
     }
-    coords 7.309 0.012 -6.182
+    coords -1.966 -3.684 1170.557
+    {
+     $grp GenericEntity {
+      Set_01_S_Mine_02 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords -376.685 -21.066 -963.795
+      }
+      Set_01_S_Mine_03 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords 1.584 -1.171 -1107.704
+      }
+      Set_01_S_Mine_04 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords 257.167 -56.246 -1608.294
+      }
+      Set_01_S_Mine_05 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords 847.653 -86.861 -1473.398
+      }
+      Set_01_S_Mine_01 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords -737.386 -48.42 -933.849
+      }
+     }
+    }
    }
-   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Set_01_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
-      }
+   Set_02_S_Mines {
+    components {
+     Hierarchy "{6174708CEDBE04F7}" {
      }
-     coords -1.966 -3.684 1170.557
-     {
-      $grp GenericEntity {
-       Set_01_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+    }
+    coords -77.909 0.001 116.641
+    {
+     $grp GenericEntity {
+      Set_02_S_Mine_02 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords -376.685 -21.066 -963.795
        }
-       Set_01_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 783.366 -94.806 -658.541
+      }
+      Set_02_S_Mine_03 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 1.584 -1.171 -1107.704
        }
-       Set_01_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 648.119 -60.781 -409.151
+      }
+      Set_02_S_Mine_04 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 257.167 -56.246 -1608.294
        }
-       Set_01_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 416.135 -76.787 -811.945
+      }
+      Set_02_S_Mine_05 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 847.653 -86.861 -1473.398
        }
-       Set_01_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords -742.811 -86.344 -322.217
+      }
+      Set_02_S_Mine_01 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords -737.386 -48.42 -933.849
        }
+       coords 1012.706 -92.367 -145.656
       }
      }
     }
-    Set_02_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
-      }
-     }
-     coords -77.909 0.001 116.641
-     {
-      $grp GenericEntity {
-       Set_02_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 783.366 -94.806 -658.541
-       }
-       Set_02_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 648.119 -60.781 -409.151
-       }
-       Set_02_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 416.135 -76.787 -811.945
-       }
-       Set_02_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -742.811 -86.344 -322.217
-       }
-       Set_02_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords 1012.706 -92.367 -145.656
-       }
-      }
+   }
+   Set_03_S_Mines {
+    components {
+     Hierarchy "{6174708CEDBE04F7}" {
      }
     }
-    Set_03_S_Mines {
-     components {
-      Hierarchy "{6174708CEDBE04F7}" {
+    coords 120.112 -3.19 -840.575
+    {
+     $grp GenericEntity {
+      Set_03_S_Mine_02 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
+        }
+       }
+       coords 373.948 -63.666 376.387
       }
-     }
-     coords 120.112 -3.19 -840.575
-     {
-      $grp GenericEntity {
-       Set_03_S_Mine_02 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+      Set_03_S_Mine_03 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 373.948 -63.666 376.387
        }
-       Set_03_S_Mine_03 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 27.188 -26.336 1139.64
+      }
+      Set_03_S_Mine_04 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 27.188 -26.336 1139.64
        }
-       Set_03_S_Mine_04 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 159.687 -21.588 1170.143
+      }
+      Set_03_S_Mine_05 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 159.687 -21.588 1170.143
        }
-       Set_03_S_Mine_05 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
+       coords 540.993 -31.748 1413.714
+      }
+      Set_03_S_Mine_01 {
+       components {
+        Hierarchy "{6174708CC8E64666}" {
         }
-        coords 540.993 -31.748 1413.714
        }
-       Set_03_S_Mine_01 {
-        components {
-         Hierarchy "{6174708CC8E64666}" {
-         }
-        }
-        coords -497.993 -49.674 517.465
-       }
+       coords -497.993 -49.674 517.465
       }
      }
     }

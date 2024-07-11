@@ -34,7 +34,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 15689.141 64.21 1556.132
-  angleY 162.016
   {
    GenericEntity USSR_25_Base_Glochy_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -43,7 +42,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 38.464 0.321 194.859
+    coords 31.947 0.321 -215.048
    }
    GenericEntity USSR_25_Base_Glochy_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -52,10 +51,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 93.728 0.286 -95.621
+    coords -84.572 -0.054 144.103
    }
    GenericEntity USSR_25_Base_Glochy_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords -79.658 0.021 115.557
+    coords 111.445 0.021 -85.317
+    angleY 162.016
     {
      SCR_AIWaypoint USSR_25_Base_Glochy_WP_01 {
       ID "60E2393A8223D17F"
@@ -159,7 +159,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
  }
- USSR_26_Base_trainstation {
+ USSR_26_Base_Trainstation {
   components {
    SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
    }
@@ -193,29 +193,28 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 12400.604 14.146 400.499
-  angleY 179.595
   {
-   GenericEntity USSR_26_Base_trainstation_APS_patrol_01 {
+   GenericEntity USSR_26_Base_Trainstation_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords -69.66 -2.115 12
+    coords 47.217 -2.115 -31.41
    }
-   GenericEntity USSR_26_Base_trainstation_APS_patrolBackup_01 {
+   GenericEntity USSR_26_Base_Trainstation_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 0.003 -3.292 -115.443
+    coords -17.353 -2.186 135.805
    }
   }
  }
- USSR_24_Base_powerplant {
+ USSR_24_Base_Powerplant {
   components {
    SCR_CampaignBuildingProviderComponent "{61B553CF94050021}" {
    }
@@ -249,25 +248,24 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 14129.676 39.455 3498.558
-  angleY 179.595
   {
-   GenericEntity USSR_24_Base_powerplant_APS_patrol_01 {
+   GenericEntity USSR_24_Base_Powerplant_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 0 -0.368 -54.591
+    coords 0 -0.424 -84.208
    }
-   GenericEntity USSR_24_Base_powerplant_APS_patrolBackup_01 {
+   GenericEntity USSR_24_Base_Powerplant_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 0 -0.394 52.726
+    coords 0 -2.457 132.104
    }
    GenericEntity {
     ID "5EEEC471C30578EB"

@@ -30,8 +30,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 15641.404 109.139 8555.5
-  angleY -169.409
+  coords 15641.404 109.138 8555.5
   {
    GenericEntity USSR_16_Base_North_e_militarybase_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -40,6 +39,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
+    coords 10.667 10.931 54.905
    }
    GenericEntity USSR_16_Base_North_e_militarybase_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -48,11 +48,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
+    coords -47.801 -7.952 -40.376
    }
    GenericEntity USSR_16_Base_North_e_militarybase_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords -42.182 25.456 -118.609
+    coords 63.263 25.456 108.836
     angleX 6.218
-    angleY -0.39
+    angleY -169.799
     angleZ -3.598
     {
      SCR_AIWaypoint USSR_16_Base_North_e_militarybase_WP_01 {
@@ -191,7 +192,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 13404.118 43.064 9143.912
-  angleY -74.543
   {
    GenericEntity USSR_13_Base_Niscova_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -200,7 +200,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 0.002 2.468 -52.672
+    coords 73.914 -1.037 -38.954
    }
    GenericEntity USSR_13_Base_Niscova_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -209,10 +209,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 61.725 -2.575 71.696
+    coords -47.117 -2.342 23.656
    }
    GenericEntity USSR_13_Base_Niscova_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords 18.812 -1.292 15.231
+    coords -9.666 -1.292 22.191
+    angleY -74.543
     {
      SCR_AIWaypoint USSR_13_Base_Niscova_WP_01 {
       ID "60E2393A8223D17F"
@@ -297,8 +298,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -146.293 7.283 -307.358
-    angleY 74.543
+    coords 257.252 7.283 -222.918
    }
   }
  }
@@ -522,8 +522,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 10633.476 65.674 8764.907
-  angleY 51.482
+  coords 10633.479 70 8764.907
   {
    GenericEntity USSR_14_Base_MilitaryBarracks_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -532,7 +531,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 50.799 -4.268 186.41
+    coords 175.196 -8.594 71.296
    }
    GenericEntity USSR_14_Base_MilitaryBarracks_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -541,7 +540,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -4.991 2.283 111.69
+    coords 91.852 -3.414 74.547
    }
    GenericEntity USSR_14_Base_MilitaryBarracks_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
     components {
@@ -549,7 +548,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       m_eGroupType TEAM_MG
      }
     }
-    coords -83.005 14.166 157.842
+    coords 71.803 9.839 163.24
+    angleY 51.482
     {
      SCR_AIWaypoint USSR_14_Base_MilitaryBarracks_WP_01 {
       ID "60E2393A8223D17F"
@@ -724,7 +724,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords 51.424 4.357 -7.031
+     coords 26.521 0.031 -44.613
+     angleY 51.482
     }
     USSR_14_Base_MilitaryBarracks_APS_patrol_03 {
      components {
@@ -737,7 +738,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords -80.821 4.358 -26.646
+     coords -71.183 0.031 46.642
+     angleY 51.482
     }
    }
   }
@@ -774,7 +776,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 9923.354 72.384 8066.123
-  angleY -162.683
   {
    GenericEntity USSR_17_Base_Barachuk_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -783,7 +784,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -98.961 5.883 10.759
+    coords 72.67 5.617 -46.112
    }
    GenericEntity USSR_17_Base_Barachuk_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -792,7 +793,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 83.432 -2.737 -112.993
+    coords -84.242 -1.853 84.805
    }
    GenericEntity USSR_17_Base_Barachuk_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
     components {
@@ -800,7 +801,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       m_eGroupType TEAM_MG
      }
     }
-    coords -183.396 5.792 -47.78
+    coords 189.304 5.792 -8.975
+    angleY -162.683
     {
      SCR_AIWaypoint USSR_17_Base_Barachuk_WP_01 {
       ID "60E2393A8223D17F"
@@ -902,8 +904,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -14.11 1.222 -61.405
-    angleY 162.683
+    coords 31.748 1.223 54.421
    }
   }
  }

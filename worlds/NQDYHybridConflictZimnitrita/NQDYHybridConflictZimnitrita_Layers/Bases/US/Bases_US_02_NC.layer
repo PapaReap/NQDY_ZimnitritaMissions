@@ -113,7 +113,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
   }
   coords 7843.721 3.158 12440.705
-  angleY -59.898
   {
    GenericEntity US_05_Base_Lake_w_APS_ussr_patrol {
     ID "5CCED514A5908822"
@@ -122,7 +121,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords -0 1.024 12
+    coords 0 1.024 12
     angleX 3.882
     angleY -0.337
     angleZ -4.972
@@ -148,7 +147,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    }
    SCR_CampaignSpawnPointGroup {
     ID "5C6696731466AF36"
-    coords -0 0 0
+    coords 0 0 0
     angleX 5.638
     angleY -0.44
     angleZ -4.475

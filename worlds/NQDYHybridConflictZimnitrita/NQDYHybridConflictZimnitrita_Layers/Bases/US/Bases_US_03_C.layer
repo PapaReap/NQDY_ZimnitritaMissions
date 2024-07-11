@@ -34,8 +34,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 7741.443 5.319 9174.999
-  angleY 82.202
+  coords 7781.829 3.14 9158.646
   {
    GenericEntity US_07_Base_ElectricPowerStation_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
@@ -100,34 +99,45 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 7600.395 0.745 7795.529
-  angleY -103.191
+  coords 7588.693 0.937 7792.709
   {
-   GenericEntity US_08_Base_Nienia_n_APS_ussr_patrol_01 {
+   GenericEntity US_08_Base_Nienia_n_APS_ussr_patrol2 {
     ID "5CCED514A5908822"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 0 0.193 12
+    coords 0 1.024 12
+    angleX 3.882
+    angleY -0.337
+    angleZ -4.972
    }
-   GenericEntity US_08_Base_Nienia_n_APS_ussr_patrolBackup_01 {
+   GenericEntity US_08_Base_Nienia_n_APS_ussr_patrolBackup2 {
     ID "606078EE23DE48AC"
     components {
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 0 0.205 14
+    coords 0 1.153 14
+    angleX 3.329
+    angleY -0.338
+    angleZ -5.799
    }
    GenericEntity {
     ID "5EEEC471C30578EB"
-    coords -2 -0.07 -3
+    coords -2 -0.484 -3
+    angleX 6.791
+    angleY -0.451
+    angleZ -3.81
    }
    SCR_CampaignSpawnPointGroup {
     ID "5C6696731466AF36"
-    coords 0 -0.001 0.001
+    coords 0 0 0
+    angleX 5.638
+    angleY -0.44
+    angleZ -4.475
    }
   }
  }

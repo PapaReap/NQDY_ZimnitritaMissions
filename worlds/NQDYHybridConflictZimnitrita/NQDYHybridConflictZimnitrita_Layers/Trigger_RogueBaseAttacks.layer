@@ -1,6 +1,6 @@
 $grp PR_AIPatrolTrigger {
  Set_01_N_Rogue_Trigger {
-  coords 12755.865 36.575 15768.449
+  coords 12552.208 26.662 15232.584
   TriggerShapeType Sphere
   TriggerActivationType "First change"
   PeriodicQueries 1
@@ -27,7 +27,7 @@ $grp PR_AIPatrolTrigger {
      PR_GroupWaypoints "{61B93EEC8B027752}" {
       m_bCycleWaypoints 1
       m_aWaypointCollection {
-       "Set_01_N_WP_01_Rivinkallio" "Set_01_N_WP_02_Suurkyla" "Set_01_N_WP_03_ArmeijanVarikko" "Set_01_N_WP_04_Niemenkyla" "Set_01_N_WP_05_Haukkavuori"
+       "Set_01_N_WP_01_Kromzova_n" "Set_01_N_WP_02_Harbor_w" "Set_01_N_WP_03_Kromzova" "Set_01_N_WP_04_Airport" "Set_01_N_WP_05_village_nw"
       }
       m_WaypointSortOrder "RAMDOM DIRECTION"
       m_SpawnCollections "RANDOM ONE"
@@ -51,7 +51,7 @@ $grp PR_AIPatrolTrigger {
   }
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Set_01_N_WP_01_Rivinkallio {
+    Set_01_N_WP_01_Kromzova_n {
      components {
       Hierarchy "{61077CF3467712C2}" {
       }
@@ -59,119 +59,137 @@ $grp PR_AIPatrolTrigger {
      coords -378.404 -92.686 2789.182
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       N_WP_01_Rivinkallio_01_Patrol {
+       N_WP_01_Kromzova_n_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 374.504 99.821 -2721.943
+        coords 239.957 119.48 -2499.344
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_01_Rivinkallio_02_Patrol {
+       N_WP_01_Kromzova_n_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 190.523 16.733 -1483.725
+        coords -487.146 118.831 -2482.267
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_01_Rivinkallio_03_Patrol {
+       N_WP_01_Kromzova_n_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -4.634 -0.002 15.278
+        coords -495.03 106.418 -2258.739
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       N_WP_01_Kromzova_n_04_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -969.561 136.613 -3104.569
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint N_WP_01_Rivinkallio_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint N_WP_01_Kromzova_n_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -11.867 -0.003 39.423
+       coords -1732.147 93.943 -2675.465
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_01_N_WP_02_Suurkyla {
+    Set_01_N_WP_02_Harbor_w {
      components {
       Hierarchy "{61077CF34A3E7177}" {
       }
      }
-     coords 393.948 -91.998 1196.042
+     coords 532.081 -15.944 599.303
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       N_WP_02_Suurkyla_01_Patrol {
+       N_WP_02_Harbor_w_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -411.743 98.79 -1117.06
+        coords -1019.764 -7.442 -1727.68
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_02_Suurkyla_04_Patrol {
+       N_WP_02_Harbor_w_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -15.854 -1.656 -26.284
+        coords 1574.585 39.424 -1248.176
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_02_Suurkyla_02_Patrol {
+       N_WP_02_Harbor_w_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -274.62 71.713 -888.592
+        coords -93.654 -1.007 -1024.998
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_02_Suurkyla_03_Patrol {
+       N_WP_02_Harbor_w_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -219.523 -0.642 -264.849
+        coords 958.572 38.844 -2188.455
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       N_WP_02_Harbor_w_06_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords 698.602 12.469 -1190.324
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint N_WP_02_Suurkyla_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint N_WP_02_Harbor_w_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 10.416 -2.359 -27.075
+       coords 241.658 -2.76 43.296
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_01_N_WP_03_ArmeijanVarikko {
+    Set_01_N_WP_03_Kromzova {
      components {
       Hierarchy "{61077CF34E167BF9}" {
       }
      }
-     coords -608.205 -89.374 867.006
+     coords -1597.251 16.478 -1084.762
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       N_WP_03_ArmeijanVarikko_01_Patrol {
+       N_WP_03_Kromzova_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 546.051 86.998 -801.319
+        coords 1874.368 -39.832 669.061
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_03_ArmeijanVarikko_04_Patrol {
+       N_WP_03_Kromzova_05_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
@@ -180,144 +198,144 @@ $grp PR_AIPatrolTrigger {
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_03_ArmeijanVarikko_02_Patrol {
+       N_WP_03_Kromzova_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 408.083 34.849 -692.329
+        coords 2913.119 6.425 -1781.49
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_03_ArmeijanVarikko_03_Patrol {
+       N_WP_03_Kromzova_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 409.407 28.662 -438.811
+        coords -599.084 -25.993 -2199.008
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint N_WP_03_ArmeijanVarikko_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint N_WP_03_Kromzova_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 3.712 -0.002 3.663
+       coords -648.067 -18.926 -54.051
        CompletionRadius 75
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_01_N_WP_04_Niemenkyla {
+    Set_01_N_WP_04_Airport {
      components {
       Hierarchy "{61077CF34D71DB2F}" {
       }
      }
-     coords 1185.876 -92.688 -363.585
+     coords 1011.186 39.217 -2748.709
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       N_WP_04_Niemenkyla_01_Patrol {
+       N_WP_04_Airport_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -1052.109 93.25 368.741
+        coords -3877.043 -8.063 727.912
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_04_Niemenkyla_05_Patrol {
+       N_WP_04_Airport_05_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -1.973 0 27.644
+        coords -493.496 -58.551 2368.322
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_04_Niemenkyla_03_Patrol {
+       N_WP_04_Airport_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -572.991 11.999 347.388
+        coords -3209.055 -43.237 -580.863
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_04_Niemenkyla_02_Patrol {
+       N_WP_04_Airport_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -776.664 70.446 398.25
-        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-        Autocomplete 1
-       }
-       N_WP_04_Niemenkyla_04_Patrol {
-        components {
-         Hierarchy "{60F364A765D4182B}" {
-         }
-        }
-        coords -177.481 2.741 308.251
+        coords -3331.591 -53.701 1621.298
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint N_WP_04_Niemenkyla_06_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint N_WP_04_Airport_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -23.235 -0.033 8.896
+       coords 390.479 -16.317 -115.153
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_01_N_WP_05_Haukkavuori {
+    Set_01_N_WP_05_village_nw {
      components {
       Hierarchy "{61077CF35016A340}" {
       }
      }
-     coords 406.738 22.874 -1110.735
+     coords 406.738 22.874 -1110.734
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       N_WP_05_Haukkavuori_01_Patrol {
+       N_WP_05_village_nw_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -279.899 -26.007 1068.646
+        coords -3270.19 8.631 -915.313
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_05_Haukkavuori_03_Patrol {
+       N_WP_05_village_nw_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -14.689 0 10.703
+        coords -1712.743 -23.837 -2701.534
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       N_WP_05_Haukkavuori_02_Patrol {
+       N_WP_05_village_nw_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 18.81 -30.477 410.758
+        coords -2613.811 -32.562 -2184.716
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       N_WP_05_village_nw_05_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -889.464 -46.314 -14.64
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint N_WP_05_Haukkavuori_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint N_WP_05_village_nw_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 10.445 0 -0.016
+       coords 1763.027 3.65 368.774
        Autocomplete 1
        CompletionType Any
       }
@@ -327,7 +345,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_02_C_Rogue_Trigger {
-  coords 14932.508 70.243 7999.724
+  coords 14631.62 104.69 9648.174
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -347,7 +365,7 @@ $grp PR_AIPatrolTrigger {
   m_iDelayTimerMax 1800
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEC7513F471}" {
-    m_GroupType "Group: Fire Team (4)"
+    m_GroupType "Group: AT Team (4)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEDE04F2640}" {
       m_bKeepGroupActive 1
@@ -357,7 +375,7 @@ $grp PR_AIPatrolTrigger {
      PR_GroupWaypoints "{61B93EEDE6540C61}" {
       m_bCycleWaypoints 1
       m_aWaypointCollection {
-       "Set_02_C_WP_06_Liiralahdenjarvi" "Set_02_C_WP_07_Kiiskinkyla" "Set_02_C_WP_08_Mustalovi" "Set_02_C_WP_09_Miettila"
+       "Set_02_C_WP_06_Andruhanov_n" "Set_02_C_WP_07_IndustrialZone" "Set_02_C_WP_08_village_ne" "Set_02_C_WP_09_Niscova" "Set_02_C_WP_10_Valadim"
       }
       m_WaypointSortOrder "RAMDOM DIRECTION"
       m_SpawnCollections "RANDOM ONE"
@@ -381,200 +399,307 @@ $grp PR_AIPatrolTrigger {
   }
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Set_02_C_WP_06_Liiralahdenjarvi {
+    Set_02_C_WP_06_Andruhanov_n {
      components {
       Hierarchy "{61077CF354A43430}" {
       }
      }
-     coords -539.785 15.139 913.353
+     coords 4.181 0.83 0.658
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       C_WP_06_Liiralahdenjarvi_01_Patrol {
+       C_WP_06_Andruhanov_n_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 483.954 3.225 -795.835
+        coords 515.003 42.173 1617.416
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_06_Liiralahdenjarvi_03_Patrol {
+       C_WP_06_Andruhanov_n_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 13.118 0.725 -35.693
+        coords -3417.135 -78.612 1607.46
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_06_Liiralahdenjarvi_02_Patrol {
+       C_WP_06_Andruhanov_n_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 216.025 14.908 -283.564
+        coords -1312.488 -36.852 1822.986
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_06_Andruhanov_n_05_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -1190.048 -61.521 -442.652
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_06_Andruhanov_n_06_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -164.7 -44.035 -972.742
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_06_Andruhanov_n_07_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords 1247.229 145.662 -67.944
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint C_WP_06_Liiralahdenjarvi_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint C_WP_06_Andruhanov_n_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -4.065 0.468 -8.901
+       coords -2304.233 -74.543 1201.774
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_02_C_WP_07_Kiiskinkyla {
+    Set_02_C_WP_07_IndustrialZone {
      components {
       Hierarchy "{61077CF35BC00D8C}" {
       }
      }
-     coords 722.588 -16.892 398.673
+     coords -1716.976 -71.776 -894.4
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       C_WP_07_Kiiskinkyla_01_Patrol {
+       C_WP_07_IndustrialZone_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -915.354 30.246 -367.034
+        coords 407.345 35.56 2714.331
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_07_Kiiskinkyla_04_Patrol {
+       C_WP_07_IndustrialZone_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -27.701 -3.555 23.487
+        coords -1265 25.915 473.557
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_07_Kiiskinkyla_02_Patrol {
+       C_WP_07_IndustrialZone_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -917.383 29.146 -44.422
+        coords -676.459 -1.926 2236.987
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_07_Kiiskinkyla_03_Patrol {
+       C_WP_07_IndustrialZone_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -242.94 11.449 197.62
+        coords -1373.372 10.46 1008.275
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_07_IndustrialZone_06_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords 2746.525 99.789 -82.954
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint C_WP_07_Kiiskinkyla_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint C_WP_07_IndustrialZone_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 3.035 -0.006 5.498
+       coords -555.286 -0.914 -96.533
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_02_C_WP_08_Mustalovi {
+    Set_02_C_WP_08_village_ne {
      components {
       Hierarchy "{61077CF3590ACCB8}" {
       }
      }
-     coords -1028.914 -16.442 -255.614
+     coords 982.325 -15.144 1055.323
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       C_WP_08_Mustalovi_01_Patrol {
+       C_WP_08_village_ne_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 902.744 13.352 269.878
+        coords -2287.485 -21.478 758.356
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_08_Mustalovi_03_Patrol {
+       C_WP_08_village_ne_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 22.179 0.002 19.3
+        coords -3109.232 -40.314 -845.547
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_08_Mustalovi_02_Patrol {
+       C_WP_08_village_ne_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 345.55 22.743 200.808
+        coords -3242.133 -58.319 244.198
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint C_WP_08_Mustalovi_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint C_WP_08_village_ne_03_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -4.051 -0.027 4.07
+       coords 170.94 25.354 -160.183
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_02_C_WP_09_Miettila {
+    Set_02_C_WP_09_Niscova {
      components {
       Hierarchy "{61077CF35DE8C413}" {
       }
      }
-     coords 584.812 77.258 -822.569
+     coords -1421.691 -69.029 -499.3
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       C_WP_09_Miettila_01_Patrol {
+       C_WP_09_Niscova_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -404.507 -88.51 788.985
+        coords 2512.199 69.589 1489.914
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_09_Miettila_03_Patrol {
+       C_WP_09_Niscova_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 2.818 -0.981 34.651
+        coords 1208.206 28.09 -561.086
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       C_WP_09_Miettila_02_Patrol {
+       C_WP_09_Niscova_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -109.318 -38.618 237.349
+        coords 2352.926 76.618 -534.077
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_09_Niscova_05_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -842.173 -4.879 1672.655
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint C_WP_09_Miettila_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint C_WP_09_Niscova_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 3.782 -0.336 7.372
+       coords 217.905 6.928 89.928
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 400
+       }
+      }
+     }
+    }
+    Set_02_C_WP_10_Valadim {
+     components {
+      Hierarchy "{61077CF35DE8C413}" {
+      }
+     }
+     coords 124.982 -42.566 -3197.068
+     {
+      $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
+       C_WP_10_Valadim_01_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords 763.934 43.53 2114.691
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_10_Valadim_02_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords 732.515 -11.692 932.471
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_10_Valadim_04_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -173.877 -24.374 -1208.231
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       C_WP_10_Valadim_05_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -1232.74 -14.656 2680.125
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+      }
+      SCR_TimedWaypoint C_WP_10_Valadim_03_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+       components {
+        Hierarchy "{6120496DC986D784}" {
+        }
+       }
+       coords 580.353 -1.833 -252.366
+       Autocomplete 1
+       CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 400
+       }
       }
      }
     }
@@ -582,7 +707,7 @@ $grp PR_AIPatrolTrigger {
   }
  }
  Set_03_S_Rogue_Trigger {
-  coords 15324.937 64.156 1801.361
+  coords 13066.604 44.066 4161.133
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -602,7 +727,7 @@ $grp PR_AIPatrolTrigger {
   m_iDelayTimerMax 1800
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEA8EFE3D9D}" {
-    m_GroupType "Group: Fire Team (4)"
+    m_GroupType "Group SF: Sentry Team (2)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEA9365010A}" {
       m_bKeepGroupActive 1
@@ -612,7 +737,7 @@ $grp PR_AIPatrolTrigger {
      PR_GroupWaypoints "{61B93EEA92448BF5}" {
       m_bCycleWaypoints 1
       m_aWaypointCollection {
-       "Set_03_S_WP_10_Teollisuusalue" "Set_03_S_WP_11_Pahanraonkallio" "Set_03_S_WP_12_Reactor" "Set_03_S_WP_13_Heikinhelli" "Set_03_S_WP_14_Lounatrivi"
+       "Set_03_S_WP_10_RailwayGruwice_ne" "Set_03_S_WP_11_Glochy" "Set_03_S_WP_12_Trainstation" "Set_03_S_WP_13_Powerplant" "Set_03_S_WP_14_Varpadany"
       }
       m_WaypointSortOrder "RAMDOM DIRECTION"
       m_SpawnCollections "RANDOM ONE"
@@ -636,265 +761,256 @@ $grp PR_AIPatrolTrigger {
   }
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Set_03_S_WP_10_Teollisuusalue {
+    Set_03_S_WP_10_RailwayGruwice_ne {
      components {
       Hierarchy "{61077CF360DE7AE5}" {
       }
      }
-     coords 509.772 -76.88 954.96
+     coords -1089.69 -20.601 1424.256
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       S_WP_10_Teollisuusalue_01_Patrol {
+       S_WP_10_RailwayGruwice_ne_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -484.274 74.438 -904.546
+        coords 1642.391 -11.434 -1072.821
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_10_Teollisuusalue_04_Patrol {
+       S_WP_10_RailwayGruwice_ne_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -17.749 -0.062 -15.384
+        coords -321.948 -9.022 -670.716
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_10_Teollisuusalue_02_Patrol {
+       S_WP_10_RailwayGruwice_ne_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -319.774 84.053 -556.064
-        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-        Autocomplete 1
-       }
-       S_WP_10_Teollisuusalue_03_Patrol {
-        components {
-         Hierarchy "{60F364A765D4182B}" {
-         }
-        }
-        coords -28.728 24.678 -151.352
+        coords 3263.608 38.66 536.245
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint S_WP_10_Teollisuusalue_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint S_WP_10_RailwayGruwice_ne_03_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 5.241 0.001 -1.981
+       coords -193.581 -2.684 86.469
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_03_S_WP_11_Pahanraonkallio {
+    Set_03_S_WP_11_Glochy {
      components {
       Hierarchy "{61077CF367BE4D17}" {
       }
      }
-     coords -1002.702 -57.626 747.994
+     coords 2333.486 20.704 -2521.712
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       S_WP_11_Pahanraonkallio_01_Patrol {
+       S_WP_11_Glochy_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 956.607 56.701 -712.771
+        coords -1757.843 -52.016 2865.854
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_11_Pahanraonkallio_03_Patrol {
+       S_WP_11_Glochy_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 7.496 1.213 -26.285
+        coords -853.537 7.023 -344.956
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_11_Pahanraonkallio_02_Patrol {
+       S_WP_11_Glochy_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 401.909 26.03 -470.808
+        coords -1236.331 -24.296 1878.315
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       S_WP_11_Glochy_05_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -102.168 -12.996 2927.13
+        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+        Autocomplete 1
+       }
+       S_WP_11_Glochy_06_Patrol {
+        components {
+         Hierarchy "{60F364A765D4182B}" {
+         }
+        }
+        coords -390.734 -11.333 1874.92
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint S_WP_11_Pahanraonkallio_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint S_WP_11_Glochy_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords -2.74 -0.364 -0.169
+       coords 193.398 1.781 -122.024
        Autocomplete 1
        CompletionType Any
       }
      }
     }
-    Set_03_S_WP_12_Reactor {
+    Set_03_S_WP_12_Trainstation {
      components {
       Hierarchy "{61077CF36503DBEB}" {
       }
      }
-     coords 1031.527 -90.442 -164.278
+     coords -794.875 -28.724 -3617.785
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       S_WP_12_Reactor_01_Patrol {
+       S_WP_12_Trainstation_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -950.038 89.149 137.879
+        coords 683.25 -2.245 926.273
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_12_Reactor_04_Patrol {
+       S_WP_12_Trainstation_03_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -4.354 0 -23.724
-        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-        Autocomplete 1
-       }
-       S_WP_12_Reactor_02_Patrol {
-        components {
-         Hierarchy "{60F364A765D4182B}" {
-         }
-        }
-        coords -377.849 43.662 56.656
-        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-        Autocomplete 1
-       }
-       S_WP_12_Reactor_03_Patrol {
-        components {
-         Hierarchy "{60F364A765D4182B}" {
-         }
-        }
-        coords -45.441 1.225 -50.23
+        coords 2620.803 44.002 1792.261
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint S_WP_12_Reactor_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint S_WP_12_Trainstation_02_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 1.881 0 2.654
+       coords 156.582 -2.789 -153.883
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 300
+       }
       }
      }
     }
-    Set_03_S_WP_13_Heikinhelli {
+    Set_03_S_WP_13_Powerplant {
      components {
       Hierarchy "{61077CF36849EB8E}" {
       }
      }
-     coords -875.075 -87.677 -712.483
+     coords 961.493 -6.913 -664.912
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       S_WP_13_Heikinhelli_01_Patrol {
+       S_WP_13_Powerplant_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 825.937 92.225 703.401
+        coords -2360.307 -20.081 1391.378
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_13_Heikinhelli_03_Patrol {
+       S_WP_13_Powerplant_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 7.502 0.141 31.272
+        coords 1617.892 27.205 -1940.008
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_13_Heikinhelli_02_Patrol {
+       S_WP_13_Powerplant_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords 404.767 54.551 625.323
+        coords -299.119 -29.192 -1345.487
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint S_WP_13_Heikinhelli_04_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint S_WP_13_Powerplant_03_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 7.498 0.21 5.562
+       coords 120.623 2.462 -7.176
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 400
+       }
       }
      }
     }
-    Set_03_S_WP_14_Lounatrivi {
+    Set_03_S_WP_14_Varpadany {
      components {
       Hierarchy "{61077CF36FB06167}" {
       }
      }
-     coords 323.721 -90.479 -1146.054
+     coords 2139.657 7.738 416.253
      {
       $grp SCR_AIWaypoint : "{750A8D1695BD6998}Prefabs/AI/Waypoints/AIWaypoint_Move.et" {
-       S_WP_14_Lounatrivi_01_Patrol {
+       S_WP_14_Varpadany_01_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -123.628 95.193 1037.154
+        coords -2239.15 -39.158 -3095.141
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_14_Lounatrivi_04_Patrol {
+       S_WP_14_Varpadany_02_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -25.836 1.455 31.934
+        coords -1058.261 -2.075 -1125.297
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
-       S_WP_14_Lounatrivi_02_Patrol {
+       S_WP_14_Varpadany_04_Patrol {
         components {
          Hierarchy "{60F364A765D4182B}" {
          }
         }
-        coords -138.411 65.581 624.447
-        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-        Autocomplete 1
-       }
-       S_WP_14_Lounatrivi_03_Patrol {
-        components {
-         Hierarchy "{60F364A765D4182B}" {
-         }
-        }
-        coords -248.921 16.701 228.196
+        coords 498.902 12.352 -2985.901
         AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
         Autocomplete 1
        }
       }
-      SCR_TimedWaypoint S_WP_14_Lounatrivi_05_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
+      SCR_TimedWaypoint S_WP_14_Varpadany_03_SD : "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et" {
        components {
         Hierarchy "{6120496DC986D784}" {
         }
        }
-       coords 3.094 0.28 3.125
+       coords 148.362 0.086 -18.761
        Autocomplete 1
        CompletionType Any
+       m_TimedWaypointParameters SCR_AITimedWaypointParameters "{60DAE2484F999078}" {
+        m_holdingTime 500
+       }
       }
      }
     }
