@@ -1,0 +1,68 @@
+*** TASKS DELIVER SUPPLIES ***
+
+Deliver Supplies Ajvan
+Deliver to the market in the small community of Ajvan<br />
+2x Canteen<br />
+2x MRE<br />
+1x Jerry Can
+
+Deliver Supplies Andruhanov FS
+Deliver to the Fire Station in the city of Andruhanov<br />
+2x Consumable Carriers<br />
+3x Legs of Meat<br />
+4x MRE<br />
+3x Jerry Can
+
+Deliver Supplies Glochy
+Deliver to the town of Glochy<br />
+3x Consumable Carriers<br />
+2x Legs of Meat
+
+Deliver Supplies Gruwice
+Deliver to the market in the city of Gruwice<br />
+2x Consumable Carriers<br />
+3x MRE<br />
+2x Jerry Can
+
+Deliver Supplies Sokyyiv
+Deliver to the town of Sokyyiv<br />
+2x Consumable Carriers<br />
+3x MRE<br />
+2x Jerry Can
+
+Deliver Supplies Soperk
+Deliver to the market in the town of Soperk<br />
+2x Canteen<br />
+1x Leg of Meat<br />
+2x MRE
+
+Deliver Supplies Stereni
+Deliver to farm in the town of Stereni<br />
+3x Consumable Carriers<br />
+3x MRE<br />
+2x Jerry Can<br />
+2x Legs of Meat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

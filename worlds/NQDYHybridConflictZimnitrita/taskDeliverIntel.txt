@@ -1,0 +1,62 @@
+
+*** TASKS_DELIVERINTEL ***
+
+Task Title: Locate Intel Airport
+Task Description: Search the Airport for hidden intel
+
+Task Title: Locate Intel Airport
+Task Description: Search the Airport for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

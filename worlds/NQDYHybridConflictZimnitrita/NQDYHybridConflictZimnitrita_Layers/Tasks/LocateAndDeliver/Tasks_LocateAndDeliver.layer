@@ -17,8 +17,8 @@ PR_SpawnTaskTrigger TaskTrg_LocateAndDeliver_Master {
   }
  }
  m_bUseRandomDelayTimer 1
- m_iDelayTimerMin 180
- m_iDelayTimerMax 360
+ m_iDelayTimerMin 1800
+ m_iDelayTimerMax 3600
  m_aIndividualTasks {
   PR_TaskDetails "{61A3677E33B2BF4C}" {
    m_sTaskName "TaskLocateAndDeliver_01"
@@ -45,7 +45,7 @@ PR_SpawnTaskTrigger TaskTrg_LocateAndDeliver_Master {
  m_iDelayTimerBetweenEachTaskMax 10800
 }
 GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
- coords 5341.016 4.779 4990.137
+ coords 10338.509 5.125 14387.16
  {
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
    Layer_TaskLocateAndDeliver_01 {
@@ -188,28 +188,49 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
           Hierarchy "{613802B54F5287D4}" {
           }
          }
-         coords -16.093 -8.359 60.884
+         coords -190.748 -8.383 -92.171
         }
         TaskLocateAndDeliver_01_move_03 {
          components {
           Hierarchy "{613802B54F5287D4}" {
           }
          }
-         coords -17.755 -8.751 75.022
+         coords 128.267 -7.128 351.72
         }
         TaskLocateAndDeliver_01_move_01 {
          components {
           Hierarchy "{613802B54F5287D4}" {
           }
          }
-         coords 19.284 -7.322 49.444
+         coords -250.408 -8.659 27.176
         }
         TaskLocateAndDeliver_01_move_04 {
          components {
           Hierarchy "{613802B54F5287D4}" {
           }
          }
-         coords 17.699 -8.146 69.938
+         coords 307.408 -8.282 149.891
+        }
+        TaskLocateAndDeliver_01_move_05 {
+         components {
+          Hierarchy "{613802B54F5287D4}" {
+          }
+         }
+         coords 48.411 -8.659 22.199
+        }
+        TaskLocateAndDeliver_01_move_06 {
+         components {
+          Hierarchy "{613802B54F5287D4}" {
+          }
+         }
+         coords 362.259 11.417 413.65
+        }
+        TaskLocateAndDeliver_01_move_07 {
+         components {
+          Hierarchy "{613802B54F5287D4}" {
+          }
+         }
+         coords 20.336 -8.659 149.494
         }
        }
       }
@@ -353,7 +374,7 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
           m_aPlugins {
            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-            m_fAreaRadius 30
+            m_fAreaRadius 28
             m_aCustomTriggerConditions {
              SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
               m_aPrefabFilter {
@@ -384,4 +405,8 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
    }
   }
  }
+}
+Vehicle S105_base1 : "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et" {
+ coords 10359.206 5.125 14511.037
+ Flags 2097155
 }

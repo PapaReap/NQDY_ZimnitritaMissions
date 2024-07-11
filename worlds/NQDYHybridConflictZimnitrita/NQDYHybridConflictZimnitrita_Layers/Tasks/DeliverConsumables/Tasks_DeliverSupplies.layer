@@ -18,40 +18,40 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Master {
  m_iDelayTimerMin 1800
  m_iDelayTimerMax 2700
  m_aIndividualTasks {
-  PR_TaskDetails "{61634CCE4819CE7F}" {
-   m_sTaskName "TaskDeliverSupplies_Jokela"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Jokela"
-  }
   PR_TaskDetails "{61634CCE49B6A3CA}" {
-   m_sTaskName "TaskDeliverSupplies_Jokela_n"
+   m_sTaskName "TaskDeliverSupplies_Ajvan"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Jokela_n"
-  }
-  PR_TaskDetails "{61634CD8C681C7C1}" {
-   m_sTaskName "TaskDeliverSupplies_Korkiala"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Korkiala"
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Ajvan"
   }
   PR_TaskDetails "{61634CD55CDABD8E}" {
-   m_sTaskName "TaskDeliverSupplies_Lansikallio"
+   m_sTaskName "TaskDeliverSupplies_Andruhanov_FS"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Lansikallio"
-  }
-  PR_TaskDetails "{61655C53239633A8}" {
-   m_sTaskName "TaskDeliverSupplies_Niemenkyla"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Niemenkyla"
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Andruhanov_FS"
   }
   PR_TaskDetails "{61508AE96772D7CC}" {
-   m_sTaskName "TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
+   m_sTaskName "TaskDeliverSupplies_Glochy"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Glochy"
   }
   PR_TaskDetails "{61655C485BB7B2DA}" {
-   m_sTaskName "TaskDeliverSupplies_Purjekallio"
+   m_sTaskName "TaskDeliverSupplies_Gruwice_market"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Purjekallio"
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Gruwice_market"
+  }
+  PR_TaskDetails "{61634CCE4819CE7F}" {
+   m_sTaskName "TaskDeliverSupplies_Sokyyiv"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Sokyyiv"
+  }
+  PR_TaskDetails "{61634CD8C681C7C1}" {
+   m_sTaskName "TaskDeliverSupplies_Soperk"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Soperk"
+  }
+  PR_TaskDetails "{61655C53239633A8}" {
+   m_sTaskName "TaskDeliverSupplies_Stereni"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverSupplies_Stereni"
   }
  }
  m_iPlayerDistanceToSpawnTask 600
@@ -62,17 +62,16 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Master {
  m_iDelayTimerBetweenEachTaskMax 10800
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
- Area_DS_Pohjoissivunkallio_farmhouse {
+ Area_DS_Sokyyiv {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     m_bExcludeFromDynamicDespawn 1
     m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
    }
   }
-  coords 5147.624 21.117 9697.322
+  coords 13951.061 27.406 14984.716
   {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Sokyyiv {
     coords -9.258 1.182 -15.252
     Flags 2097155
     TriggerShapeType Sphere
@@ -84,296 +83,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 50
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Sokyyiv"
     m_ActivationPresence ANY_CHARACTER
     m_aIndividualTasks {
      PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
+      m_sTaskName "TaskDeliverSupplies_Sokyyiv"
      }
     }
    }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse {
-    coords 3.234 -0.304 3.074
-    TriggerShapeType Sphere
-    SphereRadius 30
-    DrawShape 1
-    ShapeColor 0 0.502 0.502 0.098
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 5
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-    m_bNeutralizePersistentObject 1
-    m_aOverrideOptions {
-     PR_OverrideTriggerActivation "{61917DF60E955557}" {
-      m_bOverrideActivationPresence 1
-      m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-     }
-    }
-    m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-    m_PlayerXPTaskReward "Deliver Supplies (40)"
-    m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-    m_aRemovePrefabDetails {
-     PR_RemovePrefabFilter "{61964248E5071991}" {
-      m_aSpecificPrefabNames {
-       "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
-      }
-      m_iPrefabCountToRemove 3
-     }
-     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
-      m_aSpecificPrefabNames {
-       "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
-      }
-      m_iPrefabCountToRemove 2
-     }
-    }
-    {
-     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse {
-       coords -12.062 -0.001 -7.016
-      }
-      Pers_Fail_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse {
-       coords -12.105 0 -7.254
-      }
-     }
-    }
-   }
-   GenericEntity Pers_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    coords -1.668 0.122 -0.764
-   }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Pohjoissivunkallio_farmhouse : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords -43.061 2.809 104.268
-    {
-     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Pohjoissivunkallio_farmhouse_01 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 80
-        }
-       }
-       coords 0 0 0
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_01_01_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords 4.121 -4.712 -19.862
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_01_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords -15.266 -4.383 -23.622
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_01_05_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords 41.416 -2.752 -104.195
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_01_03_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 53.587 -6.177 28.446
-          angleY 178.77
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_01_04_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 134.829 -2.799 -61.442
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Pohjoissivunkallio_farmhouse_02 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 66
-        }
-       }
-       coords -6.586 0.567 -0.478
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_02_03_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords -8.053 -3.81 -190.938
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_02_01_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords -27.157 -4.817 -60.703
-         }
-         SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_02_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 118.267 -0.125 -198
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Pohjoissivunkallio_farmhouse_03 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_iRandomPercent 0
-        }
-       }
-       coords 14.131 -4.745 -130.617
-       {
-        GenericEntity SlotAI_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-          }
-         }
-         coords -24.248 0.343 88.799
-        }
-       }
-      }
-     }
-    }
-   }
-   GenericEntity TaskDeliverSupplies_Pohjoissivunkallio_farmhouse : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
-        m_sSound "SOUND_HUD_TASK_CREATED"
-       }
-      }
-      m_aTriggerActionsOnFinish {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
-        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-        }
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse"
-        }
-       }
-      }
-     }
-    }
-    coords -3.894 0.001 -1.966
-    {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Pohjoissivunkallio_farmhouse {
-      ID "5E74C90E3ED35D79"
-      components {
-       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
-          m_aCustomTriggerConditions {
-           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
-            m_aPrefabFilter {
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
-              m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
-              m_iPrefabCount 3
-             }
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
-              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
-              m_bIncludeChildren 1
-              m_iPrefabCount 2
-             }
-            }
-           }
-          }
-          m_bSearchVehicleInventory 0
-         }
-        }
-        m_sTaskTitle "Deliver Supplies Pohjoissivunkallio"
-        m_sTaskDescription "Deliver to the farmhouse south of Pohjoissivunkallio<br />"\
-        "3x Consumable Carriers<br />"\
-        "2x Legs of Meat"
-        m_aActionsOnCreated {
-         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
-          m_iMaxNumberOfActivations 1
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Pohjoissivunkallio_farmhouse"
-          }
-         }
-        }
-       }
-      }
-      coords 7.128 -0.304 5.033
-     }
-    }
-   }
-  }
- }
- Area_DS_Jokela {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
-    m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
-   }
-  }
-  coords 5018.059 5.843 6420.802
-  {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Jokela {
-    coords -9.258 1.182 -15.252
-    Flags 2097155
-    TriggerShapeType Sphere
-    SphereRadius 500
-    DrawShape 1
-    ShapeColor 0.046 0 1 0.078
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 50
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Jokela"
-    m_ActivationPresence ANY_CHARACTER
-    m_aIndividualTasks {
-     PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Jokela"
-     }
-    }
-   }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Jokela {
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Sokyyiv {
     coords 3.592 -0.304 3.3
     TriggerShapeType Sphere
-    SphereRadius 30
+    SphereRadius 20
     DrawShape 1
     ShapeColor 0 0.502 0.502 0.098
     TriggerActivationType "First change"
@@ -381,20 +102,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 5
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Jokela"
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Sokyyiv"
     m_bNeutralizePersistentObject 1
     m_aOverrideOptions {
      PR_OverrideTriggerActivation "{61917DF60E955557}" {
       m_bOverrideActivationPresence 1
       m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Jokela"
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Sokyyiv"
      }
     }
     m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Jokela"
+    m_sTaskName "Opt_TaskDeliverSupplies_Sokyyiv"
     m_PlayerXPTaskReward "Deliver Supplies (40)"
     m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Jokela"
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Sokyyiv"
     m_aRemovePrefabDetails {
      PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
       m_aSpecificPrefabNames {
@@ -417,19 +138,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     {
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Jokela {
+      Pers_Opt_TaskDeliverSupplies_Sokyyiv {
        coords -12.062 -0.001 -7.016
       }
-      Pers_Fail_TaskDeliverSupplies_Jokela {
+      Pers_Fail_TaskDeliverSupplies_Sokyyiv {
        coords -12.105 0 -7.254
       }
      }
     }
    }
-   GenericEntity Pers_TaskDeliverSupplies_Jokela : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   GenericEntity Pers_TaskDeliverSupplies_Sokyyiv : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -4.054 -0.39 -1.319
    }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Jokela : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer_TaskDeliverSupplies_AI_Sokyyiv : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_ONE
@@ -439,7 +160,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     coords -43.061 2.809 104.268
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Jokela_01 {
+      Layer_TaskDeliverSupplies_AI_Sokyyiv_01 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -449,51 +170,51 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 35.288 -1.656 -88.193
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Jokela_01_01_LFTS {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_01_01_LFTS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
            }
           }
-          coords -48.429 0.262 79.34
+          coords -43.117 -2.715 74.317
          }
-         SlotAI_TaskDeliverSupplies_Jokela_01_02_WR {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_01_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 22.937 1.052 59.028
+          coords 22.937 -4.79 64.45
          }
-         SlotAI_TaskDeliverSupplies_Jokela_01_05_LRGS {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_01_05_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords 23.227 -1.866 -60.629
+          coords -10.994 -1.199 -77.07
          }
-         SlotAI_TaskDeliverSupplies_Jokela_01_03_WR {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_01_03_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 9.987 0.473 19.475
+          coords 9.987 -1.993 19.476
           angleY 178.77
          }
-         SlotAI_TaskDeliverSupplies_Jokela_01_04_WR {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_01_04_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -39.582 -3.661 -20.09
+          coords -39.582 -2.855 -20.09
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Jokela_02 {
+      Layer_TaskDeliverSupplies_AI_Sokyyiv_02 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -503,34 +224,34 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 49.227 -2.167 -101.079
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Jokela_02_01_WR {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_02_01_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -46.647 -3.864 -22.674
+          coords -46.647 -2.049 -22.674
          }
-         SlotAI_TaskDeliverSupplies_Jokela_02_02_WR {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_02_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 27.888 3.678 -33.654
+          coords 33.817 -0.464 -25.85
          }
-         SlotAI_TaskDeliverSupplies_Jokela_02_03_LRGS {
+         SlotAI_TaskDeliverSupplies_Sokyyiv_02_03_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords 17.025 1.696 10.846
+          coords 17.025 -0.668 10.846
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Jokela_03 {
+      Layer_TaskDeliverSupplies_AI_Sokyyiv_03 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_iRandomPercent 0
@@ -538,22 +259,23 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        coords 41.047 -2.867 -100.777
        {
-        GenericEntity SlotAI_TaskDeliverSupplies_Jokela_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        GenericEntity SlotAI_TaskDeliverSupplies_Sokyyiv_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          components {
           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
           }
          }
-         coords 5.77 -1.87 -111.386
+         coords 31.935 -0.357 8.657
         }
        }
       }
      }
     }
    }
-   GenericEntity TaskDeliverSupplies_Jokela : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+   GenericEntity TaskDeliverSupplies_Sokyyiv : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_bShowDebugShapesDuringRuntime 0
       m_eActivationType ON_TRIGGER_ACTIVATION
       m_aActivationActions {
        SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
@@ -566,12 +288,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Jokela"
+         m_sEntityName "TaskDeliverSupplies_Sokyyiv"
         }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Jokela"
+         m_sEntityName "Pers_TaskDeliverSupplies_Sokyyiv"
         }
        }
       }
@@ -579,13 +301,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords -3.894 0.001 -1.966
     {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Jokela {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Sokyyiv {
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
+          m_fAreaRadius 18
           m_aCustomTriggerConditions {
            SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
             m_aPrefabFilter {
@@ -607,8 +329,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_bSearchVehicleInventory 0
          }
         }
-        m_sTaskTitle "Deliver Supplies Jokela"
-        m_sTaskDescription "Deliver to the town of Jokela<br />"\
+        m_sTaskTitle "Deliver Supplies Sokyyiv"
+        m_sTaskDescription "Deliver to the town of Sokyyiv<br />"\
         "2x Consumable Carriers<br />"\
         "3x MRE<br />"\
         "2x Jerry Can"
@@ -616,19 +338,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
           m_iMaxNumberOfActivations 1
           m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Jokela"
+           "Layer_TaskDeliverSupplies_AI_Sokyyiv"
           }
          }
         }
        }
       }
-      coords 7.128 -0.304 5.033
+      coords 7.552 -0.304 5.033
      }
     }
    }
   }
  }
- Area_DS_Jokela_n {
+ Area_DS_Ajvan {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     m_bExcludeFromDynamicDespawn 1
@@ -636,9 +358,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_bShowDebugShapesInWorkbench 1
    }
   }
-  coords 4853.645 3.964 6641.478
+  coords 15837.765 50 14539.854
   {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Jokela_n {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Ajvan {
     coords -9.258 1.182 -15.252
     Flags 2097155
     TriggerShapeType Sphere
@@ -650,18 +372,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 50
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Jokela_n"
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Ajvan"
     m_ActivationPresence ANY_CHARACTER
     m_aIndividualTasks {
      PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Jokela_n"
+      m_sTaskName "TaskDeliverSupplies_Ajvan"
      }
     }
    }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Jokela_n {
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Ajvan {
     coords 3.156 0.017 3.2
     TriggerShapeType Sphere
-    SphereRadius 30
+    SphereRadius 20
     DrawShape 1
     ShapeColor 0 0.502 0.502 0.098
     TriggerActivationType "First change"
@@ -669,20 +391,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 5
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Jokela_n"
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Ajvan"
     m_bNeutralizePersistentObject 1
     m_aOverrideOptions {
      PR_OverrideTriggerActivation "{61917DF60E955557}" {
       m_bOverrideActivationPresence 1
       m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Jokela_n"
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Ajvan"
      }
     }
     m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Jokela_n"
+    m_sTaskName "Opt_TaskDeliverSupplies_Ajvan"
     m_PlayerXPTaskReward "Deliver Supplies (40)"
     m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Jokela_n"
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Ajvan"
     m_aRemovePrefabDetails {
      PR_RemovePrefabFilter "{61930DD1230AD752}" {
       m_aSpecificPrefabNames {
@@ -704,19 +426,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     {
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Jokela_n {
+      Pers_Opt_TaskDeliverSupplies_Ajvan {
        coords -12.062 -0.001 -7.016
       }
-      Pers_Fail_TaskDeliverSupplies_Jokela_n {
+      Pers_Fail_TaskDeliverSupplies_Ajvan {
        coords -12.105 0 -7.254
       }
      }
     }
    }
-   GenericEntity Pers_TaskDeliverSupplies_Jokela_n : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   GenericEntity Pers_TaskDeliverSupplies_Ajvan : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -3.913 -0.024 -1.907
    }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Jokela_n : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer_TaskDeliverSupplies_AI_Ajvan : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_ONE
@@ -726,7 +448,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     coords -43.061 2.809 104.268
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Jokela_n_01 {
+      Layer_TaskDeliverSupplies_AI_Ajvan_01 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -736,51 +458,51 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 0 0 0
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Jokela_n_01_01_LFTS {
+         SlotAI_TaskDeliverSupplies_Ajvan_01_01_LFTS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
            }
           }
-          coords -0.971 -1.288 -33.32
+          coords -0.971 -5.645 -33.32
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_01_02_WR {
+         SlotAI_TaskDeliverSupplies_Ajvan_01_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 90.421 0.424 -98.378
+          coords 90.421 -2.809 -98.378
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_01_05_LRGS {
+         SlotAI_TaskDeliverSupplies_Ajvan_01_05_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords 64.015 1.478 -6.673
+          coords 65.171 -5.082 -18.655
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_01_03_WR {
+         SlotAI_TaskDeliverSupplies_Ajvan_01_03_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 17.543 -2.77 -123.125
+          coords 17.543 -2.809 -123.125
           angleY 178.77
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_01_04_WR {
+         SlotAI_TaskDeliverSupplies_Ajvan_01_04_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 43.26 -3.006 -98.705
+          coords 43.26 -2.609 -98.705
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Jokela_n_02 {
+      Layer_TaskDeliverSupplies_AI_Ajvan_02 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -790,34 +512,34 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords -6.586 0.567 -0.478
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Jokela_n_02_01_WR {
+         SlotAI_TaskDeliverSupplies_Ajvan_02_01_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 104.916 1.468 -94.482
+          coords 104.916 -3.376 -94.482
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_02_02_WR {
+         SlotAI_TaskDeliverSupplies_Ajvan_02_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 10.346 -3.661 -56.577
+          coords 6.206 -4.3 -57.534
          }
-         SlotAI_TaskDeliverSupplies_Jokela_n_02_03_LRGS {
+         SlotAI_TaskDeliverSupplies_Ajvan_02_03_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords -14.309 -3.38 -128.938
+          coords -3.463 -3.376 -133.02
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Jokela_n_03 {
+      Layer_TaskDeliverSupplies_AI_Ajvan_03 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_iRandomPercent 0
@@ -825,20 +547,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        coords 14.131 -4.745 -130.617
        {
-        GenericEntity SlotAI_TaskDeliverSupplies_Jokela_n_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        GenericEntity SlotAI_TaskDeliverSupplies_Ajvan_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          components {
           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
           }
          }
-         coords 17.5 1.512 50.297
+         coords 12.415 1.905 45.979
         }
        }
       }
      }
     }
    }
-   GenericEntity TaskDeliverSupplies_Jokela_n : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+   GenericEntity TaskDeliverSupplies_Ajvan : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
@@ -853,12 +575,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Jokela_n"
+         m_sEntityName "TaskDeliverSupplies_Ajvan"
         }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Jokela_n"
+         m_sEntityName "Pers_TaskDeliverSupplies_Ajvan"
         }
        }
       }
@@ -866,13 +588,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords -3.894 0.001 -1.966
     {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Jokela_n {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Ajvan {
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
+          m_fAreaRadius 18
           m_aCustomTriggerConditions {
            SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
             m_aPrefabFilter {
@@ -894,8 +616,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_bSearchVehicleInventory 0
          }
         }
-        m_sTaskTitle "Deliver Supplies North Jokela"
-        m_sTaskDescription "Deliver to the small community north of Jokela<br />"\
+        m_sTaskTitle "Deliver Supplies North Ajvan"
+        m_sTaskDescription "Deliver to the market in the small community of Ajvan<br />"\
         "2x Canteen<br />"\
         "2x MRE<br />"\
         "1x Jerry Can"
@@ -903,7 +625,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
           m_iMaxNumberOfActivations 1
           m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Jokela_n"
+           "Layer_TaskDeliverSupplies_AI_Ajvan"
           }
          }
         }
@@ -915,17 +637,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
  }
- Area_DS_Lansikallio {
+ Area_DS_Soperk {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     m_bExcludeFromDynamicDespawn 1
     m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
    }
   }
-  coords 6247.086 48.875 5074.869
+  coords 11667.06 30.782 11878.065
   {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Lansikallio {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Soperk {
     coords -9.258 1.182 -15.252
     Flags 2097155
     TriggerShapeType Sphere
@@ -937,15 +658,302 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 50
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Lansikallio"
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Soperk"
     m_ActivationPresence ANY_CHARACTER
     m_aIndividualTasks {
      PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Lansikallio"
+      m_sTaskName "TaskDeliverSupplies_Soperk"
      }
     }
    }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Lansikallio {
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Soperk {
+    coords 3.342 -0.05 2.652
+    TriggerShapeType Sphere
+    SphereRadius 20
+    DrawShape 1
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Soperk"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Soperk"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverSupplies_Soperk"
+    m_PlayerXPTaskReward "Deliver Supplies (40)"
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Soperk"
+    m_aRemovePrefabDetails {
+     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
+      m_aSpecificPrefabNames {
+       "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+      }
+      m_iPrefabCountToRemove 2
+     }
+     PR_RemovePrefabFilter "{61964248E5071991}" {
+      m_aSpecificPrefabNames {
+       "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
+      }
+     }
+     PR_RemovePrefabFilter "{61930DD1230AD752}" {
+      m_aSpecificPrefabNames {
+       "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+      }
+      m_iPrefabCountToRemove 2
+     }
+    }
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverSupplies_Soperk {
+       coords -12.062 -0.001 -7.016
+      }
+      Pers_Fail_TaskDeliverSupplies_Soperk {
+       coords -12.105 0 -7.254
+      }
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverSupplies_Soperk : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords -3.875 0.086 -2.125
+   }
+   GenericEntity Layer_TaskDeliverSupplies_AI_Soperk : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -43.061 2.809 104.268
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverSupplies_AI_Soperk_01 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 80
+        }
+       }
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Soperk_01_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 8.638 -3.066 -149.659
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 34.003 -3.477 -12.929
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_01_03_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 27.13 -2.855 -125.655
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_01_04_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 81.168 -2.85 -89.562
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_01_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 23.685 -2.81 -156.596
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Soperk_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 66
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Soperk_02_01_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 85.495 -3.377 -138.986
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_02_03_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 69.1 -3.859 -96.7
+         }
+         SlotAI_TaskDeliverSupplies_Soperk_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 51.6 -3.477 -68.9
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Soperk_03 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_iRandomPercent 0
+        }
+       }
+       coords 14.131 -4.745 -130.617
+       {
+        GenericEntity SlotAI_TaskDeliverSupplies_Soperk_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+          }
+         }
+         coords 29.829 1.935 27.364
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverSupplies_Soperk : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
+         m_sEntityName "TaskDeliverSupplies_Soperk"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
+         m_sEntityName "Pers_TaskDeliverSupplies_Soperk"
+        }
+       }
+      }
+     }
+    }
+    coords -3.894 0.001 -1.966
+    {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Soperk {
+      ID "5E74C90E3ED35D79"
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 18
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
+              m_sSpecificPrefabName "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
+              m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 2
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
+              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
+              m_bIncludeChildren 1
+             }
+            }
+           }
+          }
+          m_bSearchVehicleInventory 0
+         }
+        }
+        m_sTaskTitle "Deliver Supplies Soperk"
+        m_sTaskDescription "Deliver to the market in the town of Soperk<br />"\
+        "2x Canteen<br />"\
+        "1x Leg of Meat<br />"\
+        "2x MRE"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverSupplies_AI_Soperk"
+          }
+         }
+        }
+       }
+      }
+      coords 7.128 -0.304 5.033
+     }
+    }
+   }
+  }
+ }
+ Area_DS_Andruhanov_FS {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 12233.982 41.625 9909.969
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Andruhanov_FS {
+    coords -9.258 1.182 -15.252
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Andruhanov_FS"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverSupplies_Andruhanov_FS"
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Andruhanov_FS {
     coords 3.052 0 3.486
     TriggerShapeType Sphere
     SphereRadius 30
@@ -956,20 +964,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 5
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Lansikallio"
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Andruhanov_FS"
     m_bNeutralizePersistentObject 1
     m_aOverrideOptions {
      PR_OverrideTriggerActivation "{61917DF60E955557}" {
       m_bOverrideActivationPresence 1
       m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Lansikallio"
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Andruhanov_FS"
      }
     }
     m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Lansikallio"
+    m_sTaskName "Opt_TaskDeliverSupplies_Andruhanov_FS"
     m_PlayerXPTaskReward "Deliver Supplies (40)"
     m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Lansikallio"
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Andruhanov_FS"
     m_aRemovePrefabDetails {
      PR_RemovePrefabFilter "{61964248E5071991}" {
       m_aSpecificPrefabNames {
@@ -998,19 +1006,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     {
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Lansikallio {
+      Pers_Opt_TaskDeliverSupplies_Andruhanov_FS {
        coords -12.062 -0.001 -7.016
       }
-      Pers_Fail_TaskDeliverSupplies_Lansikallio {
+      Pers_Fail_TaskDeliverSupplies_Andruhanov_FS {
        coords -12.105 0 -7.254
       }
      }
     }
    }
-   GenericEntity Pers_TaskDeliverSupplies_Lansikallio : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   GenericEntity Pers_TaskDeliverSupplies_Andruhanov_FS : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -3.893 0 -1.971
    }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Lansikallio : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer_TaskDeliverSupplies_AI_Andruhanov_FS : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_ONE
@@ -1020,7 +1028,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     coords -43.061 2.809 104.268
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Lansikallio_01 {
+      Layer_TaskDeliverSupplies_AI_Andruhanov_FS_01 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -1030,7 +1038,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 0 0 0
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Lansikallio_01_01_LFTS {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_01_01_LFTS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
@@ -1038,7 +1046,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -13.14 -1.394 -8.853
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_01_02_WR {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_01_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
@@ -1046,7 +1054,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords 58.225 -0.604 -29.165
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_01_03_WR {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_01_03_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
@@ -1055,7 +1063,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           coords 45.275 -1.183 -68.718
           angleY 178.77
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_01_04_WR {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_01_04_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
@@ -1063,7 +1071,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -4.294 -5.317 -108.283
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_01_05_LRGS {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_01_05_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
@@ -1074,7 +1082,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Lansikallio_02 {
+      Layer_TaskDeliverSupplies_AI_Andruhanov_FS_02 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -1084,7 +1092,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords -6.586 0.567 -0.478
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Lansikallio_02_02_WR {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_02_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
@@ -1092,7 +1100,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords 83.701 0.944 -134.255
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_02_03_LRGS {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_02_03_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
@@ -1100,7 +1108,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords 72.838 -1.038 -89.755
          }
-         SlotAI_TaskDeliverSupplies_Lansikallio_02_01_WR {
+         SlotAI_TaskDeliverSupplies_Andruhanov_FS_02_01_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
@@ -1111,7 +1119,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Lansikallio_03 {
+      Layer_TaskDeliverSupplies_AI_Andruhanov_FS_03 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_iRandomPercent 0
@@ -1119,7 +1127,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        coords 14.131 -4.745 -130.617
        {
-        GenericEntity SlotAI_TaskDeliverSupplies_Lansikallio_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        GenericEntity SlotAI_TaskDeliverSupplies_Andruhanov_FS_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          components {
           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
@@ -1132,7 +1140,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
    }
-   GenericEntity TaskDeliverSupplies_Lansikallio : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+   GenericEntity TaskDeliverSupplies_Andruhanov_FS : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
@@ -1147,12 +1155,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Lansikallio"
+         m_sEntityName "TaskDeliverSupplies_Andruhanov_FS"
         }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Lansikallio"
+         m_sEntityName "Pers_TaskDeliverSupplies_Andruhanov_FS"
         }
        }
       }
@@ -1160,7 +1168,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords -3.894 0.001 -1.966
     {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Lansikallio {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Andruhanov_FS {
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
@@ -1173,15 +1181,15 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
              SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
               m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
              }
-             SCR_ScenarioFrameworkPrefabFilterCount "{61634CD0B27A9FEE}" {
-              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
-              m_bIncludeChildren 1
-              m_iPrefabCount 3
-             }
              SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
               m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
               m_bIncludeChildren 1
               m_iPrefabCount 4
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{61634CD0B27A9FEE}" {
+              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 3
              }
              SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
               m_sSpecificPrefabName "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
@@ -1195,8 +1203,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_bOnce 0
          }
         }
-        m_sTaskTitle "Deliver Supplies Lansikallio"
-        m_sTaskDescription "Deliver to the farm community of Lansikallio<br />"\
+        m_sTaskTitle ""\
+        "Deliver Supplies Andruhanov FS"
+        m_sTaskDescription "Deliver to the Fire Station in the city of Andruhanov<br />"\
         "2x Consumable Carriers<br />"\
         "3x Legs of Meat<br />"\
         "4x MRE<br />"\
@@ -1205,7 +1214,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
           m_iMaxNumberOfActivations 1
           m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Lansikallio"
+           "Layer_TaskDeliverSupplies_AI_Andruhanov_FS"
           }
          }
         }
@@ -1217,17 +1226,16 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
  }
- Area_DS_Korkiala {
+ Area_DS_Stereni {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     m_bExcludeFromDynamicDespawn 1
     m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
    }
   }
-  coords 4167.61 38.981 9842.083
+  coords 14089.021 42.75 2383.648
   {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Korkiala {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Stereni {
     coords -9.258 1.182 -15.252
     Flags 2097155
     TriggerShapeType Sphere
@@ -1239,593 +1247,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 50
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Korkiala"
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Stereni"
     m_ActivationPresence ANY_CHARACTER
     m_aIndividualTasks {
      PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Korkiala"
+      m_sTaskName "TaskDeliverSupplies_Stereni"
      }
     }
    }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Korkiala {
-    coords 3.342 -0.05 2.652
-    TriggerShapeType Sphere
-    SphereRadius 30
-    DrawShape 1
-    ShapeColor 0 0.502 0.502 0.098
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 5
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Korkiala"
-    m_bNeutralizePersistentObject 1
-    m_aOverrideOptions {
-     PR_OverrideTriggerActivation "{61917DF60E955557}" {
-      m_bOverrideActivationPresence 1
-      m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Korkiala"
-     }
-    }
-    m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Korkiala"
-    m_PlayerXPTaskReward "Deliver Supplies (40)"
-    m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Korkiala"
-    m_aRemovePrefabDetails {
-     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
-      m_aSpecificPrefabNames {
-       "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
-      }
-      m_iPrefabCountToRemove 2
-     }
-     PR_RemovePrefabFilter "{61964248E5071991}" {
-      m_aSpecificPrefabNames {
-       "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
-      }
-     }
-     PR_RemovePrefabFilter "{61930DD1230AD752}" {
-      m_aSpecificPrefabNames {
-       "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
-      }
-      m_iPrefabCountToRemove 2
-     }
-    }
-    {
-     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Korkiala {
-       coords -12.062 -0.001 -7.016
-      }
-      Pers_Fail_TaskDeliverSupplies_Korkiala {
-       coords -12.105 0 -7.254
-      }
-     }
-    }
-   }
-   GenericEntity Pers_TaskDeliverSupplies_Korkiala : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    coords -3.875 0.086 -2.125
-   }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Korkiala : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords -43.061 2.809 104.268
-    {
-     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Korkiala_01 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 80
-        }
-       }
-       coords 0 0 0
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Korkiala_01_01_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords 8.638 -4.309 -149.659
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_01_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 34.003 -5.36 -12.929
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_01_03_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 27.13 -2.97 -125.655
-          angleY 178.77
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_01_04_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 81.168 -2.904 -95.845
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_01_05_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords -12.587 -11.911 -137.729
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Korkiala_02 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 66
-        }
-       }
-       coords -6.586 0.567 -0.478
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Korkiala_02_01_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 48.15 -2.752 -139.834
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_02_03_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords 69.1 -3.859 -96.7
-         }
-         SlotAI_TaskDeliverSupplies_Korkiala_02_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 51.6 -5.981 -68.9
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Korkiala_03 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_iRandomPercent 0
-        }
-       }
-       coords 14.131 -4.745 -130.617
-       {
-        GenericEntity SlotAI_TaskDeliverSupplies_Korkiala_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-          }
-         }
-         coords -33.773 -9.462 89.163
-        }
-       }
-      }
-     }
-    }
-   }
-   GenericEntity TaskDeliverSupplies_Korkiala : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
-        m_sSound "SOUND_HUD_TASK_CREATED"
-       }
-      }
-      m_aTriggerActionsOnFinish {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
-        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Korkiala"
-        }
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Korkiala"
-        }
-       }
-      }
-     }
-    }
-    coords -3.894 0.001 -1.966
-    {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Korkiala {
-      ID "5E74C90E3ED35D79"
-      components {
-       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
-          m_aCustomTriggerConditions {
-           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
-            m_aPrefabFilter {
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
-              m_sSpecificPrefabName "{630FB4AD4A735264}Prefabs/Items/Equipment/Canteens/Canteen_US_01.et"
-             }
-             SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
-              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
-              m_bIncludeChildren 1
-             }
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
-              m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
-              m_bIncludeChildren 1
-              m_iPrefabCount 2
-             }
-            }
-           }
-          }
-          m_bSearchVehicleInventory 0
-         }
-        }
-        m_sTaskTitle "Deliver Supplies Korkiala"
-        m_sTaskDescription "Deliver to the village of Korkiala<br />"\
-        "2x Canteen<br />"\
-        "1x Leg of Meat<br />"\
-        "2x MRE"
-        m_aActionsOnCreated {
-         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
-          m_iMaxNumberOfActivations 1
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Korkiala"
-          }
-         }
-        }
-       }
-      }
-      coords 7.128 -0.304 5.033
-     }
-    }
-   }
-  }
- }
- Area_DS_Purjekallio {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
-    m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
-   }
-  }
-  coords 4197.277 12.698 8495.311
-  {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Purjekallio {
-    coords -9.258 1.182 -15.252
-    Flags 2097155
-    TriggerShapeType Sphere
-    SphereRadius 500
-    DrawShape 1
-    ShapeColor 0.046 0 1 0.078
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 50
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Purjekallio"
-    m_ActivationPresence ANY_CHARACTER
-    m_aIndividualTasks {
-     PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Purjekallio"
-     }
-    }
-   }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Purjekallio {
-    coords 3.651 0.169 3.594
-    TriggerShapeType Sphere
-    SphereRadius 30
-    DrawShape 1
-    ShapeColor 0 0.502 0.502 0.098
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 5
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Purjekallio"
-    m_bNeutralizePersistentObject 1
-    m_aOverrideOptions {
-     PR_OverrideTriggerActivation "{61917DF60E955557}" {
-      m_bOverrideActivationPresence 1
-      m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Purjekallio"
-     }
-    }
-    m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Purjekallio"
-    m_PlayerXPTaskReward "Deliver Supplies (40)"
-    m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Purjekallio"
-    m_aRemovePrefabDetails {
-     PR_RemovePrefabFilter "{61964248E5071991}" {
-      m_aSpecificPrefabNames {
-       "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
-      }
-      m_iPrefabCountToRemove 2
-     }
-     PR_RemovePrefabFilter "{61930DD1230AD752}" {
-      m_aSpecificPrefabNames {
-       "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
-      }
-      m_iPrefabCountToRemove 3
-     }
-     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
-      m_aSpecificPrefabNames {
-       "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
-      }
-      m_iPrefabCountToRemove 2
-     }
-    }
-    {
-     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Jokela2 {
-       coords -12.062 -0.001 -7.016
-      }
-      Pers_Fail_TaskDeliverSupplies_Jokela2 {
-       coords -12.105 0 -7.254
-      }
-     }
-    }
-   }
-   GenericEntity Pers_TaskDeliverSupplies_Purjekallio : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    coords -3.887 -0.02 -1.989
-   }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Purjekallio : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords -43.061 2.809 104.268
-    {
-     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Purjekallio_01 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 80
-        }
-       }
-       coords 0 0 0
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Purjekallio_01_01_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords 10.621 -5.041 -61.463
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_01_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 27.879 -3.674 -80.918
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_01_05_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords 127.81 -4.843 -167.361
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_01_03_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 74.589 -2.344 -67.714
-          angleY 178.77
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_01_04_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 91.378 -2.516 -129.445
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Purjekallio_02 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 66
-        }
-       }
-       coords -6.586 0.567 -0.478
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Purjekallio_02_01_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 26.61 -4.368 -84.937
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_02_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 85.298 -3.015 -121.061
-         }
-         SlotAI_TaskDeliverSupplies_Purjekallio_02_03_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords 46.489 -4.119 -80.803
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverSupplies_AI_Purjekallio_03 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_iRandomPercent 0
-        }
-       }
-       coords 14.131 -4.745 -130.617
-       {
-        GenericEntity SlotAI_TaskDeliverSupplies_Purjekallio_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-          }
-         }
-         coords 13.389 1.92 3.066
-        }
-       }
-      }
-     }
-    }
-   }
-   GenericEntity TaskDeliverSupplies_Purjekallio : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
-        m_sSound "SOUND_HUD_TASK_CREATED"
-       }
-      }
-      m_aTriggerActionsOnFinish {
-       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
-        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Purjekallio"
-        }
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Purjekallio"
-        }
-       }
-      }
-     }
-    }
-    coords -3.894 0.001 -1.966
-    {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Purjekallio {
-      ID "5E74C90E3ED35D79"
-      components {
-       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
-          m_aCustomTriggerConditions {
-           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
-            m_aPrefabFilter {
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
-              m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
-             }
-             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
-              m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
-              m_bIncludeChildren 1
-             }
-             SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
-              m_sSpecificPrefabName "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
-              m_bIncludeChildren 1
-              m_iPrefabCount 2
-             }
-            }
-           }
-          }
-          m_bSearchVehicleInventory 0
-         }
-        }
-        m_sTaskTitle "Deliver Supplies Purjekallio"
-        m_sTaskDescription "Deliver to the farmhouse west of Purjekallio<br />"\
-        "2x Consumable Carriers<br />"\
-        "3x MRE<br />"\
-        "2x Jerry Can"
-        m_aActionsOnCreated {
-         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
-          m_iMaxNumberOfActivations 1
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Purjekallio"
-          }
-         }
-        }
-       }
-      }
-      coords 7.128 -0.304 5.033
-     }
-    }
-   }
-  }
- }
- Area_DS_Niemenkyla {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
-    m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
-   }
-  }
-  coords 6397.974 5.889 7484.418
-  {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Niemenkyla {
-    coords -9.258 1.182 -15.252
-    Flags 2097155
-    TriggerShapeType Sphere
-    SphereRadius 500
-    DrawShape 1
-    ShapeColor 0.046 0 1 0.078
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 50
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverSupplies_Niemenkyla"
-    m_ActivationPresence ANY_CHARACTER
-    m_aIndividualTasks {
-     PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverSupplies_Niemenkyla"
-     }
-    }
-   }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Niemenkyla {
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Stereni {
     coords 3.201 -0.04 2.573
     TriggerShapeType Sphere
-    SphereRadius 30
+    SphereRadius 20
     DrawShape 1
     ShapeColor 0 0.502 0.502 0.098
     TriggerActivationType "First change"
@@ -1833,20 +1266,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     UpdatePeriod 5
     m_bDebugLogs 1
     m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Niemenkyla"
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Stereni"
     m_bNeutralizePersistentObject 1
     m_aOverrideOptions {
      PR_OverrideTriggerActivation "{61917DF60E955557}" {
       m_bOverrideActivationPresence 1
       m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverSupplies_Niemenkyla"
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Stereni"
      }
     }
     m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverSupplies_Niemenkyla"
+    m_sTaskName "Opt_TaskDeliverSupplies_Stereni"
     m_PlayerXPTaskReward "Deliver Supplies (40)"
     m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Niemenkyla"
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Stereni"
     m_aRemovePrefabDetails {
      PR_RemovePrefabFilter "{61930DD1230AD752}" {
       m_aSpecificPrefabNames {
@@ -1875,19 +1308,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     {
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverSupplies_Niemenkyla {
+      Pers_Opt_TaskDeliverSupplies_Stereni {
        coords -12.062 -0.001 -7.016
       }
-      Pers_Fail_TaskDeliverSupplies_Niemenkyla {
+      Pers_Fail_TaskDeliverSupplies_Stereni {
        coords -12.105 0 -7.254
       }
      }
     }
    }
-   GenericEntity Pers_TaskDeliverSupplies_Niemenkyla : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   GenericEntity Pers_TaskDeliverSupplies_Stereni : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -3.869 0.031 -2.084
    }
-   GenericEntity Layer_TaskDeliverSupplies_AI_Niemenkyla : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer_TaskDeliverSupplies_AI_Stereni : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
       m_SpawnChildren RANDOM_ONE
@@ -1897,7 +1330,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     coords 2.351 -0.033 4.511
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverSupplies_AI_Niemenkyla_01 {
+      Layer_TaskDeliverSupplies_AI_Stereni_01 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -1907,51 +1340,51 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords -45.413 2.842 99.757
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Niemenkyla_01_01_LFTS {
+         SlotAI_TaskDeliverSupplies_Stereni_01_01_LFTS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
            }
           }
-          coords 8.201 -1.29 0.947
+          coords 8.201 -9.458 0.947
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_01_02_WR {
+         SlotAI_TaskDeliverSupplies_Stereni_01_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 53.432 -7.642 -43.496
+          coords 53.432 -4.728 -43.496
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_01_05_LRGS {
+         SlotAI_TaskDeliverSupplies_Stereni_01_05_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords -1.982 -2.418 -116.105
+          coords -1.982 -2.778 -116.105
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_01_03_WR {
+         SlotAI_TaskDeliverSupplies_Stereni_01_03_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords 140.75 -6.331 -153.473
+          coords 140.75 -2.778 -153.473
           angleY 178.77
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_01_04_WR {
+         SlotAI_TaskDeliverSupplies_Stereni_01_04_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -59.619 -0.866 -58.212
+          coords -59.619 -14.085 -58.212
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Niemenkyla_02 {
+      Layer_TaskDeliverSupplies_AI_Stereni_02 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_SpawnChildren RANDOM_MULTIPLE
@@ -1961,34 +1394,34 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 1.207 -0.116 0.422
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverSupplies_Niemenkyla_02_01_WR {
+         SlotAI_TaskDeliverSupplies_Stereni_02_01_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -83.892 0.543 -29.473
+          coords -83.892 -0.503 -29.473
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_02_02_WR {
+         SlotAI_TaskDeliverSupplies_Stereni_02_02_WR {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -29.542 1.427 109.362
+          coords -29.542 -6.43 109.362
          }
-         SlotAI_TaskDeliverSupplies_Niemenkyla_02_03_LRGS {
+         SlotAI_TaskDeliverSupplies_Stereni_02_03_LRGS {
           components {
            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
            }
           }
-          coords 3.024 -4.101 58.334
+          coords 3.024 -2.222 58.334
          }
         }
        }
       }
-      Layer_TaskDeliverSupplies_AI_Niemenkyla_03 {
+      Layer_TaskDeliverSupplies_AI_Stereni_03 {
        components {
         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
          m_iRandomPercent 0
@@ -1996,20 +1429,20 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        coords 1.152 -0.059 -0.388
        {
-        GenericEntity SlotAI_TaskDeliverSupplies_Niemenkyla_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        GenericEntity SlotAI_TaskDeliverSupplies_Stereni_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          components {
           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
           }
          }
-         coords -4.512 0.181 -2.796
+         coords -4.512 0.092 -2.796
         }
        }
       }
      }
     }
    }
-   GenericEntity TaskDeliverSupplies_Niemenkyla : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+   GenericEntity TaskDeliverSupplies_Stereni : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
     components {
      SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
       m_eActivationType ON_TRIGGER_ACTIVATION
@@ -2024,12 +1457,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-         m_sEntityName "TaskDeliverSupplies_Niemenkyla"
+         m_sEntityName "TaskDeliverSupplies_Stereni"
         }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
-         m_sEntityName "Pers_TaskDeliverSupplies_Niemenkyla"
+         m_sEntityName "Pers_TaskDeliverSupplies_Stereni"
         }
        }
       }
@@ -2037,13 +1470,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     }
     coords -3.894 0.001 -1.966
     {
-     GenericEntity SlotMoveTo_TaskDeliverSupplies_Niemenkyla {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Stereni {
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-          m_fAreaRadius 30
+          m_fAreaRadius 18
           m_aCustomTriggerConditions {
            SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
             m_aPrefabFilter {
@@ -2071,17 +1504,577 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           m_bSearchVehicleInventory 0
          }
         }
-        m_sTaskTitle "Deliver Supplies Niemenkyla"
-        m_sTaskDescription "Deliver to the town of Niemenkyla<br />"\
+        m_sTaskTitle "Deliver Supplies Stereni"
+        m_sTaskDescription "Deliver to farm in the town of Stereni"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverSupplies_AI_Stereni"
+          }
+         }
+        }
+       }
+      }
+      coords 7.128 -0.304 5.033
+     }
+    }
+   }
+  }
+ }
+ Area_DS_Glochy {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+   }
+  }
+  coords 15266.759 60.328 1485.135
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Glochy {
+    coords -9.258 1.182 -15.252
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Glochy"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverSupplies_Glochy"
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Glochy {
+    coords 3.234 -0.304 3.074
+    TriggerShapeType Sphere
+    SphereRadius 30
+    DrawShape 1
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Glochy"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Glochy"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverSupplies_Glochy"
+    m_PlayerXPTaskReward "Deliver Supplies (40)"
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Glochy"
+    m_aRemovePrefabDetails {
+     PR_RemovePrefabFilter "{61964248E5071991}" {
+      m_aSpecificPrefabNames {
+       "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+      }
+      m_iPrefabCountToRemove 3
+     }
+     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
+      m_aSpecificPrefabNames {
+       "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
+      }
+      m_iPrefabCountToRemove 2
+     }
+    }
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverSupplies_Glochy {
+       coords -12.062 -0.001 -7.016
+      }
+      Pers_Fail_TaskDeliverSupplies_Glochy {
+       coords -12.105 0 -7.254
+      }
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverSupplies_Glochy : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords -1.668 0.122 -0.764
+   }
+   GenericEntity Layer_TaskDeliverSupplies_AI_Glochy : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -43.061 2.809 104.268
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverSupplies_AI_Glochy_01 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 80
+        }
+       }
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Glochy_01_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 4.121 -2.804 -19.862
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 119.42 -1.972 -104.009
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_01_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 41.416 -2.849 -104.195
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_01_03_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 53.754 -1.707 20.69
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_01_04_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 122.659 -1.84 -63.396
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Glochy_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 66
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Glochy_02_03_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -8.053 -27.435 -190.938
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_02_01_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -22.097 -10.064 -61.819
+         }
+         SlotAI_TaskDeliverSupplies_Glochy_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 118.115 -2.684 -189.829
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Glochy_03 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_iRandomPercent 0
+        }
+       }
+       coords 14.131 -4.745 -130.617
+       {
+        GenericEntity SlotAI_TaskDeliverSupplies_Glochy_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+          }
+         }
+         coords -24.248 1.882 82.692
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverSupplies_Glochy : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
+         m_sEntityName "TaskDeliverSupplies_Glochy"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
+         m_sEntityName "Pers_TaskDeliverSupplies_Glochy"
+        }
+       }
+      }
+     }
+    }
+    coords -3.894 0.001 -1.966
+    {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Glochy {
+      ID "5E74C90E3ED35D79"
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 30
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
+              m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+              m_iPrefabCount 3
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
+              m_sSpecificPrefabName "{CD23D85E73B53D82}Prefabs/Items/Food/PR_MeatLeg_01.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 2
+             }
+            }
+           }
+          }
+          m_bSearchVehicleInventory 0
+         }
+        }
+        m_sTaskTitle "Deliver Supplies Glochy"
+        m_sTaskDescription "Deliver to the town of Glochy<br />"\
         "3x Consumable Carriers<br />"\
-        "3x MRE<br />"\
-        "2x Jerry Can<br />"\
         "2x Legs of Meat"
         m_aActionsOnCreated {
          SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
           m_iMaxNumberOfActivations 1
           m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverSupplies_AI_Niemenkyla"
+           "Layer_TaskDeliverSupplies_AI_Glochy"
+          }
+         }
+        }
+       }
+      }
+      coords 7.128 -0.304 5.033
+     }
+    }
+   }
+  }
+ }
+ Area_DS_Gruwice_market {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+   }
+  }
+  coords 10315.855 10 5426.698
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Gruwice_market {
+    coords -9.258 1.182 -15.252
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverSupplies_Gruwice_market"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverSupplies_Gruwice_market"
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Gruwice_market {
+    coords 3.651 0.169 3.594
+    TriggerShapeType Sphere
+    SphereRadius 20
+    DrawShape 1
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Gruwice_market"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverSupplies_Gruwice_market"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverSupplies_Gruwice_market"
+    m_PlayerXPTaskReward "Deliver Supplies (40)"
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Gruwice_market"
+    m_aRemovePrefabDetails {
+     PR_RemovePrefabFilter "{61964248E5071991}" {
+      m_aSpecificPrefabNames {
+       "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+      }
+      m_iPrefabCountToRemove 2
+     }
+     PR_RemovePrefabFilter "{61930DD1230AD752}" {
+      m_aSpecificPrefabNames {
+       "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+      }
+      m_iPrefabCountToRemove 3
+     }
+     PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
+      m_aSpecificPrefabNames {
+       "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
+      }
+      m_iPrefabCountToRemove 2
+     }
+    }
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverSupplies_Gruwice_market {
+       coords -12.062 -0.001 -7.016
+      }
+      Pers_Fail_TaskDeliverSupplies_Gruwice_market {
+       coords -12.105 0 -7.254
+      }
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverSupplies_Gruwice_market : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords -3.887 -0.02 -1.989
+   }
+   GenericEntity Layer_TaskDeliverSupplies_AI_Gruwice_market : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -43.061 2.809 104.268
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverSupplies_AI_Gruwice_market_01 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 80
+        }
+       }
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Gruwice_market_01_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -1.841 -2.809 -75.594
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 31.372 -2.382 -82.961
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_01_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 138.664 -0.247 -167.361
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_01_03_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 74.589 -2.809 -67.714
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_01_04_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 85.031 -1.498 -129.445
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Gruwice_market_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 66
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverSupplies_Gruwice_market_02_01_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 26.61 -3.376 -84.937
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 76.839 -3.334 -121.151
+         }
+         SlotAI_TaskDeliverSupplies_Gruwice_market_02_03_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 47.412 -3.376 -107.441
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverSupplies_AI_Gruwice_market_03 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_iRandomPercent 0
+        }
+       }
+       coords 14.131 -4.745 -130.617
+       {
+        GenericEntity SlotAI_TaskDeliverSupplies_Gruwice_market_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+          }
+         }
+         coords 22.288 1.936 4.899
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverSupplies_Gruwice_market : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
+         m_sEntityName "TaskDeliverSupplies_Gruwice_market"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
+         m_sEntityName "Pers_TaskDeliverSupplies_Gruwice_market"
+        }
+       }
+      }
+     }
+    }
+    coords -3.894 0.001 -1.966
+    {
+     GenericEntity SlotMoveTo_TaskDeliverSupplies_Gruwice_market {
+      ID "5E74C90E3ED35D79"
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 18
+          m_aCustomTriggerConditions {
+           SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
+            m_aPrefabFilter {
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
+              m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
+              m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+              m_bIncludeChildren 1
+             }
+             SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
+              m_sSpecificPrefabName "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
+              m_bIncludeChildren 1
+              m_iPrefabCount 2
+             }
+            }
+           }
+          }
+          m_bSearchVehicleInventory 0
+         }
+        }
+        m_sTaskTitle "Deliver Supplies Gruwice"
+        m_sTaskDescription "Deliver to the market in the city of Gruwice<br />"\
+        "2x Consumable Carriers<br />"\
+        "3x MRE<br />"\
+        "2x Jerry Can"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverSupplies_AI_Gruwice_market"
           }
          }
         }

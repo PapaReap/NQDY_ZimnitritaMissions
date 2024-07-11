@@ -1,6 +1,6 @@
 $grp PR_SpawnTaskTrigger {
  TaskTrg_TaskDeliverVehicles_Friendly_Master {
-  coords 6022.695 44.563 4837.198
+  coords 6002.231 114.804 5053.278
   TriggerShapeType Sphere
   SphereRadius 1
   ShapeColor 0.046 0 1 0.078
@@ -426,7 +426,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6023.095 44.563 4834.52
+  coords 6033.462 110.227 4975.656
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_01 {
     coords 0.247 0 -0.774
@@ -588,7 +588,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.923 44.562 4829.119
+  coords 6041.019 109.604 4955.255
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_02 {
     coords 0.247 0 -0.774
@@ -750,7 +750,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.664 44.562 4824.438
+  coords 6047.455 109.315 4939.929
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_03 {
     coords 0.247 0 -0.774
@@ -912,7 +912,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.759 44.563 4818.571
+  coords 6057.334 109.073 4915.241
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_04 {
     coords 0.247 0 -0.774
@@ -1074,7 +1074,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.605 44.563 4813.002
+  coords 6075.331 108.686 4871.79
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_08 {
     coords 0.247 0 -0.774
@@ -1236,7 +1236,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.213 44.562 4807.253
+  coords 6064.123 108.957 4901.091
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_05 {
     coords 0.247 0 -0.774
@@ -1398,7 +1398,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6021.07 44.561 4801.8
+  coords 6069.999 108.827 4886.217
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_06 {
     coords 0.247 0 -0.774
@@ -1560,7 +1560,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6020.746 44.564 4797.04
+  coords 6070.526 108.816 4886.832
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_07 {
     coords 0.247 0 -0.774
@@ -1722,7 +1722,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6020.682 44.562 4792.862
+  coords 6085.408 108.501 4847.969
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_10 {
     coords 0.247 0 -0.774
@@ -1884,7 +1884,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 6020.223 44.563 4787.496
+  coords 6078.231 108.585 4862.854
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Friendly_09 {
     coords 0.247 0 -0.774
@@ -2046,7 +2046,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 60
    }
   }
-  coords 5966.93 44.562 4845.619
+  coords 6025.196 111.027 4993.055
   {
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverVehicles_Enemy_01 {
     coords 0.247 0 -0.774
