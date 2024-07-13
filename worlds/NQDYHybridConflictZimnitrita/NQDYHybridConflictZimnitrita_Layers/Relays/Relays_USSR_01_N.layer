@@ -190,7 +190,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
     "faction affiliation" "USSR"
    }
   }
-  coords 8639.412 67.252 13108.31
+  coords 8639.412 60.095 13108.31
   angleY 17.692
   {
    GenericEntity {
@@ -227,7 +227,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_bPickRandomGroupType 1
       }
      }
-     coords 5.533 -0.196 -4.102
+     coords 5.533 1.026 -4.102
     }
     USSR_05_Relay_Lake_w_tower_APS_patrol_02 {
      components {
@@ -237,7 +237,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_bPickRandomGroupType 1
       }
      }
-     coords 83.577 -20.75 -108.723
+     coords 83.577 -14.001 -108.723
     }
     USSR_05_Relay_Lake_w_tower_APS_patrol_03 {
      components {
@@ -247,7 +247,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_bPickRandomGroupType 1
       }
      }
-     coords -201.105 -20.03 -48.889
+     coords -201.105 -12.829 -48.889
     }
     USSR_05_Relay_Lake_w_tower_APS_patrol_04 {
      components {
@@ -257,7 +257,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_bPickRandomGroupType 1
       }
      }
-     coords 2.186 -4.265 115.703
+     coords 2.186 -2.085 115.704
     }
    }
   }

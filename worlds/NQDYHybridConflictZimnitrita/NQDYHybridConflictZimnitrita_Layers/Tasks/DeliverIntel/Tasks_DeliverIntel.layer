@@ -42,50 +42,149 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Master {
     }
    }
   }
-  PR_TaskDetails "{615A5577DA9C36FA}" {
-   m_sTaskName "TaskDeliverIntel_Haukkavuori"
+  PR_TaskDetails "{6161067CF4B5746B}" {
+   m_sTaskName "TaskDeliverIntel_Gruwice_WT"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Haukkavuori"
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Gruwice_WT"
    m_bUseMoveTaskDestination 1
    m_aTaskMoveDetails {
-    PR_MoveTask "{615A55770C9F53CD}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Haukkavuori"
+    PR_MoveTask "{615E14E80CF02CBD}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Gruwice_WT"
      m_sMoveSectionToRandomBases {
       1
      }
      m_bInsertBaseNameInTaskInfos 1
      m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Haukkavuori"
+      "Opt_TaskDeliverIntel_Gruwice_WT"
      }
     }
-    PR_MoveTask "{615A557721DE677F}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Haukkavuori"
+    PR_MoveTask "{615E14E80C5AFC1F}" {
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Gruwice_WT"
      m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Haukkavuori"
+      "TaskDeliverIntel_MoveCollection_Gruwice_WT"
      }
     }
    }
   }
-  PR_TaskDetails "{6161067CF4B5746B}" {
-   m_sTaskName "TaskDeliverIntel_Heikinhelli"
+  PR_TaskDetails "{615A5577DA9C36FA}" {
+   m_sTaskName "TaskDeliverIntel_IndustrialZone"
    m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Heikinhelli"
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_IndustrialZone"
    m_bUseMoveTaskDestination 1
    m_aTaskMoveDetails {
-    PR_MoveTask "{615E14E80CF02CBD}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Heikinhelli"
+    PR_MoveTask "{615A55770C9F53CD}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_IndustrialZone"
      m_sMoveSectionToRandomBases {
       1
      }
      m_bInsertBaseNameInTaskInfos 1
      m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Heikinhelli"
+      "Opt_TaskDeliverIntel_IndustrialZone"
+     }
+    }
+    PR_MoveTask "{615A557721DE677F}" {
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_IndustrialZone"
+     m_sMoveSectionTo {
+      "TaskDeliverIntel_MoveCollection_IndustrialZone"
+     }
+    }
+   }
+  }
+  PR_TaskDetails "{615A55703C2A8F29}" {
+   m_sTaskName "TaskDeliverIntel_Kromzova"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Kromzova"
+   m_bUseMoveTaskDestination 1
+   m_aTaskMoveDetails {
+    PR_MoveTask "{615A5570474C944E}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Kromzova"
+     m_sMoveSectionToRandomBases {
+      1 2
+     }
+     m_bInsertBaseNameInTaskInfos 1
+     m_sAdditionalObjectsToMove {
+      "Opt_TaskDeliverIntel_Kromzova"
+     }
+    }
+    PR_MoveTask "{615A55704547FD8E}" {
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Kromzova"
+     m_sMoveSectionTo {
+      "TaskDeliverIntel_MoveCollection_Kromzova"
+     }
+    }
+   }
+  }
+  PR_TaskDetails "{61610671FEE49A5C}" {
+   m_sTaskName "TaskDeliverIntel_LakeCamp"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_LakeCamp"
+   m_bUseMoveTaskDestination 1
+   m_aTaskMoveDetails {
+    PR_MoveTask "{615E14E80CF02CBD}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_LakeCamp"
+     m_sMoveSectionToRandomBases {
+      1
+     }
+     m_bInsertBaseNameInTaskInfos 1
+     m_sAdditionalObjectsToMove {
+      "Opt_TaskDeliverIntel_LakeCamp"
      }
     }
     PR_MoveTask "{615E14E80C5AFC1F}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Heikinhelli"
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_LakeCamp"
      m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Heikinhelli"
+      "TaskDeliverIntel_MoveCollection_LakeCamp"
+     }
+    }
+   }
+  }
+  PR_TaskDetails "{616063C43859E2F7}" {
+   m_sTaskName "TaskDeliverIntel_Sartava"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Sartava"
+   m_bUseMoveTaskDestination 1
+   m_aTaskMoveDetails {
+    PR_MoveTask "{615A5570474C944E}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Sartava"
+     m_sMoveSectionToRandomBases {
+      1
+     }
+     m_bInsertBaseNameInTaskInfos 1
+     m_sAdditionalObjectsToMove {
+      "Opt_TaskDeliverIntel_Sartava"
+     }
+    }
+    PR_MoveTask "{615A55704547FD8E}" {
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Sartava"
+     m_sMoveSectionTo {
+      "TaskDeliverIntel_MoveCollection_Sartava"
+     }
+     m_sMoveSectionToRandomBases {
+      0
+     }
+    }
+   }
+  }
+  PR_TaskDetails "{615F71C3740FB04F}" {
+   m_sTaskName "TaskDeliverIntel_Szarlota"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Szarlota"
+   m_bUseMoveTaskDestination 1
+   m_aTaskMoveDetails {
+    PR_MoveTask "{615E14E80CF02CBD}" {
+     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Szarlota"
+     m_sMoveSectionToRandomBases {
+      1
+     }
+     m_bInsertBaseNameInTaskInfos 1
+     m_sAdditionalObjectsToMove {
+      "Opt_TaskDeliverIntel_Szarlota"
+     }
+    }
+    PR_MoveTask "{615E14E80C5AFC1F}" {
+     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Szarlota"
+     m_sMoveSectionTo {
+      "TaskDeliverIntel_MoveCollection_Szarlota"
      }
     }
    }
@@ -114,84 +213,6 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Master {
     }
    }
   }
-  PR_TaskDetails "{615F71C3740FB04F}" {
-   m_sTaskName "TaskDeliverIntel_Kappeliniemi"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Kappeliniemi"
-   m_bUseMoveTaskDestination 1
-   m_aTaskMoveDetails {
-    PR_MoveTask "{615E14E80CF02CBD}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Kappeliniemi"
-     m_sMoveSectionToRandomBases {
-      1
-     }
-     m_bInsertBaseNameInTaskInfos 1
-     m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Kappeliniemi"
-     }
-    }
-    PR_MoveTask "{615E14E80C5AFC1F}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Kappeliniemi"
-     m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Kappeliniemi"
-     }
-    }
-   }
-  }
-  PR_TaskDetails "{616063C43859E2F7}" {
-   m_sTaskName "TaskDeliverIntel_Kiiskinkyla"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Kiiskinkyla"
-   m_bUseMoveTaskDestination 1
-   m_aTaskMoveDetails {
-    PR_MoveTask "{615A5570474C944E}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Kiiskinkyla"
-     m_sMoveSectionToRandomBases {
-      1
-     }
-     m_bInsertBaseNameInTaskInfos 1
-     m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Kiiskinkyla"
-     }
-    }
-    PR_MoveTask "{615A55704547FD8E}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Kiiskinkyla"
-     m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Kiiskinkyla"
-     }
-     m_sMoveSectionToRandomBases {
-      0
-     }
-    }
-   }
-  }
-  PR_TaskDetails "{615A55703C2A8F29}" {
-   m_sTaskName "TaskDeliverIntel_Kiiskinkyla_s"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Kiiskinkyla_s"
-   m_bUseMoveTaskDestination 1
-   m_aTaskMoveDetails {
-    PR_MoveTask "{615A5570474C944E}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Kiiskinkyla_s"
-     m_sMoveSectionToRandomBases {
-      1 2
-     }
-     m_bInsertBaseNameInTaskInfos 1
-     m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Kiiskinkyla_s"
-     }
-    }
-    PR_MoveTask "{615A55704547FD8E}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Kiiskinkyla_s"
-     m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Kiiskinkyla_s"
-     }
-     m_sMoveSectionToRandomBases {
-      0
-     }
-    }
-   }
-  }
   PR_TaskDetails "{616063C379DDDBEE}" {
    m_sTaskName "TaskDeliverIntel_Liiralahdenjarvi"
    m_bUsePersistentTask 1
@@ -212,30 +233,6 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Master {
      m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Liiralahdenjarvi"
      m_sMoveSectionTo {
       "TaskDeliverIntel_MoveCollection_Liiralahdenjarvi"
-     }
-    }
-   }
-  }
-  PR_TaskDetails "{61610671FEE49A5C}" {
-   m_sTaskName "TaskDeliverIntel_Lounatkyla"
-   m_bUsePersistentTask 1
-   m_sPersistentTaskObject "Pers_TaskDeliverIntel_Lounatkyla"
-   m_bUseMoveTaskDestination 1
-   m_aTaskMoveDetails {
-    PR_MoveTask "{615E14E80CF02CBD}" {
-     m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Lounatkyla"
-     m_sMoveSectionToRandomBases {
-      1
-     }
-     m_bInsertBaseNameInTaskInfos 1
-     m_sAdditionalObjectsToMove {
-      "Opt_TaskDeliverIntel_Lounatkyla"
-     }
-    }
-    PR_MoveTask "{615E14E80C5AFC1F}" {
-     m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Lounatkyla"
-     m_sMoveSectionTo {
-      "TaskDeliverIntel_MoveCollection_Lounatkyla"
      }
     }
    }
@@ -512,582 +509,3412 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Master {
  m_iDelayTimerBetweenEachTaskMin 3600
  m_iDelayTimerBetweenEachTaskMax 10800
 }
-GenericEntity Area_Airport_DI : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
- components {
-  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-   m_bExcludeFromDynamicDespawn 1
-   m_iDynamicDespawnRange 500
-   m_bShowDebugShapesInWorkbench 1
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Area_Airport_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 500
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 14253.844 50.906 11937.875
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Airport {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_Airport"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_Airport"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Airport"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_Airport"
+        }
+       }
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Airport"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_Airport"
+        }
+       }
+      }
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Airport {
+    coords 6.611 0.001 3.679
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Airport"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_Airport"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_Airport"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.25
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Airport"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_Airport {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_Airport {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_Airport : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4994F44931C0}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Armeijan Varikko"
+      m_sTaskDescription "Search Armeijan Varikko for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4994620AB689}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_Airport"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61610678DC6D443B}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_Airport"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_Airport {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_Airport"
+        }
+       }
+      }
+      coords 6.656 0.001 3.63
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_Airport {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Airport"
+        m_sTaskDescription "Search the Airport for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Airport"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F49954F6F8565}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.127 -0.034
+      angleY -22.479
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_Airport : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.203 0.002 -1.984
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_Airport : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_Airport_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Airport_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 4.121 -0.001 -19.862
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 40.131 -0.001 -109.69
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -83.432 -0.001 -122.333
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 136.936 -0.001 -139.262
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords -104.334 -0.001 -52.786
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 106.528 -0.001 42.353
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_Airport_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -34.935 -0.001 -134.339
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverIntel_AI_Airport_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Airport_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -9.157 -0.568 27.786
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 197.085 -0.568 -154.02
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -45.114 -0.568 -15.638
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -131.068 -0.63 -108.222
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 147.165 -0.568 -78.855
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 34.366 -0.568 -97.66
+         }
+         SlotAI_TaskDeliverIntel_Airport_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -47.662 -0.568 -108.087
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_Airport : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_Airport_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -129.748 9.956 -60.428
+      }
+      TaskDeliverIntel_Airport_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -129.018 5.76 -64.041
+      }
+      TaskDeliverIntel_Airport_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -131.176 5.744 -57.711
+      }
+      TaskDeliverIntel_Airport_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -125.361 1.948 -53.547
+      }
+      TaskDeliverIntel_Airport_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -119.812 1.948 -59.006
+      }
+      TaskDeliverIntel_Airport_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -122.424 1.948 -62.601
+      }
+      TaskDeliverIntel_Airport_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -130.409 1.96 -64.276
+      }
+      TaskDeliverIntel_Airport_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -97.882 1.018 -92.803
+      }
+      TaskDeliverIntel_Airport_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -85.732 1.018 -84.976
+      }
+      TaskDeliverIntel_Airport_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -96.354 1.017 -79.699
+      }
+      TaskDeliverIntel_Airport_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -91.352 1.036 -76.389
+      }
+      TaskDeliverIntel_Airport_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -71.969 5.151 -96.109
+      }
+      TaskDeliverIntel_Airport_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -72.021 5.151 -96.227
+      }
+      TaskDeliverIntel_Airport_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -70.177 5.151 -92.792
+      }
+      TaskDeliverIntel_Airport_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -75.941 5.152 -116.848
+      }
+      TaskDeliverIntel_Airport_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -73.95 5.151 -121.054
+      }
+      TaskDeliverIntel_Airport_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -74.077 1.951 -119.989
+      }
+      TaskDeliverIntel_Airport_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -77.566 2.061 -115.924
+      }
+      TaskDeliverIntel_Airport_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -41.822 5.151 -96.65
+      }
+      TaskDeliverIntel_Airport_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -66.758 5.151 -90.967
+      }
+      TaskDeliverIntel_Airport_move_22 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -32.789 1.103 -155.377
+      }
+      TaskDeliverIntel_Airport_move_23 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -111.819 1.531 -108.583
+      }
+      TaskDeliverIntel_Airport_move_24 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -122.323 1.551 -95.368
+      }
+      TaskDeliverIntel_Airport_move_25 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -122.949 1.554 -88.842
+      }
+      TaskDeliverIntel_Airport_move_26 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -158.996 0.948 -78.758
+      }
+      TaskDeliverIntel_Airport_move_27 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -158.676 1.042 -86.087
+      }
+      TaskDeliverIntel_Airport_move_28 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -182.876 1.05 -92.733
+      }
+      TaskDeliverIntel_Airport_move_29 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -40.158 5.151 -100.172
+      }
+      TaskDeliverIntel_Airport_move_21 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 9.082 2.062 -151.588
+      }
+      TaskDeliverIntel_Airport_move_31 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 13.521 1.95 -148.1
+      }
+      TaskDeliverIntel_Airport_move_32 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 17.454 1.95 -143.012
+      }
+      TaskDeliverIntel_Airport_move_33 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -48.947 2.045 -100.349
+      }
+      TaskDeliverIntel_Airport_move_34 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -41.831 1.951 -96.79
+      }
+      TaskDeliverIntel_Airport_move_35 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -9.57 1.95 -115.428
+      }
+      TaskDeliverIntel_Airport_move_36 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 17.998 5.15 -119.706
+      }
+      TaskDeliverIntel_Airport_move_30 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 21.342 5.15 -126.65
+      }
+     }
+    }
+   }
   }
  }
- coords 14253.844 50.906 11937.875
- {
-  PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Airport {
-   coords 0.401 -0.051 6.334
-   Flags 2097155
-   TriggerShapeType Sphere
-   SphereRadius 500
-   DrawShape 1
-   ShapeColor 0.046 0 1 0.078
-   TriggerActivationType "First change"
-   PeriodicQueries 1
-   UpdatePeriod 50
-   m_bDebugLogs 1
-   m_bUsePersistence 1
-   m_sPersistentObject "Pers_TaskDeliverIntel_Airport"
-   m_ActivationPresence ANY_CHARACTER
-   m_aIndividualTasks {
-    PR_TaskDetails "{613802B2DA10B658}" {
-     m_sTaskName "TaskDeliverIntel_Airport"
-     m_bUseMoveTaskDestination 1
-     m_aTaskMoveDetails {
-      PR_MoveTask "{613802B2E6E682B1}" {
-       m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Airport"
-       m_sMoveSectionToRandomBases {
-        1
+ Area_IndustrialZone_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+   }
+  }
+  coords 12259.583 32.003 8770.485
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_IndustrialZone {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_IndustrialZone"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_IndustrialZone"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_IndustrialZone"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_IndustrialZone"
+        }
        }
-       m_bInsertBaseNameInTaskInfos 1
-       m_sAdditionalObjectsToMove {
-        "Opt_TaskDeliverIntel_Airport"
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_IndustrialZone"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_IndustrialZone"
+        }
        }
       }
-      PR_MoveTask "{613802B56EC76EB7}" {
-       m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Airport"
-       m_sMoveSectionTo {
-        "TaskDeliverIntel_MoveCollection_Airport"
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_IndustrialZone {
+    coords 6.612 0 3.674
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_IndustrialZone"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_IndustrialZone"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_IndustrialZone"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.2
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_IndustrialZone"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_IndustrialZone {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_IndustrialZone {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_IndustrialZone : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F499402A3F4AD}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
        }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel IndustrialZone"
+      m_sTaskDescription "Search the Industrial Zone for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F499469EBCF37}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_IndustrialZone"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402FDC697974}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_IndustrialZone"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_IndustrialZone {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_IndustrialZone"
+        }
+       }
+      }
+      coords 6.656 0.001 3.63
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_IndustrialZone {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Industrial Zone"
+        m_sTaskDescription "Search the Industrial Zone for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Haukkavuori"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F499556240617}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.127 -0.034
+      angleY -22.479
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_IndustrialZone : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.12 0 -1.003
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_IndustrialZone : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_IndustrialZone_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 23.777 0.027 49.001
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -22.937 0.027 117.329
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 104.68 0.027 82.585
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords 16.394 -0.004 -50.009
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -122.074 0.027 122.544
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -111.702 -0.223 -76.743
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -43.854 0.382 -69.865
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverIntel_AI_IndustrialZone_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 90.523 -0.54 81.404
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -64.211 -0.54 177.177
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -112.526 -0.782 -86.844
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 50.576 -0.571 -73.113
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 196.569 -0.571 -215.322
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 236.256 -0.571 -130.632
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 98.004 -0.571 -193.032
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_IndustrialZone : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_IndustrialZone_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 67.77 1.032 -32.493
+      }
+      TaskDeliverIntel_IndustrialZone_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 10.288 1.007 -129.246
+      }
+      TaskDeliverIntel_IndustrialZone_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 5.269 1.007 -130.403
+      }
+      TaskDeliverIntel_IndustrialZone_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 3.304 1.007 -126.801
+      }
+      TaskDeliverIntel_IndustrialZone_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -3.163 1.165 -113.296
+      }
+      TaskDeliverIntel_IndustrialZone_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -22.463 1.335 -43.854
+      }
+      TaskDeliverIntel_IndustrialZone_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -20.094 1.281 -62.794
+      }
+      TaskDeliverIntel_IndustrialZone_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -13.133 1.336 -56.234
+      }
+      TaskDeliverIntel_IndustrialZone_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -76.385 1.243 109.481
+      }
+      TaskDeliverIntel_IndustrialZone_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -38.36 13.126 38.353
+      }
+      TaskDeliverIntel_IndustrialZone_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -34.422 13.254 54.84
+      }
+      TaskDeliverIntel_IndustrialZone_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -76.885 17.118 69.146
+      }
+      TaskDeliverIntel_IndustrialZone_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 46.688 1.196 4.07
+      }
+      TaskDeliverIntel_IndustrialZone_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 42.787 1.207 -3.34
+      }
+      TaskDeliverIntel_IndustrialZone_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 46.529 1.196 -3.691
+      }
+      TaskDeliverIntel_IndustrialZone_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 97.911 1.138 16.958
+      }
+      TaskDeliverIntel_IndustrialZone_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 123.792 1.503 12.885
+      }
+      TaskDeliverIntel_IndustrialZone_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 121.269 1.503 24.297
+      }
+      TaskDeliverIntel_IndustrialZone_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 67.852 1.032 -32.548
+      }
+      TaskDeliverIntel_IndustrialZone_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 69.625 0.989 -32.026
       }
      }
     }
    }
   }
-  PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Airport {
-   coords 6.611 0.001 3.679
-   TriggerShapeType Sphere
-   SphereRadius 2
-   ShapeColor 0 0.502 0.502 0.098
-   TriggerActivationType "First change"
-   PeriodicQueries 1
-   UpdatePeriod 5
-   m_bDebugLogs 1
-   m_bUsePersistence 1
-   m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Airport"
-   m_bNeutralizePersistentObject 1
-   m_aOverrideOptions {
-    PR_OverrideTriggerActivation "{61917DF60E955557}" {
-     m_bOverrideActivationPresence 1
-     m_bActivateIfObjectMissing 1
-     m_sMissingObjectName "Pers_TaskDeliverIntel_Airport"
+ }
+ Area_Gruwice_DI_WT {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+   }
+  }
+  coords 9679.272 9.125 4800.3
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Gruwice_WT {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_Gruwice_WT"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_Gruwice_WT"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Gruwice_WT"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_Gruwice_WT"
+        }
+       }
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Gruwice_WT"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_Gruwice_WT"
+        }
+       }
+      }
+     }
     }
    }
-   m_iDelayTimerMin 5
-   m_sTaskName "Opt_TaskDeliverIntel_Airport"
-   m_PlayerXPTaskReward "Deliver Intel (50)"
-   m_fXPMultiplier 1.25
-   m_fMaxDistanceForVolunteerBonus 200
-   m_bUseTaskFailObject 1
-   m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Airport"
-   {
-    $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-     Pers_Opt_TaskDeliverIntel_Airport {
-      coords 0.001 -0.019 0.136
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Gruwice_WT {
+    coords 6.609 0.735 3.672
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Gruwice_WT"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_Gruwice_WT"
      }
-     Pers_Fail_TaskDeliverIntel_Airport {
-      coords 0.146 -0.341 -0.415
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_Gruwice_WT"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.125
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Gruwice_WT"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_Gruwice_WT {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_Gruwice_WT {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_Gruwice_WT : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F49943518AC72}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Gruwice Water Treatment"
+      m_sTaskDescription "Search Gruwice Water Treatment for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_Gruwice_WT"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402F0F3B853C}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6161402F1BE18878}" {
+         m_sEntityName "Pers_TaskDeliverIntel_Gruwice_WT"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_Gruwice_WT {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_Gruwice_WT"
+        }
+       }
+      }
+      coords 6.656 0.737 3.63
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_Gruwice_WT {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Gruwice Water Treatment"
+        m_sTaskDescription "Search Gruwice Water Treatment for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Gruwice_WT"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F499A938992D4}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.127 -0.034
+      angleY -22.479
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_Gruwice_WT : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.39 0 0.132
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_Gruwice_WT : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_Gruwice_WT_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -85.603 1.498 30.656
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 18.981 0.837 -54.089
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 41.51 0.874 -3.268
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -61.539 -0.02 -38.323
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords 2.701 -0.001 10.06
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 74.234 0.874 21.985
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 4.841 -0.001 23.281
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverIntel_AI_Gruwice_WT_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 30.02 -3.709 87.103
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -43.341 -0.568 19.811
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -14.857 -1.686 -68.882
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 74.309 0.305 -65.684
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -69.704 -0.469 -32.922
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -101.246 7.198 15.347
+         }
+         SlotAI_TaskDeliverIntel_Gruwice_WT_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 51.73 -0.999 -87.849
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_Gruwice_WT : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_Gruwice_WT_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 72.301 2.796 13.071
+      }
+      TaskDeliverIntel_Gruwice_WT_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 71.179 2.327 6.411
+      }
+      TaskDeliverIntel_Gruwice_WT_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 51.516 2.941 12.972
+      }
+      TaskDeliverIntel_Gruwice_WT_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 55.815 8.904 4.303
+      }
+      TaskDeliverIntel_Gruwice_WT_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 69.858 8.886 14.434
+      }
+      TaskDeliverIntel_Gruwice_WT_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 79.008 8.789 8.891
+      }
+      TaskDeliverIntel_Gruwice_WT_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 74.953 8.789 10.705
+      }
+      TaskDeliverIntel_Gruwice_WT_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 75.703 8.783 2.644
+      }
+      TaskDeliverIntel_Gruwice_WT_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 17.057 1.189 -15.362
+      }
+      TaskDeliverIntel_Gruwice_WT_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -46.519 5.142 37.062
+      }
+      TaskDeliverIntel_Gruwice_WT_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -42.926 5.142 36.779
+      }
+      TaskDeliverIntel_Gruwice_WT_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -53.376 5.142 40.549
+      }
+      TaskDeliverIntel_Gruwice_WT_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -47.548 5.142 37.667
+      }
+      TaskDeliverIntel_Gruwice_WT_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -42.913 1.286 64.593
+      }
+      TaskDeliverIntel_Gruwice_WT_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -27.282 1.13 69.951
+      }
+      TaskDeliverIntel_Gruwice_WT_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -57.697 1.536 25.522
+      }
+      TaskDeliverIntel_Gruwice_WT_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -70.505 0.962 -13.403
+      }
+      TaskDeliverIntel_Gruwice_WT_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -70.259 1.528 -24.525
+      }
+      TaskDeliverIntel_Gruwice_WT_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -15.327 1.253 -14.58
+      }
+      TaskDeliverIntel_Gruwice_WT_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 7.472 1.145 -6.694
+      }
      }
     }
    }
   }
-  GenericEntity TaskDeliverIntel_Airport : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
-   components {
-    SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
-     m_bShowDebugShapesDuringRuntime 1
-     m_eActivationType ON_TRIGGER_ACTIVATION
-     m_aActivationActions {
-      SCR_ScenarioFrameworkActionPlaySound "{615F4994F44931C0}" {
-       m_sSound "SOUND_HUD_TASK_CREATED"
-      }
-     }
-     m_bExcludeFromDynamicDespawn 1
-     m_sTaskTitle "Locate Intel Armeijan Varikko"
-     m_sTaskDescription "Search Armeijan Varikko for hidden intel"
-     m_bPlaceMarkerOnSubjectSlot 0
-     m_aTriggerActionsOnFinish {
-      SCR_ScenarioFrameworkActionPlaySound "{615F4994620AB689}" {
-       m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-      }
-      SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-       m_iMaxNumberOfActivations 1
-       m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-        m_sEntityName "TaskDeliverIntel_Airport"
-       }
-      }
-      SCR_ScenarioFrameworkActionDeleteEntity "{61610678DC6D443B}" {
-       m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
-        m_sEntityName "Pers_TaskDeliverIntel_Airport"
-       }
-      }
-     }
-     m_bShowDebugShapesInWorkbench 1
-     m_sTaskTitleUpdated ""
-     m_sTaskDescriptionUpdated ""
-    }
+ }
+ Area_Szarlota_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 400
    }
-   coords -0.044 0 0.046
-   {
-    GenericEntity SlotDelivery_TaskDeliverIntel_Airport {
-     ID "5E74C909218B71FF"
-     components {
-      SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
-       m_aPlugins {
-        SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
-         m_fAreaRadius 2
-         m_bOnce 0
+  }
+  coords 13128.286 8.102 1776.767
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Szarlota {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_Szarlota"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_Szarlota"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Szarlota"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_Szarlota"
         }
        }
-       m_aAssociatedTaskLayers {
-        "TaskDeliverIntel_Airport"
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Szarlota"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_Szarlota"
+        }
        }
       }
      }
-     coords 6.656 0.001 3.63
     }
-    GenericEntity SlotPick_TaskDeliverIntel_Airport {
-     ID "5E74C909218B7182"
-     components {
-      SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
-       m_bShowDebugShapesDuringRuntime 1
-       m_bExcludeFromDynamicDespawn 1
-       m_sTaskTitle "Locate Intel Airport"
-       m_sTaskDescription "Search the Airport for hidden intel"
-       m_aActionsOnCreated {
-        SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
-         m_iMaxNumberOfActivations 1
-         m_aNameOfObjectsToSpawnOnActivation {
-          "Layer_TaskDeliverIntel_AI_Airport"
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Szarlota {
+    coords 6.612 -0.001 3.682
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Szarlota"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_Szarlota"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_Szarlota"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.125
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Szarlota"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_Szarlota {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_Szarlota {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_Szarlota : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F49943518AC72}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Szarlota"
+      m_sTaskDescription "Search Szarlota for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_Szarlota"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402F3C873D3A}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_Szarlota"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_Szarlota {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_Szarlota"
+        }
+       }
+      }
+      coords 6.656 0.001 3.63
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_Szarlota {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Szarlota"
+        m_sTaskDescription "Search Szarlota for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Szarlota"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F499A938992D4}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.127 -0.034
+      angleY -22.479
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_Szarlota : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords -0.643 -0.001 0.306
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_Szarlota : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_Szarlota_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Szarlota_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -107.99 2.653 24.459
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 260.396 2.17 -67.59
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 359.497 -0.448 29.685
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -299.759 2.527 84.708
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords -11.853 2.689 35.382
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -264.724 6.034 -65.315
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 23.771 2.064 -78.034
          }
         }
        }
-       m_aActionsOnUpdated {
-        SCR_ScenarioFrameworkActionPlaySound "{615F49954F6F8565}" {
-         m_sSound "SOUND_HUD_TASK_CREATED"
+      }
+      Layer_TaskDeliverIntel_AI_Szarlota_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
         }
        }
-       m_sTaskTitleUpdated1 "Deliver Intel to base %2"
-       m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
-       m_sTaskTitleUpdated2 "Locate the dropped intel"
-       m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Szarlota_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -64.617 1.088 -8.002
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 162.719 -1.483 68.286
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -219.077 1.364 -46.184
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -54.728 1.606 -116.771
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 270.496 1.848 -58.593
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 95.649 1.646 16.209
+         }
+         SlotAI_TaskDeliverIntel_Szarlota_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 269.373 1.834 -55.94
+         }
+        }
+       }
       }
      }
-     coords 0.043 0.127 -0.034
-     angleY -22.479
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_Szarlota : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_Szarlota_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -26.087 4.835 -144.063
+      }
+      TaskDeliverIntel_Szarlota_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -29.67 5.127 -148.223
+      }
+      TaskDeliverIntel_Szarlota_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -27.828 4.342 -102.282
+      }
+      TaskDeliverIntel_Szarlota_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -17.175 4.334 -89.389
+      }
+      TaskDeliverIntel_Szarlota_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -10.462 4.24 -82.654
+      }
+      TaskDeliverIntel_Szarlota_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 0.481 4.243 -62.308
+      }
+      TaskDeliverIntel_Szarlota_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 18.954 3.665 -28.346
+      }
+      TaskDeliverIntel_Szarlota_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -97.776 3.369 -113.411
+      }
+      TaskDeliverIntel_Szarlota_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 35.144 1.424 25.604
+      }
+      TaskDeliverIntel_Szarlota_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 58.669 5.452 8.594
+      }
+      TaskDeliverIntel_Szarlota_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 98.461 3.689 14.051
+      }
+      TaskDeliverIntel_Szarlota_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 115.787 3.018 4.904
+      }
+      TaskDeliverIntel_Szarlota_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -99.33 5.264 69.034
+      }
+      TaskDeliverIntel_Szarlota_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -64.074 5.668 77.687
+      }
+      TaskDeliverIntel_Szarlota_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -139.844 3.217 75.889
+      }
+      TaskDeliverIntel_Szarlota_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -120.024 3.115 -119.918
+      }
+      TaskDeliverIntel_Szarlota_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -117.589 6.905 -137.109
+      }
+      TaskDeliverIntel_Szarlota_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -119.578 3.623 -136.772
+      }
+      TaskDeliverIntel_Szarlota_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -108.769 3.592 -145.701
+      }
+     }
     }
    }
   }
-  GenericEntity Pers_TaskDeliverIntel_Airport : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-   coords 0.203 0.002 -1.984
-  }
-  GenericEntity Layer_TaskDeliverIntel_AI_Airport : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-   components {
-    SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-     m_SpawnChildren RANDOM_ONE
-     m_eActivationType ON_TRIGGER_ACTIVATION
-    }
+ }
+ Area_Sartava_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 250
    }
-   coords -3.319 0.001 0.196
-   {
-    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-     Layer_TaskDeliverIntel_AI_Airport_01 {
-      coords 0 0 0
-      {
-       $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-        SlotAI_TaskDeliverIntel_Airport_01_01_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords 4.121 -0.001 -19.862
+  }
+  coords 9477.254 7.498 10025.996
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Sartava {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_Sartava"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_Sartava"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Sartava"
+        m_sMoveSectionToRandomBases {
+         1
         }
-        SlotAI_TaskDeliverIntel_Airport_01_02_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords 40.131 -0.001 -109.69
-        }
-        SlotAI_TaskDeliverIntel_Airport_01_03_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords -83.432 -0.001 -122.333
-         angleY -179.102
-        }
-        SlotAI_TaskDeliverIntel_Airport_01_04_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords 136.936 -0.001 -139.262
-        }
-        SlotAI_TaskDeliverIntel_Airport_01_05_LRGS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-          }
-         }
-         coords -104.334 -0.001 -52.786
-        }
-        SlotAI_TaskDeliverIntel_Airport_01_06_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords 106.528 -0.001 42.353
-         angleY 178.77
-        }
-        SlotAI_TaskDeliverIntel_Airport_01_07_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords -34.935 -0.001 -134.339
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_Sartava"
         }
        }
-      }
-     }
-     Layer_TaskDeliverIntel_AI_Airport_02 {
-      components {
-       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-        m_SpawnChildren RANDOM_BASED_ON_PLAYERS_COUNT
-       }
-      }
-      coords -6.586 0.567 -0.478
-      {
-       $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-        SlotAI_TaskDeliverIntel_Airport_02_05_LRGS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-          }
-         }
-         coords -9.157 -0.568 27.786
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_04_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords 197.085 -0.568 -154.02
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_02_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords -45.114 -0.568 -15.638
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_03_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords -131.068 -0.63 -108.222
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_01_LFTS {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-          }
-         }
-         coords 147.165 -0.568 -78.855
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_06_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords 34.366 -0.568 -97.66
-        }
-        SlotAI_TaskDeliverIntel_Airport_02_07_WR {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-          }
-         }
-         coords -47.662 -0.568 -108.087
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Sartava"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_Sartava"
         }
        }
       }
      }
     }
    }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Sartava {
+    coords 6.439 0.295 4.094
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Sartava"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_Sartava"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_Sartava"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.125
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Sartava"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_Sartava {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_Sartava {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_Sartava : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F49940AB6BBA8}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Sartava"
+      m_sTaskDescription "Search Sartava for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4994730FC1D2}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_Sartava"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402F4113CC9C}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_Sartava"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_Sartava {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_Sartava"
+        }
+       }
+      }
+      coords 6.656 0.001 3.63
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_Sartava {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Sartava"
+        m_sTaskDescription "Search Sartava for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Sartava"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F49955E7AE1B6}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.127 -0.034
+      angleY -22.479
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_Sartava : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.449 0.026 0.272
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_Sartava : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_Sartava_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Sartava_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -13.118 -1.776 2.281
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 94.059 -3.416 -31.944
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 40.122 -4.688 -123.866
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords 46.71 0.348 -35.084
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 54.927 0.001 94.044
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -122.83 11.564 114.313
+         }
+         SlotAI_TaskDeliverIntel_Sartava_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -133.579 5.077 49.14
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverIntel_AI_Sartava_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Sartava_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -204.242 14.223 64.977
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 13.893 2.365 95.399
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 172.155 -1.685 41.166
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -78.864 -4.253 -67.674
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -34.013 4.263 80.608
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 74.166 -5.472 -99.775
+         }
+         SlotAI_TaskDeliverIntel_Sartava_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 58.64 -0.566 17.779
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_Sartava : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 6.605 1.156 36.769
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_Sartava_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 72.919 -4.122 -147.479
+      }
+      TaskDeliverIntel_Sartava_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 76.256 -4.25 -140.071
+      }
+      TaskDeliverIntel_Sartava_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -11.672 -3.581 -102.665
+      }
+      TaskDeliverIntel_Sartava_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -24.598 -3.781 -104.996
+      }
+      TaskDeliverIntel_Sartava_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -28.042 -3.691 -98.47
+      }
+      TaskDeliverIntel_Sartava_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -44.992 -2.33 -87.729
+      }
+      TaskDeliverIntel_Sartava_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -66.393 -3.448 -100.591
+      }
+      TaskDeliverIntel_Sartava_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -70.904 -3.354 -95.191
+      }
+      TaskDeliverIntel_Sartava_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -88.407 -2.298 -69.13
+      }
+      TaskDeliverIntel_Sartava_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -81.853 -2.254 -37.542
+      }
+      TaskDeliverIntel_Sartava_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -87.521 -2.273 -37.421
+      }
+      TaskDeliverIntel_Sartava_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -61.418 -3.95 -35.963
+      }
+      TaskDeliverIntel_Sartava_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -54.785 -3.581 -50.493
+      }
+      TaskDeliverIntel_Sartava_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -51.415 -3.983 -59.763
+      }
+      TaskDeliverIntel_Sartava_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -56.052 -3.826 -61.504
+      }
+      TaskDeliverIntel_Sartava_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 20.525 1.359 -28.16
+      }
+      TaskDeliverIntel_Sartava_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 50.365 1.327 -31.825
+      }
+      TaskDeliverIntel_Sartava_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 45.375 -0.209 4.758
+      }
+      TaskDeliverIntel_Sartava_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 78.618 0.523 -21.913
+      }
+      TaskDeliverIntel_Sartava_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 107.8 0.53 2.511
+      }
+     }
+    }
+   }
   }
-  GenericEntity TaskDeliverIntel_MoveCollection_Airport : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-   coords 0.069 0.008 -1.042
-   {
-    $grp GenericEntity {
-     TaskDeliverIntel_Airport_move_01 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+ }
+ Area_Kromzova_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 250
+   }
+  }
+  coords 10605.25 8.843 14573.549
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Kromzova {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_Kromzova"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_Kromzova"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_Kromzova"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_Kromzova"
+        }
+       }
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_Kromzova"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_Kromzova"
+        }
        }
       }
-      coords -129.748 9.956 -60.428
      }
-     TaskDeliverIntel_Airport_move_02 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
-      }
-      coords -129.018 5.76 -64.041
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_Kromzova {
+    coords 6.568 0.066 3.773
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_Kromzova"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_Kromzova"
      }
-     TaskDeliverIntel_Airport_move_03 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_Kromzova"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.125
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_Kromzova"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_Kromzova {
+       coords 0.001 -0.019 0.136
       }
-      coords -131.176 5.744 -57.711
+      Pers_Fail_TaskDeliverIntel_Kromzova {
+       coords 0.146 -0.341 -0.415
+      }
      }
-     TaskDeliverIntel_Airport_move_04 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+   }
+   GenericEntity TaskDeliverIntel_Kromzova : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F49940AB6BBA8}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
        }
       }
-      coords -125.361 1.948 -53.547
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Kromzova"
+      m_sTaskDescription "Search Kromzova for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4994730FC1D2}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_Kromzova"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402F4BDF2EE0}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_Kromzova"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
      }
-     TaskDeliverIntel_Airport_move_05 {
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_Kromzova {
+      ID "5E74C909218B71FF"
       components {
-       Hierarchy "{613802B54F5287D4}" {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_Kromzova"
+        }
        }
       }
-      coords -119.812 1.948 -59.006
+      coords 6.656 0.001 3.63
      }
-     TaskDeliverIntel_Airport_move_06 {
+     GenericEntity SlotPick_TaskDeliverIntel_Kromzova {
+      ID "5E74C909218B7182"
       components {
-       Hierarchy "{613802B54F5287D4}" {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Kromzova"
+        m_sTaskDescription "Search Kromzova for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Kromzova"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F49955E7AE1B6}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
        }
       }
-      coords -122.424 1.948 -62.601
+      coords 0.043 0.127 -0.034
+      angleY -22.479
      }
-     TaskDeliverIntel_Airport_move_07 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
-      }
-      coords -130.409 1.96 -64.276
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_Kromzova : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.577 0.003 0.252
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_Kromzova : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
      }
-     TaskDeliverIntel_Airport_move_08 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_Kromzova_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Kromzova_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 27.612 -3.041 -16.092
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -0.373 12.155 145.14
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 68.922 17.383 117.061
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -124.325 -3.719 -85.292
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords -235.737 -3.774 20.003
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 1.064 -3.469 -124.657
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -158.795 -3.719 -159.029
+         }
+        }
        }
       }
-      coords -97.882 1.018 -92.803
+      Layer_TaskDeliverIntel_AI_Kromzova_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_Kromzova_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -143.592 -3.44 10.721
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 109.093 15.601 177.49
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 123.356 -4.036 -13.311
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -160.013 -4.286 -159.264
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -35.99 -0.567 43.005
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 55.374 12.737 84.184
+         }
+         SlotAI_TaskDeliverIntel_Kromzova_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -153.419 -4.286 -92.019
+         }
+        }
+       }
+      }
      }
-     TaskDeliverIntel_Airport_move_09 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_Kromzova : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_Kromzova_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -33.439 2.799 -41.63
       }
-      coords -85.732 1.018 -84.976
+      TaskDeliverIntel_Kromzova_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -30.693 2.799 -38.126
+      }
+      TaskDeliverIntel_Kromzova_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 74.894 17.473 153.879
+      }
+      TaskDeliverIntel_Kromzova_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 64.102 20.893 150.466
+      }
+      TaskDeliverIntel_Kromzova_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -20.451 1.369 52.9
+      }
+      TaskDeliverIntel_Kromzova_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -25.23 1.375 35.574
+      }
+      TaskDeliverIntel_Kromzova_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -73.313 2.55 19.337
+      }
+      TaskDeliverIntel_Kromzova_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -40.728 0.919 -7.355
+      }
+      TaskDeliverIntel_Kromzova_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -39.396 0.865 -12.551
+      }
+      TaskDeliverIntel_Kromzova_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -30.536 2.799 -38.325
+      }
+      TaskDeliverIntel_Kromzova_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 0.36 -2.216 -93.649
+      }
+      TaskDeliverIntel_Kromzova_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 9.272 -2.689 -89.255
+      }
+      TaskDeliverIntel_Kromzova_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 76.556 -2.216 -33.066
+      }
+      TaskDeliverIntel_Kromzova_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 74.033 -2.428 -50.189
+      }
+      TaskDeliverIntel_Kromzova_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 79.905 -2.817 -54.942
+      }
+      TaskDeliverIntel_Kromzova_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 95.111 -2.103 -74.605
+      }
+      TaskDeliverIntel_Kromzova_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 76.944 -2.304 -90.408
+      }
+      TaskDeliverIntel_Kromzova_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 72.827 -2.307 -88.109
+      }
+      TaskDeliverIntel_Kromzova_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 52.512 -0.995 -116.778
+      }
+      TaskDeliverIntel_Kromzova_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 52.078 -1.097 -112.369
+      }
      }
-     TaskDeliverIntel_Airport_move_10 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+   }
+  }
+ }
+ Area_LakeCamp_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 250
+   }
+  }
+  coords 8795.505 55.079 13175.479
+  {
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_LakeCamp {
+    coords 0.401 -0.051 6.334
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_LakeCamp"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_LakeCamp"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_LakeCamp"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_LakeCamp"
+        }
+       }
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_LakeCamp"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_LakeCamp"
+        }
        }
       }
-      coords -96.354 1.017 -79.699
      }
-     TaskDeliverIntel_Airport_move_11 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
-      }
-      coords -91.352 1.036 -76.389
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_LakeCamp {
+    coords 6.587 0.05 3.755
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_LakeCamp"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_LakeCamp"
      }
-     TaskDeliverIntel_Airport_move_12 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_LakeCamp"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.125
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_LakeCamp"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_LakeCamp {
+       coords 0.001 -0.019 0.136
       }
-      coords -71.969 5.151 -96.109
+      Pers_Fail_TaskDeliverIntel_LakeCamp {
+       coords 0.146 -0.341 -0.415
+      }
      }
-     TaskDeliverIntel_Airport_move_13 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+   }
+   GenericEntity TaskDeliverIntel_LakeCamp : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F49943518AC72}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
        }
       }
-      coords -72.021 5.151 -96.227
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel Lake Camp"
+      m_sTaskDescription "Search the Lake Camp for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_LakeCamp"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402F519F463C}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_LakeCamp"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
      }
-     TaskDeliverIntel_Airport_move_14 {
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_LakeCamp {
+      ID "5E74C909218B71FF"
       components {
-       Hierarchy "{613802B54F5287D4}" {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_LakeCamp"
+        }
        }
       }
-      coords -70.177 5.151 -92.792
+      coords 6.656 0.001 3.63
      }
-     TaskDeliverIntel_Airport_move_15 {
+     GenericEntity SlotPick_TaskDeliverIntel_LakeCamp {
+      ID "5E74C909218B7182"
       components {
-       Hierarchy "{613802B54F5287D4}" {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel LakeCamp"
+        m_sTaskDescription "Search the Lake Camp for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_LakeCamp"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F499A938992D4}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
        }
       }
-      coords -75.941 5.152 -116.848
+      coords 0.043 0.127 -0.034
+      angleY -22.479
      }
-     TaskDeliverIntel_Airport_move_16 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
-       }
-      }
-      coords -73.95 5.151 -121.054
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_LakeCamp : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.303 -0.002 0.161
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_LakeCamp : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
      }
-     TaskDeliverIntel_Airport_move_17 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+    coords -3.319 0.001 0.196
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_LakeCamp_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_LakeCamp_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -157.264 -13.289 74.24
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 2.209 0.479 8.877
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 144.423 -21.771 67.541
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -82.261 21.689 167.889
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords 100.341 -11.236 -55.288
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -62.15 1.201 -53.49
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 69.183 -1.767 0.872
+         }
+        }
        }
       }
-      coords -74.077 1.951 -119.989
+      Layer_TaskDeliverIntel_AI_LakeCamp_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_LakeCamp_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords 30.142 9.572 184.077
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 8.463 2.537 70.188
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -98.142 7.432 17.014
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 38.826 2.433 45.7
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 4.231 -5.952 -39.735
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 58.54 4.49 79.498
+         }
+         SlotAI_TaskDeliverIntel_LakeCamp_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 104.254 -11.803 -87.878
+         }
+        }
+       }
+      }
      }
-     TaskDeliverIntel_Airport_move_18 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_LakeCamp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 0.069 0.008 -1.042
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_LakeCamp_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 105.126 -10.213 -65.843
       }
-      coords -77.566 2.061 -115.924
-     }
-     TaskDeliverIntel_Airport_move_19 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 107.278 -9.598 -47.583
       }
-      coords -41.822 5.151 -96.65
-     }
-     TaskDeliverIntel_Airport_move_20 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 111.322 -9.761 -45.335
       }
-      coords -66.758 5.151 -90.967
-     }
-     TaskDeliverIntel_Airport_move_22 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 13.106 3.978 55.268
       }
-      coords -32.789 1.103 -155.377
-     }
-     TaskDeliverIntel_Airport_move_23 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 12.386 3.959 65.054
       }
-      coords -111.819 1.531 -108.583
-     }
-     TaskDeliverIntel_Airport_move_24 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 43.097 3.784 41.06
       }
-      coords -122.323 1.551 -95.368
-     }
-     TaskDeliverIntel_Airport_move_25 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 30.433 2.802 26.881
       }
-      coords -122.949 1.554 -88.842
-     }
-     TaskDeliverIntel_Airport_move_26 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 25.289 3.202 30.811
       }
-      coords -158.996 0.948 -78.758
-     }
-     TaskDeliverIntel_Airport_move_27 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 26.589 2.875 33.158
       }
-      coords -158.676 1.042 -86.087
-     }
-     TaskDeliverIntel_Airport_move_28 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -78.699 22.56 175.478
       }
-      coords -182.876 1.05 -92.733
-     }
-     TaskDeliverIntel_Airport_move_29 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 40.323 4.709 59.207
       }
-      coords -40.158 5.151 -100.172
-     }
-     TaskDeliverIntel_Airport_move_21 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 4.842 2.802 39.072
       }
-      coords 9.082 2.062 -151.588
-     }
-     TaskDeliverIntel_Airport_move_31 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 5.238 2.062 26.734
       }
-      coords 13.521 1.95 -148.1
-     }
-     TaskDeliverIntel_Airport_move_32 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -11.64 -2.775 -23.801
       }
-      coords 17.454 1.95 -143.012
-     }
-     TaskDeliverIntel_Airport_move_33 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -3.809 -2.775 -23.148
       }
-      coords -48.947 2.045 -100.349
-     }
-     TaskDeliverIntel_Airport_move_34 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -62.286 1.694 -50.575
       }
-      coords -41.831 1.951 -96.79
-     }
-     TaskDeliverIntel_Airport_move_35 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords -62.556 1.693 -58.493
       }
-      coords -9.57 1.95 -115.428
-     }
-     TaskDeliverIntel_Airport_move_36 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 81.432 -11.344 -43.287
       }
-      coords 17.998 5.15 -119.706
-     }
-     TaskDeliverIntel_Airport_move_30 {
-      components {
-       Hierarchy "{613802B54F5287D4}" {
+      TaskDeliverIntel_LakeCamp_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
        }
+       coords 85.374 -11.744 -48.105
       }
-      coords 21.342 5.15 -126.65
+      TaskDeliverIntel_LakeCamp_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 104.116 -10.748 -43.117
+      }
+      TaskDeliverIntel_LakeCamp_move_21 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 125.456 -10.2 -71.588
+      }
+      TaskDeliverIntel_LakeCamp_move_22 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 123.803 -5.068 -78.116
+      }
      }
     }
    }
