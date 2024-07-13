@@ -1,0 +1,5 @@
+Randomize supply caches
+Random mines by ai
+Random ambush by ai
+//done. Add xp for tasks
+check on limit vehicles
