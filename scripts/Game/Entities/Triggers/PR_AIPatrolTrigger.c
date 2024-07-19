@@ -430,9 +430,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 
 		if (m_bDebugLogs)
 		{
-			Print(("[PR_AIPatrolTrigger] " + m_sLogMode + " : Trigger Name: " + m_sTriggerName), LogLevel.NORMAL);
+			Print(("[PR_AIPatrolTrigger] (CallSpawnPatrol) " + m_sLogMode + " : Trigger Name: " + m_sTriggerName), LogLevel.NORMAL);
 			Print((
-			"[PR_AIPatrolTrigger] " + m_sLogMode + " : Info: Group side: " + groupSide +
+			"[PR_AIPatrolTrigger] (CallSpawnPatrol) " + m_sLogMode + " : Info: Group side: " + groupSide +
 			", Spawn group type: " + groupType +
 			", Spawn position: " + spawnPosition +
 			", Delay: " + delay

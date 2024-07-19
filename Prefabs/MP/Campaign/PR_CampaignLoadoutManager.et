@@ -34,15 +34,21 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
    m_sAffiliatedFaction "US"
   }
   SCR_FactionPlayerLoadout "{60FD411B0C4C8C74}" {
-   m_sLoadoutName "AR (JohnnyReap)"
-   m_sLoadoutResource "{DFE02241733695CB}Prefabs/Characters/Factions/BLUFOR/US_Army/PR_US_AR_Johnny.et"
-   m_sLoadoutImage "{43EA535E240F0B17}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_AR.edds"
+   m_sLoadoutName "Grenadier (JohnnyReap)"
+   m_sLoadoutResource "{6BEC4B3F91425A9B}Prefabs/Characters/Factions/BLUFOR/US_Army/PR_US_Grenadier_Johnny.et"
+   m_sLoadoutImage "{99D02888988DED59}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_GL.edds"
    m_sAffiliatedFaction "US"
   }
   SCR_FactionPlayerLoadout "{60FD411B12D1F00A}" {
    m_sLoadoutName "MG (Peace)"
    m_sLoadoutResource "{0F3B6A845B801795}Prefabs/Characters/Factions/BLUFOR/US_Army/PR_US_MG_Peace.et"
    m_sLoadoutImage "{D68798DF09F5BE8E}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_MG.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{61E60C5CF293E239}" {
+   m_sLoadoutName "Sniper (Erebus)"
+   m_sLoadoutResource "{121A63E9130FE844}Prefabs/Characters/Factions/BLUFOR/US_Army/PR_US_Sniper_Erebus.et"
+   m_sLoadoutImage "{13AC78F098028758}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Sniper.edds"
    m_sAffiliatedFaction "US"
   }
   SCR_FactionPlayerLoadout "{60FD411B134ABF6A}" {

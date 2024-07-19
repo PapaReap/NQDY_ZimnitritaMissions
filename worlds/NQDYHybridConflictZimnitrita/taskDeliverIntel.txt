@@ -5,9 +5,33 @@
 //TaskDeliverIntel_Airport
 Task Title: Locate Intel Airport
 Task Description: Search the Airport for hidden intel
-
+//SlotPick_TaskDeliverIntel_Airport
 Task Title: Locate Intel Airport
 Task Description: Search the Airport for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main & friendly
+//TaskDeliverIntel_Airport_s
+Task Title: Locate Intel Airport
+Task Description: Search south of the Airport for hidden intel
+//SlotPick_TaskDeliverIntel_Airport_s
+Task Title: Locate Intel Airport
+Task Description: Search south of the Airport for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main & friendly
+//TaskDeliverIntel_Airport_sx2
+Task Title: Locate Intel Airport
+Task Description: Search south of the Airport for hidden intel
+//SlotPick_TaskDeliverIntel_Airport_sx2
+Task Title: Locate Intel Airport
+Task Description: Search south of the Airport for hidden intel
 Task Title Updated1: Deliver Intel to base %2
 Task Description Updated1: Return recovered intel back to base %2
 Task Title Updated2: Locate the dropped intel
@@ -17,7 +41,7 @@ Task Description Updated2: Return to last known position to search for lost inte
 //TaskDeliverIntel_Gruwice_WT
 Task Title: Locate Intel Gruwice Water Treatment
 Task Description: Search Gruwice Water Treatment for hidden intel
-
+//SlotPick_TaskDeliverIntel_Gruwice_WT
 Task Title: Locate Intel Gruwice Water Treatment
 Task Description: Search Gruwice Water Treatment for hidden intel
 Task Title Updated1: Deliver Intel to base %2
@@ -29,7 +53,7 @@ Task Description Updated2: Return to last known position to search for lost inte
 //TaskDeliverIntel_IndustrialZone
 Task Title: Locate Intel Industrial Zone
 Task Description: Search the Industrial Zone for hidden intel
-
+//SlotPick_TaskDeliverIntel_IndustrialZone
 Task Title: Locate Intel Industrial Zone
 Task Description: Search the Industrial Zone for hidden intel
 Task Title Updated1: Deliver Intel to base %2
@@ -41,7 +65,7 @@ Task Description Updated2: Return to last known position to search for lost inte
 //TaskDeliverIntel_Kromzova
 Task Title: Locate Intel Kromzova
 Task Description: Search Kromzova for hidden intel
-
+//SlotPick_TaskDeliverIntel_Kromzova
 Task Title: Locate Intel Kromzova
 Task Description: Search Kromzova for hidden intel
 Task Title Updated1: Deliver Intel to base %2
@@ -53,9 +77,57 @@ Task Description Updated2: Return to last known position to search for lost inte
 //TaskDeliverIntel_LakeCamp
 Task Title: Locate Intel Lake Camp
 Task Description: Search the Lake Camp for hidden intel
-
+//SlotPick_TaskDeliverIntel_LakeCamp
 Task Title: Locate Intel Lake Camp
 Task Description: Search the Lake Camp for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_MyrislavIndustry
+Task Title: Locate Intel Myrislav Industry
+Task Description: Search Myrislav Industry for hidden intel
+//SlotPick_TaskDeliverIntel_MyrislavIndustry
+Task Title: Locate Intel Myrislav Industry
+Task Description: Search Myrislav Industry for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_Nienia
+Task Title: Locate Intel Nienia
+Task Description: Search Nienia for hidden intel
+//SlotPick_TaskDeliverIntel_Nienia
+Task Title: Locate Intel Nienia
+Task Description: Search Nienia for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_Niscova_se
+Task Title: Locate Intel Niscova
+Task Description: Search S.E. Niscova for hidden intel
+//SlotPick_TaskDeliverIntel_Niscova_se
+Task Title: Locate Intel Niscova
+Task Description: Search S.E. Niscova for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_NiscovaFarm
+Task Title: Locate Intel Niscova Farm
+Task Description: Search Niscova Farm for hidden intel
+//SlotPick_TaskDeliverIntel_NiscovaFarm
+Task Title: Locate Intel Niscova Farm
+Task Description: Search Niscova Farm for hidden intel
 Task Title Updated1: Deliver Intel to base %2
 Task Description Updated1: Return recovered intel back to your main base %2
 Task Title Updated2: Locate the dropped intel
@@ -65,7 +137,7 @@ Task Description Updated2: Return to last known position to search for lost inte
 //TaskDeliverIntel_Sartava
 Task Title: Locate Intel Sartava
 Task Description: Search Sartava for hidden intel
-
+//SlotPick_TaskDeliverIntel_Sartava
 Task Title: Locate Intel Sartava
 Task Description: Search Sartava for hidden intel
 Task Title Updated1: Deliver Intel to base %2
@@ -74,10 +146,34 @@ Task Title Updated2: Locate the dropped intel
 Task Description Updated2: Return to last known position to search for lost intel
 
 //Main
+//TaskDeliverIntel_Sokyyiv
+Task Title: Locate Intel Sokyyiv
+Task Description: Search Sokyyiv for hidden intel
+//SlotPick_TaskDeliverIntel_Sokyyiv
+Task Title: Locate Intel Sokyyiv
+Task Description: Search Sokyyiv for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_Stereni
+Task Title: Locate Intel Stereni
+Task Description: Search Stereni for hidden intel
+//SlotPick_TaskDeliverIntel_Stereni
+Task Title: Locate Intel Stereni
+Task Description: Search Stereni for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
 //TaskDeliverIntel_Szarlota
 Task Title: Locate Intel Szarlota
 Task Description: Search Szarlota for hidden intel
-
+//SlotPick_TaskDeliverIntel_Szarlota
 Task Title: Locate Intel Szarlota
 Task Description: Search Szarlota for hidden intel
 Task Title Updated1: Deliver Intel to base %2
@@ -85,7 +181,41 @@ Task Description Updated1: Return recovered intel back to your main base %2
 Task Title Updated2: Locate the dropped intel
 Task Description Updated2: Return to last known position to search for lost intel
 
+//Main
+//TaskDeliverIntel_Varpadany
+Task Title: Locate Intel Varpadany
+Task Description: Search Varpadany for hidden intel
+//SlotPick_TaskDeliverIntel_Varpadany
+Task Title: Locate Intel Varpadany
+Task Description: Search Varpadany for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
 
+//Main
+//TaskDeliverIntel_Vrana
+Task Title: Locate Intel Vrana
+Task Description: Search Vrana for hidden intel
+//SlotPick_TaskDeliverIntel_Vrana
+Task Title: Locate Intel Vrana
+Task Description: Search Vrana for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
+
+//Main
+//TaskDeliverIntel_ZimitritaFalls_ne
+Task Title: Locate Intel ZimitritaFalls
+Task Description: Search ZimitritaFalls for hidden intel
+//SlotPick_TaskDeliverIntel_ZimitritaFalls_ne
+Task Title: Locate Intel ZimitritaFalls
+Task Description: Search the area N.E. of ZimitritaFalls for hidden intel
+Task Title Updated1: Deliver Intel to base %2
+Task Description Updated1: Return recovered intel back to your main base %2
+Task Title Updated2: Locate the dropped intel
+Task Description Updated2: Return to last known position to search for lost intel
 
 
 

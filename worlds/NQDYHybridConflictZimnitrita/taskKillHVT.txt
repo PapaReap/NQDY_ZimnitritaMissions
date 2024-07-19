@@ -1,0 +1,165 @@
+
+*** TASKS_KILLHVT ***
+
+//TaskKill_HVT_Andruhanov_CZ
+Eliminate HVT Andruhanov Commercial Zone
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His location is the Commercial Zone, in south of the town Andruhanov.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_DarkForest
+Eliminate HVT Dark Forest
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
+His last known location is in the mountain area of Dark Forest.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Unknown.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_DotskLake
+Eliminate HVT Dotsk Lake
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
+His last known location is near Dotsk Lake.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Unknown.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_ElectricRelay_w
+Eliminate HVT Electric Relay
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His last know location hiding out in the woods, west of Electric Relay.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_HarbourElectrical_w
+Eliminate HVT Harbour Electrical
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
+His last known location is west of the Harbour Electrical station.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Unknown.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_KramadianskBridge_mb
+Eliminate HVT Military Base
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His location is S.E. of Kramadiansk Bridge at a Military Base.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_Kromzova_CastleRuins
+Eliminate HVT Kromzova Castle Ruins
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an murderer disguised as a medic, he is anything but a medic with the blood he has on his hands.<br />
+He is hiding out in the area south of Kromzova near the Castle Ruins.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Moderate.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_OldCastle
+Eliminate HVT Old Castle
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His location is the around the area of the Old Castle.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_Sartava_Sawmill
+Eliminate HVT Sartava Sawmill
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an RTO Operator. He's responsible for relaying comms to help coordinated assaults on nearby forces, he must be stopped.<br />
+He is know to be operating in the area south of Sartava at a sawmill.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Moderate.<br />
+Bringing him back alive is not a option.
+	// EXTRA TASK
+	Deliver RTO Radio Sartava Sawmill
+Now that you have elimated the RTO Operator, recover his radio backpack and deliver it to base %2 for further evaluation.
+
+//TaskKill_HVT_Sokyyiv_s
+Eliminate HVT Sokyyiv South
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His location is the construction site south of Sokyyiv.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+//TaskKill_HVT_ZimitritaFalls
+Eliminate HVT Zimitrita Falls
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an RTO Operator. He's responsible for relaying comms to help coordinated assaults on nearby forces, he must be stopped.<br />
+He is hiding out in the woods in the area of Zimitrita Falls.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Moderate.<br />
+Bringing him back alive is not a option.
+	// EXTRA TASK
+	Deliver RTO Radio Zimitrita Falls
+Now that you have elimated the RTO Operator, recover his radio backpack and deliver it to base %2 for further evaluation.
+
+//TaskKill_HVT_Gruwice_CZ
+Eliminate HVT Gruwice Commercial Zone
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
+His location is the Commercial Zone, in N.W. Gruwice.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: High.<br />
+Bringing him back alive is not a option.
+
+
+
+
+
+
+Eliminate HVT Lounatkorkia (Silo)
+Recovered intel suggests we have found the location of a new HVT.<br />
+The HVT is an researcher that is doing development of weapons of mass destruction.<br />
+His location is the area south of the community of Lounatkyla.<br />
+Your objective is to locate and neutralize this HVT.<br />
+Resistance Probability: Unknown.<br />
+Bringing him back alive is not a option.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

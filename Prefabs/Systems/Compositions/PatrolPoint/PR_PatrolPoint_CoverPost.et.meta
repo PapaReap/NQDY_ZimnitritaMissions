@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D6F0D5EEF9A31044}Prefabs/Systems/Compositions/PatrolPoint/PR_PatrolPoint_CoverPost.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

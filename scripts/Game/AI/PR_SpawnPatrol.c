@@ -107,7 +107,7 @@ class PR_SpawnPatrol
 		int groupFormation = intArray.Get(10);
 
 		string m_SpawnGroup = GetGroupToSpawn(spawnSide, groupType);
-		Print(string.Format("[PR_SpawnPatrolTrigger2] m_SpawnGroup: %1", m_SpawnGroup), LogLevel.WARNING);
+		Print(string.Format("[PRSpawnPatrol] m_SpawnGroup: %1", m_SpawnGroup), LogLevel.WARNING);
 		SetPersistentObject(persistentObject);
 		
 		//--- Generate the resource
@@ -119,7 +119,7 @@ class PR_SpawnPatrol
 			return;
 		}
 
-		Print(string.Format("[PR_SpawnPatrolTrigger2] resource: %1", resource), LogLevel.WARNING);
+		Print(string.Format("[PRSpawnPatrol] resource: %1", resource), LogLevel.WARNING);
 		//--- Generate spawn parameters and spawn the group
 		m_Group = SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPosition)));
 
