@@ -93,21 +93,6 @@ enum PR_EGroupUSSR
 	"Group: Suppress Team (4)"		= 35,
 	"Group SF: Sentry Team (2)" 	= 36,
 	"Group SF: Squad (6)" 			= 37,
-	
-/*	"Man: Machine Gun (1)" = 0,		// 0
-	"Man: Sniper (1)" = 1,				// 1
-	"Man: GL (1)" = 2,					// 2
-	"Man: Unarmed (1)" = 3,				// 3
-	"Group: Fire Team (4)" = 4,		// 4  default
-	"Group: Light Fire Team (4)" = 5,	// 5
-	"Group: Machine Gun Team (2)" = 6,	// 6
-	"Group: Medical Section (2)" = 7,	// 7
-	"Group: Rifle Squad (6)" = 8,		// 8
-	"Group: Sentry Team (2)" = 9,		// 9
-	"Group: AT Team (4)" = 10,			// 10
-	"Group: Sniper Team (2)" = 11,		// 11
-	"Group: GL Team (4)" = 12,			// 12
-	"Group: Suppress Team (4)" = 13,	// 13*/
 }
 
 enum PR_EGroupFIA
@@ -138,30 +123,26 @@ enum PR_EGroupFIA
 	"Group: Rifle Squad (7)"		= 22,
 	"Group: Sapper Team (2)" 		= 23,
 	"Group: Sentry Team (2)" 		= 24,
-	"Group: Sharpshooter Team (2)" = 25,
+	"Group: Sharpshooter Team (2)"	= 25,
 	"Group: Suppress Team (4)"		= 26,
 }
 
 enum PR_EGroupCiv
 {
-	"MUST CHOOSE GROUP!"			= -1,
-	"Man: Machine Gun (1)" = 0,		// 0
-	"Man: Sniper (1)" = 1,				// 1
-	"Man: GL (1)" = 2,					// 2
-	"Man: Unarmed (1)" = 3,				// 3
-	"Group: Fire Team (4)" = 4,		// 4  default
-	"Group: Light Fire Team (4)" = 5,	// 5
-	"Group: Machine Gun Team (2)" = 6,	// 6
-	"Group: Medical Section (2)" = 7,	// 7
-	"Group: Construction Workers (6)" = 8,		// 8
-	"Group: Sentry Team (2)" = 9,		// 9
-	"Group: AT Team (4)" = 10,			// 10
-	"Group: Sniper Team (2)" = 11,		// 11
-	"Group: GL Team (4)" = 12,			// 12
-	"Group: Suppress Team (4)" = 13,	// 13
+	"MUST CHOOSE GROUP!"						= -1,
+	"Man: Businessman: Randomized (1)"			= 0,
+	"Man: ConstructionWorker: Randomized (1)"	= 1,
+	"Man: Dockworker: Randomized (1)"			= 2,
+	"Man: GenericCivilian: Randomized (1)"		= 3,
+	"Group: Businessmen (3)"					= 4,
+	"Group: ConstructionWorkers (5)"			= 5,
+	"Group: Dockworkers (6)"					= 6,
+	"Group: Generic Civilians Cotton Shirt (6)"	= 7,
+	"Group: Generic Civilians Denim Jacket (2)"	= 8,
+	"Group: Generic Civilians Turtleneck (3)"	= 9,
 }
 
-enum PR_ETeleportSortOrder2
+enum PR_ETeleportSortOrder
 {
 	"ASCENDING" = 0,
 	"DESCENDING" = 1,
@@ -170,7 +151,7 @@ enum PR_ETeleportSortOrder2
 	"RANDOM ONE" = 4,
 }
 
-enum PR_ECollectionSortOrder2
+enum PR_ECollectionSortOrder
 {
 	"ASCENDING" = 0,
 	"DESCENDING" = 1,
@@ -178,7 +159,7 @@ enum PR_ECollectionSortOrder2
 	"RAMDOM MIX" = 3,
 }
 
-enum PR_EWaypointSortOrder2
+enum PR_EWaypointSortOrder
 {
 	"ASCENDING" = 0,
 	"DESCENDING" = 1,
@@ -186,7 +167,7 @@ enum PR_EWaypointSortOrder2
 	"RAMDOM MIX" = 3,
 }
 
-enum PR_ECollectionSpawn2
+enum PR_ECollectionSpawn
 {
 	"ALL" = 0,
 	"RANDOM ONE" = 1,
@@ -194,14 +175,6 @@ enum PR_ECollectionSpawn2
 	"RAMDOM 50%" = 3,
 	"RAMDOM 75%" = 4,
 }
-
-//enum PR_GroupSideList
-//{
-//	"US" = 0,				// 0
-//	"USSR" = 1,				// 1  default
-//	"FIA" = 2,				// 2
-//	"CIV" = 3,				// 3
-//}
 
 //! Main Script
 class PR_AIPatrolTrigger : PR_CoreTrigger
@@ -228,15 +201,18 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 
 	//! Group Details
 	private string spawnPosition = "";
+	private bool randomGroupSize = 0;
+	private int minUnitsInGroup = 1;
+	private int maxUnitsInGroup = -1;
 	private bool keepGroupActive = 0;
 	private bool suspendIfNoPlayers = 1;
 	//! Waypoints
 	private bool cycleWaypoints = 0;
 	private int rerunCounter = -1;
 	private ref array<string> waypointCollection = {};
-	private PR_ECollectionSortOrder2 collectionSortOrder = 0;
-	private PR_EWaypointSortOrder2 waypointSortOrder = 0;
-	private PR_ECollectionSpawn2 spawnCollections = 0;
+	private PR_ECollectionSortOrder collectionSortOrder = 0;
+	private PR_EWaypointSortOrder waypointSortOrder = 0;
+	private PR_ECollectionSpawn spawnCollections = 0;
 	//! Behaviours
 	private SCR_EAIGroupFormation groupFormation = 0;
 	private EAISkill aISkill = 50;
@@ -246,7 +222,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	//! Teleport Group
 	private bool teleportAfterSpawn = 0;
 	private ref array<string> teleportPosition = {};
-	private PR_ETeleportSortOrder2 teleportSortOrder = 0;
+	private PR_ETeleportSortOrder teleportSortOrder = 0;
 	//! Respawn Group
 	private int respawnCount = 0;
 	private int respawnTimerMin = 0;
@@ -257,6 +233,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	{
 		//! Group Details
 		spawnPosition = "";
+		randomGroupSize = 0;
+		minUnitsInGroup = 1;
+		maxUnitsInGroup = -1;
 		keepGroupActive = 0;
 		suspendIfNoPlayers = 1;
 		//! Waypoints
@@ -457,7 +436,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		if (teleportPosition.Count() == 0)
 			teleportPosition.Insert(spawnPos.GetName());
 
-		protected array<bool> m_aBoolArray = {cycleWaypoints, m_bDebugLogs, useRandomRespawnTimer, m_bHoldFire, keepGroupActive, suspendIfNoPlayers, teleportAfterSpawn, m_bNeutralizePersistentObjectIfGroupIsDead};
+		protected array<bool> m_aBoolArray = {cycleWaypoints, m_bDebugLogs, useRandomRespawnTimer, m_bHoldFire, randomGroupSize, keepGroupActive, suspendIfNoPlayers, teleportAfterSpawn, m_bNeutralizePersistentObjectIfGroupIsDead};
 		protected array<int> m_aIntArray = {
 			rerunCounter, // 0
 			respawnTimerMin, // 1
@@ -469,7 +448,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			spawnCollections, // 7
 			aISkill, // 8
 			aICombatType, // 9
-			groupFormation // 10
+			groupFormation, // 10
+			minUnitsInGroup, // 11
+			maxUnitsInGroup // 12
 		};
 
 		//--- Execute the AI spawning using a delayed call
@@ -494,6 +475,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			Print(string.Format("[PR_AIPatrolTrigger] %1 : groupSide: %2", m_sLogMode, groupSide), LogLevel.NORMAL);
 			Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnPosition: %2", m_sLogMode, spawnPosition), LogLevel.NORMAL);
 
+			Print(string.Format("[PR_AIPatrolTrigger] %1 : randomGroupSize: %2", m_sLogMode, randomGroupSize), LogLevel.NORMAL);
+			Print(string.Format("[PR_AIPatrolTrigger] %1 : minUnitsInGroup: %2", m_sLogMode, minUnitsInGroup), LogLevel.NORMAL);
+			Print(string.Format("[PR_AIPatrolTrigger] %1 : maxUnitsInGroup: %2", m_sLogMode, maxUnitsInGroup), LogLevel.NORMAL);
 			Print(string.Format("[PR_AIPatrolTrigger] %1 : keepGroupActive: %2", m_sLogMode, keepGroupActive), LogLevel.NORMAL);
 			Print(string.Format("[PR_AIPatrolTrigger] %1 : suspendIfNoPlayers: %2", m_sLogMode, suspendIfNoPlayers), LogLevel.NORMAL);
 
@@ -527,6 +511,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			foreach (PR_GroupDetails detailsInfo : groupDetails)
 			{
 				spawnPosition = detailsInfo.m_sSpawnPosition;
+				randomGroupSize = detailsInfo.m_bRandomGroupSize;
+				minUnitsInGroup = detailsInfo.m_iMinUnitsInGroup;
+				maxUnitsInGroup = detailsInfo.m_iMaxUnitsInGroup;
 				keepGroupActive = detailsInfo.m_bKeepGroupActive;
 				suspendIfNoPlayers = detailsInfo.m_bSuspendIfNoPlayers;
 			}
@@ -707,6 +694,15 @@ class PR_GroupDetails
 	[Attribute(desc: "Object name to spawn on. If none given group will spawn on this triggers position.  ", category: "PR Spawn Patrol: Group")]
 	string m_sSpawnPosition;
 
+	[Attribute(defvalue: "false", desc: "Randomize group size based on a random min and max values below.  ", category: "PR Spawn Patrol: Group")]
+	bool m_bRandomGroupSize;
+
+	[Attribute(defvalue: "1", desc: "Minimum amount of AIs in the group.  ", category: "PR Spawn Patrol: Group")]
+	int m_iMinUnitsInGroup;
+
+	[Attribute(defvalue: "-1", desc: "Maximum amount of AIs in the group. -1 has no effect, will use min value. If value is higher than actual group size, units will be added to group until max amount reached.  ", category: "PR Spawn Patrol: Group")]
+	int m_iMaxUnitsInGroup;
+	
 	//! PR SPAWN PATROL: GROUP - Use random respawn timer: Use random respawn timer. Uses a min value from above and max value below.
 	[Attribute("false", UIWidgets.CheckBox,"Group will continue movement even outside of player range, their simulation will not be stopped. By default groups cache at around 1km. NOTE: Use with caution, too many units might degrade server performance.  ", category: "PR Spawn Patrol: Group")]
 	bool m_bKeepGroupActive;
@@ -733,16 +729,16 @@ class PR_GroupWaypoints
 	ref array<string> m_aWaypointCollection;
 
 	//! PR SPAWN PATROL: WAYPOINT - Collection Sort Order: What order will the collections be given to the group from 'Waypoint Collections'.
-	[Attribute("0", UIWidgets.ComboBox, "What order will the collections be given to the group from 'Waypoint Collections'.  ", enums: ParamEnumArray.FromEnum(PR_ECollectionSortOrder2), category: "PR Spawn Patrol: Waypoint")]
-	PR_ECollectionSortOrder2 m_CollectionSortOrder;
+	[Attribute("0", UIWidgets.ComboBox, "What order will the collections be given to the group from 'Waypoint Collections'.  ", enums: ParamEnumArray.FromEnum(PR_ECollectionSortOrder), category: "PR Spawn Patrol: Waypoint")]
+	PR_ECollectionSortOrder m_CollectionSortOrder;
 
 	//! PR SPAWN PATROL: WAYPOINT - Waypoint Sort Order: What order will the waypoints be given to the group from within each individual 'Waypoint Collections'.
-	[Attribute("0", UIWidgets.ComboBox, "What order will the waypoints be given to the group from within each individual 'Waypoint Collections'.  ", enums: ParamEnumArray.FromEnum(PR_EWaypointSortOrder2), category: "PR Spawn Patrol: Waypoint")]
-	PR_EWaypointSortOrder2 m_WaypointSortOrder;
+	[Attribute("0", UIWidgets.ComboBox, "What order will the waypoints be given to the group from within each individual 'Waypoint Collections'.  ", enums: ParamEnumArray.FromEnum(PR_EWaypointSortOrder), category: "PR Spawn Patrol: Waypoint")]
+	PR_EWaypointSortOrder m_WaypointSortOrder;
 
 	//! PR SPAWN PATROL: WAYPOINT - Spawn Collections: How many collections to use from 'Waypoint Collections'. If % is used, it will round down. Always a min of 1 collection.
-	[Attribute("0", UIWidgets.ComboBox, "How many collections to use from 'Waypoint Collections'. If % is used, it will round down. Always a min of 1 collection.  ", enums: ParamEnumArray.FromEnum(PR_ECollectionSpawn2), category: "PR Spawn Patrol: Waypoint")]
-	PR_ECollectionSpawn2 m_SpawnCollections;
+	[Attribute("0", UIWidgets.ComboBox, "How many collections to use from 'Waypoint Collections'. If % is used, it will round down. Always a min of 1 collection.  ", enums: ParamEnumArray.FromEnum(PR_ECollectionSpawn), category: "PR Spawn Patrol: Waypoint")]
+	PR_ECollectionSpawn m_SpawnCollections;
 }
 
 //! Group Behaviors
@@ -783,8 +779,8 @@ class PR_TeleportGroup
 	ref array<string> m_aTeleportPosition;
 
 	//! PR SPAWN PATROL: WAYPOINT - Collection Sort Order: What order will the collections be given to the group from 'Waypoint Collections'.
-	[Attribute("0", UIWidgets.ComboBox, "What order will the teleport positions be given to the group from 'Teleport Position'.  ", enums: ParamEnumArray.FromEnum(PR_ETeleportSortOrder2), category: "PR Spawn Patrol: SPECIAL: Teleport To Position")]
-	PR_ETeleportSortOrder2 m_TeleportSortOrder;
+	[Attribute("0", UIWidgets.ComboBox, "What order will the teleport positions be given to the group from 'Teleport Position'.  ", enums: ParamEnumArray.FromEnum(PR_ETeleportSortOrder), category: "PR Spawn Patrol: SPECIAL: Teleport To Position")]
+	PR_ETeleportSortOrder m_TeleportSortOrder;
 }
 
 //! Respawn Group

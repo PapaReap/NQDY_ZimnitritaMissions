@@ -1,25 +1,406 @@
-PR_AIPatrolTrigger {
- coords 5446.249 12.531 9138.654
- m_aOverrideOptions {
-  PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
-   m_bOverrideActivationPresence 1
+$grp PR_AIPatrolTrigger {
+ CIV_Sokyyiv {
+  coords 13677.352 21.069 15003.86
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
   }
- }
- m_aSideCIV {
-  PR_Group_Civilian "{61B93EC8EE625881}" {
-   m_GroupType "Group: Construction Workers (6)"
-   m_aGroupWaypoints {
-    PR_GroupWaypoints "{61B93EC8511DE33D}" {
-     m_aWaypointCollection {
-      "SuurkylaCivWaypoint"
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: ConstructionWorkers (5)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Sokyyiv_Waypoint"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Sokyyiv_Waypoint"
+      }
      }
     }
    }
   }
+  {
+   SCR_DefendWaypoint CIV_Sokyyiv_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
  }
-}
-SCR_DefendWaypoint SuurkylaCivWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
- coords 5364.297 24.659 9153.983
- CompletionRadius 250
- m_bFastInit 0
+ CIV_Ajvan {
+  coords 15768.387 51.942 14516.368
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Dockworkers (6)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Ajvan_Waypoint"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Ajvan_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Ajvan_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F02683A301AF71}" {
+     }
+    }
+    coords -0.848 0.752 0.419
+    CompletionRadius 150
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Niscova {
+  coords 13607.684 47.251 9181.059
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Generic Civilians Cotton Shirt (6)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Niscova_Waypoint"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Niscova_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Niscova_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Glochy {
+  coords 15372.506 61.667 1464.803
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Generic Civilians Cotton Shirt (6)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Glochy_Waypoint"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Glochy_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Glochy_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Szarlota {
+  coords 13182.973 17.792 1751.628
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Generic Civilians Turtleneck (3)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Szarlota_Waypoint"
+      m_bRandomGroupSize 1
+      m_iMinUnitsInGroup 5
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Szarlota_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Szarlota_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Stereni {
+  coords 14013.262 41.765 2439.78
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Generic Civilians Denim Jacket (2)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Stereni_Waypoint"
+      m_bRandomGroupSize 1
+      m_iMinUnitsInGroup 6
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Stereni_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Stereni_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Watertreatment {
+  coords 9734.011 9.999 4744.736
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Dockworkers (6)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Watertreatment_Waypoint"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Watertreatment_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Watertreatment_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Gruwiice {
+  coords 10347.717 15.001 5319.644
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Businessmen (3)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Gruwiice_Waypoint"
+      m_bRandomGroupSize 1
+      m_iMinUnitsInGroup 4
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Gruwiice_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Gruwiice_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 200
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Gruwiice_02 {
+  coords 10182.006 10.001 5748.263
+  TriggerShapeType Sphere
+  ShapeColor 0 1 0.023 0.078
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 60
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{61B93EC8EA29CCD6}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 10
+  m_iDelayTimerMax 20
+  m_aSideCIV {
+   PR_Group_Civilian "{61B93EC8EE625881}" {
+    m_GroupType "Group: Businessmen (3)"
+    m_aGroupDetails {
+     PR_GroupDetails "{61F0268B0A798F28}" {
+      m_sSpawnPosition "CIV_Gruwiice_02_Waypoint"
+      m_bRandomGroupSize 1
+      m_iMinUnitsInGroup 4
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{61B93EC8511DE33D}" {
+      m_aWaypointCollection {
+       "CIV_Gruwiice_02_Waypoint"
+      }
+     }
+    }
+   }
+  }
+  {
+   SCR_DefendWaypoint CIV_Gruwiice_02_Waypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{61F0268269E6C64A}" {
+     }
+    }
+    coords 0.352 0.017 -0.615
+    CompletionRadius 250
+    m_bFastInit 0
+   }
+  }
+ }
 }

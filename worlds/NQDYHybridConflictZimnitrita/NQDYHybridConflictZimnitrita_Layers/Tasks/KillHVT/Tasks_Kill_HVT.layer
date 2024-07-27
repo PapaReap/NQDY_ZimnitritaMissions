@@ -1356,7 +1356,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{61E217A40F251D8B}" {
         }
        }
-       coords -0.014 -0 0.832
+       coords -0.014 0 0.832
        angleY -177.16
        AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
@@ -5521,7 +5521,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{61E217A40F251D8B}" {
         }
        }
-       coords 0.669 -0 0.885
+       coords 0.669 0 0.885
        angleY 46.872
        AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
@@ -5933,7 +5933,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     Props_HVT_Gruwice_CZ {
-     coords 36.976 -0 -63.033
+     coords 36.976 0 -63.033
      {
       $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
        HVT_Gruwice_CZ_sandbag_corner_01 {
@@ -6322,7 +6322,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
     m_iDynamicDespawnRange 40
    }
   }
-  coords 12267.607 32.031 8914.572
+  coords 12447.301 32.031 8794.886
   {
    $grp PR_AIPatrolTrigger {
     SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01 {
@@ -7277,7 +7277,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     Props_HVT_Andruhanov_CZ {
-     coords 2.412 -0 -18.932
+     coords 2.412 0 -18.932
      {
       $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
        HVT_Andruhanov_CZ_sandbag_corner_01 {
@@ -7822,7 +7822,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{61E217A40F251D8B}" {
         }
        }
-       coords -0.126 -0 0.387
+       coords -0.126 0 0.387
        AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
        AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
        CompletionRadius 3.5

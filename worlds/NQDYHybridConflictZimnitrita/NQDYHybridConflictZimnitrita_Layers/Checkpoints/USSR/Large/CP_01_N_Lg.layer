@@ -7,7 +7,7 @@ $grp PR_AIPatrolTrigger {
   ShapeColor 0.502 0 0.376 0.098
   TriggerActivationType "First change"
   PeriodicQueries 1
-  UpdatePeriod 10
+  UpdatePeriod 60
   m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_01_N_Lg_01"
@@ -16,6 +16,9 @@ $grp PR_AIPatrolTrigger {
     m_bOverrideActivationPresence 1
    }
   }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
   m_bNeutralizePersistentObjectIfGroupIsDead 1
   m_aSideUSSR {
    PR_Group_USSR "{61B93EE454E5FEF7}" {
@@ -64,7 +67,7 @@ $grp PR_AIPatrolTrigger {
   ShapeColor 0.502 0 0.376 0.098
   TriggerActivationType "First change"
   PeriodicQueries 1
-  UpdatePeriod 10
+  UpdatePeriod 60
   m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_01_N_Lg_02"
@@ -73,6 +76,9 @@ $grp PR_AIPatrolTrigger {
     m_bOverrideActivationPresence 1
    }
   }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
   m_bNeutralizePersistentObjectIfGroupIsDead 1
   m_aSideUSSR {
    PR_Group_USSR "{61B93EE454E5FEF7}" {
@@ -121,7 +127,7 @@ $grp PR_AIPatrolTrigger {
   ShapeColor 0.502 0 0.376 0.098
   TriggerActivationType "First change"
   PeriodicQueries 1
-  UpdatePeriod 10
+  UpdatePeriod 60
   m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_01_N_Lg_03"
@@ -130,6 +136,9 @@ $grp PR_AIPatrolTrigger {
     m_bOverrideActivationPresence 1
    }
   }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
   m_bNeutralizePersistentObjectIfGroupIsDead 1
   m_aSideUSSR {
    PR_Group_USSR "{61B93EE454E5FEF7}" {
@@ -178,7 +187,7 @@ $grp PR_AIPatrolTrigger {
   ShapeColor 0.502 0 0.376 0.098
   TriggerActivationType "First change"
   PeriodicQueries 1
-  UpdatePeriod 10
+  UpdatePeriod 60
   m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_01_N_Lg_04"
@@ -187,6 +196,9 @@ $grp PR_AIPatrolTrigger {
     m_bOverrideActivationPresence 1
    }
   }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
   m_bNeutralizePersistentObjectIfGroupIsDead 1
   m_aSideUSSR {
    PR_Group_USSR "{61B93EE454E5FEF7}" {
@@ -235,7 +247,7 @@ $grp PR_AIPatrolTrigger {
   ShapeColor 0.502 0 0.376 0.098
   TriggerActivationType "First change"
   PeriodicQueries 1
-  UpdatePeriod 10
+  UpdatePeriod 60
   m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_01_N_Lg_05"
@@ -244,6 +256,9 @@ $grp PR_AIPatrolTrigger {
     m_bOverrideActivationPresence 1
    }
   }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
   m_bNeutralizePersistentObjectIfGroupIsDead 1
   m_aSideUSSR {
    PR_Group_USSR "{61B93EE454E5FEF7}" {
@@ -1576,13 +1591,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           }
           GenericEntity {
            ID "5CC72E06418CF197"
-           coords -2.607 -0 5.887
+           coords -2.607 0 5.887
            angleX 0
            angleY -3.697
           }
           GenericEntity {
            ID "5CC72E06418CF1B1"
-           coords -2.257 -0 5.897
+           coords -2.257 0 5.897
            angleX 0
            angleY -16.828
           }
@@ -1925,7 +1940,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           }
           GenericEntity {
            ID "5CC72E06418CF099"
-           coords -2.872 -0 5.968
+           coords -2.872 0 5.968
            angleY -15.352
            Flags 2097155
            {
@@ -3580,7 +3595,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           }
           GenericEntity {
            ID "5CC72E06418CFF19"
-           coords -3.028 -0 -0.332
+           coords -3.028 0 -0.332
            angleX 1.352
            angleY 73.803
            angleZ -1.255
@@ -5067,7 +5082,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           }
           GenericEntity {
            ID "5CC72E06418CF1FD"
-           coords -4.032 -0 -0.257
+           coords -4.032 0 -0.257
            angleX -0.426
            angleY -164.138
            angleZ 0.136
@@ -5622,7 +5637,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           }
           GenericEntity {
            ID "5E5C73D2049F561B"
-           coords -0.583 -0 3.138
+           coords -0.583 0 3.138
            angleX -0.117
            angleY -15.962
            angleZ -1.26
@@ -14661,8 +14676,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
          {
           GenericEntity {
            ID "5CC72E06418CF129"
-           coords -2.85 -0 3.885
-           angleX -0
+           coords -2.85 0 3.885
            angleY -36.445
           }
           GenericEntity {

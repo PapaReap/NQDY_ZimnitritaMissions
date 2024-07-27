@@ -35,6 +35,7 @@ class PR_SpawnPatrol
 	protected array<string> m_aWaypointCollection;
 	protected bool m_bDebugLogs;
 	protected bool m_bCycleWaypoints;
+	protected bool m_bRandomGroupSize;
 	protected bool m_bKeepGroupActive;
 	protected bool m_bSuspendIfNoPlayers;
 	protected bool m_bTeleportAfterSpawn;
@@ -54,6 +55,9 @@ class PR_SpawnPatrol
 	protected int m_iAICombatType;// = 1;
 	protected int m_iAIGroupFormation;// = 0;
 	protected int m_iAIMovementType;// = 1;
+	
+	protected int m_iMinUnitsInGroup;// = 1;
+	protected int m_iMaxUnitsInGroup;// = -1;
 	
 	protected IEntity m_PersistentObject;
 
@@ -86,10 +90,11 @@ class PR_SpawnPatrol
 		bool debugLogs = boolArray.Get(1);
 		bool useRandomRespawnTimer = boolArray.Get(2);
 		bool holdFire = boolArray.Get(3);
-		bool keepGroupActive = boolArray.Get(4);
-		bool suspendIfNoPlayers = boolArray.Get(5);
-		bool teleportAfterSpawn = boolArray.Get(6);
-		bool neutralizePersistentObjectIfGroupIsDead = boolArray.Get(7);
+		bool randomGroupSize = boolArray.Get(4);
+		bool keepGroupActive = boolArray.Get(5);
+		bool suspendIfNoPlayers = boolArray.Get(6);
+		bool teleportAfterSpawn = boolArray.Get(7);
+		bool neutralizePersistentObjectIfGroupIsDead = boolArray.Get(8);
 
 		array<string> teleportPosition = m_sStringArray.Get(0);
 		array<string> waypointCollection = m_sStringArray.Get(1);
@@ -105,9 +110,14 @@ class PR_SpawnPatrol
 		int skill = intArray.Get(8);
 		int combatType = intArray.Get(9);
 		int groupFormation = intArray.Get(10);
+		int minUnitsInGroup = intArray.Get(11);
+		int maxUnitsInGroup = intArray.Get(12);
 
+		// maybe make a custom group count
 		string m_SpawnGroup = GetGroupToSpawn(spawnSide, groupType);
-		Print(string.Format("[PRSpawnPatrol] m_SpawnGroup: %1", m_SpawnGroup), LogLevel.WARNING);
+		if (debugLogs)
+			Print(string.Format("[PRSpawnPatrol] m_SpawnGroup: %1", m_SpawnGroup), LogLevel.WARNING);
+
 		SetPersistentObject(persistentObject);
 		
 		//--- Generate the resource
@@ -119,8 +129,11 @@ class PR_SpawnPatrol
 			return;
 		}
 
-		Print(string.Format("[PRSpawnPatrol] resource: %1", resource), LogLevel.WARNING);
+		if (debugLogs)
+			Print(string.Format("[PRSpawnPatrol] resource: %1", resource), LogLevel.WARNING);
+
 		//--- Generate spawn parameters and spawn the group
+
 		m_Group = SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPosition)));
 
 		if (!m_Group)
@@ -129,8 +142,40 @@ class PR_SpawnPatrol
 			return;
 		}
 
+		int removeUnitCount = 0;
+
+		if (randomGroupSize)
+		{
+			int prefabUnitCount = m_Group.m_aUnitPrefabSlots.Count();
+			int unitsToSpawn = prefabUnitCount;
+			if (unitsToSpawn > minUnitsInGroup)
+				unitsToSpawn = minUnitsInGroup;
+	
+			if (maxUnitsInGroup > minUnitsInGroup)
+				unitsToSpawn = Math.RandomIntInclusive(minUnitsInGroup, maxUnitsInGroup);
+	
+			if (unitsToSpawn < 1)
+				unitsToSpawn = 1;
+			
+			Print(string.Format("[PRSpawnPatrol] unitsToSpawn: %1", unitsToSpawn), LogLevel.NORMAL);
+	
+			if (prefabUnitCount >= unitsToSpawn)
+			{
+				removeUnitCount = prefabUnitCount - unitsToSpawn;
+			} else
+			{
+				unitsToSpawn = unitsToSpawn - prefabUnitCount;
+				while (unitsToSpawn > 0)
+				{
+					m_Group.SetMaxUnitsToSpawn(Math.Min(prefabUnitCount, unitsToSpawn));
+					m_Group.SpawnUnits();
+					unitsToSpawn = unitsToSpawn - prefabUnitCount;
+				}
+			}
+		}
+
 		//--- For group information, needs a sleep it seems
-		GetGame().GetCallqueue().CallLater(GetGroupAgents, 5000, false, m_Group);
+		GetGame().GetCallqueue().CallLater(GetGroupAgents, 5000, false, m_Group, removeUnitCount);
 
 		//--- Create waypoints for the group
 		array<AIWaypoint> cycleWaypointArray = {};
@@ -359,7 +404,7 @@ class PR_SpawnPatrol
 		}
 
 		SetKeepGroupActive(keepGroupActive);
-		SetSuspendIfNoPlayers(keepGroupActive);
+		SetSuspendIfNoPlayers(suspendIfNoPlayers);
 		// Set Behaviors
 		SetAISkillB(skill);
 		SetCombatTypeB(combatType);
@@ -378,6 +423,9 @@ class PR_SpawnPatrol
 			SetSpawnSide(spawnSide);
 			SetGroupType(groupType);
 			SetSpawnPosition(spawnPosition);
+			SetRandomGroupSize(randomGroupSize);
+			SetMinUnitsInGroup(minUnitsInGroup);
+			SetMaxUnitsInGroup(maxUnitsInGroup);
 			SetCycleWaypoints(cycleWaypoints);
 			SetRandomRespawnTimer(useRandomRespawnTimer);
 			SetWaypointCollection(waypointCollection);
@@ -411,13 +459,14 @@ class PR_SpawnPatrol
 
 	//------------------------------------------------------------------------------------------------
 	//! Gets groupGA agents
-	void GetGroupAgents(SCR_AIGroup groupGA)
+	void GetGroupAgents(SCR_AIGroup groupGA, int removeUnitCount)
 	{
 		if (!groupGA)
 			return;
 
-		// teleport after spawn
 		bool keepGroupActive = GetKeepGroupActive();
+		
+		// teleport after spawn
 		bool teleportAfterSpawn = GetTeleportAfterSpawn();
 		array<string> teleportPosition = GetTeleportPosition();
 
@@ -426,6 +475,28 @@ class PR_SpawnPatrol
 
 		array<AIAgent> agents = {};
 		groupGA.GetAgents(agents);
+		Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) removeUnitCount: %1", removeUnitCount), LogLevel.NORMAL);
+		if (removeUnitCount > 0 && agents.Count() > removeUnitCount)
+		{
+			int i = 0;
+			IEntity agentEntityToRemove;
+
+			while (i < removeUnitCount && agents.Count() > 1)
+			{
+				int randomIndex = agents.GetRandomIndex();
+				agentEntityToRemove = agents.Get(randomIndex).GetControlledEntity();
+				if (agentEntityToRemove)
+				{
+					SCR_EntityHelper.DeleteEntityAndChildren(agentEntityToRemove);
+					agents.Remove(randomIndex);
+				}
+				i++;
+			}
+			
+			agents.Clear();
+			groupGA.GetAgents(agents);
+			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) agents.Count(): %1", agents.Count()), LogLevel.NORMAL);
+		}
 
 		AIWaypoint currentWaypoint = groupGA.GetCurrentWaypoint(); // works
 		Print(("[PR_SpawnPatrol] (GetGroupAgents) currentWaypoint: " + currentWaypoint), LogLevel.NORMAL);
@@ -627,6 +698,9 @@ class PR_SpawnPatrol
 	//! What to do after all groupA members are dead
 	void AfterGroupIsEmpty(SCR_AIGroup groupA)
 	{
+		if (!Replication.IsRunning())
+			return;
+
 		bool neutralizePersistentObjectIfGroupIsDead = GetNeutralizePersistentObjectIfGroupIsDead();
 		IEntity persistentObject = GetPersistentObject();
 		int respawnCount = GetRespawnCount();
@@ -654,10 +728,13 @@ class PR_SpawnPatrol
 		bool debugLogs = GetDebugLogs();
 		bool useRandomRespawnTimer = GetRandomRespawnTimer();
 		bool holdFire = GetHoldFireB();
+		bool randomGroupSize = GetRandomGroupSize();
+		int minUnitsInGroup = GetMinUnitsInGroup();
+		int maxUnitsInGroup = GetMaxUnitsInGroup();
 		bool keepGroupActive = GetKeepGroupActive();
 		bool suspendIfNoPlayers = GetSuspendIfNoPlayers();
 		bool teleportAfterSpawn = GetTeleportAfterSpawn();
-		array<bool> boolArray = {cycleWaypoints, debugLogs, useRandomRespawnTimer, holdFire, keepGroupActive, suspendIfNoPlayers, teleportAfterSpawn, neutralizePersistentObjectIfGroupIsDead};
+		array<bool> boolArray = {cycleWaypoints, debugLogs, useRandomRespawnTimer, holdFire, randomGroupSize, keepGroupActive, suspendIfNoPlayers, teleportAfterSpawn, neutralizePersistentObjectIfGroupIsDead};
 		array<string> teleportPosition = GetTeleportPosition();
 		array<string> waypointCollection = GetWaypointCollection();
 		array<array<string>> stringArray = {teleportPosition, waypointCollection};
@@ -685,7 +762,9 @@ class PR_SpawnPatrol
 			spawnCollections, // 7
 			skill, // 8
 			combatType, // 9
-			groupFormation // 10
+			groupFormation, // 10
+			minUnitsInGroup, // 11
+			maxUnitsInGroup // 12
 		};
 
 		int delay = respawnTimerMin * 1000;
@@ -696,6 +775,7 @@ class PR_SpawnPatrol
 
 		if (debugLogs)
 		{
+			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) rerunCounter: " + rerunCounter, LogLevel.NORMAL);
 			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnTimerMin: " + respawnTimerMin, LogLevel.NORMAL);
 			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnTimerMax: " + respawnTimerMax, LogLevel.NORMAL);
 			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnCount: " + respawnCount, LogLevel.NORMAL);
@@ -725,7 +805,7 @@ class PR_SpawnPatrol
 		);
 	}
 
-	//! GETTERS/SETTERS
+	//! SETTERS/GETTERS
 
 	//------------------------------------------------------------------------------------------------
 	//! sets m_vOldVector
@@ -907,6 +987,48 @@ class PR_SpawnPatrol
 	bool GetNeutralizePersistentObjectIfGroupIsDead()
 	{
 		return m_bNeutralizePersistentObjectIfGroupIsDead;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bRandomGroupSize
+	void SetRandomGroupSize(bool randomGroupSize)
+	{
+		m_bRandomGroupSize = randomGroupSize;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! returns m_bRandomGroupSize
+	bool GetRandomGroupSize()
+	{
+		return m_bRandomGroupSize;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iMinUnitsInGroup
+	void SetMinUnitsInGroup(int minUnitsInGroup)
+	{
+		m_iMinUnitsInGroup = minUnitsInGroup;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! returns m_iMinUnitsInGroup
+	int GetMinUnitsInGroup()
+	{
+		return m_iMinUnitsInGroup;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iMaxUnitsInGroup
+	void SetMaxUnitsInGroup(int maxUnitsInGroup)
+	{
+		m_iMaxUnitsInGroup = maxUnitsInGroup;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! returns m_iMaxUnitsInGroup
+	int GetMaxUnitsInGroup()
+	{
+		return m_iMaxUnitsInGroup;
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -1500,63 +1622,10 @@ class PR_SpawnPatrol
 					{
 						return "{4D3BBEC1A955626A}Prefabs/Groups/OPFOR/Spetsnaz/Group_USSR_Spetsnaz_Squad.et";
 					};
-
-				//	case 0: // Machine Gun Man
-				//	{
-				//		return "{B50B7BF31273C2A6}Prefabs/Groups/OPFOR/Group_USSR_MG_M.et"; // modded
-				//	};
-				//	case 1: // Sniper Man
-				//	{
-				//		return "{429C8FCA9031B8D7}Prefabs/Groups/OPFOR/Group_USSR_Sniper_M.et"; // modded
-				//	};
-				//	case 2: // GL Man
-				//	{
-				//		return "{24E78E5A255B17A0}Prefabs/Groups/OPFOR/Group_USSR_GL_M.et"; // modded
-				//	};
-				//	case 3: // Unarmed Man
-				//	{
-				//		return "{CB8C0EC8AC47E4A4}Prefabs/Groups/OPFOR/Group_USSR_Unarmed_M.et"; // modded
-				//	};
-				//	case 4: // Fire Team
-				//	{
-				//		return "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et";
-				//	};
-				//	case 5: // Light Fire Team
-				//	{
-				//		return "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et";
-				//	};
-				//	case 6: // Machine Gun Team
-				//	{
-				//		return "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et";
-				//	};
-				//	case 7: // Medical Section
-				//	{
-				//		return "{D815658156080328}Prefabs/Groups/OPFOR/Group_USSR_MedicalSection.et";
-				//	};
-				//	case 8: // Rifle Squad
-				//	{
-				//		return "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et";
-				//	};
-				//	case 9: // Sentry Team
-				//	{
-				//		return "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et";
-				//	};
-				//	case 10: // AT Team
-				//	{
-				//		return "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et";
-				//	};
 					case 11: // Sniper Team
 					{
 						return "{28AC75D434F61AEC}Prefabs/Groups/OPFOR/Group_USSR_SniperTeam.et"; // modded
 					};
-				//	case 12: // GL Team
-				//	{
-				//		return "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et";
-				///	};
-				//	case 13: // Suppress Team
-				//	{
-				//		return "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et";
-				//	};
 					default:
 					{
 						return "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et";
@@ -1677,7 +1746,6 @@ class PR_SpawnPatrol
 						{
 							return "{89CE31B88A5FA745}Prefabs/Groups/INDFOR/Group_FIA_Team_Suppress.et";
 						};
-
 						default:
 						{
 							return "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et";
@@ -1690,9 +1758,49 @@ class PR_SpawnPatrol
 					{
 						switch (groupType)
 						{
-							case 8: // Rifle Squad
+							case 0: // "Businessman: Randomized (1)" modded
+							{
+								return "{55F9B4E227B13B6B}Prefabs/Groups/CIV/Group_CIV_Businessman_M.et"; // modded
+							};
+							case 1: // "ConstructionWorker: Randomized (1)" modded
+							{
+								return "{6FD0B67BDC42F1FD}Prefabs/Groups/CIV/Group_CIV_ConstructionWorker_M.et"; // modded
+							};
+							case 2: // "Dockworker: Randomized (1)" modded
+							{
+								return "{435A9C896D732A96}Prefabs/Groups/CIV/Group_CIV_Dockworker_M.et"; // modded
+							};
+							case 3: // "GenericCivilian: Randomized (1)" modded
+							{
+								return "{786CFDDDEDC05481}Prefabs/Groups/CIV/Group_CIV_GenericCivilian_M.et"; // modded
+							};
+							case 4: // Businessmen (3)
+							{
+								return "{FB2BD9B5C65E0487}Prefabs/Groups/CIV/Group_CIV_Businessmen.et"; // modded
+							};
+							case 5: // ConstructionWorkers (5)
 							{
 								return "{8A251FDFB29D763D}Prefabs/Groups/CIV/Group_CIV_ConstructionWorkers.et"; // modded
+							};
+							case 6: // Dockworkers (6)
+							{
+								return "{3A23D35EEB7B8171}Prefabs/Groups/CIV/Group_CIV_Dockworkers.et"; // modded
+							};
+							case 7: // Generic Civilians Cotton Shirt (6)
+							{
+								return "{083743756819C4EC}Prefabs/Groups/CIV/Group_CIV_GenericCivilians_CottonShirt.et"; // modded
+							};
+							case 8: // Generic Civilians Denim Jacket (2)
+							{
+								return "{0B09A60D42C795BF}Prefabs/Groups/CIV/Group_CIV_GenericCivilians_DenimJacket.et"; // modded
+							};
+							case 9: // Generic Civilians Turtleneck (3)
+							{
+								return "{A0AB3BE793EC3CBB}Prefabs/Groups/CIV/Group_CIV_GenericCivilians_Turtleneck.et"; // modded
+							};
+							default:
+							{
+								return "{8A251FDFB29D763D}Prefabs/Groups/CIV/Group_CIV_ConstructionWorkers.et";
 							};
 						}
 					}

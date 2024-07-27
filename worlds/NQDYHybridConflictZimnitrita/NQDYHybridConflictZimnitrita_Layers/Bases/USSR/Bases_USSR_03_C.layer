@@ -336,7 +336,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 12363.211 32 8695.827
+  coords 12404.274 32 8659.836
   {
    GenericEntity USSR_15_Base_IndustrialZone_APS_patrol_01 {
     ID "5CCED514A5908822"

@@ -5991,7 +5991,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
     m_bExcludeFromDynamicDespawn 1
     m_iDynamicDespawnRange 100
-    m_bShowDebugShapesInWorkbench 1
    }
   }
   coords 15007.598 50.75 5224.764

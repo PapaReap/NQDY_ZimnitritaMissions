@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A0AB3BE793EC3CBB}Prefabs/Groups/CIV/Group_CIV_GenericCivilians_Turtleneck.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
