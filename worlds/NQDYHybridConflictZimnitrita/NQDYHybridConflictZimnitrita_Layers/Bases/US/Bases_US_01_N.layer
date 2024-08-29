@@ -38,6 +38,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_03_Base_Kromzova_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -50,6 +56,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_03_Base_Kromzova_APS_ussr_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -118,6 +131,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_04_Base_Kromzova_sw_APS_ussr_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -127,6 +146,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_04_Base_Kromzova_sw_APS_ussr_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -178,6 +204,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_02_Base_Harbor_e_APS_ussr_patrol {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -190,6 +222,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_02_Base_Harbor_e_APS_ussr_patrolBackup {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -258,6 +297,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_01_Base_Harbor_w_APS_ussr_patrol {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -267,6 +312,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity US_01_Base_Harbor_w_APS_ussr_patrolBackup {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }

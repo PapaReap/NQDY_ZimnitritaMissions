@@ -1,5 +1,6 @@
 PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Master {
  coords 5078.767 19.137 9574.018
+ Flags 2097155
  TriggerShapeType Sphere
  SphereRadius 1
  ShapeColor 0.046 0 1 0.078
@@ -15,8 +16,8 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Master {
   }
  }
  m_bUseRandomDelayTimer 1
- m_iDelayTimerMin 1800
- m_iDelayTimerMax 2700
+ m_iDelayTimerMin 18
+ m_iDelayTimerMax 27
  m_aIndividualTasks {
   PR_TaskDetails "{61634CCE49B6A3CA}" {
    m_sTaskName "TaskDeliverSupplies_Ajvan"
@@ -58,8 +59,8 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Master {
  m_bUseRandomTasks 1
  m_iRandomTaskCount -1
  m_bUseRandomDelayBetweenTasksTimer 1
- m_iDelayTimerBetweenEachTaskMin 3600
- m_iDelayTimerBetweenEachTaskMax 10800
+ m_iDelayTimerBetweenEachTaskMin 36
+ m_iDelayTimerBetweenEachTaskMax 108
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  Area_DS_Sokyyiv {
@@ -305,6 +306,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 18
@@ -592,6 +594,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 18
@@ -878,6 +881,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 18
@@ -1172,6 +1176,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 30
@@ -1474,6 +1479,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 18
@@ -1758,6 +1764,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 30
@@ -2041,6 +2048,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       ID "5E74C90E3ED35D79"
       components {
        SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_sFactionKey "US"
         m_aPlugins {
          SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
           m_fAreaRadius 18

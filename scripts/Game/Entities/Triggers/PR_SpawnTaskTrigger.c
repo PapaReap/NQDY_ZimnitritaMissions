@@ -87,12 +87,16 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 			{
 				foreach (PR_TaskDetails taskDetails : m_aIndividualTasks)
 				{
-					SetIndividualTasks(taskDetails);
+					//if (m_bEnableThisTask)
+						SetIndividualTasks(taskDetails);
 				}
 				Print(string.Format("[PR_SpawnTaskTrigger] %1 : Trigger: %2 : GetIndividualTasksToSpawnOnActivation(): %3", m_sLogMode, m_sTriggerName, GetIndividualTasksToSpawnOnActivation()), LogLevel.WARNING);
 				Print(string.Format("[PR_SpawnTaskTrigger] %1 : Trigger: %2 : m_bMoveTaskDestinationArray: %3", m_sLogMode, m_sTriggerName, m_bMoveTaskDestinationArray), LogLevel.WARNING);
 			}
-
+			
+		//if (!m_bEnableThisTask)
+		//	return;
+			
 			if (m_bUseTaskPool)
 				GetTaskPool();
 			else
@@ -469,6 +473,10 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 	//!
 	protected void SetIndividualTasks(PR_TaskDetails taskDetails)
 	{
+		bool enableThisTask = taskDetails.m_bEnableThisTask;
+		if (!enableThisTask)
+			return;
+
 		string taskName = taskDetails.m_sTaskName;
 		bool usePersistentTask = taskDetails.m_bUsePersistentTask;
 		string persistentTaskObjectName = taskDetails.m_sPersistentTaskObject;
@@ -491,6 +499,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 			}
 		}
 
+		//SetEnableThisTask(enableThisTask);
 		SetIndividualTasksToSpawnOnActivation(taskName);
 		SetUsePersistentTaskArray(usePersistentTask);
 		SetPersistentTaskObjectArray(persistentTaskObjectName);
@@ -1640,6 +1649,10 @@ enum PR_TASK_ESFTaskType
 [BaseContainerProps()]
 class PR_TaskDetails
 {
+	//! PR Task Spawner: Tasks - Individual Tasks - Enable this Task
+	[Attribute("true", UIWidgets.CheckBox,"Enable this Task.  ", category: "PR Task Spawner: Tasks - Individual Tasks")]
+	bool m_bEnableThisTask;
+	
 	//! PR Task Spawner: Tasks - Individual Tasks - Name of task to spawn.
 	[Attribute(desc: "Name of task to spawn.  ", category: "PR Task Spawner: Tasks - Individual Tasks")]
 	string m_sTaskName;

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5FDD4AE4D6F25CFB}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_UK59_FIA_ai.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

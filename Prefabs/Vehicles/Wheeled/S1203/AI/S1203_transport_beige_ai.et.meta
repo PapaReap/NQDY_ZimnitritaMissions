@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4B4EF6BEB2AB0DC9}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige_ai.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,6 +1,7 @@
 $grp PR_AIPatrolTrigger {
- CIV_Sokyyiv {
+ CIV_Sokyyivx {
   coords 13677.352 21.069 15003.86
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -38,13 +39,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Ajvan {
+ CIV_Ajvanx {
   coords 15768.387 51.942 14516.368
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -81,14 +84,15 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61F02683A301AF71}" {
      }
     }
-    coords -0.848 0.752 0.419
+    coords -0.847 0.752 0.419
     CompletionRadius 150
     m_bFastInit 0
    }
   }
  }
- CIV_Niscova {
+ CIV_Niscovax {
   coords 13607.684 47.251 9181.059
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -126,13 +130,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Glochy {
+ CIV_Glochyx {
   coords 15372.506 61.667 1464.803
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -170,13 +176,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Szarlota {
+ CIV_Szarlotax {
   coords 13182.973 17.792 1751.628
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -216,13 +224,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Stereni {
+ CIV_Sterenix {
   coords 14013.262 41.765 2439.78
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -262,13 +272,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Watertreatment {
+ CIV_Watertreatmentx {
   coords 9734.011 9.999 4744.736
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -306,13 +318,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 400
     m_bFastInit 0
    }
   }
  }
- CIV_Gruwiice {
+ CIV_Gruwiicex {
   coords 10347.717 15.001 5319.644
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -352,13 +366,15 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 200
     m_bFastInit 0
    }
   }
  }
- CIV_Gruwiice_02 {
+ CIV_Gruwiice_02x {
   coords 10182.006 10.001 5748.263
+  Flags 2097155
   TriggerShapeType Sphere
   ShapeColor 0 1 0.023 0.078
   TriggerActivationType "First change"
@@ -398,7 +414,272 @@ $grp PR_AIPatrolTrigger {
      }
     }
     coords 0.352 0.017 -0.615
+    Flags 2097155
     CompletionRadius 250
+    m_bFastInit 0
+   }
+  }
+ }
+}
+$grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+ CIV_Ajvan {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_Dockworkers_6
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 15768.996 50 14519.893
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.112 0.015 -18.083
+    angleY -149.271
+    CompletionRadius 150
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Glochy {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_CottonShirt_6
+    m_iSimulateGamePlayerCountForScaling 6
+    m_bIgnoreMissionHeader 0
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 15372.232 61.655 1465.088
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.113 -0.414 -18.083
+    angleY -149.271
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Gruwiice {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_Businessmen_3
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 10347.562 15 5319.57
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.113 2.697 -18.083
+    angleY -149.271
+    CompletionRadius 200
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Gruwiice_02 {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_Businessmen_3
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 10181.971 10.001 5748.239
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.113 -0.001 -18.083
+    angleY -149.271
+    CompletionRadius 250
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Niscova {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_CottonShirt_6
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 13607.008 46.737 9181.354
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.326 0.011 0.444
+    angleY -149.271
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Sokyyiv {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_ConstructionWorkers_5
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 13677.344 21.067 15003.86
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.328 0.016 0.445
+    angleY -149.271
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Stereni {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_DenimJacket_2
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 14014.094 35.203 2446.779
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.326 0.069 0.444
+    angleY -149.271
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Szarlota {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_Turtleneck_3
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 13178.055 9.31 1757.687
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.326 0.011 0.444
+    angleY -149.271
+    CompletionRadius 400
+    m_bFastInit 0
+   }
+  }
+ }
+ CIV_Watertreatment {
+  components {
+   SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+    m_sDefaultWaypointPrefab "{A33AF7FC5004F294}Prefabs/AI/Waypoints/AIWaypoint_Defend_Large_CO.et"
+    m_eGroupType CIV_Dockworkers_6
+    m_iSimulateGamePlayerCountForScaling 2
+    m_iMinUnitsInGroup 4
+    m_iUnitScaleForOptimumPlayerCount 12
+    m_iMaxUnitsInGroup 20
+   }
+   SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+    "faction affiliation" "CIV"
+   }
+  }
+  coords 9733.993 10 4744.614
+  angleY 149.271
+  {
+   SCR_DefendWaypoint : "{4ECD14650D82F5CA}Prefabs/AI/Waypoints/AIWaypoint_Loiter_CO.et" {
+    components {
+     Hierarchy "{62257DA11EDD9902}" {
+     }
+    }
+    coords 0.326 0.011 0.444
+    angleY -149.271
+    CompletionRadius 400
     m_bFastInit 0
    }
   }

@@ -1,0 +1,70 @@
+Vehicle : "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{62277171900A6028}" {
+     SourceMaterial "S105Body_mat"
+     AssignedMaterial "{4856BEF97E6258E3}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_yellow.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Skoda105_Randomized_Name"
+    Icon "{C431FD61793AA13F}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Random.edds"
+    m_Image "{44A4AFCD015B61DC}UI/Textures/EditorPreviews/Vehicles/Wheeled/S105/S105_randomized.edds"
+    m_aAuthoredLabels {
+     290 3 13 36 50 200
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{62277171900A601F}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{62277171900A601D}" {
+      m_sVariantPrefab "{8469FE85F25F7FBF}Prefabs/Vehicles/Wheeled/S105/S105_beige_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900A6013}" {
+      m_sVariantPrefab "{A61EB60A9F61EBF4}Prefabs/Vehicles/Wheeled/S105/S105_darkblue_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900A6011}" {
+      m_sVariantPrefab "{D93654118FCDE537}Prefabs/Vehicles/Wheeled/S105/S105_darkbrown_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900A6016}" {
+      m_sVariantPrefab "{483BE9D8462251D0}Prefabs/Vehicles/Wheeled/S105/S105_darkred_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900A6017}" {
+      m_sVariantPrefab "{6555046111F29F7E}Prefabs/Vehicles/Wheeled/S105/S105_green_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF82}" {
+      m_sVariantPrefab "{04E4EA9683157DA7}Prefabs/Vehicles/Wheeled/S105/S105_lightblue_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF80}" {
+      m_sVariantPrefab "{32B9D20202359AC6}Prefabs/Vehicles/Wheeled/S105/S105_lightgreen_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF9E}" {
+      m_sVariantPrefab "{3E9C09E9E153A836}Prefabs/Vehicles/Wheeled/S105/S105_rally_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF9D}" {
+      m_sVariantPrefab "{050969F2801A8A22}Prefabs/Vehicles/Wheeled/S105/S105_red_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF9B}" {
+      m_sVariantPrefab "{C282D914D29C265E}Prefabs/Vehicles/Wheeled/S105/S105_white_ai.et"
+     }
+     SCR_EditableEntityVariant "{62277171900DEF9A}" {
+      m_sVariantPrefab "{FF698CBFA45B58E4}Prefabs/Vehicles/Wheeled/S105/S105_yellow_ai.et"
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+ }
+}

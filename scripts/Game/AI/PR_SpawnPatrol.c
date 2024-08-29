@@ -497,9 +497,40 @@ class PR_SpawnPatrol
 			groupGA.GetAgents(agents);
 			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) agents.Count(): %1", agents.Count()), LogLevel.NORMAL);
 		}
-
+// veh test
+	/*	
+		array<string> groupVehicles = {};
+		//IEntity spawnPos = GetGame().GetWorld().FindEntityByName(spawnPosition);
+		IEntity spawnedVehicle = GetGame().GetWorld().FindEntityByName("M1025_armed_M2HB_MERDC1");
+		string vehicle = spawnedVehicle.ToString();
+		groupVehicles.Insert(vehicle);	
+		groupGA.SetGroupVehicles(groupVehicles);
+		BaseCompartmentManagerComponent slotCompMan = BaseCompartmentManagerComponent.Cast(spawnedVehicle.FindComponent(BaseCompartmentManagerComponent));
+		array<BaseCompartmentSlot> vehicleCompartments = new array<BaseCompartmentSlot>;
+		int spaces = slotCompMan.GetCompartments(vehicleCompartments); // edit PapaReap
+		//for (int j = 0; j < agents.Count(); j++)
+		for (int j = 0; (j < agents.Count() && spaces > j); j++) // edit PapaReap
+		{
+			AIAgent member = agents[j];
+			if (member)
+			{
+				SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(member.GetControlledEntity());
+				CompartmentAccessComponent CAComp = CompartmentAccessComponent.Cast(character.FindComponent(CompartmentAccessComponent));
+				if (CAComp && character && !character.IsInVehicle())
+				{
+					BaseCompartmentSlot slot = vehicleCompartments[j];
+					Print(string.Format("[PR_SpawnPatrol] slot: %1", slot), LogLevel.NORMAL);
+					if (slot)
+						CAComp.GetInVehicle(spawnedVehicle, slot, true, -1, ECloseDoorAfterActions.INVALID, false);
+				}
+			}
+		}
+	*/	
 		AIWaypoint currentWaypoint = groupGA.GetCurrentWaypoint(); // works
 		Print(("[PR_SpawnPatrol] (GetGroupAgents) currentWaypoint: " + currentWaypoint), LogLevel.NORMAL);
+	//	int wpCount = GetWaypointCollection(); // this needs work
+	//	array<AIWaypoint> waypoints = groupGA.GetWaypoints();
+		//Print(("[PR_SpawnPatrol] (GetGroupAgents) waypoints: " + waypoints()), LogLevel.NORMAL);
 		int groupSize = groupGA.GetAgentsCount();
 		Print(("[PR_SpawnPatrol] (GetGroupAgents) groupSize: " + groupSize), LogLevel.NORMAL);
 

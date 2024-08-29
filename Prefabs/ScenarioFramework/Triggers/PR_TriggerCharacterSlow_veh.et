@@ -1,0 +1,17 @@
+SCR_CharacterTriggerEntity {
+ ID "61FA51D5EFD9A582"
+ components {
+  RplComponent "{61FA51D5EFD9A584}" {
+  }
+ }
+ coords 17.346 1.001 156.693
+ TriggerShapeType Sphere
+ SphereRadius 5
+ ShapeColor 0.441 0.845 0.439 0.494
+ TriggerActivationType "Every query"
+ PeriodicQueries 1
+ UpdatePeriod 1
+ ClassesFilter {
+  "Vehicle"
+ }
+}

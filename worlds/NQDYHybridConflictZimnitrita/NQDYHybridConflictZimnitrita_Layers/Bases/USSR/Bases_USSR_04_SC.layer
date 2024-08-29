@@ -38,6 +38,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_22_Base_Gruwice_militarybase_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -48,7 +54,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     ID "606078EE23DE48AC"
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 12
+      m_iMaxUnitsInGroup 20
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
@@ -56,12 +65,34 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
     coords 113.577 1.447 -45.672
    }
+   GenericEntity : "{644AEC5C537E03F0}Prefabs/Systems/AmbientVehicles/AmbientVehicleSpawnpoint_USSR.et" {
+    components {
+     SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
+      m_aIncludedEditableEntityLabels {
+      }
+      m_aExcludedEditableEntityLabels {
+      }
+      m_bOverrideEntityLabels 1
+      m_aSpecificPrefabNames {
+       "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et"
+      }
+     }
+    }
+    coords -29.802 9.948 142.893
+    angleX 0.897
+    angleY 0.092
+    angleZ -0.894
+   }
    $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     USSR_22_Base_Gruwice_militarybase_APS_patrol_02 {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 4
+       m_iUnitScaleForOptimumPlayerCount 10
+       m_iMaxUnitsInGroup 20
       }
       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
        "faction affiliation" "USSR"
@@ -75,6 +106,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        m_sDefaultWaypointPrefab "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 4
+       m_iUnitScaleForOptimumPlayerCount 12
+       m_iMaxUnitsInGroup 20
       }
       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
        "faction affiliation" "USSR"
@@ -87,7 +122,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 4
+       m_iUnitScaleForOptimumPlayerCount 10
+       m_iMaxUnitsInGroup 20
       }
       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
        "faction affiliation" "USSR"
@@ -95,6 +133,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
      coords -199.523 -10.306 234.125
     }
+   }
+   Vehicle Mi8MT_unarmed_transport10 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
+    coords -29.674 9.923 142.961
+    Flags 2097155
    }
   }
  }
@@ -136,6 +178,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
@@ -148,6 +193,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
@@ -253,17 +302,44 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   GenericEntity : "{644AEC5C537E03F0}Prefabs/Systems/AmbientVehicles/AmbientVehicleSpawnpoint_USSR.et" {
+    components {
+     SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
+      m_aIncludedEditableEntityLabels {
+      }
+      m_aExcludedEditableEntityLabels {
+      }
+      m_bOverrideEntityLabels 1
+      m_aSpecificPrefabNames {
+       "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et"
+      }
+     }
+    }
+    coords 90.404 -6.032 -28.621
+    angleX 0.897
+    angleY 0.092
+    angleZ -0.894
+   }
    GenericEntity USSR_21_Base_Vrana_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType FIRETEAM
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
     coords 371.576 11.99 377.707
+   }
+   Vehicle Mi8MT_unarmed_transport9 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
+    coords 90.498 -6.038 -28.594
+    Flags 2097155
    }
   }
  }
@@ -303,6 +379,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_18_Base_Gruwice_n_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -312,6 +394,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_18_Base_Gruwice_n_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -322,6 +411,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_eGroupType TEAM_MG
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
      }
     }
     coords -82.376 -0.348 78.876
@@ -493,6 +585,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_19_Base_RailwayGruwice_ne_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -502,6 +600,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_19_Base_RailwayGruwice_ne_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -652,6 +757,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_23_Base_Varpadany_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -661,6 +772,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_23_Base_Varpadany_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -818,6 +935,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_20_base_Valadim_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -827,6 +951,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_20_base_Valadim_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }

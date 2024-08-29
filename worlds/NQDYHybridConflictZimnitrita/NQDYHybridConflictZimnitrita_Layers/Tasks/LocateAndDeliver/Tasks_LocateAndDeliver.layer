@@ -1,5 +1,6 @@
 PR_SpawnTaskTrigger TaskTrg_LocateAndDeliver_Master {
  coords 5825.926 29.515 4962.633
+ Flags 2097155
  TriggerShapeType Sphere
  SphereRadius 1
  ShapeColor 0.046 0 1 0.078
@@ -89,6 +90,7 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
      }
      PR_TaskOptimizerTrigger OPT_TaskLocateAndDeliver_01 {
       coords -0.113 0.002 -0.138
+      Flags 2097155
       TriggerShapeType Sphere
       SphereRadius 3
       DrawShape 1
@@ -290,6 +292,7 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
      }
      PR_TaskOptimizerTrigger Opt_TaskLocateAndDeliver_01_Deliver {
       coords -0.022 0.01 -0.005
+      Flags 2097155
       TriggerShapeType Sphere
       SphereRadius 30
       DrawShape 1

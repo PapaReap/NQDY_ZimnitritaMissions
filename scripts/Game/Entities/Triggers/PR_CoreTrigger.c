@@ -8,8 +8,6 @@ class PR_CoreTriggerClass : SCR_BaseTriggerEntityClass
 	// prefab properties here
 }
 
-
-
 class PR_CoreTrigger : SCR_BaseTriggerEntity
 {
 	//! PR Spawn Patrol: Utilities - Toggle to refresh EOnInit during testing.
@@ -44,7 +42,7 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 	//! PR Core: Trigger Activation - Override options for special cases
 	[Attribute(desc: "Override options for special cases.  ", category: "PR Core: Trigger Activation")]
 	protected ref array<ref PR_OverrideTriggerActivation> m_aOverrideOptions;
-	
+
 	//! PR SPAWN PATROL: DETAILS - Use random delay timer: Uses a min and max values below.
 	[Attribute("false", UIWidgets.CheckBox,"Use random delay timer: Uses a min and max values below.  ", category: "PR Core: Trigger Timer Delay")]
 	protected bool m_bUseRandomDelayTimer;
@@ -71,9 +69,9 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 	protected string m_sLogMode = "(OnActivate)";
 	protected IEntity m_PersistentObject;
 
-	bool overrideActivationPresence = false;
-	bool activateIfObjectMissing = false;
-	string missingObjectName;
+	bool m_bOverrideActivationPresenceM = false;
+	bool m_bActivateIfObjectMissingM = false;
+	string m_sMissingObjectNameM;
 
 	override protected void EOnInit(IEntity owner)
 	{
@@ -87,7 +85,7 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 
 		m_World = owner.GetWorld();
 		m_Trigger = BaseGameTriggerEntity.Cast(m_World.FindEntityByID(this.GetID()));
-		m_fRadius = m_Trigger.GetSphereRadius(); 
+		m_fRadius = m_Trigger.GetSphereRadius();
 		//Print(string.Format("[PR_Core_Trigger] %1 : Trigger: %2 : m_fRadius: %3", m_sLogMode, m_sTriggerName, m_fRadius), LogLevel.WARNING);
 		m_sTriggerName = m_Trigger.GetName();
 		if (!m_sTriggerName)
@@ -121,9 +119,9 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 		{
 			foreach (PR_OverrideTriggerActivation activationOptions : m_aOverrideOptions)
 			{
-				overrideActivationPresence = activationOptions.m_bOverrideActivationPresence;
-				activateIfObjectMissing = activationOptions.m_bActivateIfObjectMissing;
-				missingObjectName = activationOptions.m_sMissingObjectName;
+				m_bOverrideActivationPresenceM = activationOptions.m_bOverrideActivationPresence;
+				m_bActivateIfObjectMissingM = activationOptions.m_bActivateIfObjectMissing;
+				m_sMissingObjectNameM = activationOptions.m_sMissingObjectName;
 			}
 		}
 	}
@@ -296,23 +294,23 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 			}
 		}
 
-		if (overrideActivationPresence)
+		if (m_bOverrideActivationPresenceM)
 		{
 			int playerCount = GetGame().GetPlayerManager().GetPlayerCount();
 			if (playerCount == 0)
 				return false;
 
-			if (activateIfObjectMissing)
+			if (m_bActivateIfObjectMissingM)
 			{
-				IEntity missingObject = GetGame().GetWorld().FindEntityByName(missingObjectName);
+				IEntity missingObject = GetGame().GetWorld().FindEntityByName(m_sMissingObjectNameM);
 				if (missingObject)
 					return false;
 			}
-			
+
 			FactionManager factionManager = GetGame().GetFactionManager();
 			if (factionManager)
 				m_OwnerFaction = factionManager.GetFactionByKey(m_OwnerFactionKey);
-			
+
 			return true;
 		}
 
@@ -335,13 +333,13 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 			if (m_ActivationPresence == PR_Core_EActivationPresence.PLAYER)
 				return EntityUtils.IsPlayer(ent);
 
-			if (activateIfObjectMissing)
+			if (m_bActivateIfObjectMissingM)
 			{
-				IEntity missingObject = GetGame().GetWorld().FindEntityByName(missingObjectName);
+				IEntity missingObject = GetGame().GetWorld().FindEntityByName(m_sMissingObjectNameM);
 				if (missingObject)
 					return false;
 			}
-			
+
 			return true;
 		}
 

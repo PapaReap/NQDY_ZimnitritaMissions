@@ -19,6 +19,7 @@ PR_SpawnTaskTrigger TaskTrg_TaskKill_HVT_Master {
  m_iDelayTimerMax 2700
  m_aIndividualTasks {
   PR_TaskDetails "{61A244522783DCCA}" {
+   m_bEnableThisTask 0
    m_sTaskName "TaskKill_HVT_Andruhanov_CZ"
    m_bUsePersistentTask 1
    m_sPersistentTaskObject "Pers_TaskKill_HVT_Andruhanov_CZ"
@@ -332,11 +333,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_KramadianskBridge_mb"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -727,11 +723,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
            m_sSound "SOUND_HUD_TASK_SUCCEEDED"
           }
-          SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-            m_sEntityName "TaskKill_HVT_ZimitritaFalls_Deliver"
-           }
-          }
           SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
            m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
             m_sEntityName "Pers_TaskKill_HVT_ZimitritaFalls_Deliver2"
@@ -871,11 +862,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          m_aTriggerActionsOnFinish {
           SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
            m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-          }
-          SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-            m_sEntityName "TaskKill_HVT_ZimitritaFalls"
-           }
           }
           SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
            m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -1673,11 +1659,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_OldCastle"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
          m_sEntityName "Pers_TaskKill_HVT_OldCastle"
@@ -2026,11 +2007,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_DotskLake"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
          m_sEntityName "Pers_TaskKill_HVT_DotskLake"
@@ -2340,11 +2316,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_DarkForest"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -2751,11 +2722,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_HarbourElectrical_w"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
          m_sEntityName "Pers_TaskKill_HVT_HarbourElectrical_w"
@@ -3098,11 +3064,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          m_aTriggerActionsOnFinish {
           SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
            m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-          }
-          SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-            m_sEntityName "TaskKill_HVT_Sartava_Sawmill"
-           }
           }
           SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
            m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -3492,11 +3453,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
            m_sSound "SOUND_HUD_TASK_SUCCEEDED"
           }
-          SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-            m_sEntityName "TaskKill_HVT_Sartava_Sawmill_Deliver"
-           }
-          }
           SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
            m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
             m_sEntityName "Pers_TaskKill_HVT_Sartava_Sawmill_Deliver2"
@@ -3644,11 +3600,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_Kromzova_CastleRuins"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -4220,11 +4171,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_ElectricRelay_w"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
@@ -5622,11 +5568,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_Gruwice_CZ"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
          m_sEntityName "Pers_TaskKill_HVT_Gruwice_CZ"
@@ -6315,1379 +6256,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
  }
- Area_HVT_Andruhanov_CZ {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
-    m_iDynamicDespawnRange 40
-   }
-  }
-  coords 12447.301 32.031 8794.886
-  {
-   $grp PR_AIPatrolTrigger {
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01 {
-     coords -77.029 31.905 -130.589
-     TriggerShapeType Sphere
-     SphereRadius 1
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 10
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bOverrideActivationPresence 1
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Man SF: LMG (1)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EE40F7312FE}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_01"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.9
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_01"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_01 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords -0.234 0 4.317
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 1.5
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02 {
-     coords -94.495 31.904 -40.7
-     TriggerShapeType Sphere
-     SphereRadius 1
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 10
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bOverrideActivationPresence 1
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Man SF: LMG (1)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EE46FEAEBFA}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_02"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.9
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_02 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords 0.042 0 0.031
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 1.5
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_03 {
-     coords -86.605 28.204 -83.47
-     TriggerShapeType Sphere
-     SphereRadius 1
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 10
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bOverrideActivationPresence 1
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Man SF: Sharpshooter (1)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_03"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EE5D0A93718}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_03"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_03"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_03 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords 0.749 0 0.002
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 18
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_04 {
-     coords -89.961 24.204 -121.661
-     TriggerShapeType Sphere
-     SphereRadius 100
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 1
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Man SF: LMG (1)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_04"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EE54D34EF1E}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_04"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_04"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_04 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords 0.031 0 -0.009
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 2
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_05 {
-     coords -96.617 16.204 -118.427
-     TriggerShapeType Sphere
-     SphereRadius 100
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 1
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Man SF: SL (1)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_05"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EFAAA10CAFB}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_05"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_05"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_05 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords -0.138 0 -0.379
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 3
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_06 {
-     coords -85.937 8.204 -94.609
-     TriggerShapeType Sphere
-     SphereRadius 100
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 1
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Group: Fire Team (4)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_06"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EFA2265F08B}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_06"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_06"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_06 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords -0.324 0 0.38
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 10
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_07 {
-     coords -76.66 0.204 -106.31
-     TriggerShapeType Sphere
-     SphereRadius 100
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 1
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Group: Fire Team (4)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_07"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EFA2265F08B}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_07"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_07"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_07 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords -0.324 0 0.38
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 10
-      }
-     }
-    }
-    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_08 {
-     coords -123.461 0.205 -68.961
-     TriggerShapeType Sphere
-     SphereRadius 100
-     "Polyline Height" 10
-     ShapeColor 0.046 0 1 0.078
-     TriggerActivationType "First change"
-     PeriodicQueries 1
-     UpdatePeriod 1
-     m_bDebugLogs 1
-     m_bUsePersistence 1
-     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-     m_aOverrideOptions {
-      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
-       m_bActivateIfObjectMissing 1
-       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
-      }
-     }
-     m_bUseRandomDelayTimer 1
-     m_iDelayTimerMin 1
-     m_iDelayTimerMax 10
-     m_aSideUSSR {
-      PR_Group_USSR "{61B93EE454E5FEF7}" {
-       m_GroupType "Group: Fire Team (4)"
-       m_aGroupDetails {
-        PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_08"
-        }
-       }
-       m_aGroupWaypoints {
-        PR_GroupWaypoints "{61E37EFA2265F08B}" {
-         m_bCycleWaypoints 1
-         m_aWaypointCollection {
-          "TaskKill_HVT_Andruhanov_CZ_WP_08"
-         }
-        }
-       }
-       m_aGroupBehaviours {
-        PR_GroupBehaviours "{61B93EE5BDD39817}" {
-         m_fPerceptionFactor 0.75
-        }
-       }
-       m_aTeleportGroup {
-        PR_TeleportGroup "{61B93EE472C451B0}" {
-         m_bTeleportAfterSpawn 1
-         m_aTeleportPosition {
-          "TaskKill_HVT_Andruhanov_CZ_WP_08"
-         }
-        }
-       }
-      }
-     }
-     {
-      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_08 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
-       components {
-        Hierarchy "{61E217A40F251D8B}" {
-        }
-       }
-       coords -0.324 0 0.38
-       angleY -177.16
-       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
-       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
-       CompletionRadius 10
-      }
-     }
-    }
-   }
-   PR_SpawnTaskTrigger TaskTrg_TaskKill_HVT_Andruhanov_CZ {
-    coords 2.736 0 1.7
-    Flags 2097155
-    TriggerShapeType Sphere
-    SphereRadius 800
-    DrawShape 1
-    ShapeColor 0.046 0 1 0.078
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 50
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
-    m_ActivationPresence ANY_CHARACTER
-    m_aIndividualTasks {
-     PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskKill_HVT_Andruhanov_CZ"
-      m_bUseMoveTaskDestination 1
-      m_aTaskMoveDetails {
-       PR_MoveTask "{613802B56EC76EB7}" {
-        m_sTaskSectionToMove "SlotKill_TaskKill_HVT_Andruhanov_CZ"
-        m_sMoveSectionTo {
-         "TaskKill_HVT_MoveCollection_Andruhanov_CZ"
-        }
-        m_sAdditionalObjectsToMove {
-         "Opt_TaskKill_HVT_Andruhanov_CZ"
-        }
-       }
-      }
-     }
-    }
-    m_iPlayerDistanceToSpawnTask 300
-    m_iRandomTaskCount -1
-    m_bUseRandomDelayBetweenTasksTimer 1
-    m_iDelayTimerBetweenEachTaskMin 10
-    m_iDelayTimerBetweenEachTaskMax 20
-   }
-   PR_TaskOptimizerTrigger Opt_TaskKill_HVT_Andruhanov_CZ {
-    coords -3.407 0 -2.836
-    TriggerShapeType Sphere
-    SphereRadius 1
-    ShapeColor 0 0.502 0.502 0.098
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 5
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskKill_HVT_Andruhanov_CZ"
-    m_bNeutralizePersistentObject 1
-    m_aOverrideOptions {
-     PR_OverrideTriggerActivation "{61917DF60E955557}" {
-      m_bOverrideActivationPresence 1
-      m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskKill_HVT_Andruhanov_CZ"
-     }
-    }
-    m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskKill_HVT_Andruhanov_CZ"
-    m_PlayerXPTaskReward "Kill HVT (60)"
-    m_fXPMultiplier 1.35
-    m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskKill_HVT_Andruhanov_CZ"
-    {
-     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskKill_HVT_Andruhanov_CZ {
-       coords 0.001 -0.019 0.136
-      }
-      Pers_Fail_TaskKill_HVT_Andruhanov_CZ {
-       coords 0.146 -0.341 -0.415
-      }
-     }
-    }
-   }
-   GenericEntity TaskKill_HVT_Andruhanov_CZ : "{2008B4EE6C4D528E}Prefabs/ScenarioFramework/Components/LayerTaskKill.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
-      m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionPlaySound "{61675A281BC5E92D}" {
-        m_sSound "SOUND_HUD_TASK_CREATED"
-       }
-      }
-      m_sTaskTitle ""
-      m_sTaskDescription ""
-      m_aTriggerActionsOnFinish {
-       SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
-        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_Andruhanov_CZ"
-        }
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
-         m_sEntityName "Pers_TaskKill_HVT_Andruhanov_CZ"
-        }
-       }
-      }
-     }
-    }
-    coords 1.546 0 -2.734
-    {
-     GenericEntity SlotKill_TaskKill_HVT_Andruhanov_CZ : "{C70DC6CBD1AAEC9A}Prefabs/ScenarioFramework/Components/SlotKill.et" {
-      components {
-       SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
-        m_sFactionKey "USSR"
-        m_sObjectToSpawn "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
-        m_sTaskTitle "Eliminate HVT Andruhanov Commercial Zone"
-        m_sTaskDescription "Recovered intel suggests we have found the location of a new HVT.<br />"\
-        "The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />"\
-        "His location is the Commercial Zone, in south of the town Andruhanov.<br />"\
-        "Your objective is to locate and neutralize this HVT.<br />"\
-        "Resistance Probability: High.<br />"\
-        "Bringing him back alive is not a option."
-        m_aActionsOnCreated {
-         SCR_ScenarioFrameworkActionSpawnObjects "{61675A2B92CE427A}" {
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskKill_HVT_AI_Andruhanov_CZ" "Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS"
-          }
-         }
-         SCR_ScenarioFrameworkActionDeleteEntity "{61675A3DE2120FC2}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A3DE6CF6AB9}" {
-           m_sEntityName "Pers_TaskKill_TRG_Andruhanov_CZ"
-          }
-         }
-        }
-        m_bSpawnAIOnWPPos 0
-        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
-        m_fPerceptionFactor 0.75
-       }
-      }
-      coords -4.986 0 -0.003
-     }
-    }
-   }
-   $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    Pers_TaskKill_TRG_Andruhanov_CZ {
-     coords 1.433 0 -2.781
-    }
-    Pers_TaskKill_HVT_Andruhanov_CZ {
-     coords 1.492 0 -2.901
-    }
-   }
-   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-    Layer_TaskKill_HVT_AI_Andruhanov_CZ {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_SpawnChildren RANDOM_MULTIPLE
-       m_iRandomPercent 66
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords -7.693 0 -7.775
-     {
-      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-       Layer_TaskKill_HVT_AI_Andruhanov_CZ_01 {
-        components {
-         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-          m_iRandomPercent 80
-         }
-        }
-        coords 35.289 0 -88.193
-        {
-         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_01_LFT {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -31.455 0 83.205
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_02_WR {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -34.934 -0.031 27.184
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_05_LRG {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -157.609 0 49.553
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_03_WR {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -179.299 0 34.492
-           angleY 178.77
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_04_WR {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -109.333 0 -67.911
-          }
-         }
-        }
-       }
-       Layer_TaskKill_HVT_AI_Andruhanov_CZ_02 {
-        components {
-         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-          m_iRandomPercent 66
-         }
-        }
-        coords 49.228 0 -101.079
-        {
-         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_01_WR {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -66.94 0 23.255
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_02_WR {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -169.066 0 -29.036
-          }
-          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_03_LRGS {
-           components {
-            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-             m_fPerceptionFactor 0.75
-            }
-           }
-           coords -85.681 0 -18.554
-          }
-         }
-        }
-       }
-       Layer_TaskKill_HVT_AI_Andruhanov_CZ_03 {
-        components {
-         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-          m_iRandomPercent 0
-         }
-        }
-        coords 41.048 0 -100.777
-        {
-         GenericEntity SlotAI_TaskKill_HVT_Andruhanov_CZ_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-            m_fPerceptionFactor 0.75
-           }
-          }
-          coords -157.4 0 71.906
-         }
-        }
-       }
-      }
-     }
-    }
-    Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS {
-     components {
-      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-       m_iRandomPercent 66
-       m_eActivationType ON_TRIGGER_ACTIVATION
-      }
-     }
-     coords -92.703 0.623 -97.396
-     {
-      GenericEntity Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS_01 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_iRandomPercent 0
-        }
-       }
-       coords 41.047 -2.867 -100.777
-       {
-        GenericEntity Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS_01_RifleSquad : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         components {
-          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-           m_sObjectToSpawn "{648E1AECBE85557B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_SquadRifle.et"
-           m_fPerceptionFactor 0.75
-          }
-         }
-         coords -43.82 2.652 126.146
-        }
-       }
-      }
-     }
-    }
-   }
-   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    TaskKill_HVT_MoveCollection_Andruhanov_CZ {
-     coords -7.187 0 -7.429
-     {
-      $grp GenericEntity {
-       TaskKill_HVT_Andruhanov_CZ_move_02 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -78.618 0.204 -96.566
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_03 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -68.561 0.206 -64.959
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_01 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -53.696 0.205 -97.578
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_04 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -88.456 0.206 -61.16
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_05 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -110.566 0.205 -62.363
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_06 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -86.087 0.206 -39.052
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_07 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -93.949 0.204 -29.27
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_08 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -79.101 0.206 -32.453
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_09 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -65.039 0.205 -28.443
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_10 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -88.035 0.204 -28.08
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_11 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -96.216 0.204 -22.59
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_12 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -86.506 0.204 -110.239
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_13 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -70.079 0.205 -123.661
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_14 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords 19.022 0 -9.992
-       }
-       TaskKill_HVT_Andruhanov_CZ_move_15 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -64.296 0.205 -129.71
-       }
-      }
-     }
-    }
-    Props_HVT_Andruhanov_CZ {
-     coords 2.412 0 -18.932
-     {
-      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-       HVT_Andruhanov_CZ_sandbag_corner_01 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -35.746 16.204 -38.245
-        angleY 92.28
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E8 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.428 0 0.542
-          angleY 39.708
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_02 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -35.659 16.204 -90.688
-        angleY -178.504
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E9 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.397 0 0.59
-          angleY 41.245
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_03 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -140.733 16.204 -38.479
-        angleY 3.591
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E10 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.225 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.32 0 0.554
-          angleY 42.386
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_04 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -140.614 16.206 -90.811
-        angleY -86.406
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E11 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.46 0 0.529
-          angleY -150.729
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_05 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -98.043 31.904 -9.379
-        angleY 76.431
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E12 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords 1.147 0 1.937
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.312 0 0.642
-          angleY 40.733
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_06 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -78.832 31.905 -9.458
-        angleY 18.738
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E13 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords -1.737 0 -0.941
-          angleY 86.08
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.418 0 0.623
-          angleY 39.549
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_07 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -97.661 31.892 -119.754
-        angleY -162.383
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E14 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords -1.737 0 -0.941
-          angleY 86.08
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.347 0 0.52
-          angleY 39.799
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_08 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -78.471 31.905 -119.782
-        angleY -107.121
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E15 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords 1.147 0 1.937
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.312 0 0.642
-          angleY 40.733
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-   }
-  }
- }
  Area_HVT_Sokyyiv_s {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
@@ -8187,11 +6755,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{61675A284A1EBC39}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A284EE8D66C}" {
-         m_sEntityName "TaskKill_HVT_Sokyyiv_s"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
          m_sEntityName "Pers_TaskKill_HVT_Sokyyiv_s"
@@ -8460,6 +7023,1487 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords -6.275 -33.901 -11.521
+      }
+     }
+    }
+   }
+  }
+ }
+ Area_HVT_Andruhanov_CZ {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 40
+   }
+  }
+  coords 12264.573 32 8653.326
+  Flags 2097155
+  {
+   $grp PR_AIPatrolTrigger {
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01 {
+     coords -26.892 31.902 102.482
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 1
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 10
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bOverrideActivationPresence 1
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Man SF: LMG (1)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EE40F7312FE}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_01"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.9
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_01"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_01 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.234 0 4.317
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02 {
+     coords -44.653 31.904 102.488
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 1
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 10
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bOverrideActivationPresence 1
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Man SF: LMG (1)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EE46FEAEBFA}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_02"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.9
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_02 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.903 0 4.316
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 1.5
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_03 {
+     coords -37.028 28.205 53.158
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 1
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 10
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bOverrideActivationPresence 1
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Man SF: Sharpshooter (1)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_03"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EE5D0A93718}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_03"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_03"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_03 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords 0.749 0 0.002
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 18
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_04 {
+     coords 13.262 16.202 27.929
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 100
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 1
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Man SF: LMG (1)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_04"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EE54D34EF1E}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_04"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_04"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_04 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords 0.031 0 -0.009
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 2
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_05 {
+     coords -85.711 16.204 28.376
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 100
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 1
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Man SF: SL (1)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_05"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EFAAA10CAFB}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_05"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_05"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_05 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.138 0 -0.379
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 3
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_06 {
+     coords 2.726 8.235 39.673
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 100
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 1
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Group: Fire Team (4)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_06"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EFA2265F08B}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_06"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_06"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_06 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.324 0 0.38
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 10
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_07 {
+     coords -64.355 8.204 44.612
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 100
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 1
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Group: Fire Team (4)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_07"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EFA2265F08B}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_07"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_07"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_07 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.324 0 0.38
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 10
+      }
+     }
+    }
+    SpawnTrg_TaskKill_HVT_Andruhanov_CZ_08 {
+     coords -36.523 8.206 78.09
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 100
+     "Polyline Height" 10
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 1
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61B93EE4E552837A}" {
+       m_bActivateIfObjectMissing 1
+       m_sMissingObjectName "Pers_TaskKill_TRG_Andruhanov_CZ"
+      }
+     }
+     m_bUseRandomDelayTimer 1
+     m_iDelayTimerMin 1
+     m_iDelayTimerMax 10
+     m_aSideUSSR {
+      PR_Group_USSR "{61B93EE454E5FEF7}" {
+       m_GroupType "Group: Fire Team (4)"
+       m_aGroupDetails {
+        PR_GroupDetails "{61B93EE45CE6F7D6}" {
+         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_08"
+        }
+       }
+       m_aGroupWaypoints {
+        PR_GroupWaypoints "{61E37EFA2265F08B}" {
+         m_bCycleWaypoints 1
+         m_aWaypointCollection {
+          "TaskKill_HVT_Andruhanov_CZ_WP_08"
+         }
+        }
+       }
+       m_aGroupBehaviours {
+        PR_GroupBehaviours "{61B93EE5BDD39817}" {
+         m_fPerceptionFactor 0.75
+        }
+       }
+       m_aTeleportGroup {
+        PR_TeleportGroup "{61B93EE472C451B0}" {
+         m_bTeleportAfterSpawn 1
+         m_aTeleportPosition {
+          "TaskKill_HVT_Andruhanov_CZ_WP_08"
+         }
+        }
+       }
+      }
+     }
+     {
+      SCR_DefendWaypoint TaskKill_HVT_Andruhanov_CZ_WP_08 : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+       components {
+        Hierarchy "{61E217A40F251D8B}" {
+        }
+       }
+       coords -0.324 0 0.38
+       angleY -177.16
+       Flags 2097155
+       AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+       AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+       CompletionRadius 10
+      }
+     }
+    }
+   }
+   PR_SpawnTaskTrigger TaskTrg_TaskKill_HVT_Andruhanov_CZ {
+    coords 2.736 0 1.7
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 800
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskKill_HVT_Andruhanov_CZ"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskKill_HVT_Andruhanov_CZ"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotKill_TaskKill_HVT_Andruhanov_CZ"
+        m_sMoveSectionTo {
+         "TaskKill_HVT_MoveCollection_Andruhanov_CZ"
+        }
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskKill_HVT_Andruhanov_CZ"
+        }
+       }
+      }
+     }
+    }
+    m_iPlayerDistanceToSpawnTask 300
+    m_iRandomTaskCount -1
+    m_bUseRandomDelayBetweenTasksTimer 1
+    m_iDelayTimerBetweenEachTaskMin 10
+    m_iDelayTimerBetweenEachTaskMax 20
+   }
+   PR_TaskOptimizerTrigger Opt_TaskKill_HVT_Andruhanov_CZ {
+    coords -3.407 0 -2.836
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 1
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskKill_HVT_Andruhanov_CZ"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskKill_HVT_Andruhanov_CZ"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskKill_HVT_Andruhanov_CZ"
+    m_PlayerXPTaskReward "Kill HVT (60)"
+    m_fXPMultiplier 1.35
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskKill_HVT_Andruhanov_CZ"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskKill_HVT_Andruhanov_CZ {
+       coords 0.001 -0.019 0.136
+       Flags 2097155
+      }
+      Pers_Fail_TaskKill_HVT_Andruhanov_CZ {
+       coords 0.146 -0.341 -0.415
+       Flags 2097155
+      }
+     }
+    }
+   }
+   GenericEntity TaskKill_HVT_Andruhanov_CZ : "{2008B4EE6C4D528E}Prefabs/ScenarioFramework/Components/LayerTaskKill.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{61675A281BC5E92D}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_sTaskTitle ""
+      m_sTaskDescription ""
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{61675A283334ECA0}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{61675A2859D09BB6}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A285C9045D2}" {
+         m_sEntityName "Pers_TaskKill_HVT_Andruhanov_CZ"
+        }
+       }
+      }
+     }
+    }
+    coords 1.546 0 -2.734
+    Flags 2097155
+    {
+     GenericEntity SlotKill_TaskKill_HVT_Andruhanov_CZ : "{C70DC6CBD1AAEC9A}Prefabs/ScenarioFramework/Components/SlotKill.et" {
+      components {
+       SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
+        m_sFactionKey "USSR"
+        m_sObjectToSpawn "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
+        m_sTaskTitle "Eliminate HVT Andruhanov Commercial Zone"
+        m_sTaskDescription "Recovered intel suggests we have found the location of a new HVT.<br />"\
+        "The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />"\
+        "His location is the Commercial Zone, in south of the town Andruhanov.<br />"\
+        "Your objective is to locate and neutralize this HVT.<br />"\
+        "Resistance Probability: High.<br />"\
+        "Bringing him back alive is not a option."
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61675A2B92CE427A}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskKill_HVT_AI_Andruhanov_CZ" "Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS"
+          }
+         }
+         SCR_ScenarioFrameworkActionDeleteEntity "{61675A3DE2120FC2}" {
+          m_Getter SCR_ScenarioFrameworkGetEntityByName "{61675A3DE6CF6AB9}" {
+           m_sEntityName "Pers_TaskKill_TRG_Andruhanov_CZ"
+          }
+         }
+        }
+        m_bSpawnAIOnWPPos 0
+        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+        m_fPerceptionFactor 0.75
+       }
+      }
+      coords -4.986 0 -0.003
+      Flags 2097155
+     }
+    }
+   }
+   $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    Pers_TaskKill_TRG_Andruhanov_CZ {
+     coords 1.433 0 -2.781
+     Flags 2097155
+    }
+    Pers_TaskKill_HVT_Andruhanov_CZ {
+     coords 1.492 0 -2.901
+     Flags 2097155
+    }
+   }
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    Layer_TaskKill_HVT_AI_Andruhanov_CZ {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_SpawnChildren RANDOM_MULTIPLE
+       m_iRandomPercent 66
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 28.108 0 71.226
+     Flags 2097155
+     {
+      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+       Layer_TaskKill_HVT_AI_Andruhanov_CZ_01 {
+        components {
+         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+          m_iRandomPercent 80
+         }
+        }
+        coords 35.289 0 -88.193
+        Flags 2097155
+        {
+         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_01_LFT {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords 62.737 0 143.964
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_02_WR {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords 101.268 0 91.574
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_03_WR {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -32.374 0 97.05
+           angleY 178.77
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_04_WR {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -51.486 0 -5.949
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_01_05_LRG {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -29.053 0 96.076
+           Flags 2097155
+          }
+         }
+        }
+       }
+       Layer_TaskKill_HVT_AI_Andruhanov_CZ_02 {
+        components {
+         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+          m_iRandomPercent 66
+         }
+        }
+        coords 49.228 0 -101.079
+        Flags 2097155
+        {
+         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_01_WR {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -60.651 0 5.054
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_02_WR {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -112.323 0 145.034
+           Flags 2097155
+          }
+          SlotAI_TaskKill_HVT_Andruhanov_CZ_02_03_LRGS {
+           components {
+            SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+             m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+             m_fPerceptionFactor 0.75
+            }
+           }
+           coords -6.007 0 83.647
+           Flags 2097155
+          }
+         }
+        }
+       }
+       Layer_TaskKill_HVT_AI_Andruhanov_CZ_03 {
+        components {
+         SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+          m_iRandomPercent 0
+         }
+        }
+        coords 41.048 0 -100.777
+        Flags 2097155
+        {
+         GenericEntity SlotAI_TaskKill_HVT_Andruhanov_CZ_03_01_LRGS : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+            m_fPerceptionFactor 0.75
+           }
+          }
+          coords -71.945 0 128.426
+          Flags 2097155
+         }
+        }
+       }
+      }
+     }
+    }
+    Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS {
+     components {
+      SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+       m_iRandomPercent 66
+       m_eActivationType ON_TRIGGER_ACTIVATION
+      }
+     }
+     coords 51.137 0.002 -2.12
+     Flags 2097155
+     {
+      GenericEntity Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS_01 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_iRandomPercent 0
+        }
+       }
+       coords -1.018 -0.002 -11.531
+       Flags 2097155
+       {
+        GenericEntity Layer_TaskKill_HVT_AI_Andruhanov_CZ_02_RS_01_RifleSquad : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         components {
+          SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+           m_sObjectToSpawn "{648E1AECBE85557B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_SquadRifle.et"
+           m_fPerceptionFactor 0.75
+          }
+         }
+         coords -22.435 0 43.708
+         Flags 2097155
+        }
+       }
+      }
+     }
+    }
+   }
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    Props_HVT_Andruhanov_CZ {
+     coords 185.14 0.031 122.628
+     Flags 2097155
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       HVT_Andruhanov_CZ_sandbag_corner_01 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -168.898 16.17 -43.466
+        angleY 92.28
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E8 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          {
+           coords -1.737 0 -0.941
+           angleY 86.08
+          }
+          {
+           coords 1.147 0 1.937
+          }
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.428 0 0.542
+          angleY 39.708
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_02 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -168.812 16.172 -95.908
+        angleY -178.504
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E9 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          {
+           coords -1.737 0 -0.941
+           angleY 86.08
+          }
+          {
+           coords 1.147 0 1.937
+          }
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.397 0 0.59
+          angleY 41.245
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_03 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -273.93 16.224 -43.814
+        angleY 3.591
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E10 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.147 1.16 1.335
+          angleY -45
+         }
+         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          {
+           coords -1.732 0 -0.942
+           angleY 86.08
+           {
+            GenericEntity {
+             ID "5D70BA356CD2E641"
+             coords -0.001 0 -0.002
+            }
+           }
+          }
+          {
+           coords 1.148 0 1.937
+           {
+            GenericEntity {
+             ID "5D70BA356CD2E641"
+             coords 0.001 0 0.002
+            }
+           }
+          }
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.315 0 0.554
+          angleY 42.386
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.02 0 -0.007
+             angleY 0
+            }
+            {
+             coords 0.008 0.001 -0.023
+             angleY 0
+            }
+            {
+             coords 0.007 0.001 -0.016
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.915 0 1.187
+           angleY -45
+           {
+            GenericEntity {
+             ID "5D6CEB977773E465"
+             coords -0.019 0 -0.246
+            }
+           }
+          }
+          {
+           coords -1.394 0 1.558
+           angleY -45
+           {
+            GenericEntity {
+             ID "5D6CEB977773E465"
+             coords -0.019 0 -0.242
+            }
+           }
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_04 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -273.81 16.172 -96.146
+        angleY -86.406
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E11 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 0 1.329
+          angleY -45
+         }
+         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          {
+           coords -1.739 0 -0.944
+           angleY 86.08
+           {
+            GenericEntity {
+             ID "5D70BA356CD2E641"
+             coords 0.001 0 0.002
+            }
+           }
+          }
+          {
+           coords 1.144 0 1.935
+           {
+            GenericEntity {
+             ID "5D70BA356CD2E641"
+             coords 0.002 0 -0.001
+            }
+           }
+          }
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.461 0 0.526
+          angleY -150.729
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.92 0 1.184
+           angleY -45
+           {
+            GenericEntity {
+             ID "5D6CEB977773E465"
+             coords -0.018 0 -0.245
+            }
+           }
+          }
+          {
+           coords -1.398 0 1.555
+           angleY -45
+           {
+            GenericEntity {
+             ID "5D6CEB977773E465"
+             coords -0.016 0 -0.245
+            }
+           }
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_05 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -230.936 31.872 -14.586
+        angleY 76.431
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E12 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          coords 1.147 0 1.937
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.312 0 0.642
+          angleY 40.733
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_06 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -211.962 31.871 -14.64
+        angleY 18.738
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E13 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          coords -1.737 0 -0.941
+          angleY 86.08
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.418 0 0.623
+          angleY 39.549
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_07 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -230.844 31.807 -125.1
+        angleY -162.383
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E14 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          coords -1.737 0 -0.941
+          angleY 86.08
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.347 0 0.52
+          angleY 39.799
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+       HVT_Andruhanov_CZ_sandbag_corner_08 {
+        components {
+         Hierarchy "{61E217A490C86F8B}" {
+         }
+        }
+        coords -211.654 31.873 -125.129
+        angleY -107.121
+        Flags 2097155
+        {
+         Turret Tripod_6T5_PKM_61E217A648DC5E15 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+          coords -1.154 1.162 1.335
+          angleY -45
+         }
+         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
+          coords 1.147 0 1.937
+         }
+         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+          coords -0.312 0 0.642
+          angleY 40.733
+          {
+           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
+            {
+             coords 0.022 0 -0.006
+             angleY 0
+            }
+            {
+             coords 0.009 0.132 -0.021
+             angleY 0
+            }
+            {
+             coords 0.009 0.269 -0.013
+             angleY 0
+            }
+           }
+          }
+         }
+         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
+          {
+           coords -0.917 0 1.185
+           angleY -45
+          }
+          {
+           coords -1.395 0 1.558
+           angleY -45
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    TaskKill_HVT_MoveCollection_Andruhanov_CZ {
+     coords 175.54 0.031 134.131
+     Flags 2097155
+     {
+      $grp GenericEntity {
+       TaskKill_HVT_Andruhanov_CZ_move_01 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -194.959 0.172 -31.073
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_02 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -204.643 0.175 -49.611
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_03 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -211.326 0.173 -85.412
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_04 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -222.239 0.175 -73.166
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_05 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -219.26 8.175 -71.405
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_06 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -197.719 16.173 -117.223
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_07 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -202.763 24.174 -132.641
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_08 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -203.129 31.874 -127.505
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_09 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -202.828 24.173 -95.656
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_10 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -219.863 24.173 -94.686
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_11 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -232.712 16.225 -80.291
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_12 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -190.378 16.171 -80.835
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_13 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -194.794 0.174 -129.025
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_14 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -193.638 0.174 -135.404
+        Flags 2097155
+       }
+       TaskKill_HVT_Andruhanov_CZ_move_15 {
+        components {
+         Hierarchy "{613802B54F5287D4}" {
+         }
+        }
+        coords -203.576 0.066 -142.958
+        Flags 2097155
+       }
       }
      }
     }

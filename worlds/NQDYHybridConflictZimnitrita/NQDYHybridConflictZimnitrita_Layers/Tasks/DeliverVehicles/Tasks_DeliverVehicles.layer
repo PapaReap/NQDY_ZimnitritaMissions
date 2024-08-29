@@ -1,6 +1,7 @@
 $grp PR_SpawnTaskTrigger {
  TaskTrg_TaskDeliverVehicles_Friendly_Master {
   coords 6002.231 114.804 5053.278
+  Flags 2097155
   TriggerShapeType Sphere
   SphereRadius 1
   ShapeColor 0.046 0 1 0.078

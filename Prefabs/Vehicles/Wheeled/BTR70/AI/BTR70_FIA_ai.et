@@ -1,0 +1,166 @@
+Vehicle : "{1C5FE7B7FF49BB8D}Prefabs/Vehicles/Wheeled/BTR70/BTR70_Base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{622773A136F3546E}" {
+     SourceMaterial "BTR_70_base_exterior_Body"
+     AssignedMaterial "{8F718BB17EA4CCC7}Assets/Vehicles/Wheeled/BTR70/Data/BTR_70_base_exterior_Body_FIA.emat"
+    }
+   }
+  }
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   CompartmentSlots {
+    PilotCompartmentSlot PilotCompartment {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC9085FC38}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r01 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{677B515F119222C2}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r02 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{D25BC9815A9F9E8D}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AT.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_l03 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{D25BC9815A9F9E8D}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AT.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r03 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_l04 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r04 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_BTR70_Name"
+    Icon "{95F49CBE9FF7A0CB}UI/Textures/Editor/EditableEntities/Vehicles/EditableEntity_Vehicle_Apc.edds"
+    IconSetName ""
+    m_Image "{F19A3202D2D35A0A}UI/Textures/EditorPreviews/Vehicles/Wheeled/BTR70/BTR70_FIA.edds"
+    m_sFaction "FIA"
+    m_aAuthoredLabels + {
+     20 21 37 200 26 53
+    }
+    m_aAutoLabels {
+     12 122
+    }
+    m_bEditorPlaceAsOneGroup 0
+    m_aOccupantFillCompartmentTypes {
+     2 0 1
+    }
+    m_aCrewEntityBudgetCost {
+     SCR_EntityBudgetValue "{622773A136F3544D}" {
+      m_BudgetType AI
+      m_Value 2
+     }
+    }
+    m_aPassengerEntityBudgetCost {
+     SCR_EntityBudgetValue "{622773A136F35443}" {
+      m_BudgetType AI
+      m_Value 6
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SCR_UniversalInventoryStorageComponent "{59168B38F20DFF74}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38E3D91D053}" {
+     SlotTemplate InventoryStorageSlot AKammunition {
+      Prefab "{A827B610B7CD4158}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Last_5Tracer.et"
+     }
+    }
+    MultiSlotConfiguration "{5A60D38E3DE4B1EA}" {
+     SlotTemplate InventoryStorageSlot UGLammo {
+      Prefab ""
+     }
+     NumSlots 0
+    }
+    MultiSlotConfiguration "{5A60D38E3DCB490D}" {
+     SlotTemplate InventoryStorageSlot RPKammunition {
+      Prefab ""
+     }
+     NumSlots 0
+    }
+    MultiSlotConfiguration "{5A60D38E3DD3F9D0}" {
+     SlotTemplate InventoryStorageSlot PKMammunition {
+      Prefab "{03094E059B554A9C}Prefabs/Weapons/Magazines/UK59/Box_762x54_UK59_50rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{622773A136F355B7}" {
+     SlotTemplate InventoryStorageSlot Backpack {
+      Prefab "{FDA7B6630DB87991}Prefabs/Items/Equipment/Backpacks/Backpack_M70_Swiss.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{622773A136F355AA}" {
+     SlotTemplate InventoryStorageSlot ATMine {
+      Prefab "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{622773A136F355A8}" {
+     SlotTemplate InventoryStorageSlot MineFlag {
+      Prefab "{AC67BAB9763A3977}Prefabs/Items/Demining/MineFlags/MineFlag_USSR.et"
+     }
+     NumSlots 12
+    }
+    MultiSlotConfiguration "{622773A136F355AE}" {
+     SlotTemplate InventoryStorageSlot KPVTAmmo {
+      Prefab "{8257B5AFDE7AE5CB}Prefabs/Weapons/Magazines/Box_145x114_KPVT_50rnd_4API_1APIT.et"
+     }
+     NumSlots 9
+    }
+    MultiSlotConfiguration "{622773A136F355AC}" {
+     SlotTemplate InventoryStorageSlot PKMTAmmo {
+      Prefab "{D8421F6E70B2FB4F}Prefabs/Weapons/Magazines/Box_762x54_PK_250rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 7
+    }
+   }
+   m_fMaxWeight 350
+  }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "FIA"
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 13602.9
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{A31F0FF0EF0B74C8}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Turret/BTR70_FIA_Turret.et"
+    }
+    RegisteringComponentSlotInfo FIA_CoatOfArms_decal {
+     Prefab "{DB04C3A5DDE10A12}Prefabs/Vehicles/Wheeled/BTR70/VehParts/BTR70_FIA_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

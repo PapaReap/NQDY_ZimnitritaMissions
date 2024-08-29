@@ -1,0 +1,27 @@
+Vehicle : "{8EB38BBD860DA06E}Prefabs/Vehicles/Wheeled/S105/S105_lightblue.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{6227717067E7B9FF}" {
+     SourceMaterial "S105Body_mat"
+     AssignedMaterial "{6A5E5A0B4C4B52A1}Assets/Vehicles/Wheeled/S105/Data/S105Body_mat_beige.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    m_Image "{91DD65B4543CAFEC}UI/Textures/EditorPreviews/Vehicles/Wheeled/S105/S105_beige.edds"
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+ }
+}

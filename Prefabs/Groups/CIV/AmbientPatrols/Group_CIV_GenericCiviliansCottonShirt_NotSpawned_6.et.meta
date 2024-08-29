@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B43F216FB40EF8AF}Prefabs/Groups/CIV/AmbientPatrols/Group_CIV_GenericCiviliansCottonShirt_NotSpawned_6.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

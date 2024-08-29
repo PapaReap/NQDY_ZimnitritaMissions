@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et"
+ Name "{FF698CBFA45B58E4}Prefabs/Vehicles/Wheeled/S105/S105_yellow_ai.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

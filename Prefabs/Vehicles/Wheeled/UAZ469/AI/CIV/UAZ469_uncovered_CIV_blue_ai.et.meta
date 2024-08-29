@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BD7DFD06B1C559E1}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered_CIV_blue_ai.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

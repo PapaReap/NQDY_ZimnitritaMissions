@@ -1,0 +1,44 @@
+Vehicle : "{33BC05D02006BE44}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker_CIV_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{622773A0C4836E04}" {
+     SourceMaterial "Ural_Body"
+     AssignedMaterial "{0BE45D85009BE504}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_FUEL_Pohona.emat"
+    }
+    MaterialAssignClass "{622773A0C4836E7D}" {
+     SourceMaterial "Ural_Interior_02"
+     AssignedMaterial "{B5AC48D60890467F}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_Metals_CIV_FUEL_Pohona.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Ural4320_Fuel_Variant2_Name"
+    m_Image "{271F1A44BFBBC16E}UI/Textures/EditorPreviews/Vehicles/Wheeled/Ural4320/Civilian/Ural4320_tanker_CIV_pohona.edds"
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Tank {
+     Prefab "{C19FAC3767288A3A}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_fuel_tank_CIV_fuel_Pohona.et"
+    }
+    RegisteringComponentSlotInfo Logo_FUEL_Pohona {
+     Prefab "{0D20B6BBA4AF1A6C}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Logos/Ural4320_logo_CIV_fuel_Pohona.et"
+     InheritParentSkeleton 1
+    }
+   }
+  }
+ }
+ coords 1206.453 51 1331.617
+}

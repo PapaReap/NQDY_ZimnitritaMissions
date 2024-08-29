@@ -472,35 +472,35 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	protected void GetDebugLogs(string logs)
 	{
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : logs: %2", m_sLogMode, logs), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : groupSide: %2", m_sLogMode, groupSide), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnPosition: %2", m_sLogMode, spawnPosition), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : groupSide: %2", m_sLogMode, groupSide), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnPosition: %2", m_sLogMode, spawnPosition), LogLevel.NORMAL);
 
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : randomGroupSize: %2", m_sLogMode, randomGroupSize), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : minUnitsInGroup: %2", m_sLogMode, minUnitsInGroup), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : maxUnitsInGroup: %2", m_sLogMode, maxUnitsInGroup), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : keepGroupActive: %2", m_sLogMode, keepGroupActive), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : suspendIfNoPlayers: %2", m_sLogMode, suspendIfNoPlayers), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : randomGroupSize: %2", m_sLogMode, randomGroupSize), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : minUnitsInGroup: %2", m_sLogMode, minUnitsInGroup), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : maxUnitsInGroup: %2", m_sLogMode, maxUnitsInGroup), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : keepGroupActive: %2", m_sLogMode, keepGroupActive), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : suspendIfNoPlayers: %2", m_sLogMode, suspendIfNoPlayers), LogLevel.NORMAL);
 
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : cycleWaypoints: %2", m_sLogMode, cycleWaypoints), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : rerunCounter: %2", m_sLogMode, rerunCounter), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : waypointCollection: %2", m_sLogMode, waypointCollection), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : collectionSortOrder: %2", m_sLogMode, collectionSortOrder), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : waypointSortOrder: %2", m_sLogMode, waypointSortOrder), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnCollections: %2", m_sLogMode, spawnCollections), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : cycleWaypoints: %2", m_sLogMode, cycleWaypoints), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : rerunCounter: %2", m_sLogMode, rerunCounter), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : waypointCollection: %2", m_sLogMode, waypointCollection), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : collectionSortOrder: %2", m_sLogMode, collectionSortOrder), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : waypointSortOrder: %2", m_sLogMode, waypointSortOrder), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnCollections: %2", m_sLogMode, spawnCollections), LogLevel.NORMAL);
 
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : groupFormation: %2", m_sLogMode, groupFormation), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : aISkill: %2", m_sLogMode, aISkill), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : aICombatType: %2", m_sLogMode, aICombatType), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : perceptionFactor: %2", m_sLogMode, perceptionFactor), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : groupFormation: %2", m_sLogMode, groupFormation), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : aISkill: %2", m_sLogMode, aISkill), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : aICombatType: %2", m_sLogMode, aICombatType), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : perceptionFactor: %2", m_sLogMode, perceptionFactor), LogLevel.NORMAL);
 
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportAfterSpawn: %2", m_sLogMode, teleportAfterSpawn), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportPosition: %2", m_sLogMode, teleportPosition), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportSortOrder: %2", m_sLogMode, teleportSortOrder), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportAfterSpawn: %2", m_sLogMode, teleportAfterSpawn), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportPosition: %2", m_sLogMode, teleportPosition), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : teleportSortOrder: %2", m_sLogMode, teleportSortOrder), LogLevel.NORMAL);
 
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnCount: %2", m_sLogMode, respawnCount), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnTimerMin: %2", m_sLogMode, respawnTimerMin), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : useRandomRespawnTimer: %2", m_sLogMode, useRandomRespawnTimer), LogLevel.NORMAL);
-			Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnTimerMax: %2", m_sLogMode, respawnTimerMax), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnCount: %2", m_sLogMode, respawnCount), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnTimerMin: %2", m_sLogMode, respawnTimerMin), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : useRandomRespawnTimer: %2", m_sLogMode, useRandomRespawnTimer), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : respawnTimerMax: %2", m_sLogMode, respawnTimerMax), LogLevel.NORMAL);
 	}
 
 	//------------------------------------------------------------------------------------------------

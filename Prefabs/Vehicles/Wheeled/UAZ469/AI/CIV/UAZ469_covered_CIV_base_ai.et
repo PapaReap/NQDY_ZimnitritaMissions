@@ -1,0 +1,58 @@
+Vehicle : "{99F1610551D54D17}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_sFaction "CIV"
+    m_aAutoLabels {
+     13 122 50
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 50
+     }
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{5AD4F813E67ECB5D}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5AD4F813E67ECB53}" {
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{5E86A8C9C339E7A1}" {
+    }
+    MultiSlotConfiguration "{5EB0D397D958C6E8}" {
+    }
+   }
+  }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "CIV"
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Frame {
+     Prefab "{532AB5639ABB0FD1}Prefabs/Vehicles/Wheeled/UAZ469/VehParts/Roof/UAZ469_roof_assembled.et"
+    }
+    RegisteringComponentSlotInfo SeatsRear {
+     Prefab "{780AAF0A51AEE61A}Prefabs/Vehicles/Wheeled/UAZ469/VehParts/Seats/UAZ469_seats_rear.et"
+    }
+    RegisteringComponentSlotInfo SupplyStorage_05 {
+     PivotID "v_body"
+     Offset -0.1873 1.1635 -1.6017
+     Angles -85.0629 0 0
+     MergePhysics 1
+     Prefab "{11E588E215EBCF23}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_Vehicle.et"
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo SupplyStorage_06 {
+     PivotID "v_body"
+     Offset 0.4041 0.8851 -1.4127
+     Angles 25.2855 -93.0068 -1.2853
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+     RegisterDamage 1
+    }
+   }
+  }
+ }
+}

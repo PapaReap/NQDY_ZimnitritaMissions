@@ -1,0 +1,109 @@
+Vehicle : "{4597626AF36C0858}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320.et" {
+ ID "0000000000000001"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  RigidBody "{51DAA09FECF52BBF}" {
+   Mass 8570
+   CenterOfMass 0 0.15 0.4
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Ural4320_Transport_Name"
+    Icon "{9EBE212C91B36BBE}UI/Textures/Editor/EditableEntities/Vehicles/EditableEntity_Vehicle_Truck.edds"
+    m_Image "{47CFFF79C2C0BD20}UI/Textures/EditorPreviews/Vehicles/Wheeled/Ural4320/Ural4320_transport.edds"
+    m_sFaction "USSR"
+    m_aAuthoredLabels {
+     290 3 37 210
+    }
+    m_aAutoLabels +{
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 200
+     }
+    }
+    m_bEditorPlaceAsOneGroup 0
+    m_aOccupantFillCompartmentTypes +{
+    }
+    m_aPassengerEntityBudgetCost {
+     SCR_EntityBudgetValue "{5A5EA70BD2719A94}" {
+      m_BudgetType AI
+      m_Value 8
+     }
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{6228216B941E5DFA}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{6228216BA69D37D4}" {
+      m_sVariantPrefab "{C210E97B541C03AC}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_ammo_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA4C4B3BB}" {
+      m_sVariantPrefab "{9D3B69963AF60937}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_Arsenal_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA492E820}" {
+      m_sVariantPrefab "{D16836F82F9BC084}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_command_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA42C5FC7}" {
+      m_sVariantPrefab "{F50CBA9C91020065}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_engineer_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA5B6CEA0}" {
+      m_sVariantPrefab "{0820DB044A6A0500}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_repair_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA54F0090}" {
+      m_sVariantPrefab "{7A3D73E1E23F8EF0}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_tanker_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BA50D99D6}" {
+      m_sVariantPrefab "{205C339B3F7B9B7D}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_transport_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216BAAC2E926}" {
+      m_sVariantPrefab "{DFBE5EC44599ED1B}Prefabs/Vehicles/Wheeled/Ural4320/AI/Ural4320_transport_covered_ai.et"
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SCR_VehiclePerceivableComponent "{566CD04B8A6107DD}" {
+   "Additional aim points" {
+    AimPoint "{5A44DB0B1645E80A}" : "{94ED6806120FB600}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Hull_Truck.conf" {
+     AimPointPosition PointInfo "{5A44DB148C16BF03}" {
+      Offset 0 2 -1.75
+     }
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Cargo {
+     MergePhysics 1
+     Prefab "{58B3FB7F102A8B1B}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_cargo.et"
+     DisablePhysicsInteraction 1
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterCompartments 1
+     RegisterLights 1
+    }
+   }
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{62281BD308554A65}" {
+     ContextName "cargo_open"
+     Position PointInfo "{62281BD308554A5D}" {
+      Offset 0 1.8 -3.9
+     }
+    }
+   }
+  }
+ }
+ coords -7.183 -2.498 -14.395
+ m_eVehicleType SUPPLY_TRUCK
+}

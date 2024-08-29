@@ -1,0 +1,103 @@
+Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{62281BD3FABC4E7A}" {
+     SourceMaterial "Ural_Body"
+     AssignedMaterial "{0ABA717F21E466CE}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_FIA.emat"
+    }
+    MaterialAssignClass "{62281BD3FABC4E72}" {
+     SourceMaterial "Ural_Details"
+     AssignedMaterial "{C798CD16F802F339}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Details_FIA.emat"
+    }
+   }
+  }
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   CompartmentSlots {
+    PilotCompartmentSlot PilotCompartment {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{62281BD3FABC4E6B}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r01 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC7AFDE010}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_m01 {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC78C46847}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    m_Image "{081C89830E7728B2}UI/Textures/EditorPreviews/Vehicles/Wheeled/Ural4320/Ural4320_FIA_transport.edds"
+    m_sFaction "FIA"
+    m_aAutoLabels {
+     12 122 54
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{6228216B03A21046}" {
+    m_aVariants {
+     SCR_EditableEntityVariant "{6228216B0097A840}" {
+      m_sVariantPrefab "{2EB77742EB65D8F8}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_ammo_FIA_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B003E79D9}" {
+      m_sVariantPrefab "{01EDC1DF9F9F2FEF}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_Arsenal_FIA_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B01F40CE2}" {
+      m_sVariantPrefab "{D4F462102997E174}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_engineer_FIA_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B018BEBA9}" {
+      m_sVariantPrefab "{80D0FCE916150417}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_FIA_command_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B014B5AF1}" {
+      m_sVariantPrefab "{7B2E3BCA18AFEA02}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_FIA_tanker_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B010E4097}" {
+      m_sVariantPrefab "{3401AC412B8068AB}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_FIA_transport_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B06CEBA2E}" {
+      m_sVariantPrefab "{C0E4367843C61F47}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_FIA_transport_covered_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B068D51D5}" {
+      m_sVariantPrefab "{51A36964A7B70B3C}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_FIA_transport_covered_closed_ai.et"
+     }
+     SCR_EditableEntityVariant "{6228216B06433DAE}" {
+      m_sVariantPrefab "{A81F06AEA907A642}Prefabs/Vehicles/Wheeled/Ural4320/AI/FIA/Ural4320_repair_FIA_ai.et"
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "FIA"
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 14217.9
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Cargo {
+     Prefab "{655D7F2D222AACA8}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/FIA/Ural4320_FIA_cargo.et"
+     DisablePhysicsInteraction 1
+    }
+    RegisteringComponentSlotInfo FIA_CoatOfArms_decal {
+     Prefab "{DA7286CAAB5338C5}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/FIA/Ural4320_FIA_CoatOfArms_decal.et"
+     InheritParentSkeleton 1
+    }
+   }
+  }
+ }
+}

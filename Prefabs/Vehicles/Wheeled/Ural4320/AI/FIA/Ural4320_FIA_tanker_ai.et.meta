@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7B2E3BCA18AFEA02}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_FIA_tanker_ai.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

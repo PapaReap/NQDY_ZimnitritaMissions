@@ -139,7 +139,7 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 	{
 		return m_bSubtractXP;
 	}*/
-	
+
 	protected bool m_bSubtractXP;
 	//------------------------------------------------------------------------------------------------
 	//! sets m_bSubtractXP
@@ -323,7 +323,6 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 	//! Cleanup prefabs
 	protected void CleanupPrefabs(array<ref PR_RemovePrefabFilter> removePrefabDetails)
 	{
-		//ResourceName prefabType;
 		bool includeVariants;
 		int prefabCountToRemove;
 		IEntity prefabEntity;
@@ -348,13 +347,10 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 					Print(string.Format("[PR_TaskOptimizerTrigger] (CleanupPrefabs) %1 : prefabType: %2", m_sLogMode, prefabType), LogLevel.WARNING);//temp
 					specificPrefabNamesArray.Insert(prefabType);
 				}
-				
+
 				if (specificPrefabNamesArray.Count() == 0)
 					continue;
 
-				//m_bUseTaskFailObject
-				//m_sTaskFailObject
-								
 				int _i = 0;
 				while (prefabCountToRemove > _i)
 				{
@@ -371,7 +367,7 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 						}
 						_p++;
 					}
-	
+
 					_i++;
 				}
 			}
@@ -431,7 +427,7 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 	protected bool FindNearestPrefab_FilterEntities(IEntity ent)
 	{
 		EntityPrefabData prefabData = ent.GetPrefabData();
-		
+
 		if (!prefabData)
 			return false;
 
@@ -448,10 +444,10 @@ class PR_TaskOptimizerTrigger : PR_CoreTrigger
 
 		if (SCR_BaseContainerTools.GetPrefabResourceName(baseContainer).Contains(m_sQueryPrefab))
 			return true;
-		
+
 		if (!m_bIncludeVariants)
 			return false;
-		
+
 		baseContainer = ent.GetPrefabData().GetPrefab().GetAncestor();
 		if (!baseContainer)
 			return false;
@@ -472,16 +468,16 @@ enum PR_EXPRewards
 {
 	"None (0)" = 0,
 	"Clear Area (55)" = 1, 				// 1 CUSTOM_2
-	"Defend Area (55)" = 2, 				// 2	 CUSTOM_3
+	"Defend Area (55)" = 2, 			// 2 CUSTOM_3
 	"Defend Target (60)" = 3, 			// 3 CUSTOM_4
-	"Defend Area and Target (65)" = 4,	// 4	 CUSTOM_5
-	"Deliver Supplies (40)" = 5, 		// 5	 CUSTOM_6
-	"Deliver Vehicles (45)" = 6, 		// 6	 CUSTOM_7
-	"Deliver Intel (50)" = 7, 			// 7	 CUSTOM_8
-	"Destroy (50)" = 8, 					// 8	 CUSTOM_9
-	"Kill (55)" = 9, 					// 9	 CUSTOM_10
+	"Defend Area and Target (65)" = 4,	// 4 CUSTOM_5
+	"Deliver Supplies (40)" = 5, 		// 5 CUSTOM_6
+	"Deliver Vehicles (45)" = 6, 		// 6 CUSTOM_7
+	"Deliver Intel (50)" = 7, 			// 7 CUSTOM_8
+	"Destroy (50)" = 8, 				// 8 CUSTOM_9
+	"Kill (55)" = 9, 					// 9 CUSTOM_10
 	"Kill HVT (60)" = 10, 				// 10 CUSTOM_11
-	"Extraction (50)" = 11, 				// 11 CUSTOM_12
+	"Extraction (50)" = 11, 			// 11 CUSTOM_12
 	"Move (40)" = 12, 					// 12 CUSTOM_13
 	"Last (40)" = 13, 					// 13 CUSTOM_14
 }
@@ -500,6 +496,4 @@ class PR_RemovePrefabFilter
 	//! PR Task Optimizer: Amount of prefabs to remove, should match slot prefabs required for task. Early removal of prefabs before trigger activates could result in XP loses.
 	[Attribute("1", desc: "Amount of prefabs to remove, should match slot prefabs required for task. Early removal of prefabs before trigger activates could result in XP loses.  ", category: "PR Task Optimizer")]
 	int m_iPrefabCountToRemove;
-
-	//BaseContainer m_PrefabContainer;
 }

@@ -1,0 +1,39 @@
+SCR_AIGroup : "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  SCR_AIConfigComponent "{512CC1759AE69D6D}" {
+   m_sDefaultWeaponBehaviorTree "{91B8D5FDB60C1C80}AI/BehaviorTrees/Chimera/Soldier/RetreatFromTarget.bt"
+  }
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "Civilian Businessmen"
+    m_Image "{E89D7A100ABD03DC}UI/Textures/EditorPreviews/Characters/CIV/Character_CIV_Businessman_1.edds"
+    m_aAuthoredLabels {
+     4 13
+    }
+    m_aAutoLabels {
+     70
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{604482963251834C}" {
+      m_Value 100
+     }
+    }
+    m_MilitarySymbol SCR_MilitarySymbol "{5DA097D87BDE3C22}" {
+     m_Identity CIVILIAN
+    }
+   }
+  }
+  SCR_GroupIdentityComponent "{56366C5C50AD3CF2}" {
+   m_MilitarySymbol SCR_MilitarySymbol "{56366C5C4E32A359}" {
+    m_Identity CIVILIAN
+   }
+  }
+ }
+ m_faction "CIV"
+ m_aUnitPrefabSlots {
+  "{E024A74F8A4BC644}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_1.et" "{A517C72CEF150898}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_2.et" "{626874113CAE4387}Prefabs/Characters/Factions/CIV/Businessman/Character_CIV_Businessman_3.et"
+ }
+ m_bSpawnImmediately 0
+ m_fMemberSpawnDelay 250
+}

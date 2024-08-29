@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1FBE212D07953463}Prefabs/Groups/CIV/AmbientPatrols/Group_CIV_Businessmen_NotSpawned_3.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

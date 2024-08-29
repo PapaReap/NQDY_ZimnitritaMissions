@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DEB26F6D77D34F02}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_forest_ai.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

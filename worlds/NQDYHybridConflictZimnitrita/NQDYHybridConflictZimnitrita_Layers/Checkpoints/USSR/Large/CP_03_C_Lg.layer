@@ -251,19 +251,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B120 {
-          coords 99.253 25.472 400.058
+          coords 99.252 25.475 400.058
           angleX 7.306
           angleY 8.768
           angleZ 0.053
          }
          E_Mine_TM62M_617F2A9B051E33B123 {
-          coords 105.127 25.664 401.241
+          coords 105.126 25.666 401.241
           angleX 7.306
           angleY 8.768
           angleZ 0.053
          }
          E_Mine_TM62M_617F2A9B051E33B119 {
-          coords 33.003 -0.207 159.628
+          coords 33.004 -0.206 159.629
           angleX 6.754
           angleY 8.79
           angleZ 0.761
@@ -680,13 +680,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B124 {
-          coords -18.116 -22.794 235.047
+          coords -16.922 -22.788 234.922
           angleX 0.275
           angleY 95.881
           angleZ -0.353
          }
          E_Mine_TM62M_617F2A9B051E33B125 {
-          coords -15.833 -21.839 207.826
+          coords -12.88 -21.84 207.521
           angleX 0.275
           angleY 95.881
           angleZ -0.353
@@ -1103,13 +1103,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B127 {
-          coords 18.538 -1.793 259.323
+          coords 21.249 -1.786 258.336
           angleX 0.275
           angleY 43.163
           angleZ -0.353
          }
          E_Mine_TM62M_617F2A9B051E33B126 {
-          coords 17.491 -1.895 272.552
+          coords 18.869 -1.886 271.261
           angleX 0.275
           angleY 43.163
           angleZ -0.353
@@ -1435,13 +1435,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B129 {
-          coords -7.282 -0.647 238.357
+          coords -5.981 -1.587 239.787
           angleX -0.275
           angleY -143.603
           angleZ 0.353
          }
          E_Mine_TM62M_617F2A9B051E33B128 {
-          coords -5.314 -0.962 216.574
+          coords -7.558 -1.523 217.019
           angleX -0.275
           angleY -143.603
           angleZ 0.353
@@ -1858,19 +1858,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B131 {
-          coords -29.965 -3.335 235.271
+          coords -32.39 -3.296 236.224
           angleX -1.289
           angleY 93.129
           angleZ -2.71
          }
          E_Mine_TM62M_617F2A9B051E33B132 {
-          coords -27.435 -3.058 222.504
+          coords -27.434 -3.059 222.505
           angleX -1.289
           angleY 93.129
           angleZ -2.71
          }
          E_Mine_TM62M_617F2A9B051E33B130 {
-          coords -25.337 -2.842 212.897
+          coords -22.185 -2.887 211.113
           angleX -1.289
           angleY 93.129
           angleZ -2.71
@@ -2275,19 +2275,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B134 {
-          coords 28.295 6.852 153.183
+          coords 30.015 7.118 154.252
           angleX -6.95
           angleY -135.041
           angleZ 0.222
          }
          E_Mine_TM62M_617F2A9B051E33B135 {
-          coords 28.956 11.611 205.108
+          coords 29.421 11.651 205.014
           angleX -6.95
           angleY -135.041
           angleZ 0.222
          }
          E_Mine_TM62M_617F2A9B051E33B133 {
-          coords 20.773 4.774 138.043
+          coords 19.066 4.432 136.028
           angleX -6.95
           angleY -135.041
           angleZ 0.222
@@ -2699,25 +2699,25 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B137 {
-          coords -12.173 6.798 109.749
+          coords -12.393 6.862 109.815
           angleX 14.75
           angleY -60.635
           angleZ 6.714
          }
          E_Mine_TM62M_617F2A9B051E33B138 {
-          coords -15.974 7.193 97.29
+          coords -16.955 7.432 96.371
           angleX 14.75
           angleY -60.635
           angleZ 6.714
          }
          E_Mine_TM62M_617F2A9B051E33B139 {
-          coords -9.641 5.705 102.611
+          coords -7.97 5.377 105.339
           angleX 14.75
           angleY -60.635
           angleZ 6.714
          }
          E_Mine_TM62M_617F2A9B051E33B136 {
-          coords -13.183 6.346 96.227
+          coords -12.653 6.189 96.082
           angleX 14.75
           angleY -60.635
           angleZ 6.714
@@ -3573,7 +3573,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B143 {
-          coords -70.373 0.926 172.979
+          coords -69.886 0.946 173.143
           angleX -0.937
           angleY -49.293
           angleZ -2.435
@@ -3585,7 +3585,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
           angleZ -2.435
          }
          E_Mine_TM62M_617F2A9B051E33B142 {
-          coords -75.155 2.067 189.577
+          coords -71.817 1.96 188.082
           angleX -0.937
           angleY -49.293
           angleZ -2.435
@@ -3994,19 +3994,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B146 {
-          coords -6.074 3.875 53.888
+          coords -5.711 3.565 54.12
           angleX -3.913
           angleY -158.43
           angleZ 4.3
          }
          E_Mine_TM62M_617F2A9B051E33B147 {
-          coords -1.006 3.329 42.339
+          coords -1.843 3.483 42.181
           angleX -3.913
           angleY -158.43
           angleZ 4.3
          }
          E_Mine_TM62M_617F2A9B051E33B145 {
-          coords -11.284 2.746 46.273
+          coords -13.317 2.458 46.475
           angleX -3.913
           angleY -158.43
           angleZ 4.3
@@ -4423,13 +4423,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B149 {
-          coords -17.449 0.065 86.541
+          coords 3.021 -1.764 86.011
           angleX 0.275
           angleY 57.766
           angleZ -0.353
          }
          E_Mine_TM62M_617F2A9B051E33B148 {
-          coords -16.239 0.158 98.882
+          coords 0.649 -2.026 102.465
           angleX 0.275
           angleY 57.766
           angleZ -0.353
@@ -4831,16 +4831,16 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B151 {
-          coords -12.167 0.296 173.22
-          angleX -1.615
-          angleY 129.108
-          angleZ -3.019
+          coords -9.053 -15.297 169.866
+          angleX 5.854
+          angleY 128.844
+          angleZ -2.027
          }
          E_Mine_TM62M_617F2A9B051E33B150 {
-          coords -15.959 0.351 181.983
-          angleX -1.615
-          angleY 129.108
-          angleZ -3.019
+          coords -13.785 -16.55 180.521
+          angleX 5.854
+          angleY 128.844
+          angleZ -2.027
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -6426,7 +6426,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B154 {
-          coords -44.247 -7.513 387.905
+          coords -43.76 -7.529 387.454
           angleX -0.211
           angleY 33.365
           angleZ -1.22
@@ -6854,13 +6854,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B156 {
-          coords -14.817 0.732 150.461
+          coords -15.686 0.731 150.487
           angleX -1.1
           angleY -88.209
           angleZ -5.436
          }
          E_Mine_TM62M_617F2A9B051E33B155 {
-          coords -18.38 3.959 183.906
+          coords -20.224 3.951 183.906
           angleX -1.1
           angleY -88.209
           angleZ -5.436
@@ -7282,25 +7282,25 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B158 {
-          coords 16.128 -0.972 57.073
+          coords 14.41 -0.898 57.449
           angleX -7.323
           angleY -76.676
           angleZ -7.975
          }
          E_Mine_TM62M_617F2A9B051E33B159 {
-          coords -19.629 -2.539 73.314
+          coords -19.954 -2.798 71.571
           angleX -7.323
           angleY -76.676
           angleZ -7.975
          }
          E_Mine_TM62M_617F2A9B051E33B160 {
-          coords -17.303 -1.343 79.611
+          coords -16.529 -0.5 84.082
           angleX -7.323
           angleY -76.676
           angleZ -7.975
          }
          E_Mine_TM62M_617F2A9B051E33B157 {
-          coords 15.692 -0.745 63.874
+          coords 12.951 -1.007 64.513
           angleX -7.323
           angleY -76.676
           angleZ -7.975
@@ -8216,13 +8216,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B161 {
-          coords -14.827 -2.271 73.615
+          coords -13.626 -2.52 74.177
           angleX -12.289
           angleY 62.625
           angleZ -3.479
          }
          E_Mine_TM62M_617F2A9B051E33B162 {
-          coords -11.907 -1.786 61.286
+          coords -9.304 -1.607 51.363
           angleX -12.289
           angleY 62.625
           angleZ -3.479
@@ -9052,19 +9052,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B164 {
-          coords 26.26 8.056 163.057
+          coords 30.266 8.941 166.985
           angleX -4.409
           angleY -114.633
           angleZ -6.614
          }
          E_Mine_TM62M_617F2A9B051E33B165 {
-          coords 20.025 5.95 152.851
+          coords 22.878 6.856 157.19
           angleX -4.409
           angleY -114.633
           angleZ -6.614
          }
          E_Mine_TM62M_617F2A9B051E33B163 {
-          coords 25.916 10.465 176.509
+          coords 23.415 10.863 179.392
           angleX -4.409
           angleY -114.633
           angleZ -6.614
@@ -9483,13 +9483,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B167 {
-          coords 5.813 10.18 165.354
+          coords 3.799 10.115 164.32
           angleX -0.061
           angleY -117.235
           angleZ -3.452
          }
          E_Mine_TM62M_617F2A9B051E33B166 {
-          coords 5.603 14.245 212.28
+          coords 7.03 14.282 213.016
           angleX -0.061
           angleY -117.235
           angleZ -3.452
@@ -9905,13 +9905,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B169 {
-          coords -0.489 -1.099 54.213
+          coords -1.646 -4.077 83.212
           angleX 2.217
           angleY 57.993
           angleZ -6.787
          }
          E_Mine_TM62M_617F2A9B051E33B168 {
-          coords -5.452 -1.975 61.268
+          coords -3.605 -1.891 62.423
           angleX 2.217
           angleY 57.993
           angleZ -6.787
@@ -10330,19 +10330,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B171 {
-          coords -12.792 22.001 210.937
+          coords -14.571 21.82 209.109
           angleX -6.249
           angleY 133.77
           angleZ 2.407
          }
          E_Mine_TM62M_617F2A9B051E33B172 {
-          coords -8.646 21.106 203.646
+          coords -5.483 21.492 206.896
           angleX -6.249
           angleY 133.77
           angleZ 2.407
          }
          E_Mine_TM62M_617F2A9B051E33B170 {
-          coords -11.356 22.257 213.247
+          coords -9.948 22.388 214.487
           angleX -6.249
           angleY 133.77
           angleZ 2.407
@@ -10761,19 +10761,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B174 {
-          coords -20.983 5.056 109.812
+          coords -21.265 5.02 109.78
           angleX -6.41
           angleY -73.657
           angleZ -8.357
          }
          E_Mine_TM62M_617F2A9B051E33B175 {
-          coords -19.643 6.167 116.51
+          coords -17.844 6.607 118.108
           angleX -6.41
           angleY -73.657
           angleZ -8.357
          }
          E_Mine_TM62M_617F2A9B051E33B173 {
-          coords -24.519 6.269 120.846
+          coords -28.089 6.283 123.56
           angleX -6.41
           angleY -73.657
           angleZ -8.357
@@ -11181,19 +11181,19 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B177 {
-          coords -10.161 -0.165 63.153
+          coords -7.443 -0.188 67.902
           angleX -0.937
           angleY -43.741
           angleZ -2.435
          }
          E_Mine_TM62M_617F2A9B051E33B178 {
-          coords -12.339 -0.144 60.601
+          coords -12.34 -0.143 60.601
           angleX -0.937
           angleY -43.741
           angleZ -2.435
          }
          E_Mine_TM62M_617F2A9B051E33B176 {
-          coords -13.803 -0.224 75.072
+          coords -16 -0.225 75.464
           angleX -0.937
           angleY -43.741
           angleZ -2.435
@@ -11551,13 +11551,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B180 {
-          coords -10.574 3.028 52.122
+          coords -9.171 2.993 52.39
           angleX -0.729
           angleY -127.874
           angleZ -8.145
          }
          E_Mine_TM62M_617F2A9B051E33B179 {
-          coords -9.618 2.907 41.139
+          coords -10.585 2.938 40.918
           angleX -0.729
           angleY -127.874
           angleZ -8.145

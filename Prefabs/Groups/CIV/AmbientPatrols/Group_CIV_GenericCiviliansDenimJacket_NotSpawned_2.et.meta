@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9A585DADAA5737D4}Prefabs/Groups/CIV/AmbientPatrols/Group_CIV_GenericCiviliansDenimJacket_NotSpawned_2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

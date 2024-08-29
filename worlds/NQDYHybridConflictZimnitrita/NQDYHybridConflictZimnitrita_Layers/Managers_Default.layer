@@ -1,15 +1,43 @@
-SCR_AIWorld : "{551907F0C9AE6F12}Prefabs/AI/SCR_AIWorld_Zimnitrita.et" {
+SCR_AIWorld : "{551907F0C9AE6F13}Prefabs/AI/SCR_AIWorld_Zimnitrita.et" {
  components {
   NavmeshWorldComponent "{610ECD235C57BE64}" {
    Enabled 1
+   WorldSettings NavmeshWorldParams "{622212CB290DADC6}" {
+   }
    NavmeshSettings ChimeraNavmeshWorld "{610ECD235C57BCC9}" {
     NavmeshFilesConfig BaseNavmeshFilesConfig "{61CE17B5C8B26746}" {
-     NavmeshFile "{FDDCD33CDB4E8BD8}World/Data/Vehicle_NavmeshZimnitrita.nmn"
+     NavmeshFile "{395CA63E8E456BE7}World/Data/Zimnitrita.nmn"
+    }
+    RecastConfig NavmeshRecastConfig "{622212CB36D57C5C}" {
+    }
+    NavmeshProject "Soldiers"
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E4AF}" {
+   NavmeshSettings NavmeshWorld "{61CB362050D9E4A0}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{622212CB44D265BE}" {
+     NavmeshFile "{395CA63E8E456BE7}World/Data/Zimnitrita.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E4BF}" {
+   NavmeshSettings NavmeshWorld "{61CB362050D9E4B2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{610ECD2394DCF6C6}" {
+     NavmeshFile "{395CA63E8E456BE7}World/Data/Zimnitrita.nmn"
+    }
+    UsePathSmoothing 1
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E743}" {
+   NavmeshSettings NavmeshWorld "{61CB362050D9E747}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{118D26584E97D8E6}World/Data/LowResZimnitrita.nmn"
     }
    }
   }
  }
  coords 14304.14 49.563 12916.365
+ Flags 2097155
 }
 PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 14297.626 49.563 12912.506

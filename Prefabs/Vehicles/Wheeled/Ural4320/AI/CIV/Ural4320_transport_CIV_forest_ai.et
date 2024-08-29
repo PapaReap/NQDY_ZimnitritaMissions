@@ -1,0 +1,44 @@
+Vehicle : "{A2E23CB8DDCFE82E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{622773A0D4E8447D}" {
+     SourceMaterial "Ural_Body"
+     AssignedMaterial "{3AFAAF8DCC91D45D}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CIV_Forest.emat"
+    }
+    MaterialAssignClass "{622773A0D4E84469}" {
+     SourceMaterial "Ural_Interior_02"
+     AssignedMaterial "{AB5690BA8D290C42}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Interior_Metals_CIV_Forest.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Ural4320_Transport_Variant1_Name"
+    m_Image "{98E5BD8D4F37529D}UI/Textures/EditorPreviews/Vehicles/Wheeled/Ural4320/Civilian/Ural4320_transport_CIV_forest.edds"
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Cargo {
+     Prefab "{94B79579DD7722B6}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_cargo_CIV_Forest.et"
+    }
+    RegisteringComponentSlotInfo Logo_Forest {
+     Prefab "{2EBDDB5751610937}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Logos/Ural4320_logo_CIV_forest.et"
+     InheritParentSkeleton 1
+    }
+   }
+  }
+ }
+ coords 1196.556 51 1331.617
+}

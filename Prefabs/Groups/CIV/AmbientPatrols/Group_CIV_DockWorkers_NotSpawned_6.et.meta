@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{7232C826DC7C6C42}Prefabs/Groups/CIV/AmbientPatrols/Group_CIV_DockWorkers_NotSpawned_6.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

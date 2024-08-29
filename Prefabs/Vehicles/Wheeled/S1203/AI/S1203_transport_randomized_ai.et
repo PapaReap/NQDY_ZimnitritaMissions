@@ -1,0 +1,56 @@
+Vehicle : "{D7663936ABF75FB0}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_base.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{6227717048C21FE4}" {
+     SourceMaterial "S1203_body"
+     AssignedMaterial "{269BE810858CFE4F}Assets/Vehicles/Wheeled/S1203/Data/S1203_body_blue.emat"
+    }
+    MaterialAssignClass "{6227717048C21FDC}" {
+     SourceMaterial "S1203_interior"
+     AssignedMaterial "{18CFC500A17ADDE6}Assets/Vehicles/Wheeled/S1203/Data/S1203_interior_blue.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Skoda1203_Minibus_Randomized_Name"
+    Icon "{C431FD61793AA13F}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Random.edds"
+    m_Image "{0EE84DC2D61F0B64}UI/Textures/EditorPreviews/Vehicles/Wheeled/S1203/S1203_Randomized.edds"
+    m_aAuthoredLabels {
+     290 3 13 50 36 200
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{6227717048C21FCF}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{6227717048C21FC2}" {
+      m_sVariantPrefab "{4B4EF6BEB2AB0DC9}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige_ai.et"
+     }
+     SCR_EditableEntityVariant "{6227717048C21FC1}" {
+      m_sVariantPrefab "{E9050115D54BFE8D}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_blue_ai.et"
+     }
+     SCR_EditableEntityVariant "{6227717048C21FC7}" {
+      m_sVariantPrefab "{04C0C1BDA74DD3CC}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_brown_ai.et"
+     }
+     SCR_EditableEntityVariant "{6227717048C21FC5}" {
+      m_sVariantPrefab "{EFC0503F1FC0F60D}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_red_ai.et"
+     }
+     SCR_EditableEntityVariant "{6227717048C21F3B}" {
+      m_sVariantPrefab "{E8DAD8D92F8E15D2}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_yellow_ai.et"
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+ }
+}

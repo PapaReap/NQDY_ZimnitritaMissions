@@ -155,6 +155,28 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   GenericEntity : "{644AEC5C537E03F0}Prefabs/Systems/AmbientVehicles/AmbientVehicleSpawnpoint_USSR.et" {
+    components {
+     SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
+      m_aIncludedEditableEntityLabels {
+      }
+      m_aExcludedEditableEntityLabels {
+      }
+      m_bOverrideEntityLabels 1
+      m_aSpecificPrefabNames {
+       "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et"
+      }
+     }
+    }
+    coords 252.762 29.875 149.423
+    angleX 0.897
+    angleY 0.092
+    angleZ -0.894
+   }
+   Vehicle Mi8MT_unarmed_transport8 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
+    coords 253.228 29.818 149.575
+    Flags 2097155
+   }
   }
  }
  USSR_13_Base_Niscova {
@@ -196,6 +218,12 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_13_Base_Niscova_APS_patrol_01 {
     ID "5CCED514A5908822"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -205,6 +233,13 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
    GenericEntity USSR_13_Base_Niscova_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
     components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_bPickRandomGroupType 1
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+     }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
@@ -293,6 +328,9 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType FIRETEAM
+      m_iMinUnitsInGroup 14
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
@@ -336,7 +374,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 12404.274 32 8659.836
+  coords 12375.253 32 8642.788
   {
    GenericEntity USSR_15_Base_IndustrialZone_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -345,7 +383,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 26.019 0 12
+    coords -3.843 0 -24.003
    }
    GenericEntity USSR_15_Base_IndustrialZone_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -354,10 +392,18 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 229.142 0 -62.159
+    coords 147.554 0 -76.692
+   }
+   GenericEntity {
+    ID "5EEEC471C30578EB"
+    coords -2 0 -3
+   }
+   SCR_CampaignSpawnPointGroup {
+    ID "5C6696731466AF36"
+    coords 0 0 0
    }
    GenericEntity USSR_15_Base_IndustrialZone_PR_APS_patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords -219.186 0.031 319.734
+    coords -190.164 13.719 336.782
     {
      SCR_AIWaypoint USSR_15_Base_IndustrialZone_WP_01 {
       ID "60E2393A8223D17F"
@@ -370,7 +416,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 489.456 0.001 -2.189
+       coords 489.456 -13.719 -2.189
        CompletionRadius 2
       }
       USSR_15_Base_IndustrialZone_WP_03 {
@@ -378,7 +424,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 523.762 0.002 -36.728
+       coords 523.762 -13.719 -36.728
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_04 {
@@ -386,7 +432,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 520.018 -0.031 -315.177
+       coords 520.017 -13.719 -315.177
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_05 {
@@ -394,7 +440,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 327.535 -0.031 -314.604
+       coords 382.475 -13.719 -388.498
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_06 {
@@ -402,7 +448,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 321.96 -0.031 -454.967
+       coords 321.96 -13.719 -454.967
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_07 {
@@ -410,7 +456,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 170.964 -0.198 -453.237
+       coords 170.964 -13.719 -453.237
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_08 {
@@ -418,7 +464,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 168.323 -0.029 -266.107
+       coords 163.976 -13.719 -265.532
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_09 {
@@ -426,7 +472,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -48.236 -3.704 -262.31
+       coords 158.373 -13.719 -197.607
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_10 {
@@ -434,7 +480,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -45 0.074 -36.844
+       coords -110.426 -13.719 -194.573
        CompletionRadius 1
       }
       USSR_15_Base_IndustrialZone_WP_11 {
@@ -442,7 +488,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -6.314 0 0.827
+       coords -132.216 0 12.196
        CompletionRadius 1
       }
      }
@@ -460,7 +506,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords 170.067 0.031 181.917
+     coords 144.071 0.02 151.375
+     angleX -0.448
+     angleY -0.004
+     angleZ 0.448
     }
     USSR_15_Base_IndustrialZone_APS_patrol_03 {
      components {
@@ -473,7 +522,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords -336.509 -0.469 363.392
+     coords -16.926 0 254.954
     }
     USSR_15_Base_IndustrialZone_APS_patrol_04 {
      components {
@@ -486,7 +535,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords -49.998 0.031 241.654
+     coords 175.892 0 165.97
     }
    }
   }
@@ -712,6 +761,24 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
+   GenericEntity : "{644AEC5C537E03F0}Prefabs/Systems/AmbientVehicles/AmbientVehicleSpawnpoint_USSR.et" {
+    components {
+     SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
+      m_aIncludedEditableEntityLabels {
+      }
+      m_aExcludedEditableEntityLabels {
+      }
+      m_bOverrideEntityLabels 1
+      m_aSpecificPrefabNames {
+       "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et"
+      }
+     }
+    }
+    coords -82.584 0.488 33.357
+    angleX -1.258
+    angleY -128.54
+    angleZ -0.142
+   }
    $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     USSR_14_Base_MilitaryBarracks_APS_patrol_02 {
      components {
@@ -741,6 +808,11 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      coords -71.183 0.031 46.642
      angleY 51.482
     }
+   }
+   Vehicle Mi8MT_unarmed_transport7 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
+    coords -86.01 0.413 31.969
+    angleY -129.615
+    Flags 2097155
    }
   }
  }

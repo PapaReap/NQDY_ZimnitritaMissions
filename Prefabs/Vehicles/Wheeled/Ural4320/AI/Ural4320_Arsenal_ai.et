@@ -1,0 +1,58 @@
+Vehicle : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Speed" 60
+   CruiseVehicleSpeedKmh 15
+   "Collision detection layers" 8388608
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_Ural4320_Arsenal_Name"
+    Description "#AR-EditableEntity_ArsenalTruck_Description"
+    Icon "{992690F7B5CBE7D0}UI/Textures/Editor/EditableEntities/Vehicles/EditableEntity_Arsenal_Truck.edds"
+    m_Image "{88D7CB1E7870740B}UI/Textures/EditorPreviews/Vehicles/Wheeled/Ural4320/Ural4320_Arsenal.edds"
+    m_aAutoLabels +{
+    }
+    m_aOccupantFillCompartmentTypes +{
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 0
+   m_fFuelConsumptionIdle 0
+  }
+  SCR_UniversalInventoryStorageComponent "{5916C58171230A92}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38EDB3709A9}" {
+     NumSlots 0
+    }
+    MultiSlotConfiguration "{5E86A8C920185949}" {
+     NumSlots 0
+    }
+    MultiSlotConfiguration "{5EB0D397ACA7A684}" {
+     NumSlots 0
+    }
+   }
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 11360.7
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Ammo {
+     Prefab "{2C01215170B0FFE0}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_arsenal_box.et"
+    }
+   }
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{5086DB22EEDAC8FD}" {
+     Position PointInfo "{5086DB227A5D3230}" {
+     }
+    }
+   }
+  }
+ }
+ coords 1221.514 51.001 1374.375
+}

@@ -384,10 +384,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B6 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -47.839 0.578 87.269
-         angleX 1.341
-         angleY -68.504
-         angleZ -3.13
+         coords -46.741 0.642 87.52
+         angleX -2.678
+         angleY -68.379
+         angleZ -1.789
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.572
@@ -701,7 +701,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B7 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -73.965 31.391 142.518
+         coords -73.966 31.392 142.518
          angleX 0.868
          angleY -89.028
          angleZ -14.036
@@ -1026,10 +1026,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B8 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 9.991 -11.865 37.209
-         angleX 6.655
-         angleY -177.645
-         angleZ 5.356
+         coords 11.009 -11.935 38.327
+         angleX 8.439
+         angleY -177.504
+         angleZ 4.479
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.571
@@ -2077,8 +2077,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 3.188 0.387 -3.47
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B9 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 58.001 -5.758 119.604
-         angleY 53.022
+         coords 58.443 -5.745 119.142
+         angleX -1.342
+         angleY 53.054
+         angleZ -1.343
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -2911,8 +2913,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B10 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 35.992 -4.777 141.396
-         angleY 121.721
+         coords 35.992 -4.778 141.398
+         angleX 0.448
+         angleY 121.725
+         angleZ 0.448
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -3324,8 +3328,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B11 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -10.424 -3.35 22.239
-         angleY 12.647
+         coords -10.588 -3.347 23.331
+         angleX 0.894
+         angleY 12.619
+         angleZ -1.79
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -3726,8 +3732,9 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B12 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -3.44 -4.357 47.565
+         coords -3.029 -4.366 46.312
          angleY -178.927
+         angleZ -0.448
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -4139,8 +4146,9 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B13 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -39.76 -11.824 189.325
+         coords -39.761 -11.824 189.323
          angleY -95.234
+         angleZ -0.895
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -4961,7 +4969,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B14 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 54.667 -6.025 230.97
+         coords 54.669 -6.026 230.971
          angleY 33.522
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -5315,11 +5323,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B16 {
-          coords -100.532 -2.049 182.286
-          angleY -145.68
+          coords -100.53 -2.049 182.286
+          angleX 0.447
+          angleY -145.673
+          angleZ 0.895
          }
          E_Mine_TM62M_617F2A9B051E33B15 {
-          coords 72.194 -1.114 168.993
+          coords 72.195 -1.114 168.993
           angleY -145.68
          }
         }
@@ -5734,12 +5744,16 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B18 {
-          coords -78.328 0.275 188.216
-          angleY 152.697
+          coords -78.328 0.274 188.216
+          angleX -4.466
+          angleY 152.767
+          angleZ -0.898
          }
          E_Mine_TM62M_617F2A9B051E33B17 {
-          coords 111.602 -5.969 152.404
-          angleY 152.697
+          coords 111.619 -5.975 151.975
+          angleX -0.447
+          angleY 152.69
+          angleZ 0.895
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -6155,34 +6169,34 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B20 {
-          coords -44.694 -11.985 81.966
-          angleX 0.088
-          angleY -1.264
-          angleZ 0.66
+          coords -43.778 -13.32 81.032
+          angleX -0.191
+          angleY -1.268
+          angleZ 0.77
          }
          E_Mine_TM62M_617F2A9B051E33B21 {
-          coords -52.607 -12.148 94.96
-          angleX 0.088
-          angleY -1.264
-          angleZ 0.66
+          coords -52.617 -13.087 94.961
+          angleX -0.191
+          angleY -1.268
+          angleZ 0.77
          }
          E_Mine_TM62M_617F2A9B051E33B22 {
-          coords -104.535 -11.743 177.33
-          angleX 0.088
-          angleY -1.264
-          angleZ 0.66
+          coords -104.262 -11.738 177.301
+          angleX 3.217
+          angleY -1.326
+          angleZ -1.132
          }
          E_Mine_TM62M_617F2A9B051E33B23 {
-          coords 16.147 -14.444 229.299
-          angleX 0.088
+          coords 16.148 -14.442 229.299
+          angleX 0.089
           angleY -1.264
           angleZ 0.66
          }
          E_Mine_TM62M_617F2A9B051E33B19 {
-          coords -34.38 -12.289 65.899
-          angleX 0.088
+          coords -34.385 -12.78 65.899
+          angleX 0.089
           angleY -1.264
-          angleZ 0.66
+          angleZ -7.783
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -6711,7 +6725,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 -0.004 0.591
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B24 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 5.519 -12.052 322.287
+         coords 4.999 -12.052 322.96
          angleY -15.73
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -7124,6 +7138,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
         GenericEntity E_Mine_TM62M_617F2A9B051E33B25 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          coords 29.742 -13.213 423.93
          angleY 150.177
+         angleZ -0.448
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -7535,7 +7550,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B26 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -29.704 -8.872 451.979
+         coords -27.877 -8.872 452.55
          angleY -13.058
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -7948,7 +7963,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B27 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -6.776 -0.001 208.188
+         coords -6.777 -0.002 208.189
          angleY 33.95
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -8267,11 +8282,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B29 {
-          coords -70.231 -8.232 413.456
-          angleY 28.727
+          coords -70.231 -8.417 413.456
+          angleX 0.894
+          angleY 28.755
+          angleZ 1.79
          }
          E_Mine_TM62M_617F2A9B051E33B28 {
-          coords -66.588 -8.764 398.058
+          coords -66.225 -8.764 399.183
           angleY 28.727
          }
         }
@@ -8685,8 +8702,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B30 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords -46.453 -10.427 203.058
-         angleY -40.255
+         coords -46.581 -10.427 203.431
+         angleX 0.448
+         angleY -40.251
+         angleZ 0.448
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
          coords -2.889 -0.001 -0.573
@@ -9413,11 +9432,11 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B31 {
-          coords 65.637 -5.282 151.83
+          coords 66.258 -5.282 153.122
           angleY 104.302
          }
          E_Mine_TM62M_617F2A9B051E33B32 {
-          coords -54.095 -5.283 353.968
+          coords -58.806 -5.282 353.513
           angleY 104.302
          }
         }
@@ -9832,11 +9851,12 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B33 {
-          coords -4.116 -1.815 271.211
+          coords -4.116 -1.764 271.212
+          angleX 0.448
           angleY -28.68
          }
          E_Mine_TM62M_617F2A9B051E33B34 {
-          coords 12.063 -1.784 157.754
+          coords 11.595 -1.785 156.944
           angleY -28.68
          }
         }
@@ -10262,7 +10282,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B5 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 5.634 -16.083 202.756
+         coords 6.468 -16.145 203.593
+         angleX 3.576
          angleY -166.359
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -10675,7 +10696,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 2.895 0.001 0.593
        {
         GenericEntity E_Mine_TM62M_617F2A9B051E33B4 : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
-         coords 31.457 -2.154 241.422
+         coords 31.924 -2.154 241.264
          angleY 171.318
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -11089,15 +11110,20 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B36 {
-          coords -51.101 -18.834 204.526
-          angleY 100.604
+          coords -51.101 -18.835 204.527
+          angleX -5.356
+          angleY 100.562
+          angleZ 0.45
          }
          E_Mine_TM62M_617F2A9B051E33B37 {
-          coords -48.839 -18.786 150.327
-          angleY 100.604
+          coords -48.742 -18.794 150.088
+          angleX -4.466
+          angleY 100.674
+          angleZ -0.898
          }
          E_Mine_TM62M_617F2A9B051E33B35 {
-          coords -7.138 -20.497 154.345
+          coords -7.138 -20.497 154.346
+          angleX -0.448
           angleY 100.604
          }
         }
@@ -11830,11 +11856,11 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B40 {
-          coords -29.303 -5.299 291.895
+          coords -29.302 -5.299 291.895
           angleY 16.552
          }
          E_Mine_TM62M_617F2A9B051E33B39 {
-          coords 53.457 -5.3 145.243
+          coords 53.863 -5.299 145.36
           angleY 16.552
          }
         }
@@ -12225,12 +12251,15 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B42 {
-          coords 86.281 2.949 307.029
-          angleY -170.604
+          coords 86.708 2.964 307.299
+          angleX -3.13
+          angleY -170.579
+          angleZ -0.448
          }
          E_Mine_TM62M_617F2A9B051E33B41 {
-          coords -73.482 -0.014 173.576
+          coords -73.482 -0.014 173.577
           angleY -170.604
+          angleZ 0.448
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -12956,13 +12985,13 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B43 {
-          coords 63.012 -6.927 143.117
+          coords 63.013 -6.928 143.118
           angleX -1.775
           angleY 30.595
           angleZ -7.125
          }
          E_Mine_TM62M_617F2A9B051E33B44 {
-          coords -124.271 -29.995 208.004
+          coords -124.392 -29.993 207.866
           angleX -1.775
           angleY 30.595
           angleZ -7.125
@@ -13391,11 +13420,11 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B46 {
-          coords -4.545 0.061 120.981
+          coords -5.772 0.062 120.458
           angleY 121.563
          }
          E_Mine_TM62M_617F2A9B051E33B45 {
-          coords -6.035 0.061 115.031
+          coords -8.229 0.062 112.341
           angleY 121.563
          }
         }
@@ -13776,16 +13805,16 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B48 {
-          coords -0.5 15.434 316.004
-          angleX -7.47
-          angleY -87.911
-          angleZ -3.764
+          coords 0.53 20.55 380.753
+          angleX -8.348
+          angleY -87.769
+          angleZ -10.467
          }
          E_Mine_TM62M_617F2A9B051E33B47 {
-          coords 1.207 16.225 322.887
-          angleX -7.47
-          angleY -87.911
-          angleZ -3.764
+          coords 30.764 22.727 331.889
+          angleX -10.143
+          angleY -87.965
+          angleZ 1.156
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -14207,22 +14236,22 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B49 {
-          coords 8.406 3.209 174.999
-          angleX 4.318
-          angleY 136.406
-          angleZ 6.357
+          coords 7.426 3.031 176.324
+          angleX 6.984
+          angleY 136.726
+          angleZ 6.836
          }
          E_Mine_TM62M_617F2A9B051E33B50 {
-          coords 11.425 3.722 176.101
-          angleX 4.318
-          angleY 136.406
-          angleZ 6.357
+          coords 17.998 4.98 168.769
+          angleX 7.857
+          angleY 136.917
+          angleZ 8.201
          }
          E_Mine_TM62M_617F2A9B051E33B51 {
-          coords 7.737 3.091 158.168
-          angleX 4.318
-          angleY 136.406
-          angleZ 6.357
+          coords 7.738 3.09 158.168
+          angleX 7.438
+          angleY 136.657
+          angleZ 4.593
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -14644,28 +14673,28 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B53 {
-          coords 6.658 -13.872 103.013
-          angleX -3.702
-          angleY 172.66
-          angleZ 6.827
+          coords 5.44 -13.909 101.511
+          angleX 3.827
+          angleY 173.383
+          angleZ 5.485
          }
          E_Mine_TM62M_617F2A9B051E33B54 {
-          coords 7.687 -11.732 147.6
-          angleX -3.702
+          coords 6.544 -11.875 147.422
+          angleX -3.701
           angleY 172.66
           angleZ 6.827
          }
          E_Mine_TM62M_617F2A9B051E33B55 {
-          coords 7.673 -13.789 118.34
-          angleX -3.702
-          angleY 172.66
-          angleZ 6.827
+          coords 8.78 -13.475 122.341
+          angleX -3.257
+          angleY 172.713
+          angleZ 6.824
          }
          E_Mine_TM62M_617F2A9B051E33B52 {
-          coords 14.02 -13.983 107.247
-          angleX -3.702
-          angleY 172.66
-          angleZ 6.827
+          coords 14.019 -13.984 107.247
+          angleX -11.648
+          angleY 171.692
+          angleZ 6.957
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -15153,15 +15182,15 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B57 {
           coords 77.78 -5.33 134.681
-          angleX -4.364
-          angleY -94.673
-          angleZ -12.339
+          angleX -3.491
+          angleY -94.871
+          angleZ -12.774
          }
          E_Mine_TM62M_617F2A9B051E33B56 {
-          coords -109.607 -2.063 181.745
-          angleX -4.364
-          angleY -94.673
-          angleZ -12.339
+          coords -109.43 -2.122 181.436
+          angleX -3.927
+          angleY -94.769
+          angleZ -12.333
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -15580,16 +15609,16 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B59 {
-          coords 11.114 14.73 173.943
-          angleX 10.892
-          angleY 5.992
-          angleZ -1.693
+          coords 14.943 14.649 172.986
+          angleX 9.997
+          angleY 5.99
+          angleZ 0.096
          }
          E_Mine_TM62M_617F2A9B051E33B58 {
-          coords 8.517 14.968 175.844
+          coords 9.389 15.362 177.712
           angleX 10.892
           angleY 5.992
-          angleZ -1.693
+          angleZ -1.694
          }
         }
         GenericEntity : "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et" {
@@ -16009,20 +16038,20 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        {
         $grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
          E_Mine_TM62M_617F2A9B051E33B61 {
-          coords 7.27 2.243 111.065
-          angleX 7.487
-          angleY 90.363
-          angleZ 0.597
+          coords 4.739 1.916 111.409
+          angleX 8.382
+          angleY 90.38
+          angleZ 1.047
          }
          E_Mine_TM62M_617F2A9B051E33B62 {
-          coords 3.76 1.91 123.638
-          angleX 7.487
+          coords 5.826 2.115 116.753
+          angleX 7.486
           angleY 90.363
           angleZ 0.597
          }
          E_Mine_TM62M_617F2A9B051E33B60 {
-          coords 1.604 1.583 57.312
-          angleX 7.487
+          coords 1.989 1.644 58.352
+          angleX 7.486
           angleY 90.363
           angleZ 0.597
          }

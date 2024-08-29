@@ -1092,476 +1092,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
  }
- Area_IndustrialZone_DI {
-  components {
-   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
-    m_iDynamicDespawnRange 100
-   }
-  }
-  coords 12259.583 32.003 8770.485
-  {
-   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_IndustrialZone {
-    coords 0.401 -0.051 6.334
-    Flags 2097155
-    TriggerShapeType Sphere
-    SphereRadius 500
-    DrawShape 1
-    ShapeColor 0.046 0 1 0.078
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 50
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_TaskDeliverIntel_IndustrialZone"
-    m_ActivationPresence ANY_CHARACTER
-    m_aIndividualTasks {
-     PR_TaskDetails "{613802B2DA10B658}" {
-      m_sTaskName "TaskDeliverIntel_IndustrialZone"
-      m_bUseMoveTaskDestination 1
-      m_aTaskMoveDetails {
-       PR_MoveTask "{613802B2E6E682B1}" {
-        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_IndustrialZone"
-        m_sMoveSectionToRandomBases {
-         1
-        }
-        m_bInsertBaseNameInTaskInfos 1
-        m_sAdditionalObjectsToMove {
-         "Opt_TaskDeliverIntel_IndustrialZone"
-        }
-       }
-       PR_MoveTask "{613802B56EC76EB7}" {
-        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_IndustrialZone"
-        m_sMoveSectionTo {
-         "TaskDeliverIntel_MoveCollection_IndustrialZone"
-        }
-       }
-      }
-     }
-    }
-   }
-   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_IndustrialZone {
-    coords 6.612 0 3.674
-    TriggerShapeType Sphere
-    SphereRadius 2
-    ShapeColor 0 0.502 0.502 0.098
-    TriggerActivationType "First change"
-    PeriodicQueries 1
-    UpdatePeriod 5
-    m_bDebugLogs 1
-    m_bUsePersistence 1
-    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_IndustrialZone"
-    m_bNeutralizePersistentObject 1
-    m_aOverrideOptions {
-     PR_OverrideTriggerActivation "{61917DF60E955557}" {
-      m_bOverrideActivationPresence 1
-      m_bActivateIfObjectMissing 1
-      m_sMissingObjectName "Pers_TaskDeliverIntel_IndustrialZone"
-     }
-    }
-    m_iDelayTimerMin 5
-    m_sTaskName "Opt_TaskDeliverIntel_IndustrialZone"
-    m_PlayerXPTaskReward "Deliver Intel (50)"
-    m_fXPMultiplier 1.2
-    m_fMaxDistanceForVolunteerBonus 200
-    m_bUseTaskFailObject 1
-    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_IndustrialZone"
-    {
-     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-      Pers_Opt_TaskDeliverIntel_IndustrialZone {
-       coords 0.001 -0.019 0.136
-      }
-      Pers_Fail_TaskDeliverIntel_IndustrialZone {
-       coords 0.146 -0.341 -0.415
-      }
-     }
-    }
-   }
-   GenericEntity TaskDeliverIntel_IndustrialZone : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
-    components {
-     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
-      m_bShowDebugShapesDuringRuntime 1
-      m_eActivationType ON_TRIGGER_ACTIVATION
-      m_aActivationActions {
-       SCR_ScenarioFrameworkActionPlaySound "{615F499402A3F4AD}" {
-        m_sSound "SOUND_HUD_TASK_CREATED"
-       }
-      }
-      m_bExcludeFromDynamicDespawn 1
-      m_sTaskTitle "Locate Intel IndustrialZone"
-      m_sTaskDescription "Search the Industrial Zone for hidden intel"
-      m_bPlaceMarkerOnSubjectSlot 0
-      m_aTriggerActionsOnFinish {
-       SCR_ScenarioFrameworkActionPlaySound "{615F499469EBCF37}" {
-        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_IndustrialZone"
-        }
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6161402FDC697974}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
-         m_sEntityName "Pers_TaskDeliverIntel_IndustrialZone"
-        }
-       }
-      }
-      m_bShowDebugShapesInWorkbench 1
-      m_sTaskTitleUpdated ""
-      m_sTaskDescriptionUpdated ""
-     }
-    }
-    coords -0.044 0 0.046
-    {
-     GenericEntity SlotDelivery_TaskDeliverIntel_IndustrialZone {
-      ID "5E74C909218B71FF"
-      components {
-       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
-        m_aPlugins {
-         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
-          m_fAreaRadius 2
-          m_bOnce 0
-         }
-        }
-        m_aAssociatedTaskLayers {
-         "TaskDeliverIntel_IndustrialZone"
-        }
-       }
-      }
-      coords 6.656 0.001 3.63
-     }
-     GenericEntity SlotPick_TaskDeliverIntel_IndustrialZone {
-      ID "5E74C909218B7182"
-      components {
-       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
-        m_bShowDebugShapesDuringRuntime 1
-        m_bExcludeFromDynamicDespawn 1
-        m_sTaskTitle "Locate Intel Industrial Zone"
-        m_sTaskDescription "Search the Industrial Zone for hidden intel"
-        m_aActionsOnCreated {
-         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
-          m_iMaxNumberOfActivations 1
-          m_aNameOfObjectsToSpawnOnActivation {
-           "Layer_TaskDeliverIntel_AI_Haukkavuori"
-          }
-         }
-        }
-        m_aActionsOnUpdated {
-         SCR_ScenarioFrameworkActionPlaySound "{615F499556240617}" {
-          m_sSound "SOUND_HUD_TASK_CREATED"
-         }
-        }
-        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
-        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
-        m_sTaskTitleUpdated2 "Locate the dropped intel"
-        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
-       }
-      }
-      coords 0.043 0.127 -0.034
-      angleY -22.479
-     }
-    }
-   }
-   GenericEntity Pers_TaskDeliverIntel_IndustrialZone : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-    coords 0.12 0 -1.003
-   }
-   GenericEntity Layer_TaskDeliverIntel_AI_IndustrialZone : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-    components {
-     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-      m_SpawnChildren RANDOM_ONE
-      m_eActivationType ON_TRIGGER_ACTIVATION
-     }
-    }
-    coords -3.319 0.001 0.196
-    {
-     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-      Layer_TaskDeliverIntel_AI_IndustrialZone_01 {
-       coords 0 0 0
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 23.777 0.027 49.001
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_03_LFT {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
-           }
-          }
-          coords -22.937 0.027 117.329
-          angleY -179.102
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_04_LFT {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
-           }
-          }
-          coords 104.68 0.027 82.585
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_05_LRG {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
-           }
-          }
-          coords 16.394 -0.004 -50.009
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_06_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords -122.074 0.027 122.544
-          angleY 178.77
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_07_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords -111.702 -0.223 -76.743
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_01_01_LFT {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
-           }
-          }
-          coords -43.854 0.382 -69.865
-         }
-        }
-       }
-      }
-      Layer_TaskDeliverIntel_AI_IndustrialZone_02 {
-       components {
-        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
-         m_SpawnChildren RANDOM_MULTIPLE
-         m_iRandomPercent 72
-        }
-       }
-       coords -6.586 0.567 -0.478
-       {
-        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_02_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 90.523 -0.54 81.404
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_03_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords -64.211 -0.54 177.177
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_04_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords -112.526 -0.782 -86.844
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_05_LRGS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
-           }
-          }
-          coords 50.576 -0.571 -73.113
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_06_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 196.569 -0.571 -215.322
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_07_WR {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
-           }
-          }
-          coords 236.256 -0.571 -130.632
-         }
-         SlotAI_TaskDeliverIntel_IndustrialZone_02_01_LFTS {
-          components {
-           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
-            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
-           }
-          }
-          coords 98.004 -0.571 -193.032
-         }
-        }
-       }
-      }
-     }
-    }
-   }
-   GenericEntity TaskDeliverIntel_MoveCollection_IndustrialZone : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    coords 0.069 0.008 -1.042
-    {
-     $grp GenericEntity {
-      TaskDeliverIntel_IndustrialZone_move_01 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 67.77 1.032 -32.493
-      }
-      TaskDeliverIntel_IndustrialZone_move_02 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 10.288 1.007 -129.246
-      }
-      TaskDeliverIntel_IndustrialZone_move_03 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 5.269 1.007 -130.403
-      }
-      TaskDeliverIntel_IndustrialZone_move_04 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 3.304 1.007 -126.801
-      }
-      TaskDeliverIntel_IndustrialZone_move_05 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -3.163 1.165 -113.296
-      }
-      TaskDeliverIntel_IndustrialZone_move_06 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -22.463 1.335 -43.854
-      }
-      TaskDeliverIntel_IndustrialZone_move_07 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -20.094 1.281 -62.794
-      }
-      TaskDeliverIntel_IndustrialZone_move_08 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -13.133 1.336 -56.234
-      }
-      TaskDeliverIntel_IndustrialZone_move_09 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -76.385 1.243 109.481
-      }
-      TaskDeliverIntel_IndustrialZone_move_10 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -38.36 13.126 38.353
-      }
-      TaskDeliverIntel_IndustrialZone_move_11 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -34.422 13.254 54.84
-      }
-      TaskDeliverIntel_IndustrialZone_move_12 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords -76.885 17.118 69.146
-      }
-      TaskDeliverIntel_IndustrialZone_move_13 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 46.688 1.196 4.07
-      }
-      TaskDeliverIntel_IndustrialZone_move_14 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 42.787 1.207 -3.34
-      }
-      TaskDeliverIntel_IndustrialZone_move_15 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 46.529 1.196 -3.691
-      }
-      TaskDeliverIntel_IndustrialZone_move_16 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 97.911 1.138 16.958
-      }
-      TaskDeliverIntel_IndustrialZone_move_17 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 123.792 1.503 12.885
-      }
-      TaskDeliverIntel_IndustrialZone_move_18 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 121.269 1.503 24.297
-      }
-      TaskDeliverIntel_IndustrialZone_move_19 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 67.852 1.032 -32.548
-      }
-      TaskDeliverIntel_IndustrialZone_move_20 {
-       components {
-        Hierarchy "{613802B54F5287D4}" {
-        }
-       }
-       coords 69.625 0.989 -32.026
-      }
-     }
-    }
-   }
-  }
- }
  Area_Gruwice_DI_WT {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
@@ -4775,42 +4305,42 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords 40.186 9.154 9.531
+       coords 48.304 9.29 10.753
       }
       TaskDeliverIntel_ExcavationSite_move_02 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords 48.453 10.609 8.926
+       coords 39.778 9.29 9.705
       }
       TaskDeliverIntel_ExcavationSite_move_03 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords 9.354 2.272 -55.446
+       coords 9.368 2.232 -55.019
       }
       TaskDeliverIntel_ExcavationSite_move_04 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords 3.418 2.362 -63.122
+       coords -0.285 2.37 -62.376
       }
       TaskDeliverIntel_ExcavationSite_move_05 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -6.943 2.568 -68.682
+       coords -15.42 3.026 -72.34
       }
       TaskDeliverIntel_ExcavationSite_move_06 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -13.268 3.024 -73.553
+       coords -18.511 2.819 -62.589
       }
       TaskDeliverIntel_ExcavationSite_move_07 {
        components {
@@ -10819,6 +10349,484 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords -26.885 0.9 -8.127
+      }
+     }
+    }
+   }
+  }
+ }
+ Area_IndustrialZone_DI {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_iDynamicDespawnRange 100
+   }
+  }
+  coords 12292.955 32 8686.095
+  {
+   $grp GenericEntity {
+    TaskDeliverIntel_IndustrialZone_move_02 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -21.184 13.231 13.093
+    }
+    TaskDeliverIntel_IndustrialZone_move_03 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -14.954 13.043 5.132
+    }
+    TaskDeliverIntel_IndustrialZone_move_04 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -25.176 13.103 -2.32
+    }
+    TaskDeliverIntel_IndustrialZone_move_05 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -40.572 9.221 3.122
+    }
+    TaskDeliverIntel_IndustrialZone_move_06 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -41.35 9.204 -5.136
+    }
+    TaskDeliverIntel_IndustrialZone_move_07 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -41.368 9.204 0.544
+    }
+    TaskDeliverIntel_IndustrialZone_move_08 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -31.969 9.11 7.847
+    }
+    TaskDeliverIntel_IndustrialZone_move_09 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -20.552 9.203 0.27
+    }
+    TaskDeliverIntel_IndustrialZone_move_10 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -28.021 9.11 14.83
+    }
+    TaskDeliverIntel_IndustrialZone_move_11 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -31.557 1.102 21.173
+    }
+    TaskDeliverIntel_IndustrialZone_move_12 {
+     components {
+      Hierarchy "{613802B54F5287D4}" {
+      }
+     }
+     coords -63.205 1.218 67.629
+    }
+   }
+   PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_IndustrialZone {
+    coords 0.756 0 0.066
+    Flags 2097155
+    TriggerShapeType Sphere
+    SphereRadius 500
+    DrawShape 1
+    ShapeColor 0.046 0 1 0.078
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 50
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_TaskDeliverIntel_IndustrialZone"
+    m_ActivationPresence ANY_CHARACTER
+    m_aIndividualTasks {
+     PR_TaskDetails "{613802B2DA10B658}" {
+      m_sTaskName "TaskDeliverIntel_IndustrialZone"
+      m_bUseMoveTaskDestination 1
+      m_aTaskMoveDetails {
+       PR_MoveTask "{613802B2E6E682B1}" {
+        m_sTaskSectionToMove "SlotDelivery_TaskDeliverIntel_IndustrialZone"
+        m_sMoveSectionToRandomBases {
+         1
+        }
+        m_bInsertBaseNameInTaskInfos 1
+        m_sAdditionalObjectsToMove {
+         "Opt_TaskDeliverIntel_IndustrialZone"
+        }
+       }
+       PR_MoveTask "{613802B56EC76EB7}" {
+        m_sTaskSectionToMove "SlotPick_TaskDeliverIntel_IndustrialZone"
+        m_sMoveSectionTo {
+         "TaskDeliverIntel_MoveCollection_IndustrialZone"
+        }
+       }
+      }
+     }
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_IndustrialZone {
+    coords 10.409 0 0.117
+    TriggerShapeType Sphere
+    SphereRadius 2
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskDeliverIntel_IndustrialZone"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskDeliverIntel_IndustrialZone"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskDeliverIntel_IndustrialZone"
+    m_PlayerXPTaskReward "Deliver Intel (50)"
+    m_fXPMultiplier 1.2
+    m_fMaxDistanceForVolunteerBonus 200
+    m_bUseTaskFailObject 1
+    m_sTaskFailObject "Pers_Fail_TaskDeliverIntel_IndustrialZone"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskDeliverIntel_IndustrialZone {
+       coords 0.001 -0.019 0.136
+      }
+      Pers_Fail_TaskDeliverIntel_IndustrialZone {
+       coords 0.146 -0.341 -0.415
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_IndustrialZone : "{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{615F499402A3F4AD}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_bExcludeFromDynamicDespawn 1
+      m_sTaskTitle "Locate Intel IndustrialZone"
+      m_sTaskDescription "Search the Industrial Zone for hidden intel"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionPlaySound "{615F499469EBCF37}" {
+        m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
+        m_iMaxNumberOfActivations 1
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
+         m_sEntityName "TaskDeliverIntel_IndustrialZone"
+        }
+       }
+       SCR_ScenarioFrameworkActionDeleteEntity "{6161402FDC697974}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
+         m_sEntityName "Pers_TaskDeliverIntel_IndustrialZone"
+        }
+       }
+      }
+      m_bShowDebugShapesInWorkbench 1
+      m_sTaskTitleUpdated ""
+      m_sTaskDescriptionUpdated ""
+     }
+    }
+    coords -0.044 0 0.046
+    {
+     GenericEntity SlotDelivery_TaskDeliverIntel_IndustrialZone {
+      ID "5E74C909218B71FF"
+      components {
+       SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
+          m_fAreaRadius 2
+          m_bOnce 0
+         }
+        }
+        m_aAssociatedTaskLayers {
+         "TaskDeliverIntel_IndustrialZone"
+        }
+       }
+      }
+      coords 1.477 0 8.971
+     }
+     GenericEntity SlotPick_TaskDeliverIntel_IndustrialZone {
+      ID "5E74C909218B7182"
+      components {
+       SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_bExcludeFromDynamicDespawn 1
+        m_sTaskTitle "Locate Intel Industrial Zone"
+        m_sTaskDescription "Search the Industrial Zone for hidden intel"
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{61524B08DCD327FD}" {
+          m_iMaxNumberOfActivations 1
+          m_aNameOfObjectsToSpawnOnActivation {
+           "Layer_TaskDeliverIntel_AI_Haukkavuori"
+          }
+         }
+        }
+        m_aActionsOnUpdated {
+         SCR_ScenarioFrameworkActionPlaySound "{615F499556240617}" {
+          m_sSound "SOUND_HUD_TASK_CREATED"
+         }
+        }
+        m_sTaskTitleUpdated1 "Deliver Intel to base %2"
+        m_sTaskDescriptionUpdated1 "Return recovered intel back to your main base %2"
+        m_sTaskTitleUpdated2 "Locate the dropped intel"
+        m_sTaskDescriptionUpdated2 "Return to last known position to search for lost intel"
+       }
+      }
+      coords 0.043 0.15 -0.034
+      angleX -0.274
+      angleY -22.478
+      angleZ -0.132
+     }
+    }
+   }
+   GenericEntity Pers_TaskDeliverIntel_IndustrialZone : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 0.12 0 -1.003
+   }
+   GenericEntity Layer_TaskDeliverIntel_AI_IndustrialZone : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_SpawnChildren RANDOM_ONE
+      m_eActivationType ON_TRIGGER_ACTIVATION
+     }
+    }
+    coords 3.613 0 -1.256
+    {
+     $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+      Layer_TaskDeliverIntel_AI_IndustrialZone_01 {
+       coords 0 0 0
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_01_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -67.924 0 -37.942
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -16.528 0 134.844
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_03_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords -63.244 13.719 203.172
+          angleY -179.102
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_04_LFT {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
+           }
+          }
+          coords 84.042 0 92.316
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_05_LRG {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+           }
+          }
+          coords 18.122 0 -37.525
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -143.337 0 132.586
+          angleY 178.77
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_01_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -134.346 0 -4.968
+         }
+        }
+       }
+      }
+      Layer_TaskDeliverIntel_AI_IndustrialZone_02 {
+       components {
+        SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+         m_SpawnChildren RANDOM_MULTIPLE
+         m_iRandomPercent 72
+        }
+       }
+       coords -6.586 0.567 -0.478
+       {
+        $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_01_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 55.102 -0.567 -107.398
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_02_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 50.219 -0.567 167.245
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_03_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords 155.189 -0.567 -106.123
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_04_LFTS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{D376575DF0F74E0A}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam_scaled.et"
+           }
+          }
+          coords -146.463 -0.786 6.623
+          angleZ 0.123
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_05_LRGS {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
+           }
+          }
+          coords -31.835 -0.567 82.023
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_06_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords 152.767 -11.479 -18.527
+          angleX -9.303
+          angleY 0.367
+          angleZ -2.267
+         }
+         SlotAI_TaskDeliverIntel_IndustrialZone_02_07_WR {
+          components {
+           SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+            m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
+           }
+          }
+          coords -34.409 -0.567 -58.029
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+   GenericEntity TaskDeliverIntel_MoveCollection_IndustrialZone : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords -33.304 0.011 83.349
+    {
+     $grp GenericEntity {
+      TaskDeliverIntel_IndustrialZone_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 67.058 1.18 -20.461
+      }
+      TaskDeliverIntel_IndustrialZone_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords -81.104 1.273 6.747
+      }
+      TaskDeliverIntel_IndustrialZone_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 22.968 1.259 -121.548
+      }
+      TaskDeliverIntel_IndustrialZone_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 19.494 1.519 -107.848
+      }
+      TaskDeliverIntel_IndustrialZone_move_16 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 27.101 9.064 -109.215
+      }
+      TaskDeliverIntel_IndustrialZone_move_17 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 22.307 9.065 -111.567
+      }
+      TaskDeliverIntel_IndustrialZone_move_18 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 20.012 9.065 -114.825
+      }
+      TaskDeliverIntel_IndustrialZone_move_19 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 19.842 9.065 -118.751
+      }
+      TaskDeliverIntel_IndustrialZone_move_20 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 23.601 12.791 -118.922
       }
      }
     }
