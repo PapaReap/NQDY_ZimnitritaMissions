@@ -18,9 +18,11 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEF71832519}" {
     m_GroupType "Group: Fire Team (4)"
+    m_sGroupID "(RogueBaseAttacks N)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEC840350C6}" {
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -366,9 +368,11 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEC7513F471}" {
     m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(RogueBaseAttacks C)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEDE04F2640}" {
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -727,10 +731,12 @@ $grp PR_AIPatrolTrigger {
   m_iDelayTimerMax 1800
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEA8EFE3D9D}" {
-    m_GroupType "Group SF: Sentry Team (2)"
+    m_GroupType "Group SF: Squad (6)"
+    m_sGroupID "(RogueBaseAttacks S)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEA9365010A}" {
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {

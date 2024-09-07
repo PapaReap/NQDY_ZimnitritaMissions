@@ -1243,7 +1243,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle"
         }
        }
        m_aGroupWaypoints {
@@ -1310,7 +1309,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_02"
         }
        }
        m_aGroupWaypoints {
@@ -1374,7 +1372,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: GL (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_03"
         }
        }
        m_aGroupBehaviours {
@@ -1417,7 +1414,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: MG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_04"
         }
        }
        m_aGroupBehaviours {
@@ -1460,7 +1456,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Sentry Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_05"
         }
        }
        m_aGroupBehaviours {
@@ -1503,7 +1498,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: GL (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_06"
         }
        }
        m_aGroupBehaviours {
@@ -1546,7 +1540,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Light Fire Team (4)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_OldCastle_07"
         }
        }
        m_aGroupBehaviours {
@@ -3849,7 +3842,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: MG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_01"
         }
        }
        m_aGroupBehaviours {
@@ -3891,7 +3883,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: GL (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_02"
         }
        }
        m_aGroupBehaviours {
@@ -3933,7 +3924,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: GL (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_03"
         }
        }
        m_aGroupBehaviours {
@@ -3975,7 +3965,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Sentry Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_w_04"
         }
        }
        m_aGroupBehaviours {
@@ -4017,7 +4006,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_05"
         }
        }
        m_aGroupBehaviours {
@@ -4059,7 +4047,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: MG Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_ElectricRelay_w_06"
         }
        }
        m_aGroupBehaviours {
@@ -4455,7 +4442,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_08"
         }
        }
        m_aGroupWaypoints {
@@ -4521,7 +4507,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Grenadier (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_09"
         }
        }
        m_aGroupWaypoints {
@@ -4587,7 +4572,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_10"
         }
        }
        m_aGroupWaypoints {
@@ -4653,7 +4637,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Grenadier (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_11"
         }
        }
        m_aGroupWaypoints {
@@ -4719,7 +4702,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_12"
         }
        }
        m_aGroupWaypoints {
@@ -4781,7 +4763,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: MG Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_13"
         }
        }
        m_aGroupWaypoints {
@@ -4849,7 +4830,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group SF: Sentry Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_14"
         }
        }
        m_aGroupWaypoints {
@@ -4911,7 +4891,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: AT (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_15"
         }
        }
        m_aGroupWaypoints {
@@ -4973,7 +4952,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: AT (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_16"
         }
        }
        m_aGroupWaypoints {
@@ -5039,7 +5017,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_02"
         }
        }
        m_aGroupWaypoints {
@@ -5105,7 +5082,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_04"
         }
        }
        m_aGroupWaypoints {
@@ -5170,7 +5146,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_05"
         }
        }
        m_aGroupWaypoints {
@@ -5235,7 +5210,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_06"
         }
        }
        m_aGroupWaypoints {
@@ -5302,7 +5276,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_07"
         }
        }
        m_aGroupWaypoints {
@@ -5368,7 +5341,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_01"
         }
        }
        m_aGroupWaypoints {
@@ -5435,7 +5407,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: AT (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Gruwice_CZ_03"
         }
        }
        m_aGroupWaypoints {
@@ -6293,7 +6264,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_01"
         }
        }
        m_aGroupWaypoints {
@@ -6358,7 +6328,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Medical Section (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_02"
         }
        }
        m_aGroupWaypoints {
@@ -6424,7 +6393,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_03"
         }
        }
        m_aGroupWaypoints {
@@ -6490,7 +6458,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: GL Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_04"
         }
        }
        m_aGroupWaypoints {
@@ -6556,7 +6523,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Sapper Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_05"
         }
        }
        m_aGroupWaypoints {
@@ -6622,7 +6588,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: GL Team (2)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Sokyyiv_s_06"
         }
        }
        m_aGroupWaypoints {
@@ -7068,7 +7033,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_01"
         }
        }
        m_aGroupWaypoints {
@@ -7137,7 +7101,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_02"
         }
        }
        m_aGroupWaypoints {
@@ -7206,7 +7169,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: Sharpshooter (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_03"
         }
        }
        m_aGroupWaypoints {
@@ -7274,7 +7236,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: LMG (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_04"
         }
        }
        m_aGroupWaypoints {
@@ -7342,7 +7303,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Man SF: SL (1)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_05"
         }
        }
        m_aGroupWaypoints {
@@ -7410,7 +7370,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Fire Team (4)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_06"
         }
        }
        m_aGroupWaypoints {
@@ -7478,7 +7437,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Fire Team (4)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_07"
         }
        }
        m_aGroupWaypoints {
@@ -7546,7 +7504,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        m_GroupType "Group: Fire Team (4)"
        m_aGroupDetails {
         PR_GroupDetails "{61B93EE45CE6F7D6}" {
-         m_sSpawnPosition "SpawnTrg_TaskKill_HVT_Andruhanov_CZ_08"
         }
        }
        m_aGroupWaypoints {
@@ -7912,598 +7869,130 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
    }
-   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-    Props_HVT_Andruhanov_CZ {
-     coords 185.14 0.031 122.628
-     Flags 2097155
-     {
-      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-       HVT_Andruhanov_CZ_sandbag_corner_01 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -168.898 16.17 -43.466
-        angleY 92.28
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E8 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.428 0 0.542
-          angleY 39.708
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
+   GenericEntity TaskKill_HVT_MoveCollection_Andruhanov_CZ : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    coords 175.54 0.031 134.131
+    Flags 2097155
+    {
+     $grp GenericEntity {
+      TaskKill_HVT_Andruhanov_CZ_move_01 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
        }
-       HVT_Andruhanov_CZ_sandbag_corner_02 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -168.812 16.172 -95.908
-        angleY -178.504
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E9 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.737 0 -0.941
-           angleY 86.08
-          }
-          {
-           coords 1.147 0 1.937
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.397 0 0.59
-          angleY 41.245
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_03 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -273.93 16.224 -43.814
-        angleY 3.591
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E10 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.147 1.16 1.335
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.732 0 -0.942
-           angleY 86.08
-           {
-            GenericEntity {
-             ID "5D70BA356CD2E641"
-             coords -0.001 0 -0.002
-            }
-           }
-          }
-          {
-           coords 1.148 0 1.937
-           {
-            GenericEntity {
-             ID "5D70BA356CD2E641"
-             coords 0.001 0 0.002
-            }
-           }
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.315 0 0.554
-          angleY 42.386
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.02 0 -0.007
-             angleY 0
-            }
-            {
-             coords 0.008 0.001 -0.023
-             angleY 0
-            }
-            {
-             coords 0.007 0.001 -0.016
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.915 0 1.187
-           angleY -45
-           {
-            GenericEntity {
-             ID "5D6CEB977773E465"
-             coords -0.019 0 -0.246
-            }
-           }
-          }
-          {
-           coords -1.394 0 1.558
-           angleY -45
-           {
-            GenericEntity {
-             ID "5D6CEB977773E465"
-             coords -0.019 0 -0.242
-            }
-           }
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_04 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -273.81 16.172 -96.146
-        angleY -86.406
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E11 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 0 1.329
-          angleY -45
-         }
-         $grp GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          {
-           coords -1.739 0 -0.944
-           angleY 86.08
-           {
-            GenericEntity {
-             ID "5D70BA356CD2E641"
-             coords 0.001 0 0.002
-            }
-           }
-          }
-          {
-           coords 1.144 0 1.935
-           {
-            GenericEntity {
-             ID "5D70BA356CD2E641"
-             coords 0.002 0 -0.001
-            }
-           }
-          }
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.461 0 0.526
-          angleY -150.729
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.92 0 1.184
-           angleY -45
-           {
-            GenericEntity {
-             ID "5D6CEB977773E465"
-             coords -0.018 0 -0.245
-            }
-           }
-          }
-          {
-           coords -1.398 0 1.555
-           angleY -45
-           {
-            GenericEntity {
-             ID "5D6CEB977773E465"
-             coords -0.016 0 -0.245
-            }
-           }
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_05 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -230.936 31.872 -14.586
-        angleY 76.431
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E12 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords 1.147 0 1.937
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.312 0 0.642
-          angleY 40.733
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_06 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -211.962 31.871 -14.64
-        angleY 18.738
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E13 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords -1.737 0 -0.941
-          angleY 86.08
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.418 0 0.623
-          angleY 39.549
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_07 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -230.844 31.807 -125.1
-        angleY -162.383
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E14 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords -1.737 0 -0.941
-          angleY 86.08
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.347 0 0.52
-          angleY 39.799
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
-       HVT_Andruhanov_CZ_sandbag_corner_08 {
-        components {
-         Hierarchy "{61E217A490C86F8B}" {
-         }
-        }
-        coords -211.654 31.873 -125.129
-        angleY -107.121
-        Flags 2097155
-        {
-         Turret Tripod_6T5_PKM_61E217A648DC5E15 : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-          coords -1.154 1.162 1.335
-          angleY -45
-         }
-         GenericEntity : "{898B81D2B9E9B2DC}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagWallSolidBurlap_S_USSR_01.et" {
-          coords 1.147 0 1.937
-         }
-         GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
-          coords -0.312 0 0.642
-          angleY 40.733
-          {
-           $grp GenericEntity : "{D7F69BF7D2DCA0A8}Prefabs/Props/Industrial/Pallets/Pallet_01.et" {
-            {
-             coords 0.022 0 -0.006
-             angleY 0
-            }
-            {
-             coords 0.009 0.132 -0.021
-             angleY 0
-            }
-            {
-             coords 0.009 0.269 -0.013
-             angleY 0
-            }
-           }
-          }
-         }
-         $grp GenericEntity : "{AC6DC9D2E040268A}Prefabs/Compositions/Misc/FreeRoamBuilding/SandbagRoundHighBurlap_S_USSR_01.et" {
-          {
-           coords -0.917 0 1.185
-           angleY -45
-          }
-          {
-           coords -1.395 0 1.558
-           angleY -45
-          }
-         }
-        }
-       }
+       coords -194.959 0.172 -31.073
+       Flags 2097155
       }
-     }
-    }
-    TaskKill_HVT_MoveCollection_Andruhanov_CZ {
-     coords 175.54 0.031 134.131
-     Flags 2097155
-     {
-      $grp GenericEntity {
-       TaskKill_HVT_Andruhanov_CZ_move_01 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+      TaskKill_HVT_Andruhanov_CZ_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -194.959 0.172 -31.073
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_02 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -204.643 0.175 -49.611
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -204.643 0.175 -49.611
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_03 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -211.326 0.173 -85.412
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -211.326 0.173 -85.412
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_04 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -222.239 0.175 -73.166
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -222.239 0.175 -73.166
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_05 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -219.26 8.175 -71.405
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -219.26 8.175 -71.405
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_06 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -197.719 16.173 -117.223
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -197.719 16.173 -117.223
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_07 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -202.763 24.174 -132.641
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -202.763 24.174 -132.641
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_08 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -203.129 31.874 -127.505
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -203.129 31.874 -127.505
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_09 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -202.828 24.173 -95.656
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -202.828 24.173 -95.656
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_10 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -219.863 24.173 -94.686
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -219.863 24.173 -94.686
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_11 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -232.712 16.225 -80.291
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -232.712 16.225 -80.291
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_12 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -190.378 16.171 -80.835
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_13 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -190.378 16.171 -80.835
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_13 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -194.794 0.174 -129.025
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_14 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -194.794 0.174 -129.025
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_14 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
+       coords -193.638 0.174 -135.404
+       Flags 2097155
+      }
+      TaskKill_HVT_Andruhanov_CZ_move_15 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
         }
-        coords -193.638 0.174 -135.404
-        Flags 2097155
        }
-       TaskKill_HVT_Andruhanov_CZ_move_15 {
-        components {
-         Hierarchy "{613802B54F5287D4}" {
-         }
-        }
-        coords -203.576 0.066 -142.958
-        Flags 2097155
-       }
+       coords -203.576 0.066 -142.958
+       Flags 2097155
       }
      }
     }

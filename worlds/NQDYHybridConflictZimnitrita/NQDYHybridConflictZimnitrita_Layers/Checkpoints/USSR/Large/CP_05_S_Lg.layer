@@ -7,7 +7,6 @@ PR_AIPatrolTrigger SPT_CP_05_S_Lg_01 {
  TriggerActivationType "First change"
  PeriodicQueries 1
  UpdatePeriod 60
- m_bDebugLogs 1
  m_bUsePersistence 1
  m_sPersistentObject "PR_PersistObject_SPT_CP_05_S_Lg_01"
  m_aOverrideOptions {

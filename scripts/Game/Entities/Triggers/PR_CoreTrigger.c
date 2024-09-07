@@ -278,6 +278,42 @@ class PR_CoreTrigger : SCR_BaseTriggerEntity
 		}
 	}
 
+	//------------------------------------------------------------------------------------------------
+	//! Generate Spawn Parameters
+	protected EntitySpawnParams GenerateSpawnParameters(vector position)
+	{
+		EntitySpawnParams params = EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		params.Transform[3] = position; //--- Assign the position to those parameters
+		return params;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Generate and Validate Resources
+	protected Resource GenerateAndValidateResource(string resourceToLoad)
+	{
+		Resource resource = Resource.Load(resourceToLoad);
+
+		if (!resource.IsValid())
+		{
+			Print(("[PR GenerateAndValidateResource] Resource is invalid: " + resourceToLoad), LogLevel.ERROR);
+			return null;
+		}
+
+		return resource;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Spawn Prefab
+	//protected void SpawnPrefab(Resource resource, vector spawnPos)
+	protected IEntity SpawnPrefab(Resource resource, vector spawnPos)
+	{
+		//StaticModelEntity spawnedPrefab = StaticModelEntity.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos)));
+		IEntity spawnedPrefab = GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos));
+		Print(string.Format("[SpawnPrefab] %1 : Trigger: %2 : spawnedPrefab: %3", m_sLogMode, m_sTriggerName, spawnedPrefab), LogLevel.WARNING);
+		return spawnedPrefab;
+	}
+	
 	protected int m_iExitLoop = 0;
 	//------------------------------------------------------------------------------------------------
 	//! Override this method in inherited class to define a new filter.

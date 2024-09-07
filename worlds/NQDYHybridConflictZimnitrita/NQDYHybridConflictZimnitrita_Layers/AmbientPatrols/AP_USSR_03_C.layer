@@ -1,0 +1,28 @@
+GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+ coords 8406.391 49.479 7904.192
+ {
+  $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+   {
+    coords 44.876 1.969 4.526
+   }
+   {
+    coords -161.931 5.077 23.349
+   }
+   {
+    coords -198.834 -1.817 -183.794
+   }
+   {
+    coords -230.858 -10.498 -371.449
+   }
+   {
+    coords -112.2 1.578 -511.025
+   }
+   {
+    coords -182.143 4.331 -646.453
+   }
+   {
+    coords -246.996 3.361 -902.194
+   }
+  }
+ }
+}

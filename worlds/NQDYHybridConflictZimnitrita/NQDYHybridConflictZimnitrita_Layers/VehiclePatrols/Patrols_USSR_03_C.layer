@@ -1,230 +1,887 @@
-$grp GenericEntity : "{644AEC5C537E03F0}Prefabs/Systems/AmbientVehicles/AmbientVehicleSpawnpoint_USSR.et" {
- USSR_VehicleSpawn_Niscova_n {
-  components {
-   SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
-    m_aIncludedEditableEntityLabels {
-     36 21 10
-    }
-    m_aExcludedEditableEntityLabels {
-     51 52
-    }
-    m_bRequireAllIncludedLabels 1
-    m_bOverrideEntityLabels 1
-    m_aSpecificPrefabNames {
-     "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
-    }
-    m_bIsVehiclePatrol 1
+$grp PR_AIPatrolTrigger {
+ USSR_VehiclePatrol_Andruhanov_s {
+  coords 11808.739 50.504 9465.291
+  angleY -135.766
+  TriggerShapeType Sphere
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 10
+  m_bDebugLogs 1
+  m_OwnerFactionKey ""
+  m_ActivationPresence ANY_CHARACTER
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{62427387364C12D0}" {
+    m_bOverrideActivationPresence 1
    }
   }
-  coords 13924.083 34.568 9296.915
-  angleY 90.752
-  {
-   GenericEntity AmbientPatrol3 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
-    components {
-     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_eGroupType TEAM_MG
-      m_iSimulateGamePlayerCountForScaling 1
-      m_bIgnoreMissionHeader 0
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
+  m_aSideUSSR {
+   PR_Group_USSR "{62427386E0B4E418}" {
+    m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(USSR_VehiclePatrol_Andruhanov_s)"
+    m_aGroupDetails {
+     PR_GroupDetails "{624273861A219BD3}" {
+      m_aSpawnPosition {
+       "USSR_VehiclePatrol_Andruhanov_s_spawn"
+      }
+      m_bRandomGroupSize 1
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
-      m_bRandomGroupSize 1
-      m_bIsVehicleGroup 1
-     }
-     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
-      "faction affiliation" "USSR"
+      m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
+      m_bSuspendIfNoPlayers 0
+      m_bSpawnVehicle 1
+      m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
     }
-    coords -15.785 0.249 -6.437
-    angleY 86.817
-    {
-     $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
-      USSR_VehicleSpawn_Niscova_n_wp2 {
-       coords 10.639 14.779 414.533
-       angleY -177.569
-       CompletionRadius 10
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{62427381D756DBF7}" {
+      m_bCycleWaypoints 1
+      m_aWaypointCollection {
+       "USSR_VehiclePatrol_Andruhanov_s_wp"
       }
-      USSR_VehicleSpawn_Niscova_n_wp1 {
-       coords -42.651 14.745 -1218.067
-       angleX 0.316
-       angleY -115.66
-       angleZ 1.263
-       CompletionRadius 10
+      m_WaypointSortOrder "RAMDOM DIRECTION"
+     }
+    }
+    m_aGroupBehaviours {
+     PR_GroupBehaviours "{62427381DC2465C6}" {
+      m_eAIGroupFormation Column
+      m_eAISkill VETERAN
+     }
+    }
+    m_aRespawnGroup {
+     PR_RespawnGroup "{62427381F36F60B9}" {
+      m_iRespawnCount -1
+      m_iRespawnTimerMin 2700
+      m_bUseRandomRespawnTimer 1
+      m_iRespawnTimerMax 5400
+     }
+    }
+   }
+  }
+  {
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    USSR_VehiclePatrol_Andruhanov_s_wp {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_Andruhanov_s_wp_02 {
+        coords -679.881 -2.737 -449.649
+        angleY -15.089
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Andruhanov_s_wp_03 {
+        coords -1433.078 -18.911 -3245.218
+        angleY -15.089
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Andruhanov_s_wp_01 {
+        coords 183.211 -2.903 -5.28
+        angleY -15.089
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_Andruhanov_s_spawn {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -6.939 -0.448 2.056
+     angleY 135.766
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       USSR_VehiclePatrol_Andruhanov_s_spawn_01 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 90.486 1.241 -98.439
+        angleY -12.093
+       }
+       USSR_VehiclePatrol_Andruhanov_s_spawn_02 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -551.981 3.032 -79.016
+        angleY 154.613
+       }
+       USSR_VehiclePatrol_Andruhanov_s_spawn_03 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -1063.039 0.324 -1901.1
+        angleY -89.498
+       }
+       USSR_VehiclePatrol_Andruhanov_s_spawn_04 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -1261.954 -9.607 -2566.837
+        angleY 99.785
+       }
+       USSR_VehiclePatrol_Andruhanov_s_spawn_05 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -1433.602 -16.745 -3098.357
+        angleX -4.054
+        angleY -90.701
+        angleZ -2.628
+       }
       }
      }
     }
    }
   }
  }
- USSR_VehicleSpawn_Niscova_s {
-  components {
-   SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
-    m_aIncludedEditableEntityLabels {
-     36 21 10
-    }
-    m_aExcludedEditableEntityLabels {
-     51 52
-    }
-    m_bRequireAllIncludedLabels 1
-    m_bOverrideEntityLabels 1
-    m_aSpecificPrefabNames {
-     "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
-    }
-    m_bIsVehiclePatrol 1
+ USSR_VehiclePatrol_MilitaryBarracks_nw {
+  coords 10030.211 68.405 8766.174
+  angleY -135.766
+  TriggerShapeType Sphere
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 10
+  m_bDebugLogs 1
+  m_OwnerFactionKey ""
+  m_ActivationPresence ANY_CHARACTER
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{62427387364C12D0}" {
+    m_bOverrideActivationPresence 1
    }
   }
-  coords 14048.039 52.473 8847.577
-  angleY -135.859
-  {
-   GenericEntity AmbientPatrol7 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
-    components {
-     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_eGroupType TEAM_MG
-      m_iSimulateGamePlayerCountForScaling 1
-      m_bIgnoreMissionHeader 0
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
+  m_aSideUSSR {
+   PR_Group_USSR "{62427386E0B4E418}" {
+    m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(USSR_VehiclePatrol_MilitaryBarracks_nw)"
+    m_aGroupDetails {
+     PR_GroupDetails "{624273861A219BD3}" {
+      m_aSpawnPosition {
+       "USSR_VehiclePatrol_MilitaryBarracks_nw_spawn"
+      }
+      m_bRandomGroupSize 1
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
-      m_bRandomGroupSize 1
-      m_bIsVehicleGroup 1
-     }
-     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
-      "faction affiliation" "USSR"
+      m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
+      m_bSuspendIfNoPlayers 0
+      m_bSpawnVehicle 1
+      m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
     }
-    coords -3.259 0.249 -15.674
-    angleY 86.817
-    {
-     $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
-      USSR_VehicleSpawn_Niscova_s_wp2 {
-       coords 742.792 -3.066 820.641
-       angleY 33.954
-       CompletionRadius 10
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{62427381D756DBF7}" {
+      m_bCycleWaypoints 1
+      m_aWaypointCollection {
+       "USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c01"
       }
-      USSR_VehicleSpawn_Niscova_s_wp3 {
-       coords 97.693 30.829 -931.099
-       angleY 33.954
-       CompletionRadius 10
+      m_WaypointSortOrder "RAMDOM DIRECTION"
+      m_SpawnCollections "RANDOM ONE"
+     }
+    }
+    m_aGroupBehaviours {
+     PR_GroupBehaviours "{62427381DC2465C6}" {
+      m_eAIGroupFormation Column
+      m_eAISkill VETERAN
+     }
+    }
+    m_aRespawnGroup {
+     PR_RespawnGroup "{62427381F36F60B9}" {
+      m_iRespawnCount -1
+      m_iRespawnTimerMin 2700
+      m_bUseRandomRespawnTimer 1
+      m_iRespawnTimerMax 5400
+     }
+    }
+   }
+  }
+  {
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c01 {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
       }
-      USSR_VehicleSpawn_Niscova_s_wp1 {
-       coords 146.984 -9.531 578.496
-       angleY 82.996
-       CompletionRadius 10
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_01 {
+        coords 701.576 2.914 258.139
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_02 {
+        coords -1596.4 -30.322 -616.167
+        angleY -15.088
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_MilitaryBarracks_nw_spawn {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -6.939 -0.448 2.056
+     angleY 135.766
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_01 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 816.499 1.704 316.963
+        angleY -141.397
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_02 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -46.665 -1.619 -4.566
+        angleY 154.613
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_03 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -535.704 -0.589 -310.582
+        angleY -23.904
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_04 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -829.91 0.887 -425.055
+        angleY -27.261
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_05 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -1499.111 -31.168 -610.184
+        angleX 1.636
+        angleY -13.939
+        angleZ -4.545
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02 {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02_04 {
+        coords -1194.392 38.438 405.74
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02_02 {
+        coords -1285.735 -24.271 -1291.295
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02_03 {
+        coords -890.958 -0.591 -313.411
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02_01 {
+        coords -857.944 0.708 -373.986
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_MilitaryBarracks_nw_wp_c02_05 {
+        coords -778.613 -8.162 -343.702
+        angleY -15.088
+        CompletionRadius 10
+       }
       }
      }
     }
    }
   }
  }
- USSR_VehicleSpawn_MilitaryBarracks_nw {
-  components {
-   SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
-    m_aIncludedEditableEntityLabels {
-     36 21 10
-    }
-    m_aExcludedEditableEntityLabels {
-     51 52
-    }
-    m_bRequireAllIncludedLabels 1
-    m_bOverrideEntityLabels 1
-    m_aSpecificPrefabNames {
-     "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
-    }
-    m_bIsVehiclePatrol 1
+ USSR_VehiclePatrol_Niscova_n {
+  coords 13925.041 35.551 9295.519
+  angleY -135.766
+  TriggerShapeType Sphere
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 10
+  m_bDebugLogs 1
+  m_OwnerFactionKey ""
+  m_ActivationPresence ANY_CHARACTER
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{62427387364C12D0}" {
+    m_bOverrideActivationPresence 1
    }
   }
-  coords 10030.604 68.422 8766.129
-  angleY -110.932
-  {
-   GenericEntity AmbientPatrol8 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
-    components {
-     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_eGroupType TEAM_MG
-      m_iSimulateGamePlayerCountForScaling 1
-      m_bIgnoreMissionHeader 0
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
+  m_aSideUSSR {
+   PR_Group_USSR "{62427386E0B4E418}" {
+    m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(USSR_VehiclePatrol_Niscova_n)"
+    m_aGroupDetails {
+     PR_GroupDetails "{624273861A219BD3}" {
+      m_aSpawnPosition {
+       "USSR_VehiclePatrol_Niscova_n_spawn"
+      }
+      m_bRandomGroupSize 1
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
-      m_bRandomGroupSize 1
-      m_bIsVehicleGroup 1
-     }
-     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
-      "faction affiliation" "USSR"
+      m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
+      m_bSuspendIfNoPlayers 0
+      m_bSpawnVehicle 1
+      m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
     }
-    coords -3.259 -1.047 -15.674
-    angleY 86.817
-    {
-     $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
-      {
-       coords 730.81 3.505 -53.979
-       angleY 9.027
-       CompletionRadius 10
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{62427381D756DBF7}" {
+      m_bCycleWaypoints 1
+      m_aWaypointCollection {
+       "USSR_VehiclePatrol_Niscova_n_wp"
       }
-      {
-       coords -1723.832 -29.731 86.902
-       angleY 9.027
-       CompletionRadius 10
+      m_WaypointSortOrder "RAMDOM DIRECTION"
+     }
+    }
+    m_aGroupBehaviours {
+     PR_GroupBehaviours "{62427381DC2465C6}" {
+      m_eAIGroupFormation Column
+      m_eAISkill VETERAN
+     }
+    }
+    m_aRespawnGroup {
+     PR_RespawnGroup "{62427381F36F60B9}" {
+      m_iRespawnCount -1
+      m_iRespawnTimerMin 2700
+      m_bUseRandomRespawnTimer 1
+      m_iRespawnTimerMax 5400
+     }
+    }
+   }
+  }
+  {
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    USSR_VehiclePatrol_Niscova_n_wp {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_Niscova_n_wp_wp2 {
+        coords -3.938 14.484 -391.037
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Niscova_n_wp_wp1 {
+        coords -19.944 14.45 1242.354
+        angleX 0.316
+        angleY 61.909
+        angleZ 1.263
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_Niscova_n_spawn {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -6.939 -0.448 2.056
+     angleY 135.766
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       USSR_VehiclePatrol_Niscova_n_spawn_01 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -28.507 14.836 996.705
+        angleY 85.063
+       }
+       USSR_VehiclePatrol_Niscova_n_spawn_02 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 13.196 14.397 667.284
+        angleY -84.053
+       }
+       USSR_VehiclePatrol_Niscova_n_spawn_03 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 49.772 -0.423 367.932
+        angleY -89.498
+       }
+       USSR_VehiclePatrol_Niscova_n_spawn_04 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 7.748 -1.822 153.764
+        angleY 93.483
+       }
+       USSR_VehiclePatrol_Niscova_n_spawn_05 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 25.662 9.55 -133.686
+        angleX 4.09
+        angleY 88.513
+        angleZ 2.572
+       }
       }
      }
     }
    }
   }
  }
- USSR_VehicleSpawn_Andruhanov_s {
-  components {
-   SCR_AmbientVehicleSpawnPointComponent "{5D5E85F932F777FA}" {
-    m_aIncludedEditableEntityLabels {
-     36 21 10
-    }
-    m_aExcludedEditableEntityLabels {
-     51 52
-    }
-    m_bRequireAllIncludedLabels 1
-    m_bOverrideEntityLabels 1
-    m_aSpecificPrefabNames {
-     "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
-    }
-    m_bIsVehiclePatrol 1
+ USSR_VehiclePatrol_Niscova_n2 {
+  coords 13927.236 35.444 9294.76
+  angleY -135.766
+  TriggerShapeType Sphere
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 10
+  m_bDebugLogs 1
+  m_OwnerFactionKey ""
+  m_ActivationPresence ANY_CHARACTER
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{62427387364C12D0}" {
+    m_bOverrideActivationPresence 1
    }
   }
-  coords 11808.923 50.502 9465.265
-  angleY 149.39
-  {
-   GenericEntity AmbientPatrol9 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
-    components {
-     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_eGroupType TEAM_MG
-      m_iSimulateGamePlayerCountForScaling 1
-      m_bIgnoreMissionHeader 0
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
+  m_aSideUSSR {
+   PR_Group_USSR "{62427386E0B4E418}" {
+    m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(USSR_VehiclePatrol_Niscova_n2)"
+    m_aGroupDetails {
+     PR_GroupDetails "{624273861A219BD3}" {
+      m_aSpawnPosition {
+       "USSR_VehiclePatrol_Niscova_n2_spawn"
+      }
+      m_bRandomGroupSize 1
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
-      m_bRandomGroupSize 1
-      m_bIsVehicleGroup 1
-     }
-     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
-      "faction affiliation" "USSR"
+      m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
+      m_bSuspendIfNoPlayers 0
+      m_bSpawnVehicle 1
+      m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
     }
-    coords -9.421 0.249 9.322
-    angleY 86.817
-    {
-     $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
-      wpp_2 {
-       coords 7.115 -3.423 824.567
-       angleY 108.704
-       CompletionRadius 10
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{62427381D756DBF7}" {
+      m_bCycleWaypoints 1
+      m_aWaypointCollection {
+       "USSR_VehiclePatrol_Niscova_n2_wp"
       }
-      wpp_3 {
-       coords -1897.226 -19.597 3005.392
-       angleY 108.704
-       CompletionRadius 10
+      m_WaypointSortOrder "RAMDOM DIRECTION"
+     }
+    }
+    m_aGroupBehaviours {
+     PR_GroupBehaviours "{62427381DC2465C6}" {
+      m_eAIGroupFormation Column
+      m_eAISkill VETERAN
+     }
+    }
+    m_aRespawnGroup {
+     PR_RespawnGroup "{62427381F36F60B9}" {
+      m_iRespawnCount -1
+      m_iRespawnTimerMin 2700
+      m_bUseRandomRespawnTimer 1
+      m_iRespawnTimerMax 5400
+     }
+    }
+   }
+  }
+  {
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    USSR_VehiclePatrol_Niscova_n2_wp {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
       }
-      wpp_1 {
-       coords -103.637 -3.589 -139.863
-       angleY 108.704
-       CompletionRadius 10
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_Niscova_n2_wp_01 {
+        coords -5.406 15.578 -391.467
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Niscova_n2_wp_02 {
+        coords -142.063 16.881 -2131.486
+        angleX 0.316
+        angleY 61.909
+        angleZ 1.263
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_Niscova_n2_spawn {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -6.939 -0.448 2.056
+     angleY 135.766
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       USSR_VehiclePatrol_Niscova_n2_spawn_01 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 39.638 17.695 -520.744
+        angleY -85.636
+       }
+       USSR_VehiclePatrol_Niscova_n2_spawn_02 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 3.08 24.593 -863.559
+        angleY -87.394
+       }
+       USSR_VehiclePatrol_Niscova_n2_spawn_03 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -38.688 27.014 -1030.385
+        angleY 92.867
+       }
+       USSR_VehiclePatrol_Niscova_n2_spawn_04 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -106.299 14.122 -1700.82
+        angleY 99.785
+       }
+       USSR_VehiclePatrol_Niscova_n2_spawn_05 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -145.608 15.189 -2063.352
+        angleX 3.793
+        angleY 94.615
+        angleZ 2.992
+       }
       }
      }
     }
    }
   }
+ }
+ USSR_VehiclePatrol_Niscova_s {
+  coords 14047.812 52.469 8847.481
+  angleY -135.766
+  TriggerShapeType Sphere
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 10
+  m_bDebugLogs 1
+  m_OwnerFactionKey ""
+  m_ActivationPresence ANY_CHARACTER
+  m_aOverrideOptions {
+   PR_OverrideTriggerActivation "{62427387364C12D0}" {
+    m_bOverrideActivationPresence 1
+   }
+  }
+  m_bUseRandomDelayTimer 1
+  m_iDelayTimerMin 60
+  m_iDelayTimerMax 120
+  m_aSideUSSR {
+   PR_Group_USSR "{62427386E0B4E418}" {
+    m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(USSR_VehiclePatrol_Niscova_s)"
+    m_aGroupDetails {
+     PR_GroupDetails "{624273861A219BD3}" {
+      m_aSpawnPosition {
+       "USSR_VehiclePatrol_Niscova_s_spawn"
+      }
+      m_bRandomGroupSize 1
+      m_iMinUnitsInGroup 3
+      m_iMaxUnitsInGroup 3
+      m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
+      m_bSuspendIfNoPlayers 0
+      m_bSpawnVehicle 1
+      m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
+     }
+    }
+    m_aGroupWaypoints {
+     PR_GroupWaypoints "{62427381D756DBF7}" {
+      m_bCycleWaypoints 1
+      m_aWaypointCollection {
+       "USSR_VehiclePatrol_Niscova_s_wp"
+      }
+      m_WaypointSortOrder "RAMDOM DIRECTION"
+     }
+    }
+    m_aGroupBehaviours {
+     PR_GroupBehaviours "{62427381DC2465C6}" {
+      m_eAIGroupFormation Column
+      m_eAISkill VETERAN
+     }
+    }
+    m_aRespawnGroup {
+     PR_RespawnGroup "{62427381F36F60B9}" {
+      m_iRespawnCount -1
+      m_iRespawnTimerMin 2700
+      m_bUseRandomRespawnTimer 1
+      m_iRespawnTimerMax 5400
+     }
+    }
+   }
+  }
+  {
+   $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    USSR_VehiclePatrol_Niscova_s_wp {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -7.056 -0.439 1.937
+     angleY 135.766
+     {
+      $grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+       USSR_VehiclePatrol_Niscova_s_wp_02 {
+        coords -123.058 -2.374 1114.268
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Niscova_s_wp_03 {
+        coords 776.974 31.521 -521.18
+        angleY -15.088
+        CompletionRadius 10
+       }
+       USSR_VehiclePatrol_Niscova_s_wp_01 {
+        coords -330.747 -8.839 505.592
+        angleY 33.954
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+    USSR_VehiclePatrol_Niscova_s_spawn {
+     components {
+      RplComponent "{5A7C8AEEFC85B766}" {
+       Enabled 0
+      }
+      Hierarchy "{624273864DE3B7A4}" {
+      }
+     }
+     coords -6.939 -0.448 2.056
+     angleY 135.766
+     {
+      $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+       USSR_VehiclePatrol_Niscova_s_spawn_01 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -257.892 -4.392 126.607
+        angleY 31.931
+       }
+       USSR_VehiclePatrol_Niscova_s_spawn_02 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -333.191 -11.55 563.939
+        angleY 179.127
+       }
+       USSR_VehiclePatrol_Niscova_s_spawn_03 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords -93.646 -18.68 603.575
+        angleY -89.498
+       }
+       USSR_VehiclePatrol_Niscova_s_spawn_04 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 149.527 8.116 -134.352
+        angleY 27.121
+       }
+       USSR_VehiclePatrol_Niscova_s_spawn_05 {
+        components {
+         RplComponent "{5A7C8AEEFC85B766}" {
+          Enabled 0
+         }
+         Hierarchy "{624273864DE3B7A4}" {
+         }
+        }
+        coords 754.591 29.45 -488.191
+        angleX -4.509
+        angleY -144.763
+        angleZ 1.735
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp SCR_AIWaypoint : "{FBA8DC8FDA0E770D}Prefabs/AI/Waypoints/AIWaypoint_Patrol_Hierarchy.et" {
+ USSR_VehiclePatrol_MilitaryBarracks_nw_wp_2 {
+  coords 10735.491 70.88 9018.003
+  angleY -15.088
+  CompletionRadius 10
+ }
+ USSR_VehiclePatrol_MilitaryBarracks_nw_wp_3 {
+  coords 8437.515 37.644 8143.697
+  angleY -15.088
+  CompletionRadius 10
  }
 }

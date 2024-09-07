@@ -6,6 +6,9 @@ Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transpor
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   MeshObject "{51DAA09FEFBFC0E7}" {
    Materials {
     MaterialAssignClass "{62281BD3FABC4E7A}" {

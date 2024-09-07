@@ -546,3 +546,6 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
   }
  }
 }
+Vehicle CH47G1 : "{6EE8BD07DE06EC44}Prefabs/Vehicles/Helicopters/H47/CH47G.et" {
+ coords 11075.878 5.907 3773.903
+}

@@ -11,6 +11,9 @@ Vehicle : "{99F1610551D54D17}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_base.et" {
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
    CompartmentSlots {
     PilotCompartmentSlot PilotCompartment {

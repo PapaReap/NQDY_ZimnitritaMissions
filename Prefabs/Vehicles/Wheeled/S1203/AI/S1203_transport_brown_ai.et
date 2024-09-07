@@ -6,6 +6,9 @@ Vehicle : "{D7663936ABF75FB0}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_base
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   MeshObject "{51DAA09FEFBFC0E7}" {
    Materials {
     MaterialAssignClass "{6227717041D6A1EF}" {

@@ -6,6 +6,9 @@ Vehicle : "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et" {
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   MeshObject "{51DAA09FEFBFC0E7}" {
    Materials {
     MaterialAssignClass "{62277171900A6028}" {
@@ -27,37 +30,37 @@ Vehicle : "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et" {
     m_bRandomizeDefaultVariant 0
     m_aVariants {
      SCR_EditableEntityVariant "{62277171900A601D}" {
-      m_sVariantPrefab "{8469FE85F25F7FBF}Prefabs/Vehicles/Wheeled/S105/S105_beige_ai.et"
+      m_sVariantPrefab "{8469FE85F25F7FBF}Prefabs/Vehicles/Wheeled/S105/AI/S105_beige_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900A6013}" {
-      m_sVariantPrefab "{A61EB60A9F61EBF4}Prefabs/Vehicles/Wheeled/S105/S105_darkblue_ai.et"
+      m_sVariantPrefab "{A61EB60A9F61EBF4}Prefabs/Vehicles/Wheeled/S105/AI/S105_darkblue_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900A6011}" {
-      m_sVariantPrefab "{D93654118FCDE537}Prefabs/Vehicles/Wheeled/S105/S105_darkbrown_ai.et"
+      m_sVariantPrefab "{D93654118FCDE537}Prefabs/Vehicles/Wheeled/S105/AI/S105_darkbrown_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900A6016}" {
-      m_sVariantPrefab "{483BE9D8462251D0}Prefabs/Vehicles/Wheeled/S105/S105_darkred_ai.et"
+      m_sVariantPrefab "{483BE9D8462251D0}Prefabs/Vehicles/Wheeled/S105/AI/S105_darkred_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900A6017}" {
-      m_sVariantPrefab "{6555046111F29F7E}Prefabs/Vehicles/Wheeled/S105/S105_green_ai.et"
+      m_sVariantPrefab "{6555046111F29F7E}Prefabs/Vehicles/Wheeled/S105/AI/S105_green_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF82}" {
-      m_sVariantPrefab "{04E4EA9683157DA7}Prefabs/Vehicles/Wheeled/S105/S105_lightblue_ai.et"
+      m_sVariantPrefab "{04E4EA9683157DA7}Prefabs/Vehicles/Wheeled/S105/AI/S105_lightblue_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF80}" {
-      m_sVariantPrefab "{32B9D20202359AC6}Prefabs/Vehicles/Wheeled/S105/S105_lightgreen_ai.et"
+      m_sVariantPrefab "{32B9D20202359AC6}Prefabs/Vehicles/Wheeled/S105/AI/S105_lightgreen_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF9E}" {
-      m_sVariantPrefab "{3E9C09E9E153A836}Prefabs/Vehicles/Wheeled/S105/S105_rally_ai.et"
+      m_sVariantPrefab "{3E9C09E9E153A836}Prefabs/Vehicles/Wheeled/S105/AI/S105_rally_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF9D}" {
-      m_sVariantPrefab "{050969F2801A8A22}Prefabs/Vehicles/Wheeled/S105/S105_red_ai.et"
+      m_sVariantPrefab "{050969F2801A8A22}Prefabs/Vehicles/Wheeled/S105/AI/S105_red_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF9B}" {
-      m_sVariantPrefab "{C282D914D29C265E}Prefabs/Vehicles/Wheeled/S105/S105_white_ai.et"
+      m_sVariantPrefab "{C282D914D29C265E}Prefabs/Vehicles/Wheeled/S105/AI/S105_white_ai.et"
      }
      SCR_EditableEntityVariant "{62277171900DEF9A}" {
-      m_sVariantPrefab "{FF698CBFA45B58E4}Prefabs/Vehicles/Wheeled/S105/S105_yellow_ai.et"
+      m_sVariantPrefab "{FF698CBFA45B58E4}Prefabs/Vehicles/Wheeled/S105/AI/S105_yellow_ai.et"
      }
     }
    }

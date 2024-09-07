@@ -8,7 +8,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_04_SC_Lg_01"
   m_aOverrideOptions {
@@ -68,7 +67,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_04_SC_Lg_02"
   m_aOverrideOptions {

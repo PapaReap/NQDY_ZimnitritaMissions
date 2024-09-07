@@ -15,7 +15,9 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 	{
 		SetEventMask(EntityEvent.INIT);
 	}
-
+	
+	//private string spawnPosition = ""; // make a default spawn position to this trigger if none found
+	
 	//! PR Spawn Prefab Details: Individual Prefabs to spawn.
 	[Attribute(desc: "Individual Prefabs to spawn.  ", category: "PR Spawn Prefab Details")]
 	protected ref array<ref PR_PrefabDetails> m_aPrefabDetails;
@@ -66,7 +68,7 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 			}
 		}
 
-		int prefabType;
+		string specificPrefabName;
 		array<string> objectLocationsToSpawnOn;
 		bool useRandomPositions;
 		float randomPercentage;
@@ -75,7 +77,7 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 		{
 			foreach (PR_PrefabDetails prefabDetails : m_aPrefabDetails)
 			{
-				prefabType = prefabDetails.m_PrefabType;
+				specificPrefabName = prefabDetails.m_aSpecificPrefabName;
 				objectLocationsToSpawnOn = prefabDetails.m_aObjectLocationsToSpawnOn;
 				useRandomPositions = prefabDetails.m_bUseRandomPositions;
 				randomPercentage = prefabDetails.m_fRandomPercentage;
@@ -132,20 +134,22 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 
 					vector spawnPos = object.GetOrigin();
 
-					string m_SpawnPrefab = GetPrefabType(prefabType);
-
 					//--- Generate the resource
-					Resource resource = GenerateAndValidateResource(m_SpawnPrefab);
+					Resource resource = GenerateAndValidateResource(specificPrefabName);
 
 					if (!resource)
 					{
-						Print(string.Format("[PR_SpawnPrefabTrigger] %1 : Trigger: %2 : Unable to load resource for the m_SpawnPrefab: %3", m_sLogMode, m_sTriggerName, m_SpawnPrefab), LogLevel.ERROR);
+						Print(string.Format("[PR_SpawnPrefabTrigger] %1 : Trigger: %2 : Unable to load resource for the specificPrefabName: %3", m_sLogMode, m_sTriggerName, specificPrefabName), LogLevel.ERROR);
 						continue;
 					}
 
 					//--- Generate spawn parameters and spawn the prefab
 					if (!m_bIsTestingMode)
+					//{
 						GetGame().GetCallqueue().CallLater(SpawnPrefab, delay, false, resource, spawnPos);
+						//IEntity returnPrefab = SpawnPrefab(resource, spawnPos);
+						//Print(string.Format("[PR_SpawnPrefabTrigger] %1 : Trigger: %2 : returnPrefab: %3", m_sLogMode, m_sTriggerName, returnPrefab), LogLevel.WARNING);
+					//}
 				}
 			}
 		}
@@ -155,7 +159,7 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 
 		Deactivate();
 	}
-
+/*
 	//------------------------------------------------------------------------------------------------
 	//! Generate Spawn Parameters
 	protected EntitySpawnParams GenerateSpawnParameters(vector position)
@@ -187,132 +191,17 @@ class PR_SpawnPrefabTrigger : PR_CoreTrigger
 	{
 		StaticModelEntity spawnedPrefab = StaticModelEntity.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos)));
 	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Get Prefab type
-	protected string GetPrefabType(int spawnPrefabType)
-	{
-		switch (spawnPrefabType)
-		{
-			case 0: // Mine US
-			{
-				return "{B63D38376558C9DD}PrefabsEditable/Mines/E_Mine_M15AT.et";
-			};
-			case 1: // Mine USSR
-			{
-				return "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et";
-			};
-			case 2: // Conflict Relay Radio
-			{
-				return "{DB04D6564D4AB421}Prefabs/Systems/MilitaryBase/ConflictRelayRadio_NQDY_Base.et";//"{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et";
-			};
-			//case 3: // Command Truck USSR
-			//{
-			//	return "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et";
-			//};
-			//case 4: //
-			//{
-			//	return "";
-			//};
-			//case 5: //
-			//{
-			//	return "";
-			//};
-			//case 6: //
-			//{
-			//	return "";
-			//};
-			//case 7: //
-			//{
-			//	return "";
-			//};
-			//case 8: //
-			//{
-			//	return "";
-			//};
-			//case 9: //
-			//{
-			//	return "";
-			//};
-			//case 10: //
-			//{
-			//	return "";
-			//};
-			//case 11: //
-			//{
-			//	return "";
-			//};
-			//case 12: //
-			//{
-			//	return "";
-			//};
-			//case 13: //
-			//{
-			//	return "";
-			//};
-			//case 14: //
-			//{
-			//	return "";
-			//};
-			//case 15: //
-			//{
-			//	return "";
-			//};
-			//case 16: //
-			//{
-			//	return "";
-			//};
-			//case 17: //
-			//{
-			//	return "";
-			//};
-			//case 18: //
-			//{
-			//	return "";
-			//};
-			//case 19: //
-			//{
-			//	return "";
-			//};
-			//case 20: //
-			//{
-			//	return "";
-			//};
-			//default:
-			//{
-			//	return "";
-			//};
-		};
-		return "<ERROR>";
-	}
-}
-
-enum PR_PrefabTypeList
-{
-	"AT Mine US" = 0,			// 0
-	"AT Mine USSR" = 1,			// 1 default
-	"Conflict Relay Radio" = 2,	// 2
-//	"" = 3,	// 3
-//	"" = 4,	// 4
-//	"" = 5,	// 5
-//	"" = 6,	// 6
-//	"" = 7,	// 7
-//	"" = 8,	// 8
-//	"" = 9,	// 9
-//	"" = 10,	// 10
-//	"" = 11,	// 11
-//	"" = 12,	// 12
-//	"" = 13	// 13
+	*/
 }
 
 [BaseContainerProps()]
 class PR_PrefabDetails
 {
 	//--- PR Spawn Prefab Details: Prefab type to spawn
-	[Attribute("1", UIWidgets.ComboBox, "Prefab to spawn.  ", enums: ParamEnumArray.FromEnum(PR_PrefabTypeList), category: "PR Spawn Prefab Details")]
-	PR_PrefabTypeList m_PrefabType;
+	[Attribute("{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et", params: "et", desc: "If SPECIFIC_PREFAB_NAME is selected, fill the class name here.", category: "PR Spawn Prefab Details")]
+	ResourceName m_aSpecificPrefabName;
 
-	static string m_sHintObjectLocationsToSpawnOn = "	";
+	static string m_sHintObjectLocationsToSpawnOn = "Object location names to spawn prefab on. Can be a collection name. Can combine individual & collections.	";
 	//--- PR Spawn Prefab Details: Object location names to spawn prefab on. Can be a collection name.
 	[Attribute(desc: m_sHintObjectLocationsToSpawnOn/*"Object location names to spawn prefab on. Can be a collection name. Can combine individual & collections.  "*/, category: "PR Spawn Prefab Details")]
 	ref array<string> m_aObjectLocationsToSpawnOn;

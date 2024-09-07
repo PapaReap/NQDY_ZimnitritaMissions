@@ -6,6 +6,9 @@ Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   MeshObject "{51DAA09FEFBFC0E7}" {
    Materials {
     MaterialAssignClass "{62252D7D2FD4D4C8}" {

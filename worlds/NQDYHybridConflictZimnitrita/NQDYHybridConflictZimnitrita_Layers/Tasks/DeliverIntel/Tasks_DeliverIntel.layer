@@ -10363,6 +10363,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
   coords 12292.955 32 8686.095
+  Flags 2097155
   {
    $grp GenericEntity {
     TaskDeliverIntel_IndustrialZone_move_02 {
@@ -10371,6 +10372,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -21.184 13.231 13.093
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_03 {
      components {
@@ -10378,6 +10380,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -14.954 13.043 5.132
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_04 {
      components {
@@ -10385,6 +10388,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -25.176 13.103 -2.32
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_05 {
      components {
@@ -10392,6 +10396,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -40.572 9.221 3.122
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_06 {
      components {
@@ -10399,6 +10404,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -41.35 9.204 -5.136
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_07 {
      components {
@@ -10406,6 +10412,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -41.368 9.204 0.544
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_08 {
      components {
@@ -10413,6 +10420,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -31.969 9.11 7.847
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_09 {
      components {
@@ -10420,6 +10428,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -20.552 9.203 0.27
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_10 {
      components {
@@ -10427,6 +10436,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -28.021 9.11 14.83
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_11 {
      components {
@@ -10434,6 +10444,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -31.557 1.102 21.173
+     Flags 2097155
     }
     TaskDeliverIntel_IndustrialZone_move_12 {
      components {
@@ -10441,6 +10452,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
      coords -63.205 1.218 67.629
+     Flags 2097155
     }
    }
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_IndustrialZone {
@@ -10484,6 +10496,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
    PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_IndustrialZone {
     coords 10.409 0 0.117
+    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 2
     ShapeColor 0 0.502 0.502 0.098
@@ -10512,9 +10525,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
       Pers_Opt_TaskDeliverIntel_IndustrialZone {
        coords 0.001 -0.019 0.136
+       Flags 2097155
       }
       Pers_Fail_TaskDeliverIntel_IndustrialZone {
        coords 0.146 -0.341 -0.415
+       Flags 2097155
       }
      }
     }
@@ -10555,6 +10570,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     coords -0.044 0 0.046
+    Flags 2097155
     {
      GenericEntity SlotDelivery_TaskDeliverIntel_IndustrialZone {
       ID "5E74C909218B71FF"
@@ -10572,6 +10588,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
       }
       coords 1.477 0 8.971
+      Flags 2097155
      }
      GenericEntity SlotPick_TaskDeliverIntel_IndustrialZone {
       ID "5E74C909218B7182"
@@ -10604,11 +10621,13 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       angleX -0.274
       angleY -22.478
       angleZ -0.132
+      Flags 2097155
      }
     }
    }
    GenericEntity Pers_TaskDeliverIntel_IndustrialZone : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords 0.12 0 -1.003
+    Flags 2097155
    }
    GenericEntity Layer_TaskDeliverIntel_AI_IndustrialZone : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
@@ -10618,10 +10637,12 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     coords 3.613 0 -1.256
+    Flags 2097155
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
       Layer_TaskDeliverIntel_AI_IndustrialZone_01 {
        coords 0 0 0
+       Flags 2097155
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          SlotAI_TaskDeliverIntel_IndustrialZone_01_01_LFT {
@@ -10631,6 +10652,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -67.924 0 -37.942
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_02_WR {
           components {
@@ -10639,6 +10661,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -16.528 0 134.844
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_03_LFT {
           components {
@@ -10648,6 +10671,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -63.244 13.719 203.172
           angleY -179.102
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_04_LFT {
           components {
@@ -10656,6 +10680,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 84.042 0 92.316
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_05_LRG {
           components {
@@ -10664,6 +10689,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 18.122 0 -37.525
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_06_WR {
           components {
@@ -10673,6 +10699,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -143.337 0 132.586
           angleY 178.77
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_07_WR {
           components {
@@ -10681,6 +10708,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -134.346 0 -4.968
+          Flags 2097155
          }
         }
        }
@@ -10693,6 +10721,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords -6.586 0.567 -0.478
+       Flags 2097155
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          SlotAI_TaskDeliverIntel_IndustrialZone_02_01_LFTS {
@@ -10702,6 +10731,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 55.102 -0.567 -107.398
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_02_WR {
           components {
@@ -10710,6 +10740,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 50.219 -0.567 167.245
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_03_LFTS {
           components {
@@ -10718,6 +10749,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 155.189 -0.567 -106.123
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_04_LFTS {
           components {
@@ -10727,6 +10759,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -146.463 -0.786 6.623
           angleZ 0.123
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_05_LRGS {
           components {
@@ -10735,6 +10768,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -31.835 -0.567 82.023
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_06_WR {
           components {
@@ -10746,6 +10780,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           angleX -9.303
           angleY 0.367
           angleZ -2.267
+          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_07_WR {
           components {
@@ -10754,6 +10789,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -34.409 -0.567 -58.029
+          Flags 2097155
          }
         }
        }
@@ -10763,6 +10799,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
    GenericEntity TaskDeliverIntel_MoveCollection_IndustrialZone : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     coords -33.304 0.011 83.349
+    Flags 2097155
     {
      $grp GenericEntity {
       TaskDeliverIntel_IndustrialZone_move_01 {
@@ -10771,6 +10808,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 67.058 1.18 -20.461
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_13 {
        components {
@@ -10778,6 +10816,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords -81.104 1.273 6.747
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_14 {
        components {
@@ -10785,6 +10824,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 22.968 1.259 -121.548
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_15 {
        components {
@@ -10792,6 +10832,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 19.494 1.519 -107.848
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_16 {
        components {
@@ -10799,6 +10840,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 27.101 9.064 -109.215
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_17 {
        components {
@@ -10806,6 +10848,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 22.307 9.065 -111.567
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_18 {
        components {
@@ -10813,6 +10856,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 20.012 9.065 -114.825
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_19 {
        components {
@@ -10820,6 +10864,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 19.842 9.065 -118.751
+       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_20 {
        components {
@@ -10827,6 +10872,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 23.601 12.791 -118.922
+       Flags 2097155
       }
      }
     }

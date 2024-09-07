@@ -6,6 +6,9 @@ Vehicle : "{D7663936ABF75FB0}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_base
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   MeshObject "{51DAA09FEFBFC0E7}" {
    Materials {
     MaterialAssignClass "{6227717048C21FE4}" {
@@ -31,19 +34,19 @@ Vehicle : "{D7663936ABF75FB0}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_base
     m_bRandomizeDefaultVariant 0
     m_aVariants {
      SCR_EditableEntityVariant "{6227717048C21FC2}" {
-      m_sVariantPrefab "{4B4EF6BEB2AB0DC9}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige_ai.et"
+      m_sVariantPrefab "{4B4EF6BEB2AB0DC9}Prefabs/Vehicles/Wheeled/S1203/AI/S1203_transport_beige_ai.et"
      }
      SCR_EditableEntityVariant "{6227717048C21FC1}" {
-      m_sVariantPrefab "{E9050115D54BFE8D}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_blue_ai.et"
+      m_sVariantPrefab "{E9050115D54BFE8D}Prefabs/Vehicles/Wheeled/S1203/AI/S1203_transport_blue_ai.et"
      }
      SCR_EditableEntityVariant "{6227717048C21FC7}" {
-      m_sVariantPrefab "{04C0C1BDA74DD3CC}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_brown_ai.et"
+      m_sVariantPrefab "{04C0C1BDA74DD3CC}Prefabs/Vehicles/Wheeled/S1203/AI/S1203_transport_brown_ai.et"
      }
      SCR_EditableEntityVariant "{6227717048C21FC5}" {
-      m_sVariantPrefab "{EFC0503F1FC0F60D}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_red_ai.et"
+      m_sVariantPrefab "{EFC0503F1FC0F60D}Prefabs/Vehicles/Wheeled/S1203/AI/S1203_transport_red_ai.et"
      }
      SCR_EditableEntityVariant "{6227717048C21F3B}" {
-      m_sVariantPrefab "{E8DAD8D92F8E15D2}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_yellow_ai.et"
+      m_sVariantPrefab "{E8DAD8D92F8E15D2}Prefabs/Vehicles/Wheeled/S1203/AI/S1203_transport_yellow_ai.et"
      }
     }
    }

@@ -200,12 +200,21 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	private int groupType;
 
 	//! Group Details
-	private string spawnPosition = "";
+	//private string spawnPosition = "";
+	private ref array<string> spawnPosition = {};
 	private bool randomGroupSize = 0;
 	private int minUnitsInGroup = 1;
 	private int maxUnitsInGroup = -1;
 	private bool keepGroupActive = 0;
+	private bool logGroupLocation = 0;
+	private int logUpdateInterval = 5;
 	private bool suspendIfNoPlayers = 1;
+	private bool resetGroupIfIdle = 0;
+	private bool spawnVehicle = 0;
+	private ref array<string> groupIDArray = {};
+	private string groupID;
+	private ref array<string> prefabArray = {};
+	private string specificPrefabName = "";
 	//! Waypoints
 	private bool cycleWaypoints = 0;
 	private int rerunCounter = -1;
@@ -217,7 +226,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	private SCR_EAIGroupFormation groupFormation = 0;
 	private EAISkill aISkill = 50;
 	private EAICombatType aICombatType = 1;
-	private bool m_bHoldFire = 0;
+	//private bool m_bHoldFire = 0;
 	private float perceptionFactor = 1;
 	//! Teleport Group
 	private bool teleportAfterSpawn = 0;
@@ -232,12 +241,20 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	protected void ResetTypes()
 	{
 		//! Group Details
-		spawnPosition = "";
+		//spawnPosition = "";
+		spawnPosition = {};
 		randomGroupSize = 0;
 		minUnitsInGroup = 1;
 		maxUnitsInGroup = -1;
 		keepGroupActive = 0;
+		logGroupLocation = 0;
+		logUpdateInterval = 5;
 		suspendIfNoPlayers = 1;
+		resetGroupIfIdle = 0;
+		spawnVehicle = 0;
+		groupIDArray = {};
+		prefabArray = {};
+		specificPrefabName = "";
 		//! Waypoints
 		cycleWaypoints = 0;
 		rerunCounter = -1;
@@ -249,7 +266,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		groupFormation = 0;
 		aISkill = 50;
 		aICombatType = 1;
-		m_bHoldFire = 0;
+	//	m_bHoldFire = 0;
 		perceptionFactor = 1;
 		//! Teleport Group
 		teleportAfterSpawn = 0;
@@ -308,6 +325,11 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 
 				groupSide = 0;
 				ResetTypes();
+				
+				groupID = detailsUS.m_sGroupID;
+				if (groupID)
+					groupIDArray.Insert(groupID);
+				
 				GetGroupDetails(detailsUS.m_aGroupDetails);
 				GetGroupWaypoints(detailsUS.m_aGroupWaypoints);
 				GetGroupBehaviours(detailsUS.m_aGroupBehaviours);
@@ -332,6 +354,11 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 
 				groupSide = 1;
 				ResetTypes();
+
+				groupID = detailsUSSR.m_sGroupID;
+				if (groupID)
+					groupIDArray.Insert(groupID);	
+				
 				GetGroupDetails(detailsUSSR.m_aGroupDetails);
 				GetGroupWaypoints(detailsUSSR.m_aGroupWaypoints);
 				GetGroupBehaviours(detailsUSSR.m_aGroupBehaviours);
@@ -354,9 +381,14 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 				groupType = detailsFIA.m_GroupType;
 				if (groupType == -1)
 					continue;
-
+				
 				groupSide = 2;
 				ResetTypes();
+
+				groupID = detailsFIA.m_sGroupID;
+				if (groupID)
+					groupIDArray.Insert(groupID);
+				
 				GetGroupDetails(detailsFIA.m_aGroupDetails);
 				GetGroupWaypoints(detailsFIA.m_aGroupWaypoints);
 				GetGroupBehaviours(detailsFIA.m_aGroupBehaviours);
@@ -378,9 +410,14 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 				groupType = detailsCIV.m_GroupType;
 				if (groupType == -1)
 					continue;
-
+				
 				groupSide = 3;
 				ResetTypes();
+
+				groupID = detailsCIV.m_sGroupID;
+				if (groupID)
+					groupIDArray.Insert(groupID);
+				
 				GetGroupDetails(detailsCIV.m_aGroupDetails);
 				GetGroupWaypoints(detailsCIV.m_aGroupWaypoints);
 				GetGroupBehaviours(detailsCIV.m_aGroupBehaviours);
@@ -391,6 +428,9 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 					CallSpawnPatrol();
 			}
 		}
+		
+		if (groupIDArray.Count() > 0)
+			Print(string.Format("[PR_AIPatrolTrigger] (SpawnPatrolInit) %1 : groupID: %2", m_sLogMode, groupIDArray.Get(0)), LogLevel.NORMAL);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -413,6 +453,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			Print((
 			"[PR_AIPatrolTrigger] (CallSpawnPatrol) " + m_sLogMode + " : Info: Group side: " + groupSide +
 			", Spawn group type: " + groupType +
+			", Group ID: " + groupID +
 			", Spawn position: " + spawnPosition +
 			", Delay: " + delay
 			), LogLevel.NORMAL);
@@ -420,10 +461,14 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		
 		//--- Call to spawner script on trigger activation
 		m_PR_SpawnPatrol = new PR_SpawnPatrol();
-
-		IEntity spawnPos = GetGame().GetWorld().FindEntityByName(spawnPosition);
-		if (!spawnPos)
-			spawnPos = m_World.FindEntityByID(this.GetID());
+		
+		//IEntity spawnPos = GetGame().GetWorld().FindEntityByName(spawnPosition);
+	//	vector location = m_Trigger.GetOrigin(); //trying to set directions
+	//	Print(string.Format("[PR_AIPatrolTrigger] %1 : location: %2", m_sLogMode, location), LogLevel.NORMAL);
+	//	Print(string.Format("[PR_AIPatrolTrigger] %1 : m_Trigger.GetOrigin(): %2", m_sLogMode, m_Trigger.GetOrigin()), LogLevel.NORMAL);
+		
+		//if (!spawnPos)
+		IEntity trigger = m_World.FindEntityByID(this.GetID());
 
 		if (useRandomRespawnTimer)
 		{
@@ -431,26 +476,45 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 				respawnTimerMax = respawnTimerMin + 1;
 		};
 
-		protected array<array<string>> m_sStringArray = {teleportPosition, waypointCollection};
+		protected array<array<string>> m_sStringArray = {
+			spawnPosition,			// 0
+			teleportPosition,		// 1
+			waypointCollection,		// 2
+			prefabArray,			// 3
+			groupIDArray,			// 4
+		};
 
 		if (teleportPosition.Count() == 0)
-			teleportPosition.Insert(spawnPos.GetName());
+			teleportPosition.Insert(trigger.GetName());
 
-		protected array<bool> m_aBoolArray = {cycleWaypoints, m_bDebugLogs, useRandomRespawnTimer, m_bHoldFire, randomGroupSize, keepGroupActive, suspendIfNoPlayers, teleportAfterSpawn, m_bNeutralizePersistentObjectIfGroupIsDead};
+		protected array<bool> m_aBoolArray = {
+			cycleWaypoints,			// 0
+			m_bDebugLogs,			// 1
+			useRandomRespawnTimer,	// 2
+			randomGroupSize,		// 3
+			keepGroupActive,		// 4
+			logGroupLocation,		// 5
+			suspendIfNoPlayers,		// 6
+			spawnVehicle,			// 7
+			teleportAfterSpawn,		// 8
+			m_bNeutralizePersistentObjectIfGroupIsDead, // 9
+			resetGroupIfIdle		// 10
+		};
 		protected array<int> m_aIntArray = {
-			rerunCounter, // 0
-			respawnTimerMin, // 1
-			respawnTimerMax, // 2
-			respawnCount, // 3
-			teleportSortOrder, // 4
-			collectionSortOrder, // 5
-			waypointSortOrder, // 6
-			spawnCollections, // 7
-			aISkill, // 8
-			aICombatType, // 9
-			groupFormation, // 10
-			minUnitsInGroup, // 11
-			maxUnitsInGroup // 12
+			rerunCounter,			// 0
+			respawnTimerMin,		// 1
+			respawnTimerMax,		// 2
+			respawnCount,			// 3
+			teleportSortOrder,		// 4
+			collectionSortOrder,	// 5
+			waypointSortOrder,		// 6
+			spawnCollections,		// 7
+			aISkill,				// 8
+			aICombatType,			// 9
+			groupFormation,			// 10
+			minUnitsInGroup,		// 11
+			maxUnitsInGroup,		// 12
+			logUpdateInterval		// 13
 		};
 
 		//--- Execute the AI spawning using a delayed call
@@ -460,7 +524,8 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			false,
 			groupSide,
 			groupType,
-			spawnPos.GetOrigin(),
+			//trigger.GetOrigin(),
+			trigger,
 			m_aBoolArray,
 			m_sStringArray,
 			m_aIntArray,
@@ -479,7 +544,12 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : minUnitsInGroup: %2", m_sLogMode, minUnitsInGroup), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : maxUnitsInGroup: %2", m_sLogMode, maxUnitsInGroup), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : keepGroupActive: %2", m_sLogMode, keepGroupActive), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : logGroupLocation: %2", m_sLogMode, logGroupLocation), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : logUpdateInterval: %2", m_sLogMode, logUpdateInterval), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : suspendIfNoPlayers: %2", m_sLogMode, suspendIfNoPlayers), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : resetGroupIfIdle: %2", m_sLogMode, resetGroupIfIdle), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnVehicle: %2", m_sLogMode, spawnVehicle), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : prefabArray: %2", m_sLogMode, prefabArray), LogLevel.NORMAL);
 
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : cycleWaypoints: %2", m_sLogMode, cycleWaypoints), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : rerunCounter: %2", m_sLogMode, rerunCounter), LogLevel.NORMAL);
@@ -510,12 +580,22 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		{
 			foreach (PR_GroupDetails detailsInfo : groupDetails)
 			{
-				spawnPosition = detailsInfo.m_sSpawnPosition;
+				spawnPosition = detailsInfo.m_aSpawnPosition; // //m_sSpawnPosition
 				randomGroupSize = detailsInfo.m_bRandomGroupSize;
 				minUnitsInGroup = detailsInfo.m_iMinUnitsInGroup;
 				maxUnitsInGroup = detailsInfo.m_iMaxUnitsInGroup;
 				keepGroupActive = detailsInfo.m_bKeepGroupActive;
+				logGroupLocation = detailsInfo.m_bLogGroupLocation;
+				logUpdateInterval = detailsInfo.m_iLogUpdateInterval;
 				suspendIfNoPlayers = detailsInfo.m_bSuspendIfNoPlayers;
+				resetGroupIfIdle = detailsInfo.m_bResetGroupIfIdle;
+				spawnVehicle = detailsInfo.m_bSpawnVehicle;
+				if (spawnVehicle)
+				{
+					specificPrefabName = detailsInfo.m_aSpecificPrefabName;
+					prefabArray.Insert(specificPrefabName);
+				}
+				
 			}
 		}
 	}
@@ -591,6 +671,10 @@ class PR_Group_US
 
 	[Attribute("-1", UIWidgets.ComboBox, "Group to spawn, unit count inside ( ).  ", enums: ParamEnumArray.FromEnum(PR_EGroupUS), category: "PR Spawn Patrol: Group")]
 	PR_EGroupUS m_GroupType;
+	
+	//! PR SPAWN PATROL: GROUP - ID Name to give spawned group. Use for identification, log tracking, etc...
+	[Attribute(desc: "ID Name to give spawned group. Use for identification, log tracking, etc...  ", category: "PR Spawn Patrol: Group")]
+	string m_sGroupID;
 
 	[Attribute(desc: "Group details. Includes: Set spawn location, keep active, suspend if no players. Use Only One! ", category: "PR Spawn Patrol: Group")]
 	ref array<ref PR_GroupDetails> m_aGroupDetails;
@@ -618,6 +702,10 @@ class PR_Group_USSR
 	[Attribute("-1", UIWidgets.ComboBox, "Group to spawn, unit count inside ( ).  ", enums: ParamEnumArray.FromEnum(PR_EGroupUSSR), category: "PR Spawn Patrol: Group")]
 	PR_EGroupUSSR m_GroupType;
 
+	//! PR SPAWN PATROL: GROUP - ID Name to give spawned group. Use for identification, log tracking, etc...
+	[Attribute(desc: "ID Name to give spawned group. Use for identification, log tracking, etc...  ", category: "PR Spawn Patrol: Group")]
+	string m_sGroupID;
+	
 	[Attribute(desc: "Group details. Includes: Set spawn location, keep active, suspend if no players. Use Only One! ", category: "PR Spawn Patrol: Group")]
 	ref array<ref PR_GroupDetails> m_aGroupDetails;
 
@@ -644,6 +732,10 @@ class PR_Group_FIA
 	[Attribute("-1", UIWidgets.ComboBox, "Group to spawn, unit count inside ( ).  ", enums: ParamEnumArray.FromEnum(PR_EGroupFIA), category: "PR Spawn Patrol: Group")]
 	PR_EGroupFIA m_GroupType;
 
+	//! PR SPAWN PATROL: GROUP - ID Name to give spawned group. Use for identification, log tracking, etc...
+	[Attribute(desc: "ID Name to give spawned group. Use for identification, log tracking, etc...  ", category: "PR Spawn Patrol: Group")]
+	string m_sGroupID;
+	
 	[Attribute(desc: "Group details. Includes: Set spawn location, keep active, suspend if no players. Use Only One! ", category: "PR Spawn Patrol: Group")]
 	ref array<ref PR_GroupDetails> m_aGroupDetails;
 
@@ -670,6 +762,10 @@ class PR_Group_Civilian
 	[Attribute("-1", UIWidgets.ComboBox, "Group to spawn, unit count inside ( ).  ", enums: ParamEnumArray.FromEnum(PR_EGroupCiv), category: "PR Spawn Patrol: Group")]
 	PR_EGroupCiv m_GroupType;
 
+	//! PR SPAWN PATROL: GROUP - ID Name to give spawned group. Use for identification, log tracking, etc...
+	[Attribute(desc: "ID Name to give spawned group. Use for identification, log tracking, etc...  ", category: "PR Spawn Patrol: Group")]
+	string m_sGroupID;
+	
 	[Attribute(desc: "Group details. Includes: Set spawn location, keep active, suspend if no players. Use Only One! ", category: "PR Spawn Patrol: Group")]
 	ref array<ref PR_GroupDetails> m_aGroupDetails;
 
@@ -691,8 +787,9 @@ class PR_Group_Civilian
 class PR_GroupDetails
 {
 	//! PR SPAWN PATROL: GROUP - Group spawn position: Object name to spawn on. If none given group will spawn on this triggers position.
-	[Attribute(desc: "Object name to spawn on. If none given group will spawn on this triggers position.  ", category: "PR Spawn Patrol: Group")]
-	string m_sSpawnPosition;
+	[Attribute(desc: "Object name to spawn on. If none given, group will spawn on this triggers position. Can be a collection of positions, will pick random one.  ", category: "PR Spawn Patrol: Group")]
+	//string m_sSpawnPosition;
+	ref array<string> m_aSpawnPosition;
 
 	[Attribute(defvalue: "false", desc: "Randomize group size based on a random min and max values below.  ", category: "PR Spawn Patrol: Group")]
 	bool m_bRandomGroupSize;
@@ -710,6 +807,28 @@ class PR_GroupDetails
 	//! PR SPAWN PATROL: GROUP - Suspend the groups movement if no active players in mission.
 	[Attribute("true", UIWidgets.CheckBox,"Suspend the groups movement if no active players in mission.  ", category: "PR Spawn Patrol: Group")]
 	bool m_bSuspendIfNoPlayers;
+
+	//! PR SPAWN PATROL: GROUP - Removes existing group and spawns new group if idle too long.
+	[Attribute("false", UIWidgets.CheckBox,"Reset group if idle too long (no movement) or can't complete given waypoints.  ", category: "PR Spawn Patrol: Group")]
+	bool m_bResetGroupIfIdle;
+	
+	[Attribute(defvalue: "0", desc: "Amount of time group is idle (no movement) before being reset. In minutes.  ", category: "PR Spawn Patrol: Group")]
+	int m_iResetGroupTimer;
+		
+	//! PR SPAWN PATROL: GROUP - Write logs of group location, for debugging purposes.
+	[Attribute("false", UIWidgets.CheckBox,"Write logs of group location, for debugging purposes.  ", category: "PR Spawn Patrol: Group")]
+	bool m_bLogGroupLocation;
+
+	[Attribute(defvalue: "5", desc: "Interval to update logs, in minutes.  ", category: "PR Spawn Patrol: Group")]
+	int m_iLogUpdateInterval;
+	
+	//! PR SPAWN PATROL: GROUP - Spawn a vehicle to use for patrol.
+	[Attribute("false", UIWidgets.CheckBox,"Spawn a vehicle to use for patrol.  ", category: "PR Spawn Patrol: Group")]
+	bool m_bSpawnVehicle;
+	
+	//--- PR Spawn Prefab Details: Prefab type to spawn
+	[Attribute("{19C7E8B968404775}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_ai.et", params: "et", desc: "If SPECIFIC_PREFAB_NAME is selected, fill the class name here.", category: "PR Spawn Prefab Details")]
+	ResourceName m_aSpecificPrefabName;
 }
 
 //! Group Waypoints

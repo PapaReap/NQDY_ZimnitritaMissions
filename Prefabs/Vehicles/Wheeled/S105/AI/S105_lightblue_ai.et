@@ -6,6 +6,9 @@ Vehicle : "{DA79E34823120087}Prefabs/Vehicles/Wheeled/S105/S105_base.et" {
    CruiseVehicleSpeedKmh 15
    "Collision detection layers" 8388608
   }
+  EPF_PersistenceComponent "{5A0D2D215F2F2559}" {
+   m_bSelfSpawn 0
+  }
   SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     m_Image "{DD4A605E2878A57F}UI/Textures/EditorPreviews/Vehicles/Wheeled/S105/S105_lightblue.edds"

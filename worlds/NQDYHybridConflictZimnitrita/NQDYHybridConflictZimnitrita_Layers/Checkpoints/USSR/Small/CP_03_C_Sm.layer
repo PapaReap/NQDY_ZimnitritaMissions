@@ -8,7 +8,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_07"
   m_aOverrideOptions {
@@ -60,7 +59,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_08"
   m_aOverrideOptions {
@@ -112,7 +110,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_09"
   m_aOverrideOptions {
@@ -164,7 +161,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_10"
   m_aOverrideOptions {
@@ -216,7 +212,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_11"
   m_aOverrideOptions {
@@ -268,7 +263,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_12"
   m_aOverrideOptions {
@@ -320,7 +314,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_13"
   m_aOverrideOptions {
@@ -372,7 +365,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_01"
   m_aOverrideOptions {
@@ -424,7 +416,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_02"
   m_aOverrideOptions {
@@ -476,7 +467,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_03"
   m_aOverrideOptions {
@@ -528,7 +518,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_04"
   m_aOverrideOptions {
@@ -580,7 +569,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_05"
   m_aOverrideOptions {
@@ -632,7 +620,6 @@ $grp PR_AIPatrolTrigger {
   TriggerActivationType "First change"
   PeriodicQueries 1
   UpdatePeriod 60
-  m_bDebugLogs 1
   m_bUsePersistence 1
   m_sPersistentObject "PR_PersistObject_SPT_CP_03_C_Sm_06"
   m_aOverrideOptions {

@@ -1,0 +1,285 @@
+GenericEntity Area_USSR_02_Base_Airport_Reinforce_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_bExcludeFromDynamicDespawn 1
+   m_iDynamicDespawnRange 100
+   m_bShowDebugShapesInWorkbench 1
+  }
+ }
+ coords 13967.358 49.567 12453.449
+ Flags 2097155
+ {
+  PR_SpawnTaskTrigger TaskTrg_TaskDeliverSupplies_Jokela2 {
+   coords -9.258 1.182 -15.252
+   Flags 2097155
+   TriggerShapeType Sphere
+   SphereRadius 500
+   DrawShape 1
+   ShapeColor 0.046 0 1 0.078
+   TriggerActivationType "First change"
+   PeriodicQueries 1
+   UpdatePeriod 50
+   m_bDebugLogs 1
+   m_bUsePersistence 1
+   m_sPersistentObject "Pers_TaskDeliverSupplies_Jokela"
+   m_ActivationPresence ANY_CHARACTER
+   m_aIndividualTasks {
+    PR_TaskDetails "{613802B2DA10B658}" {
+     m_sTaskName "TaskDeliverSupplies_Jokela"
+    }
+   }
+  }
+  PR_TaskOptimizerTrigger Opt_TaskDeliverSupplies_Jokela2 {
+   coords 3.592 -0.304 3.3
+   Flags 2097155
+   TriggerShapeType Sphere
+   SphereRadius 30
+   DrawShape 1
+   ShapeColor 0 0.502 0.502 0.098
+   TriggerActivationType "First change"
+   PeriodicQueries 1
+   UpdatePeriod 5
+   m_bDebugLogs 1
+   m_bUsePersistence 1
+   m_sPersistentObject "Pers_Opt_TaskDeliverSupplies_Jokela"
+   m_bNeutralizePersistentObject 1
+   m_aOverrideOptions {
+    PR_OverrideTriggerActivation "{61917DF60E955557}" {
+     m_bOverrideActivationPresence 1
+     m_bActivateIfObjectMissing 1
+     m_sMissingObjectName "Pers_TaskDeliverSupplies_Jokela"
+    }
+   }
+   m_iDelayTimerMin 5
+   m_sTaskName "Opt_TaskDeliverSupplies_Jokela"
+   m_PlayerXPTaskReward "Deliver Supplies (40)"
+   m_bUseTaskFailObject 1
+   m_sTaskFailObject "Pers_Fail_TaskDeliverSupplies_Jokela"
+   m_aRemovePrefabDetails {
+    PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
+     m_aSpecificPrefabNames {
+      "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+     }
+     m_iPrefabCountToRemove 2
+    }
+    PR_RemovePrefabFilter "{61930DD1230AD752}" {
+     m_aSpecificPrefabNames {
+      "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+     }
+     m_iPrefabCountToRemove 3
+    }
+    PR_RemovePrefabFilter "{61964248E5071991}" {
+     m_aSpecificPrefabNames {
+      "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
+     }
+     m_iPrefabCountToRemove 2
+    }
+   }
+   {
+    $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+     Pers_Opt_TaskDeliverSupplies_Jokela3 {
+      coords -12.062 -0.001 -7.016
+      Flags 2097155
+     }
+     Pers_Fail_TaskDeliverSupplies_Jokela3 {
+      coords -12.105 0 -7.254
+      Flags 2097155
+     }
+    }
+   }
+  }
+  GenericEntity PR_PersistObject1 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+   coords -4.054 -0.39 -1.319
+   Flags 2097155
+  }
+  GenericEntity Layer_USSR_02_Base_Airport_Reinforce_01 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   components {
+    SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+     m_SpawnChildren RANDOM_ONE
+    }
+   }
+   coords -43.061 2.809 104.268
+   Flags 2097155
+   {
+    $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+     Layer_USSR_02_Base_Airport_Reinforce_01_01 {
+      components {
+       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+        m_iRandomPercent 80
+       }
+      }
+      coords 35.288 -1.656 -88.193
+      Flags 2097155
+      {
+       GenericEntity SlotAI_USSR_02_Base_Airport_Reinforce_01_01 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sObjectToSpawn "{B05EA49E8FB84829}Prefabs/Systems/AmbientPatrol/Defend_Large/PR_AmbientPatrolSpawnpoint_USSR_Defend_RandomGroup.et"
+          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{61C80B33D471B1D6}" {
+           m_aLayerName {
+            "SlotDefend_USSR_02_Base_Airport_Reinforce_01_01"
+           }
+          }
+          m_eAIGroupFormation Column
+          m_fPerceptionFactor 0.75
+         }
+        }
+        coords -48.429 0.262 79.34
+        Flags 2097155
+        {
+         GenericEntity SlotDefend_USSR_02_Base_Airport_Reinforce_01_01 : "{E123BAC59A9B3D5F}Prefabs/ScenarioFramework/Components/SlotDefend.et" {
+          coords -125.69 -1.42 26.155
+          Flags 2097155
+         }
+        }
+       }
+      }
+     }
+     Layer_USSR_02_Base_Airport_Reinforce_01_02 {
+      components {
+       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+        m_iRandomPercent 66
+       }
+      }
+      coords 49.227 -2.167 -101.079
+      Flags 2097155
+      {
+       GenericEntity SlotAI_USSR_02_Base_Airport_Reinforce_01_02 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sObjectToSpawn "{B05EA49E8FB84829}Prefabs/Systems/AmbientPatrol/Defend_Large/PR_AmbientPatrolSpawnpoint_USSR_Defend_RandomGroup.et"
+          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{61C80B336D6F775B}" {
+           m_aLayerName {
+            "SlotDefend_USSR_02_Base_Airport_Reinforce_01_02"
+           }
+          }
+          m_eAIGroupFormation Column
+          m_fPerceptionFactor 0.75
+         }
+        }
+        coords -46.647 -3.864 -22.674
+        Flags 2097155
+        {
+         GenericEntity SlotDefend_USSR_02_Base_Airport_Reinforce_01_02 : "{E123BAC59A9B3D5F}Prefabs/ScenarioFramework/Components/SlotDefend.et" {
+          coords -16.905 3.217 105.477
+          Flags 2097155
+         }
+        }
+       }
+      }
+     }
+     Layer_USSR_02_Base_Airport_Reinforce_01_03 {
+      components {
+       SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+        m_iRandomPercent 0
+       }
+      }
+      coords 41.047 -2.867 -100.777
+      Flags 2097155
+      {
+       GenericEntity SlotAI_USSR_02_Base_Airport_Reinforce_01_03 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+        components {
+         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+          m_sObjectToSpawn "{001A60534BCA4CA5}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup.et"
+          m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{61C80B337492CFC7}" {
+           m_aLayerName {
+            "SlotDefend_USSR_02_Base_Airport_Reinforce_01_03"
+           }
+          }
+          m_eAIGroupFormation Column
+          m_fPerceptionFactor 0.75
+         }
+        }
+        coords 5.77 -1.87 -111.386
+        Flags 2097155
+        {
+         GenericEntity SlotDefend_USSR_02_Base_Airport_Reinforce_01_03 : "{E123BAC59A9B3D5F}Prefabs/ScenarioFramework/Components/SlotDefend.et" {
+          coords 205.926 3.273 109.074
+          Flags 2097155
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  GenericEntity TaskDeliverVehicles1 : "{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+     m_aActivationActions {
+      SCR_ScenarioFrameworkActionPlaySound "{61634CC387F1B9AC}" {
+       m_sSound "SOUND_HUD_TASK_CREATED"
+      }
+     }
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
+       m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+      }
+      SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
+       m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
+        m_sEntityName "TaskDeliverSupplies_Jokela"
+       }
+      }
+      SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
+       m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {
+        m_sEntityName "Pers_TaskDeliverSupplies_Jokela"
+       }
+      }
+     }
+    }
+   }
+   coords -3.894 0.001 -1.966
+   Flags 2097155
+   {
+    GenericEntity SlotMoveTo_TaskDeliverSupplies_Jokela2 {
+     ID "5E74C90E3ED35D79"
+     components {
+      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+         m_fAreaRadius 30
+         m_aCustomTriggerConditions {
+          SCR_CustomTriggerConditionsSpecificPrefabCount "{5E08A5E0E8C1E186}" {
+           m_aPrefabFilter {
+            SCR_ScenarioFrameworkPrefabFilterCount "{5E2C864E2C9ACE06}" {
+             m_sSpecificPrefabName "{7902C0F57CCACC95}Prefabs/Items/Food/PR_ConsumablesCarrier.et"
+            }
+            SCR_ScenarioFrameworkPrefabFilterCount "{5E2E66CF825C781C}" {
+             m_sSpecificPrefabName "{1F528E76830B4E24}Prefabs/Items/Food/PR_MRE.et"
+             m_bIncludeChildren 1
+            }
+            SCR_ScenarioFrameworkPrefabFilterCount "{61634CCD460A6CE4}" {
+             m_sSpecificPrefabName "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
+             m_bIncludeChildren 1
+             m_iPrefabCount 2
+            }
+           }
+          }
+         }
+         m_bSearchVehicleInventory 0
+        }
+       }
+       m_sTaskTitle "Deliver Supplies Jokela"
+       m_sTaskDescription "Deliver to the town of Jokela<br />"\
+       "2x Consumable Carriers<br />"\
+       "3x MRE<br />"\
+       "2x Jerry Can"
+       m_aActionsOnCreated {
+        SCR_ScenarioFrameworkActionSpawnObjects "{61634CC9E47D5741}" {
+         m_iMaxNumberOfActivations 1
+         m_aNameOfObjectsToSpawnOnActivation {
+          "Layer_TaskDeliverSupplies_AI_Jokela"
+         }
+        }
+       }
+      }
+     }
+     coords 7.128 -0.304 5.033
+     Flags 2097155
+    }
+   }
+  }
+ }
+}

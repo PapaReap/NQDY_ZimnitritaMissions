@@ -20,10 +20,14 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEBD2FDC368}" {
     m_GroupType "Group: Fire Team (4)"
+    m_sGroupID "(RenegadePatrols N)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEB542B99FA}" {
-      m_sSpawnPosition "WP_01_00_Spawn"
+      m_aSpawnPosition {
+       "WP_01_00_Spawn"
+      }
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -221,10 +225,14 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEBD2FDC368}" {
     m_GroupType "Group: AT Team (4)"
+    m_sGroupID "(RenegadePatrols NC)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEB542B99FA}" {
-      m_sSpawnPosition "WP_02_00_Spawn"
+      m_aSpawnPosition {
+       "WP_02_00_Spawn"
+      }
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -402,10 +410,14 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEBD2FDC368}" {
     m_GroupType "Group: Fire Team (4)"
+    m_sGroupID "(RenegadePatrols C)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEB542B99FA}" {
-      m_sSpawnPosition "WP_03_00_Spawn"
+      m_aSpawnPosition {
+       "WP_03_00_Spawn"
+      }
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -619,10 +631,14 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEBD2FDC368}" {
     m_GroupType "Group: Sentry Team (2)"
+    m_sGroupID "(RenegadePatrols SC)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEB542B99FA}" {
-      m_sSpawnPosition "WP_04_00_Spawn"
+      m_aSpawnPosition {
+       "WP_04_00_Spawn"
+      }
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -783,10 +799,14 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{61B93EEBD2FDC368}" {
     m_GroupType "Group: GL Team (2)"
+    m_sGroupID "(RenegadePatrols S)"
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEB542B99FA}" {
-      m_sSpawnPosition "WP_05_00_Spawn"
+      m_aSpawnPosition {
+       "WP_05_00_Spawn"
+      }
       m_bKeepGroupActive 1
+      m_bLogGroupLocation 1
      }
     }
     m_aGroupWaypoints {
@@ -820,7 +840,7 @@ $grp PR_AIPatrolTrigger {
      Hierarchy "{61077CF33C9871EA}" {
      }
     }
-    coords 9.487 -0 -9.67
+    coords 9.487 0 -9.67
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       WP_05_09_Patrol {

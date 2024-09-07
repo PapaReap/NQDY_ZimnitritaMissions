@@ -8,7 +8,7 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
    }
   }
   NavmeshWorldComponent "{5584F30EEFEE1223}" {
-   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
     NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F3B4EE8A}" {
      NavmeshFile "{395CA63E8E456BE7}World/Data/Zimnitrita.nmn"
     }
@@ -23,8 +23,7 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
   }
  }
  coords 14302.834 49.563 12911.522
- "Accepted Road Types" 79
- "Min Road Width" 1.5
+ "Accepted Road Types" 110
  LimitOfSpawnedAIAgents 2000
  "Max number of cached BTs" 40
  m_iActiveAILimit 400
