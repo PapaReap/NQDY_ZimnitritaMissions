@@ -27,6 +27,8 @@ $grp PR_AIPatrolTrigger {
        "WP_01_00_Spawn"
       }
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }
@@ -232,6 +234,8 @@ $grp PR_AIPatrolTrigger {
        "WP_02_00_Spawn"
       }
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }
@@ -417,6 +421,8 @@ $grp PR_AIPatrolTrigger {
        "WP_03_00_Spawn"
       }
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }
@@ -638,6 +644,8 @@ $grp PR_AIPatrolTrigger {
        "WP_04_00_Spawn"
       }
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }
@@ -806,6 +814,8 @@ $grp PR_AIPatrolTrigger {
        "WP_05_00_Spawn"
       }
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }

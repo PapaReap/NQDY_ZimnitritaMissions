@@ -83,10 +83,22 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	protected int m_iGroupMultiplier;
 	/* Courtesy of JeTZz */
 
+	//--- PapaReap >>>
+	[Attribute("0", UIWidgets.EditBox, "Maximum time the group will respawn. If greater than 'Respawn Period' it will pick a random time between the two. (seconds, 0 = no respawn)", "0 inf 1")]
+	protected int m_iRespawnPeriodMaximum;
+	
 	/* Gramps added */
 	[Attribute("0", UIWidgets.EditBox, "How many waves will the group respawn. (0 = no respawn, -1 = infinite respawn)", "-1 inf 1")]
 	protected int m_iRespawnWaves;
+	
+	//--- PapaReap >>>
+	[Attribute("0", UIWidgets.EditBox, "Maximum amount of waves the group respawn. If greater than 'Respawn Waves' it will pick a random amount between the two. (0 = no respawn, -1 = infinite respawn)", "-1 inf 1")]
+	protected int m_iRespawnWavesMaximum;
 
+	//! PR SPAWN PATROL: TELEPORT TO POSITION
+	[Attribute("", desc: "Object name to respawn on. If more than one is used, a random spot will be used. Can be inside a collection also.")]
+	ref array<string> m_aRespawnPosition;
+	
 	[Attribute("0")]
 	protected bool m_bIsVehicleGroup;
 	/* Gramps added */
@@ -200,6 +212,91 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		return header.m_iPlayerCount;
 	}
 
+	//--- PapaReap >>>
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bFirstRun
+	protected bool m_bFirstRun = 1;
+
+	void SetFirstRun(bool firstRun)
+	{
+		m_bFirstRun = firstRun;
+	}
+
+	bool GetFirstRun()
+	{
+		return m_bFirstRun;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Finds closest player from another entity
+	protected IEntity GetClosestPlayerEntity(IEntity entityFrom, int distance)
+	{
+		if (!entityFrom)
+			return null;
+
+		array<int> playerIDs = {};
+		GetGame().GetPlayerManager().GetPlayers(playerIDs);
+
+		IEntity closestEntity;
+		IEntity entityToBeChecked;
+
+		foreach (int playerID : playerIDs)
+		{
+			entityToBeChecked = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
+			if (!entityToBeChecked)
+				continue;
+
+			float actualDistance = vector.DistanceXZ(entityFrom.GetOrigin(), entityToBeChecked.GetOrigin());
+			Print(string.Format("[PR_SpawnPatrol] (GetClosestPlayerEntity) actualDistance: %1", actualDistance), LogLevel.WARNING);
+			if (actualDistance < distance)
+			{
+				closestEntity = entityToBeChecked;
+				distance = actualDistance;
+			}
+		}
+
+		if (!closestEntity)
+			return null;
+
+		return closestEntity;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Get all children for waypoint collection
+	void GetAllChildren(IEntity parent, notnull inout array<IEntity> allChildren)
+	{
+		if (!parent)
+			return;
+
+		IEntity child = parent.GetChildren();
+
+		if (!child)
+			child = parent;
+
+		int childCount = 0;
+		while (child)
+		{
+			childCount = childCount+ 1;
+			allChildren.InsertAt(child, 0);
+			child = child.GetSibling();
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_vSpawnPosition
+	protected vector m_vSpawnPosition;
+	void SetSpawnPosition(vector spawnPosition)
+	{
+		m_vSpawnPosition = spawnPosition;
+	}
+
+	vector GetSpawnPosition()
+	{
+		return m_vSpawnPosition;
+	}
+	
+	//--- PapaReap <<<
+	
 	//------------------------------------------------------------------------------------------------
 	override void SpawnPatrol()
 	{
@@ -208,6 +305,80 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		if (!comp)
 			return;
 
+		if (GetSpawnPosition())
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetSpawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
+		
+		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iMembersAlive: %1", m_iMembersAlive), LogLevel.WARNING);
+		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnWaves: %1", m_iRespawnWaves), LogLevel.WARNING);
+		if (m_iRespawnPeriodMaximum > m_iRespawnPeriod && m_iMembersAlive == -1)
+		{
+			m_iRespawnPeriod = Math.RandomIntInclusive(m_iRespawnPeriod, m_iRespawnPeriodMaximum);
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnPeriod2: %1", m_iRespawnPeriod), LogLevel.WARNING);
+		}
+
+		// set respawn position		
+		if (!GetFirstRun() && m_aRespawnPosition.Count() > 0 && m_iMembersAlive == -1)
+		{
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetFirstRun()2: %1", GetFirstRun()), LogLevel.WARNING);
+			array<IEntity> spawnArray = {};
+			int spawnPositionCount = m_aRespawnPosition.Count();
+			int _i = 0;
+			while (spawnPositionCount > _i)
+			{
+				array<IEntity> spawnpointArray = {};
+				IEntity spHolder = GetGame().GetWorld().FindEntityByName(m_aRespawnPosition.Get(_i));
+
+				GetAllChildren(spHolder, spawnpointArray);
+				foreach (IEntity x : spawnpointArray)
+				{
+					spawnArray.Insert(x);
+				}
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnpointArray: %1", spawnpointArray), LogLevel.WARNING);
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnArray: %1", spawnArray), LogLevel.WARNING);
+				_i++;
+			}
+
+			array<IEntity> filteredSpawnArray = {};
+			if (spawnArray.Count() > 0)
+			{
+				foreach (IEntity x : spawnArray)
+				{
+					IEntity player = GetClosestPlayerEntity(x, 300);
+					if (!player)
+					{
+						filteredSpawnArray.Insert(x);
+					} else
+						Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) Spawn position too close to player for spawn! Checking other positions. : %1", x), LogLevel.WARNING);
+				}
+			}
+
+			if (filteredSpawnArray.Count() > 0)
+			{
+				int randomIndex = filteredSpawnArray.GetRandomIndex();
+				IEntity spawnObject = filteredSpawnArray.Get(randomIndex);
+				SetSpawnPosition(spawnObject.GetOrigin()); //= spawnObject.GetOrigin();
+			}
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) filteredSpawnArray: %1", filteredSpawnArray), LogLevel.WARNING);
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_aRespawnPosition: %1", m_aRespawnPosition), LogLevel.WARNING);
+			
+			if (GetSpawnPosition())
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPosition2(): %1", GetSpawnPosition()), LogLevel.WARNING);
+		}
+		
+		
+		if (GetFirstRun())
+		{
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetFirstRun()1: %1", GetFirstRun()), LogLevel.WARNING);
+			SetFirstRun(false);
+		
+			if (m_iRespawnWavesMaximum > m_iRespawnWaves)
+			{
+				m_iRespawnWaves = Math.RandomIntInclusive(m_iRespawnWaves, m_iRespawnWavesMaximum);
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnWaves2: %1", m_iRespawnWaves), LogLevel.WARNING);
+			}
+		}
+		
+Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPosition3(): %1", GetSpawnPosition()), LogLevel.WARNING);
 		SCR_Faction faction = SCR_Faction.Cast(comp.GetAffiliatedFaction());
 
 		if (!faction)
@@ -254,6 +425,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 				if (!player)
 					continue;
 				distance = vector.DistanceSq(player.GetOrigin(), randomVec);
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) counter attack distance: %1", distance), LogLevel.WARNING);
 				if (distance > 55000)
 					continue;
 				playersVeryNear = true;
@@ -272,6 +444,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 			int limiter = 0;	// Fix for infinite loops
 			while (isUnderwater && limiter < 30 || playersVeryNear && limiter < 30 || !spawnEmpty && limiter < 30)
 			{
+				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) limiter check: %1", limiter), LogLevel.WARNING);
 				randomDir = Vector(Math.RandomFloat(0, 360), 0, 0).AnglesToVector();
 				randomVec = waypointVec + dist * randomDir;
 				spawnEmpty = SCR_WorldTools.FindEmptyTerrainPosition(randomVec, randomVec, 5, 5, 5);
@@ -291,13 +464,14 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 				}
 				limiter++;
 			}
-			if (limiter >= 30)
+			if (limiter >= 30 && (m_aRespawnPosition.Count() == 0)/*PapaReap*/)
 			{
 				Print(string.Format("[CPR] Randomizer limit reached, counter attack skipped!"), LogLevel.WARNING);
 				return;
 			}
 			// Once all checks are passed, set random spawn point
-			params.Transform[3] = randomVec;
+			if (!limiter >= 30)
+				params.Transform[3] = randomVec;
 		}
 		/* << Gramps added */
 
@@ -432,12 +606,32 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 			//--- PapaReap <<<
 		}
 
+		if (GetSpawnPosition())
+		{
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) setting group position GetSpawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
+			m_Group.SetOrigin(GetSpawnPosition());
+		}
+		//SetSpawnPosition(m_Group.GetOrigin());
+		
 		m_Group.AddWaypoint(m_Waypoint);
 
 		if ((m_iRespawnPeriod != 0 /* Gramps added >>> */&& m_iRespawnWaves != 0) || (m_iRespawnPeriod != 0 && m_iRespawnWaves == -1)/* <<< Gramps added */)
 			m_Group.GetOnAgentRemoved().Insert(OnAgentRemoved);
 	}
-
+	
+	//------------------------------------------------------------------------------------------------
+	//!
+	override void DeactivateGroup()
+	{
+		if (m_Group)
+		{
+			SetSpawnPosition(m_Group.GetOrigin());
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (DeactivateGroup) spawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
+			m_bActive = false;
+			m_Group.DeactivateAllMembers();
+		}
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	override void OnAgentRemoved()
 	{
@@ -456,6 +650,10 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		/* <<< Gramps added */
 		m_iMembersAlive = -1;
 		m_bSpawned = false;
+		
+		vector clearPos;
+		SetSpawnPosition(clearPos);
+		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (OnAgentRemoved) GetSpawnPosition()2: %1", GetSpawnPosition()), LogLevel.WARNING);
 	}
 
 	//------------------------------------------------------------------------------------------------

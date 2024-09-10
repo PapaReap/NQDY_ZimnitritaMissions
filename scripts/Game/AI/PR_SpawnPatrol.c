@@ -20,9 +20,6 @@ class PR_SpawnPatrol
 	//! destructor
 	void ~PR_SpawnPatrol()
 	{}
-
-	SCR_AIGroup m_Group;
-
 //	protected int m_iRespawnTimer;// = 0; not used atm
 //	protected int m_iAIMovementType;// = 1; not used atm
 
@@ -44,7 +41,6 @@ class PR_SpawnPatrol
 	void PRSpawnPatrol(
 		int spawnSide,
 		int groupType,
-		//vector triggerPosition,
 		IEntity trigger,
 		array<bool> boolArray,
 		array<array<string>> stringArray,
@@ -57,9 +53,7 @@ class PR_SpawnPatrol
 
 		SetSpawnSide(spawnSide);
 		SetGroupType(groupType);
-		//SetTriggerPosition(triggerPosition);
 		SetTrigger(trigger);
-		//vector spawnPosition = triggerPosition;
 		vector spawnPosition = trigger.GetOrigin();
 		SetSpawnPosition(spawnPosition);
 		vector spawnAngle = trigger.GetAngles();
@@ -87,14 +81,13 @@ class PR_SpawnPatrol
 		SetTeleportAfterSpawn(teleportAfterSpawn);
 		bool neutralizePersistentObjectIfGroupIsDead = boolArray.Get(9);
 		SetNeutralizePersistentObjectIfGroupIsDead(neutralizePersistentObjectIfGroupIsDead);
-		
-		//resetGroupIfIdle
 		bool resetGroupIfIdle = boolArray.Get(10);
 		SetResetGroupIfIdle(resetGroupIfIdle);
-		// string arrays
+
+		//--- String arrays
 		array<string> spawnPositionArray = stringArray.Get(0);
 		SetSpawnPositionArray(spawnPositionArray);
-		
+
 		//make this a method
 		array<IEntity> spawnArray = {};
 		if (spawnPositionArray.Count() > 0)
@@ -105,7 +98,7 @@ class PR_SpawnPatrol
 			{
 				array<IEntity> spawnpointArray = {};
 				IEntity spHolder = GetGame().GetWorld().FindEntityByName(spawnPositionArray.Get(_i));
-				
+
 				GetAllChildren(spHolder, spawnpointArray);
 				foreach (IEntity x : spawnpointArray)
 				{
@@ -125,7 +118,7 @@ class PR_SpawnPatrol
 					{
 						filteredSpawnArray.Insert(x);
 					} else
-						Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) Spawn position too close to player for spawn! Checking other positions. : %1", x), LogLevel.WARNING);
+						Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) Spawn position too close to player for spawn! Checking other positions. : %1", x), LogLevel.WARNING);
 				}
 			}
 
@@ -141,26 +134,25 @@ class PR_SpawnPatrol
 			else
 			{
 				//--- Execute the AI spawning using a delayed call if no positions are good. Will check again in 120 sec
-				Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) No suitable locations to spawn, trying again in 120 seconds."), LogLevel.WARNING);
+				Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) No suitable locations to spawn, trying again in 120 seconds."), LogLevel.WARNING);
 				GetGame().GetCallqueue().CallLater(
 					PRSpawnPatrol,
-					120000, //delay, 2 minutes
+					120000,
 					false,
-					GetSpawnSide(),//spawnSide,
-					groupType,
-					//triggerPosition,
-					trigger,
+					GetSpawnSide(),
+					GetGroupType(),
+					GetTrigger(),
 					boolArray,
 					stringArray,
 					intArray,
-					perceptionFactor,
-					persistentObject
+					GetPerceptionFactorB(),
+					GetPersistentObject()
 				);
-				
+
 				return;
 			}
 		}
-		
+
 		array<string> teleportPosition = stringArray.Get(1);
 		SetTeleportPosition(teleportPosition);
 		array<string> waypointCollection = stringArray.Get(2);
@@ -176,11 +168,11 @@ class PR_SpawnPatrol
 			SetGroupID(groupID);
 		}
 		else
-			SetGroupID("");
-		
+			SetGroupID("No ID Given");
+
 		if (GetDebugLogs())
-			Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) GroupID: %1, spawnPosition: %2, spawnAngle: %3", GetGroupID(), spawnPosition, spawnAngle), LogLevel.NORMAL);
-		
+			Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) GroupID: %1, spawnPosition: %2, spawnAngle: %3", GetGroupID(), GetSpawnPosition(), spawnAngle), LogLevel.NORMAL);
+
 		int rerunCounter = intArray.Get(0);
 		SetRerunCounter(rerunCounter);
 		int respawnTimerMin = intArray.Get(1);
@@ -209,78 +201,76 @@ class PR_SpawnPatrol
 		SetMaxUnitsInGroup(maxUnitsInGroup);
 		int logUpdateInterval = intArray.Get(13);
 		SetLogUpdateInterval(logUpdateInterval);
+		int resetGroupTimer = intArray.Get(14);
+		SetResetGroupTimer(resetGroupTimer);
 
 		// maybe make a custom group count
-		string m_SpawnGroup = GetGroupToSpawn(/*spawnSide, */groupType);
 		if (GetDebugLogs())
-			Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) GetGroupID(): %1, m_SpawnGroup: %1", GetGroupID(), m_SpawnGroup), LogLevel.WARNING);
+			Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) GetGroupID(): %1, m_SpawnGroup: %2", GetGroupID(), GetGroupToSpawn()), LogLevel.WARNING);
 
 		SetPersistentObject(persistentObject);
 
 		//--- Generate the resource
-		Resource resource = GenerateAndValidateResource(m_SpawnGroup);
-
+		Resource resource = GenerateAndValidateResource(GetGroupToSpawn());
 		if (!resource)
 		{
-			Print(("[PR_SpawnPatrol] (PRSpawnPatrol) Unable to load resource for the spawn group: " + m_SpawnGroup), LogLevel.ERROR);
+			Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) Unable to load resource for the spawn group: %1", GetGroupToSpawn()), LogLevel.ERROR);
 			return;
 		}
 
 		if (GetDebugLogs())
-			Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) resource: %1", resource), LogLevel.WARNING);
+			Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) resource: %1", resource), LogLevel.WARNING);
 
 		//--- Generate spawn parameters and spawn the group
-		string specificPrefabName;
-		IEntity patrolVehicle;
 		if (spawnVehicle && prefabArray.Count() > 0)
 		{
-			specificPrefabName = prefabArray.Get(0);
-
+			string specificPrefabName = prefabArray.Get(0);
 			Resource resourceVeh = GenerateAndValidateResource(specificPrefabName);
-			patrolVehicle = SpawnPrefab(resourceVeh, spawnPosition);
+			IEntity patrolVehicle = SpawnPrefab(resourceVeh, GetSpawnPosition());
 			SetPatrolVehicle(patrolVehicle);
-			patrolVehicle.SetAngles(GetSpawnAngle());
+			GetPatrolVehicle().SetAngles(GetSpawnAngle());
 			SetFirstRun(true);
 			if (GetDebugLogs())
-				Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) GetGroupID(): %1, patrolVehicle: %2", GetGroupID(), patrolVehicle), LogLevel.WARNING);
-			
+				Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) GetGroupID(): %1, patrolVehicle: %2", GetGroupID(), GetPatrolVehicle()), LogLevel.WARNING);
+
 		/*	DamageManagerComponent damageComponent = DamageManagerComponent.Cast(patrolVehicle.FindComponent(DamageManagerComponent));
 			// Destroyed?
 			if (damageComponent && damageComponent.GetState() == EDamageState.DESTROYED)
 			{
 				//Deploy(SCR_EMobileAssemblyStatus.DESTROYED);
-				
+
 				//return;
 			}*/
 		}
 
-		m_Group = SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPosition)));
+		SCR_AIGroup group = SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(GetSpawnPosition())));
+		SetGroup(group);
 
-		if (!m_Group)
+		if (!GetGroup())
 		{
 			Print("[PR_SpawnPatrol] (PRSpawnPatrol) Unable to spawn group!", LogLevel.ERROR);
 			return;
 		}
 
-		SetOldVector(m_Group.GetOrigin());
-		
+		SetOldVector(GetGroup().GetOrigin());
+
 		int removeUnitCount = 0;
 
-		if (randomGroupSize)
+		if (GetRandomGroupSize())
 		{
-			int prefabUnitCount = m_Group.m_aUnitPrefabSlots.Count();
+			int prefabUnitCount = GetGroup().m_aUnitPrefabSlots.Count();
 			int unitsToSpawn = prefabUnitCount;
-			if (unitsToSpawn > minUnitsInGroup)
-				unitsToSpawn = minUnitsInGroup;
+			if (unitsToSpawn > GetMinUnitsInGroup())
+				unitsToSpawn = GetMinUnitsInGroup();
 
-			if (maxUnitsInGroup > minUnitsInGroup)
-				unitsToSpawn = Math.RandomIntInclusive(minUnitsInGroup, maxUnitsInGroup);
+			if (GetMaxUnitsInGroup() > GetMinUnitsInGroup())
+				unitsToSpawn = Math.RandomIntInclusive(GetMinUnitsInGroup(), GetMaxUnitsInGroup());
 
 			if (unitsToSpawn < 1)
 				unitsToSpawn = 1;
 
 			if (GetDebugLogs())
-				Print(string.Format("[PRSpawnPatrol] (PRSpawnPatrol) unitsToSpawn: %1", unitsToSpawn), LogLevel.NORMAL);
+				Print(string.Format("[PR_SpawnPatrol] (PRSpawnPatrol) unitsToSpawn: %1", unitsToSpawn), LogLevel.NORMAL);
 
 			if (prefabUnitCount >= unitsToSpawn)
 			{
@@ -291,107 +281,28 @@ class PR_SpawnPatrol
 				unitsToSpawn = unitsToSpawn - prefabUnitCount;
 				while (unitsToSpawn > 0)
 				{
-					m_Group.SetMaxUnitsToSpawn(Math.Min(prefabUnitCount, unitsToSpawn));
-					m_Group.SpawnUnits();
+					GetGroup().SetMaxUnitsToSpawn(Math.Min(prefabUnitCount, unitsToSpawn));
+					GetGroup().SpawnUnits();
 					unitsToSpawn = unitsToSpawn - prefabUnitCount;
 				}
 			}
 		}
 
 		//--- Create waypoints for the group
-		SetGroupWaypoints(m_Group);
-		
+		SetGroupWaypoints();
+
 		//--- For group information, needs a sleep it seems
-		GetGame().GetCallqueue().CallLater(GetGroupAgents, 5000, false, m_Group, removeUnitCount);
+		GetGame().GetCallqueue().CallLater(GetGroupAgents, 5000, false, removeUnitCount);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aStringWaypointCollection
-	protected array<string> m_aStringWaypointCollection;
-	void SetStringWaypointCollection(array<string> stringWaypointCollection)
+	void SetGroupWaypoints()
 	{
-		m_aStringWaypointCollection = stringWaypointCollection;
-		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SetStringWaypointCollection) m_aStringWaypointCollection : %1", m_aStringWaypointCollection), LogLevel.NORMAL);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aStringWaypointCollection
-	protected array<string> GetStringWaypointCollection()
-	{
-		return m_aStringWaypointCollection;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aPrefabArray
-	protected array<string> m_aPrefabArray;
-	void SetPrefabArray(array<string> prefabArray)
-	{
-		m_aPrefabArray = prefabArray;
-		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SetPrefabArray) m_aPrefabArray : %1", m_aPrefabArray), LogLevel.NORMAL);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aPrefabArray
-	protected array<string> GetPrefabArray()
-	{
-		return m_aPrefabArray;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aGroupIDArray
-	protected array<string> m_aGroupIDArray;
-	void SetGroupIDArray(array<string> groupIDArray)
-	{
-		m_aGroupIDArray = groupIDArray;
-		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SetGroupIDArray) m_aGroupIDArray : %1", m_aGroupIDArray), LogLevel.NORMAL);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aGroupIDArray
-	protected array<string> GetGroupIDArray()
-	{
-		return m_aGroupIDArray;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_sGroupID
-	protected string m_sGroupID;
-	void SetGroupID(string groupID)
-	{
-		m_sGroupID = groupID;
-		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SetGroupID) groupID: (%1)", m_sGroupID), LogLevel.NORMAL);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_sGroupID
-	protected string GetGroupID()
-	{
-		return m_sGroupID;
-	}
-
-	void SetGroupWaypoints(SCR_AIGroup groupWP)
-	{
-		bool cycleWaypoints = GetCycleWaypoints();
-		//bool spawnVehicle = GetSpawnVehicle(); // don't think i'll use this, unless I want to respawn? maybe!
-		bool neutralizePersistentObjectIfGroupIsDead = GetNeutralizePersistentObjectIfGroupIsDead();
-
 		array<string> waypointCollection = GetStringWaypointCollection();
-		
-		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) waypointCollection : %1", waypointCollection), LogLevel.NORMAL);
 
-		int rerunCounter = GetRerunCounter();
-		int collectionSortOrder = GetCollectionSortOrder();
-		int waypointSortOrder = GetWaypointSortOrder();
-		int respawnCount = GetRespawnCount();
-		int spawnCollections = GetSpawnCollections();
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) waypointCollection : %1", GetStringWaypointCollection()), LogLevel.NORMAL);
 
 		//--- Create waypoints for the group
-		array<AIWaypoint> cycleWaypointArray = {};
 		array<string> waypointCollectionsArray = {};
 		array<string> collectionsArrayRandom = {};
 
@@ -402,16 +313,16 @@ class PR_SpawnPatrol
 		{
 			int collectionReverseSort = false;
 
-			if (collectionSortOrder == 1) // decending
+			if (GetCollectionSortOrder() == 1) // decending
 			{
 				collectionReverseSort = true;
-			} else if (collectionSortOrder == 2) // random order
+			} else if (GetCollectionSortOrder() == 2) // random order
 			{
 				collectionReverseSort = Math.RandomInt(0, 2);
 			}
 			waypointCollection.Sort(collectionReverseSort);
 
-			if (collectionSortOrder == 3) // random mix
+			if (GetCollectionSortOrder() == 3) // random mix
 			{
 				array<string> tempCollectionsArray = {};
 				foreach (int index, string x : waypointCollection)
@@ -434,24 +345,25 @@ class PR_SpawnPatrol
 				}
 			}
 		}
-		
+
 		if (GetDebugLogs())
-			Print(("[PR_SpawnPatrol] (SetGroupWaypoints) waypointCollectionSort: " + waypointCollection + "  collectionSortOrder: " + collectionSortOrder + "  waypointSortOrder: " + waypointSortOrder), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) waypointCollectionSort: %1  collectionSortOrder: %2  waypointSortOrder: %3",
+			waypointCollection, GetCollectionSortOrder(), GetWaypointSortOrder()), LogLevel.NORMAL);
 
 		if (waypointCollection.Count() > 0)
 		{
-			if (spawnCollections == 0)
+			if (GetSpawnCollections() == 0)
 			{
 				waypointCollectionsArray = waypointCollection;
 			}
-			else if (spawnCollections == 1)
+			else if (GetSpawnCollections() == 1)
 			{
 				//--- RANDOM ONE
 				int randomIndex = waypointCollection.GetRandomIndex();
 				string name = waypointCollection.Get(randomIndex);
 				waypointCollectionsArray.Insert(name);
 			}
-			else if (spawnCollections == 2)
+			else if (GetSpawnCollections() == 2)
 			{
 				//RAMDOM 25%
 				array<string> tempArray = waypointCollection;
@@ -459,8 +371,8 @@ class PR_SpawnPatrol
 				float _i = count * 0.75;
 				if (GetDebugLogs())
 				{
-					Print(("PR float 1 _i: " + _i), LogLevel.NORMAL);
-					Print(("PR count: " + count), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 1 _i: %1", _i), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR count: %1", count), LogLevel.NORMAL);
 				}
 				float _c = _i;
 
@@ -476,12 +388,12 @@ class PR_SpawnPatrol
 						exitLoop = true;
 					}
 					if (GetDebugLogs())
-						Print(("PR float 2 _i: " + _i), LogLevel.NORMAL);
+						Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 2 _i: %1", _i), LogLevel.NORMAL);
 				}
 				if (waypointCollectionsArray.Count() == 0)
 					waypointCollectionsArray = waypointCollection;
 			}
-			else if (spawnCollections == 3)
+			else if (GetSpawnCollections() == 3)
 			{
 				//RAMDOM 50%
 				array<string> tempArray = waypointCollection;
@@ -489,8 +401,8 @@ class PR_SpawnPatrol
 				float _i = count * 0.50;
 				if (GetDebugLogs())
 				{
-					Print(("PR float 1 _i: " + _i), LogLevel.NORMAL);
-					Print(("PR count: " + count), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 1 _i: %1", _i), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR count: %1", count), LogLevel.NORMAL);
 				}
 				float _c = _i;
 				while (count > _i && !exitLoop)
@@ -505,12 +417,12 @@ class PR_SpawnPatrol
 						exitLoop = true;
 					}
 					if (GetDebugLogs())
-						Print(("PR float 2 _i: " + _i), LogLevel.NORMAL);
+						Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 2 _i: %1", _i), LogLevel.NORMAL);
 				}
 				if (waypointCollectionsArray.Count() == 0)
 					waypointCollectionsArray = waypointCollection;
 			}
-			else if (spawnCollections == 4)
+			else if (GetSpawnCollections() == 4)
 			{
 				//RAMDOM 75%
 				array<string> tempArray = waypointCollection;
@@ -518,8 +430,8 @@ class PR_SpawnPatrol
 				float _i = count * 0.25;
 				if (GetDebugLogs())
 				{
-					Print(("PR float 1 _i: " + _i), LogLevel.NORMAL);
-					Print(("PR count: " + count), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 1 _i: %1", _i), LogLevel.NORMAL);
+					Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR count: %1", count), LogLevel.NORMAL);
 				}
 				float _c = _i;
 				while (count > _i && !exitLoop)
@@ -534,7 +446,7 @@ class PR_SpawnPatrol
 						exitLoop = true;
 					}
 					if (GetDebugLogs())
-						Print(("PR float 2 _i: " + _i), LogLevel.NORMAL);
+						Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) PR float 2 _i: %1", _i), LogLevel.NORMAL);
 				}
 				if (waypointCollectionsArray.Count() == 0)
 					waypointCollectionsArray = waypointCollection;
@@ -566,21 +478,21 @@ class PR_SpawnPatrol
 						tempNamesArray.Insert(name);
 					}
 
-					if (waypointSortOrder == 1)
+					if (GetWaypointSortOrder() == 1)
 						waypointReverseSort = 1;
 
-					if (waypointSortOrder == 2 && tempNamesArray.Count() >= 1)
+					if (GetWaypointSortOrder() == 2 && tempNamesArray.Count() >= 1)
 						waypointReverseSort = Math.RandomInt(0, 1);
 
 					tempNamesArray.Sort(waypointReverseSort);
 
-					foreach (int index, string x : tempNamesArray)
+					foreach (string x : tempNamesArray)
 					{
 						namesArray.Insert(x);
 					}
 
 					//--- Randomize, mix waypoint names
-					if (waypointSortOrder == 3 && namesArray.Count() >= 1)
+					if (GetWaypointSortOrder() == 3 && namesArray.Count() >= 1)
 					{
 						array<string> namesArrayRandom = {};
 						while (namesArray.Count() >= 1)
@@ -591,11 +503,11 @@ class PR_SpawnPatrol
 							namesArray.Remove(randomIndex);
 
 							if (GetDebugLogs())
-								Print(("[PR_SpawnPatrol] (SetGroupWaypoints) randomIndex Index: " + randomIndex + " Name: " + name), LogLevel.NORMAL);
+								Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) randomIndex Index: %1  Name: %2", randomIndex, name), LogLevel.NORMAL);
 						}
 						namesArray = namesArrayRandom;
 						if (GetDebugLogs())
-							Print(("[PR_SpawnPatrol] (SetGroupWaypoints) Randomized namesArray: " + namesArray), LogLevel.NORMAL);
+							Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) Randomized namesArray: %1", namesArray), LogLevel.NORMAL);
 					}
 
 					_i++;
@@ -605,94 +517,65 @@ class PR_SpawnPatrol
 		//--- Sorting waypoint names complete
 
 		//--- Add Waypoints to the group
+		array<AIWaypoint> cycleWaypointArray = {};
+
 		foreach (int index, string x : namesArray)
 		{
 			string name = namesArray.Get(index);
 			AIWaypoint waypoint = AIWaypoint.Cast(GetGame().GetWorld().FindEntityByName(name));
 
-			groupWP.AddWaypointToGroup(waypoint);
+			GetGroup().AddWaypointToGroup(waypoint);
 			cycleWaypointArray.Insert(waypoint);
 			if (GetDebugLogs())
-				Print(("[PR_SpawnPatrol] (SetGroupWaypoints) cycleWaypointArray Index: " + index + " Name: " + name), LogLevel.NORMAL);
+				Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) cycleWaypointArray Index: %1  Name: %2", index, name), LogLevel.NORMAL);
 		}
 
 		//--- Set waypoints to cycle if enabled
 		if (cycleWaypointArray.IsEmpty() && GetDebugLogs())
 			Print("[PR_SpawnPatrol] (SetGroupWaypoints) Cycle waypoints were empty", LogLevel.NORMAL);
 
-		if (!cycleWaypointArray.IsEmpty() && cycleWaypoints)
+		if (!cycleWaypointArray.IsEmpty() && GetCycleWaypoints())
 		{
 			cycleWaypointArray.Insert(cycleWaypointArray[0]);
-			AddCycleWaypoint(groupWP, cycleWaypointArray.Get(0).GetOrigin(), cycleWaypointArray, rerunCounter);
+			AddCycleWaypoint(GetGroup(), cycleWaypointArray.Get(0).GetOrigin(), cycleWaypointArray);
 			if (GetDebugLogs())
-				Print(("[PR_SpawnPatrol] (SetGroupWaypoints) CycleWaypoints: " + cycleWaypointArray), LogLevel.NORMAL);
+				Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) CycleWaypoints: %1", cycleWaypointArray), LogLevel.NORMAL);
 		}
+
+		SetWaypointCollection(waypointCollection);
 
 		//--- Stuff to do after group death
-		if (respawnCount != 0)
-		{
-			Print(string.Format("[PR_SpawnPatrol] (SetGroupWaypoints) Setting Group respawn parameters. respawnCount: %1", respawnCount), LogLevel.WARNING);
-			SetWaypointCollection(waypointCollection);
-			SetRespawnCount(respawnCount);
-			groupWP.GetOnEmpty().Insert(AfterGroupIsEmpty);
-		}
-		else
-		{
-			if (GetDebugLogs())
-				Print(("[PR_SpawnPatrol] (SetGroupWaypoints) neutralizePersistentObjectIfGroupIsDead: " + neutralizePersistentObjectIfGroupIsDead), LogLevel.WARNING);
-			if (neutralizePersistentObjectIfGroupIsDead)
-				groupWP.GetOnEmpty().Insert(AfterGroupIsEmpty);
-		}
+		GetGroup().GetOnEmpty().Insert(AfterGroupIsEmpty);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Spawn Prefab
-	//protected void SpawnPrefab(Resource resource, vector spawnPos)
-	protected IEntity SpawnPrefab(Resource resource, vector spawnPos)
+	//! CREATE GROUP CYCLE WAYPOINT	credit to Kingsley & Zelik <discord enfusion_scripting> for ideas
+	void AddCycleWaypoint(SCR_AIGroup groupCW, vector waypointPosition, array<AIWaypoint> cycleWaypointArray)
 	{
-		//StaticModelEntity spawnedPrefab = StaticModelEntity.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos)));
-		IEntity spawnedPrefab = GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos));
+		Resource resource = Resource.Load("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et");
+		AIWaypointCycle waypoint = AIWaypointCycle.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(waypointPosition)));
+		waypoint.SetWaypoints(cycleWaypointArray);
+		waypoint.SetRerunCounter(GetRerunCounter());
+		groupCW.AddWaypoint(waypoint);
 		if (GetDebugLogs())
-			Print(string.Format("[PR_SpawnPatrol] (SpawnPrefab) spawnedPrefab: %1", spawnedPrefab), LogLevel.WARNING);
-		return spawnedPrefab;
+			Print(string.Format("[PR_SpawnPatrol] (AddCycleWaypoint) Added cycle waypoint to groupID: %1, Waypoint Queue: %2", GetGroupID(), cycleWaypointArray), LogLevel.NORMAL);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! Teleports units to position after spawning, useful for placing over water, in buildings, etc...
-	void TeleportObject(string whatToMove, string whereToMove)
+	//! Gets GetGroup() agents
+	void GetGroupAgents(int removeUnitCount)
 	{
-		IEntity objectToTeleport = GetGame().GetWorld().FindEntityByName(whatToMove);
-		IEntity objectToTeleportTo = GetGame().GetWorld().FindEntityByName(whereToMove);
-		vector position = objectToTeleportTo.GetOrigin();
-		if (GetDebugLogs())
-			Print(("[PR_SpawnPatrol] (TeleportObject) objectToTeleport: " + objectToTeleport + " objectToTeleportTo: " + objectToTeleportTo + " position: " + position), LogLevel.NORMAL);
-		objectToTeleport.SetOrigin(position)
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! Gets groupGA agents
-	void GetGroupAgents(SCR_AIGroup groupGA, int removeUnitCount)
-	{
-		if (!groupGA)
+		if (!GetGroup())
 			return;
 
-		//--- Create waypoints for the group
-	//	SetGroupWaypoints(groupGA);
-
-		bool keepGroupActive = GetKeepGroupActive();
-
-		// teleport after spawn
-		bool teleportAfterSpawn = GetTeleportAfterSpawn();
+		//--- Teleport after spawn
 		array<string> teleportPosition = GetTeleportPosition();
-
-		int teleportSortOrder = GetTeleportSortOrder();
 		string whereToMove = "";
-
 		array<AIAgent> agents = {};
-		groupGA.GetAgents(agents);
+		GetGroup().GetAgents(agents);
 		if (GetDebugLogs())
 			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) removeUnitCount: %1", removeUnitCount), LogLevel.NORMAL);
-		
+
 		if (removeUnitCount > 0 && agents.Count() > removeUnitCount)
 		{
 			int i = 0;
@@ -711,21 +594,19 @@ class PR_SpawnPatrol
 			}
 
 			agents.Clear();
-			groupGA.GetAgents(agents);
+			GetGroup().GetAgents(agents);
 			if (GetDebugLogs())
 				Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) agents.Count(): %1", agents.Count()), LogLevel.NORMAL);
 		}
 
-		IEntity patrolVehicle;
 		if (GetSpawnVehicle())
 		{
-			patrolVehicle = GetPatrolVehicle();
 			array<string> groupVehicles = {};
-			string vehicle = patrolVehicle.ToString();
+			string vehicle = GetPatrolVehicle().ToString();
 			groupVehicles.Insert(vehicle);
-			groupGA.SetGroupVehicles(groupVehicles);
+			GetGroup().SetGroupVehicles(groupVehicles);
 
-			BaseCompartmentManagerComponent slotCompMan = BaseCompartmentManagerComponent.Cast(patrolVehicle.FindComponent(BaseCompartmentManagerComponent));
+			BaseCompartmentManagerComponent slotCompMan = BaseCompartmentManagerComponent.Cast(GetPatrolVehicle().FindComponent(BaseCompartmentManagerComponent));
 			array<BaseCompartmentSlot> vehicleCompartments = {};
 			int spaces = slotCompMan.GetCompartments(vehicleCompartments);
 			for (int j = 0; (j < agents.Count() && spaces > j); j++)
@@ -741,57 +622,44 @@ class PR_SpawnPatrol
 						if (GetDebugLogs())
 							Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) slot: %1", slot), LogLevel.NORMAL);
 						if (slot)
-							CAComp.GetInVehicle(patrolVehicle, slot, true, -1, ECloseDoorAfterActions.INVALID, false);
+							CAComp.GetInVehicle(GetPatrolVehicle(), slot, true, -1, ECloseDoorAfterActions.INVALID, false);
 					}
 				}
 			}
 		}
 
-		AIWaypoint currentWaypoint = groupGA.GetCurrentWaypoint(); // works
+		AIWaypoint currentWaypoint = GetGroup().GetCurrentWaypoint();
+		int groupSize = GetGroup().GetAgentsCount();
 		if (GetDebugLogs())
-			Print(("[PR_SpawnPatrol] (GetGroupAgents) currentWaypoint: " + currentWaypoint), LogLevel.NORMAL);
+		{
+			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) currentWaypoint: %1", currentWaypoint), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) groupSize: %1", groupSize), LogLevel.NORMAL);
+		}
 
-		int groupSize = groupGA.GetAgentsCount();
-		if (GetDebugLogs())
-			Print(("[PR_SpawnPatrol] (GetGroupAgents) groupSize: " + groupSize), LogLevel.NORMAL);
-
-		// Behaviors
-		int skill = GetAISkillB();
-		int combatType = GetCombatTypeB();
-		int groupFormation = GetGroupFormationB();
-		float perceptionFactor = GetPerceptionFactorB();
-		string m_sPath = "$EnfusionPersistenceFramework:Scripts/Game/EPF_PersistenceComponent.c";
-		
-	//	if (FileIO.FileExists(m_sPath))
-	//	{
-	//		bool m_bEPF_ModExist = false;
-			//EPF_PersistenceComponent persistence = EPF_PersistenceComponent.Cast(entity.FindComponent(EPF_PersistenceComponent));
-	//	}
-
-		if (teleportAfterSpawn)
+		if (GetTeleportAfterSpawn())
 		{
 			whereToMove = teleportPosition.Get(0);
 			if (GetDebugLogs())
-				Print(("[PR_SpawnPatrol] (GetGroupAgents) whereToMove: " + whereToMove), LogLevel.NORMAL);
+				Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) whereToMove: %1", whereToMove), LogLevel.NORMAL);
 
 			if (teleportPosition.Count() > 0 && teleportPosition.Count() >= 2)
 			{
 				int teleportReverseSort = false;
 
-				if (teleportSortOrder == 1) // decending
+				if (GetTeleportSortOrder() == 1) // decending
 				{
 					teleportReverseSort = true;
-				} else if (teleportSortOrder == 2) // random order
+				} else if (GetTeleportSortOrder() == 2) // random order
 				{
 					teleportReverseSort = Math.RandomInt(0, 2);
 				}
 				teleportPosition.Sort(teleportReverseSort);
 
-				// Match teleport array count to agents count to allow for enough positions
-				if (teleportPosition.Count() < groupGA.GetAgentsCount())
+				//--- Match teleport array count to agents count to allow for enough positions
+				if (teleportPosition.Count() < GetGroup().GetAgentsCount())
 				{
 					int _i = 0;
-					while (teleportPosition.Count() < groupGA.GetAgentsCount())
+					while (teleportPosition.Count() < GetGroup().GetAgentsCount())
 					{
 						string name = teleportPosition.Get(_i);
 						teleportPosition.Insert(name);
@@ -799,7 +667,7 @@ class PR_SpawnPatrol
 					}
 				}
 
-				if (teleportSortOrder == 3) // random mix
+				if (GetTeleportSortOrder() == 3) // random mix
 				{
 					array<string> tempTeleportArray = {};
 					foreach (int index, string x : teleportPosition)
@@ -822,7 +690,7 @@ class PR_SpawnPatrol
 					}
 				}
 
-				if (teleportSortOrder == 4)
+				if (GetTeleportSortOrder() == 4)
 				{
 					int randomIndex = teleportPosition.GetRandomIndex();
 					whereToMove = teleportPosition.Get(randomIndex);
@@ -840,9 +708,9 @@ class PR_SpawnPatrol
 			string agentName = agentEntity.GetName();
 			if (!agentName)
 			{
-				if (teleportAfterSpawn)
+				if (GetTeleportAfterSpawn())
 				{
-					if ((teleportPosition.Count() > 1) && (!teleportSortOrder == 4))
+					if ((teleportPosition.Count() > 1) && (!GetTeleportSortOrder() == 4))
 					{
 						whereToMove = teleportPosition.Get(index);
 					}
@@ -851,7 +719,7 @@ class PR_SpawnPatrol
 					agentEntity.SetName(agentName);
 					GetGame().GetCallqueue().CallLater(TeleportObject, 2000, false, agentName, whereToMove);
 					if (GetDebugLogs())
-						Print(("[PR_SpawnPatrolTrigger] (GetGroupAgents) agentName: " + agentName), LogLevel.NORMAL);
+						Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) agentName: %1", agentName), LogLevel.NORMAL);
 				}
 			}
 
@@ -860,9 +728,9 @@ class PR_SpawnPatrol
 			EAICombatType aiCombatType;
 			if (combatComponent)
 			{
-				combatComponent.SetAISkill(skill);
-				combatComponent.SetCombatType(combatType);
-				combatComponent.SetPerceptionFactor(perceptionFactor);
+				combatComponent.SetAISkill(GetAISkillB());
+				combatComponent.SetCombatType(GetCombatTypeB());
+				combatComponent.SetPerceptionFactor(GetPerceptionFactorB());
 
 				aiSkill = combatComponent.GetAISkill();
 				aiCombatType = combatComponent.GetCombatType();
@@ -878,159 +746,141 @@ class PR_SpawnPatrol
 		}
 
 		// Set formation
-		AIFormationComponent formComp = AIFormationComponent.Cast(groupGA.FindComponent(AIFormationComponent));
+		AIFormationComponent formComp = AIFormationComponent.Cast(GetGroup().FindComponent(AIFormationComponent));
 		if (!formComp)
 		{
 			Print(string.Format("[PR_SpawnPatrol] (GetGroupAgents) ScenarioFramework Action: AI Formation Component not found for Action %1.", this), LogLevel.ERROR);
 			return;
 		}
-		formComp.SetFormation(SCR_Enum.GetEnumName(SCR_EAIGroupFormation, groupFormation));
+		formComp.SetFormation(SCR_Enum.GetEnumName(SCR_EAIGroupFormation, GetGroupFormationB()));
 
-		array<int> behaviorArray = {skill, combatType, groupFormation};
+		//array<int> behaviorArray = {GetAISkillB(), GetCombatTypeB(), GetGroupFormationB()}; // unused atm
 
-		if (keepGroupActive || GetLogGroupLocation())
-			GetGame().GetCallqueue().CallLater(KeepGroupActive, 60000, true, groupGA, agents);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iKGACounter
-	protected int m_iKGACounter = 0;
-	void SetKGACounter(int counter)
-	{
-		m_iKGACounter = counter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iKGACounter;
-	int GetKGACounter()
-	{
-		return m_iKGACounter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iLogUpdateCounter
-	protected int m_iLogUpdateCounter = 0;
-	void SetLogUpdateCounter(int logUpdateCounter)
-	{
-		m_iLogUpdateCounter = logUpdateCounter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iLogUpdateCounter;
-	int GetLogUpdateCounter()
-	{
-		return m_iLogUpdateCounter;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iGroupIdleCounter
-	protected int m_iGroupIdleCounter = 0;
-	void SetGroupIdleCounter(int groupIdleCounter)
-	{
-		m_iGroupIdleCounter = groupIdleCounter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iGroupIdleCounter;
-	int GetGroupIdleCounter()
-	{
-		return m_iGroupIdleCounter;
+		if (GetKeepGroupActive() || GetLogGroupLocation() || (GetResetGroupIfIdle() && (!GetResetGroupTimer() <= 0)))
+			GetGame().GetCallqueue().CallLater(KeepGroupActive, 60000, true, agents);
 	}
 
 	//------------------------------------------------------------------------------------------------
 	//! Keeps group active, even when no near player in area
-	void KeepGroupActive(SCR_AIGroup kgaGroup, array<AIAgent> agents)
+	void KeepGroupActive(array<AIAgent> agents)
 	{
-		if (!kgaGroup || !agents || agents.Count() == 0)
-		{
-			GetGame().GetCallqueue().Remove(KeepGroupActive);
-			return;
-		}
-
-		AIAgent leader = kgaGroup.GetLeaderAgent();
+		AIAgent leader = GetGroup().GetLeaderAgent();
 		if (!leader)
 			return;
 
 		int lod = leader.GetLOD();
-		
-		string groupID = GetGroupID();
-		if (groupID == "")
-			groupID = "No ID Given";
-		
 		int playerCount = GetGame().GetPlayerManager().GetPlayerCount();
 
 		// maybe get idle check and not moving check, maybe store waypoints to restore after player returns? check cycle waypoints
-		// maybe kill and cleanup non moving if not supposed to be, check for nearby players first
-		if (GetLogGroupLocation() && playerCount > 0)
+		if ((GetLogGroupLocation() || (GetResetGroupIfIdle() && (!GetResetGroupTimer() <= 0))) && playerCount > 0)
 		{
+			vector oldPos = GetOldVector();
+			vector pos = GetGroup().GetOrigin();
+			float distance = vector.DistanceXZ(oldPos, pos);
+			AIWaypoint currentWaypoint = GetGroup().GetCurrentWaypoint();
+			float wpDistance = 0;
+			if (currentWaypoint)
+				wpDistance = vector.DistanceXZ(currentWaypoint.GetOrigin(), GetGroup().GetOrigin());
+			array<AIWaypoint> groupWaypoints = {};
+			int waypointCount = GetGroup().GetWaypoints(groupWaypoints);
+
 			int logUpdateCounter = GetLogUpdateCounter();
 			SetLogUpdateCounter(logUpdateCounter + 1);
-Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %1  GetLogUpdateInterval(): %2", GetLogUpdateCounter(), GetLogUpdateInterval()), LogLevel.ERROR);
+
+			//--- Print to logs group info
 			if (GetLogUpdateCounter() >= GetLogUpdateInterval())
 			{
 				if (lod < 10)
 				{
-					vector oldPos = GetOldVector();
-					vector pos = kgaGroup.GetOrigin();
-					float distance = vector.DistanceXZ(oldPos, pos);
-					
-					AIWaypoint currentWaypoint = kgaGroup.GetCurrentWaypoint();
-					
 					if (currentWaypoint)
 					{
-						float wpDistance = vector.DistanceXZ(currentWaypoint.GetOrigin(), kgaGroup.GetOrigin());
-						array<AIWaypoint> gWaypoints = {};
+						int gridX, gridZ;
+						SCR_MapEntity.GetGridPos(pos, gridX: gridX, gridZ: gridZ);
 
-						int waypointCount = kgaGroup.GetWaypoints(gWaypoints);
-						if (GetDebugLogs())
+						string wpName = currentWaypoint.GetName();
+						vector wpPos = currentWaypoint.GetOrigin();
+						int wpGridX, wpGridZ;
+						SCR_MapEntity.GetGridPos(wpPos, gridX: wpGridX, gridZ: wpGridZ);
+
+						string contName = "Unknown";
+						EntityPrefabData prefabData = currentWaypoint.GetPrefabData();
+						if (prefabData)
 						{
-							//Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: %1, distance to: %2, current waypoint: %3", groupID, wpDistance, currentWaypoint), LogLevel.WARNING);
-							if (gWaypoints.Count() > 0)
-							{
-								int gridX, gridZ;
-								SCR_MapEntity.GetGridPos(pos, gridX: gridX, gridZ: gridZ);
-								
-								string wpName = currentWaypoint.GetName();
-								vector wpPos = currentWaypoint.GetOrigin();
-								int wpGridX, wpGridZ;
-								SCR_MapEntity.GetGridPos(wpPos, gridX: wpGridX, gridZ: wpGridZ);
-								
-								string contName = "Unknown";
-								EntityPrefabData prefabData = currentWaypoint.GetPrefabData();
-								if (prefabData)
-								{
-									BaseContainer cont = prefabData.GetPrefab();
-									contName = cont.GetName();
-								}
-								
-								Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1)  Grid:(0%2,0%3)  Distance traveled:(%4)  Waypoint count:(%5)  Current waypoint:(%6) Grid:(0%7,0%8)   %9",
-								groupID, gridX, gridZ, distance, gWaypoints.Count(), wpName, wpGridX, wpGridZ, contName), LogLevel.WARNING);
-							}
+							BaseContainer cont = prefabData.GetPrefab();
+							contName = cont.GetName();
 						}
+
+						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1) Grid:(0%2,0%3),  Distance traveled:(%4),  Current waypoint:(%5) Grid:(0%6,0%7),  Waypoint count:(%8),  %9",
+						GetGroupID(), gridX, gridZ, distance, wpName, wpGridX, wpGridZ, groupWaypoints.Count(), contName), LogLevel.WARNING);
 					} else
-						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1), No Current Waypoint found!", groupID), LogLevel.ERROR);
-					
-					SetOldVector(pos);
-				} else
-					Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1) is inactive.", groupID), LogLevel.NORMAL);
-				
+						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1), No Current Waypoint found!", GetGroupID()), LogLevel.WARNING);
+				}
+
 				SetLogUpdateCounter(0);
 			}
+
+			//--- Reset group if stuck or idle too long
+			if (GetResetGroupIfIdle() && (!GetResetGroupTimer() <= 0))
+			{
+				int groupIdleCounter = GetGroupIdleCounter();
+				if (lod < 10)
+				{
+					if (distance == 0)
+						SetGroupIdleCounter(groupIdleCounter + 1);
+					else
+						SetGroupIdleCounter(0);
+				}
+
+				if (GetGroupIdleCounter() >= GetResetGroupTimer())
+				{
+					array<IEntity> filteredAgentArray = {};
+
+					foreach (int index, AIAgent agent : agents)
+					{
+						IEntity agentToCheck = agents.Get(index).GetControlledEntity();
+
+						IEntity player = GetClosestPlayerEntity(agentToCheck, 400);
+						if (player)
+							filteredAgentArray.Insert(agentToCheck);
+					}
+
+					if (filteredAgentArray.Count() == 0)
+					{
+						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1) Current waypoint: %2", GetGroupID(), currentWaypoint), LogLevel.WARNING);
+						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1) was inactive too long, resetting group!!!", GetGroupID()), LogLevel.WARNING);
+
+						foreach (AIAgent agent : agents)
+						{
+							KillUnit(agent);
+							SCR_EntityHelper.DeleteEntityAndChildren(agent);
+						}
+
+						if (GetPatrolVehicle())
+							SCR_EntityHelper.DeleteEntityAndChildren(GetPatrolVehicle());
+
+						return;
+					}
+					else
+					{
+						SetGroupIdleCounter(GetResetGroupTimer() - 1);
+						Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1) was inactive too long, but player too close to reset. Will try next round!!!", GetGroupID()), LogLevel.WARNING);
+					}
+				}
+			}
+
+			SetOldVector(pos);
 		}
 
 		if (!GetKeepGroupActive())
-		{
 			return;
-		}
-		
-		bool suspendIfNoPlayers = GetSuspendIfNoPlayers();
+
 		bool firstRun = false;
 
-		if (playerCount == 0 && suspendIfNoPlayers)
+		if (playerCount == 0 && GetSuspendIfNoPlayers())
 		{
 			if (GetKGACounter() >= 10)
 			{
-				Print(string.Format("[PR_SpawnPatrol]  (KeepGroupActive) playerCount: %1  Suspending group: (%2)", playerCount, groupID), LogLevel.WARNING);
+				Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) playerCount: %1  Suspending groupID: (%2)", playerCount, GetGroupID()), LogLevel.WARNING);
 				m_iKGACounter = 0;
 				SetKGACounter(m_iKGACounter);
 			}
@@ -1046,7 +896,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 						agent.AllowMaxLOD();
 					}
 				}
-				Print(string.Format("[PR_SpawnPatrol]  (KeepGroupActive) groupID: (%1)  Adjusting LOD to AllowMaxLOD()", groupID), LogLevel.WARNING);
+				Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1)  Adjusting LOD to AllowMaxLOD()", GetGroupID()), LogLevel.WARNING);
 			}
 		}
 		else
@@ -1062,26 +912,115 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 					}
 				}
 				SetFirstRun(false);
-				Print(string.Format("[PR_SpawnPatrol]  (KeepGroupActive) groupID: (%1)  Adjusting LOD to PreventMaxLOD()", groupID), LogLevel.WARNING);
+				Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) groupID: (%1)  Adjusting LOD to PreventMaxLOD()", GetGroupID()), LogLevel.WARNING);
 			}
 		}
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! sets m_bFirstRun
-	protected bool m_bFirstRun;
-	void SetFirstRun(bool firstRun)
+	//! What to do after all groupA members are dead
+	void AfterGroupIsEmpty(SCR_AIGroup group)
 	{
-		m_bFirstRun = firstRun;
+		GetGame().GetCallqueue().Remove(KeepGroupActive);
+
+		Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : groupID: (%1)  Starting new group session...", GetGroupID()), LogLevel.WARNING);
+		//if (!Replication.IsRunning())
+		if (!Replication.IsRunning() && (RplSession.Mode() == RplMode.Dedicated)) // this needs testing on server
+		{
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : groupID: (%1)  Ending session...", GetGroupID()), LogLevel.WARNING);
+			return;
+		}
+
+		if (GetNeutralizePersistentObjectIfGroupIsDead())
+		{
+			if (GetPersistentObject())
+			{
+				Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : persistentObject: %1", GetPersistentObject().GetName()), LogLevel.WARNING);
+				KillUnit(GetPersistentObject());
+				SCR_EntityHelper.DeleteEntityAndChildren(GetPersistentObject());
+			}
+		}
+
+		if (GetRespawnCount() == 0)
+		{
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : groupID: (%1)  No respawns available!", GetGroupID()), LogLevel.WARNING);
+			return;
+		}
+
+		SetRespawnCount(GetRespawnCount() - 1);
+
+		array<bool> boolArray = {
+			GetCycleWaypoints(),							// 0
+			GetDebugLogs(),									// 1
+			GetRandomRespawnTimer(),						// 2
+			GetRandomGroupSize(),							// 3
+			GetKeepGroupActive(),							// 4
+			GetLogGroupLocation(),							// 5
+			GetSuspendIfNoPlayers(),						// 6
+			GetSpawnVehicle(),	 							// 7
+			GetTeleportAfterSpawn(),						// 8
+			GetNeutralizePersistentObjectIfGroupIsDead(),	// 9
+			GetResetGroupIfIdle()							// 10
+		};
+
+		array<array<string>> stringArray = {
+			GetSpawnPositionArray(),	// 0
+			GetTeleportPosition(),		// 1
+			GetWaypointCollection(),	// 2
+			GetPrefabArray(),			// 3
+			GetGroupIDArray()			// 4
+		};
+
+		array<int> intArray = {
+			GetRerunCounter(),			// 0
+			GetRespawnTimerMin(),		// 1
+			GetRespawnTimerMax(),		// 2
+			GetRespawnCount(),			// 3
+			GetTeleportSortOrder(),		// 4
+			GetCollectionSortOrder(),	// 5
+			GetWaypointSortOrder(),		// 6
+			GetSpawnCollections(),		// 7
+			GetAISkillB(),				// 8
+			GetCombatTypeB(),			// 9
+			GetGroupFormationB(),		// 10
+			GetMinUnitsInGroup(),		// 11
+			GetMaxUnitsInGroup(),		// 12
+			GetLogUpdateInterval(),		// 13
+			GetResetGroupTimer()		// 14
+		};
+
+		int delay = GetRespawnTimerMin() * 1000;
+		if (GetRandomRespawnTimer())
+			delay = Math.RandomInt(GetRespawnTimerMin() * 1000, GetRespawnTimerMax() * 1000);
+
+		if (GetDebugLogs())
+		{
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) spawnSide: %1", GetSpawnSide()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) groupType: %1", GetGroupType()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) trigger: %1", GetTrigger()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) boolArray: %1", boolArray), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) stringArray: %1", stringArray), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) intArray: %1", intArray), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) perceptionFactor: %1", GetPerceptionFactorB()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) persistentObject: %1", GetPersistentObject()), LogLevel.NORMAL);
+		}
+
+		//--- Execute the AI spawning using a delayed call
+		GetGame().GetCallqueue().CallLater(
+			PRSpawnPatrol,
+			delay,
+			false,
+			GetSpawnSide(),
+			GetGroupType(),
+			GetTrigger(),
+			boolArray,
+			stringArray,
+			intArray,
+			GetPerceptionFactorB(),
+			GetPersistentObject()
+		);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bFirstRun;
-	bool GetFirstRun()
-	{
-		return m_bFirstRun;
-	}
-	
 	//------------------------------------------------------------------------------------------------
 	//! Finds closest player from another entity
 	protected IEntity GetClosestPlayerEntity(IEntity entityFrom, int distance)
@@ -1116,7 +1055,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 
 		return closestEntity;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Kills entity
 	protected void KillUnit(IEntity entity)
@@ -1127,730 +1066,29 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! What to do after all groupA members are dead
-	void AfterGroupIsEmpty(SCR_AIGroup groupA)
+	//! Spawn Prefab
+	protected IEntity SpawnPrefab(Resource resource, vector spawnPos)
 	{
-		string groupID = GetGroupID();
-		if (groupID == "")
-			groupID = "No ID Given";
-		
-		Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : groupID: (%1)  Starting new group session...", groupID), LogLevel.WARNING);
-		//Print(string.Format("[PR_SpawnPatrol] AfterGroupIsEmpty : Starting... RplSession.Mode(): %1", RplSession.Mode()), LogLevel.WARNING);
-		//if (!Replication.IsRunning())
-		if (!Replication.IsRunning() && (RplSession.Mode() == RplMode.Dedicated)) // this needs testing on server
-		{
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : groupID: (%1)  Ending session...", groupID), LogLevel.WARNING);
-			return;
-		}
-
-		//bool neutralizePersistentObjectIfGroupIsDead = GetNeutralizePersistentObjectIfGroupIsDead();
-		//IEntity persistentObject = GetPersistentObject();
-		int respawnCount = GetRespawnCount();
-
-		if (GetNeutralizePersistentObjectIfGroupIsDead())
-		{
-			if (GetPersistentObject())
-			{
-				Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) : persistentObject: %1", GetPersistentObject().GetName()), LogLevel.WARNING);
-				KillUnit(GetPersistentObject());
-				SCR_EntityHelper.DeleteEntityAndChildren(GetPersistentObject());
-				if (respawnCount == 0)
-					return;
-			}
-		}
-
-		if (respawnCount != 0)
-			respawnCount--;
-		SetRespawnCount(respawnCount);
-
-		//int spawnSide = GetSpawnSide();
-		//int groupType = GetGroupType();
-		//IEntity trigger = GetTrigger();
-		//vector triggerPosition = GetTriggerPosition();
-		//bool cycleWaypoints = GetCycleWaypoints();
-		//bool useRandomRespawnTimer = GetRandomRespawnTimer();
-		//bool randomGroupSize = GetRandomGroupSize();
-		//int minUnitsInGroup = GetMinUnitsInGroup();
-		//int maxUnitsInGroup = GetMaxUnitsInGroup();
-		//int getLogUpdateInterval = GetLogUpdateInterval();
-		//bool keepGroupActive = GetKeepGroupActive();
-		//bool logGroupLocation = GetLogGroupLocation();
-		//bool suspendIfNoPlayers = GetSuspendIfNoPlayers();
-		//bool spawnVehicle = GetSpawnVehicle();
-		//bool teleportAfterSpawn = GetTeleportAfterSpawn();
-		//bool resetGroupIfIdle = GetResetGroupIfIdle();
-		array<bool> boolArray = {
-			GetCycleWaypoints(),//cycleWaypoints,							// 0
-			GetDebugLogs(),							// 1
-			GetRandomRespawnTimer(),//useRandomRespawnTimer,					// 2
-			GetRandomGroupSize(),//randomGroupSize,						// 3
-			GetKeepGroupActive(),//keepGroupActive,						// 4
-			GetLogGroupLocation(),//logGroupLocation,						// 5
-			GetSuspendIfNoPlayers(),//suspendIfNoPlayers,						// 6
-			GetSpawnVehicle(),//spawnVehicle, 							// 7
-			GetTeleportAfterSpawn(),//teleportAfterSpawn,						// 8
-			GetNeutralizePersistentObjectIfGroupIsDead(),//neutralizePersistentObjectIfGroupIsDead,// 9
-			GetResetGroupIfIdle()//resetGroupIfIdle						// 10
-		};
-
-		//array<string> spawnPositionArray = GetSpawnPositionArray();
-		//array<string> teleportPosition = GetTeleportPosition();
-		//array<string> waypointCollection = GetWaypointCollection();
-		//array<string> prefabArray = GetPrefabArray();
-		//array<string> groupIDArray = GetGroupIDArray();
-		array<array<string>> stringArray = {
-			GetSpawnPositionArray(),//spawnPositionArray,	// 0
-			GetTeleportPosition(),//teleportPosition,	// 1
-			GetWaypointCollection(),//waypointCollection,	// 2
-			GetPrefabArray(),//prefabArray,		// 3
-			GetGroupIDArray()//groupIDArray		// 4
-		};
-		//int rerunCounter = GetRerunCounter();
-		//int respawnTimerMin = GetRespawnTimerMin();
-		//int respawnTimerMax = GetRespawnTimerMax();
-		//int teleportSortOrder = GetTeleportSortOrder();
-		//int collectionSortOrder = GetCollectionSortOrder();
-		//int waypointSortOrder = GetWaypointSortOrder();
-
-		//int skill = GetAISkillB();
-		//int combatType = GetCombatTypeB();
-		//int groupFormation = GetGroupFormationB();
-		//float perceptionFactor = GetPerceptionFactorB();
-
-		//int spawnCollections = GetSpawnCollections();
-		array<int> intArray = {
-			GetRerunCounter(),//rerunCounter,		// 0
-			GetRespawnTimerMin(),//respawnTimerMin,	// 1
-			GetRespawnTimerMax(),//respawnTimerMax,	// 2
-			GetRespawnCount(),//respawnCount,		// 3
-			GetTeleportSortOrder(),//teleportSortOrder,	// 4
-			GetCollectionSortOrder(),//collectionSortOrder,// 5
-			GetWaypointSortOrder(),//waypointSortOrder,	// 6
-			GetSpawnCollections(),//spawnCollections,	// 7
-			GetAISkillB(),//skill,				// 8
-			GetCombatTypeB(),//combatType,			// 9
-			GetGroupFormationB(),//groupFormation,		// 10
-			GetMinUnitsInGroup(),//minUnitsInGroup,	// 11
-			GetMaxUnitsInGroup(),//maxUnitsInGroup,	// 12
-			GetLogUpdateInterval()//getLogUpdateInterval// 13
-		};
-
-		int delay = GetRespawnTimerMin() * 1000;
-		if (GetRandomRespawnTimer())
-		{
-			delay = Math.RandomInt(GetRespawnTimerMin() * 1000, GetRespawnTimerMax() * 1000);
-		}
-
+		IEntity spawnedPrefab = GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(spawnPos));
 		if (GetDebugLogs())
-		{
-			/*Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) rerunCounter: " + rerunCounter, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnTimerMin: " + respawnTimerMin, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnTimerMax: " + respawnTimerMax, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) respawnCount: " + respawnCount, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) teleportPosition: " + teleportPosition, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) waypointCollection: " + waypointCollection, LogLevel.NORMAL);
-			Print("[PR_SpawnPatrol] (AfterGroupIsEmpty) delay: " + delay, LogLevel.NORMAL);*/
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) spawnSide: %1", GetSpawnSide()), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) groupType: %1", GetGroupType()), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) trigger: %1", GetTrigger()), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) boolArray: %1", boolArray), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) stringArray: %1", stringArray), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) intArray: %1", intArray), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) perceptionFactor: %1", GetPerceptionFactorB()), LogLevel.NORMAL);
-			Print(string.Format("[PR_SpawnPatrol] (AfterGroupIsEmpty) persistentObject: %1", GetPersistentObject()), LogLevel.NORMAL);
-		}
-
-		//--- Execute the AI spawning using a delayed call
-		GetGame().GetCallqueue().CallLater(
-			PRSpawnPatrol,
-			delay,
-			false,
-			GetSpawnSide(),//spawnSide,
-			GetGroupType(),//groupType,
-			GetTrigger(),//trigger,
-			boolArray,
-			stringArray,
-			intArray,
-			GetPerceptionFactorB(),//perceptionFactor,
-			GetPersistentObject()//persistentObject
-		);
-	}
-
-	//! SETTERS/GETTERS
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bSpawnVehicle
-	protected bool m_bSpawnVehicle;
-	void SetSpawnVehicle(bool spawnVehicle)
-	{
-		m_bSpawnVehicle = spawnVehicle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bSpawnVehicle;
-	bool GetSpawnVehicle()
-	{
-		return m_bSpawnVehicle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_PatrolVehicle
-	protected IEntity m_PatrolVehicle;
-	void SetPatrolVehicle(IEntity patrolVehicle)
-	{
-		m_PatrolVehicle = patrolVehicle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_PatrolVehicle;
-	IEntity GetPatrolVehicle()
-	{
-		return m_PatrolVehicle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_vOldVector
-	protected vector m_vOldVector;
-	void SetOldVector(vector distance)
-	{
-		m_vOldVector = distance;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_vOldVector;
-	vector GetOldVector()
-	{
-		return m_vOldVector;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iAISkill
-	protected int m_iAISkill;
-	void SetAISkillB(int skill)
-	{
-		m_iAISkill = skill;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iAISkill;
-	int GetAISkillB()
-	{
-		return m_iAISkill;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iAICombatType
-	protected int m_iAICombatType;
-	void SetCombatTypeB(int combatType)
-	{
-		m_iAICombatType = combatType;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iAICombatType;
-	int GetCombatTypeB()
-	{
-		return m_iAICombatType;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iAIGroupFormation
-	protected int m_iAIGroupFormation;
-	void SetGroupFormationB(int groupFormation)
-	{
-		m_iAIGroupFormation = groupFormation;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iAIGroupFormation;
-	int GetGroupFormationB()
-	{
-		return m_iAIGroupFormation;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_fPerceptionFactor
-	protected float m_fPerceptionFactor;
-	void SetPerceptionFactorB(float perceptionFactor)
-	{
-		m_fPerceptionFactor = perceptionFactor;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_fPerceptionFactor;
-	float GetPerceptionFactorB()
-	{
-		return m_fPerceptionFactor;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_PersistentObject
-	protected IEntity m_PersistentObject;
-	void SetPersistentObject(IEntity persistentObject)
-	{
-		m_PersistentObject = persistentObject;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_PersistentObject;
-	IEntity GetPersistentObject()
-	{
-		return m_PersistentObject;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iSpawnSide
-	protected int m_iSpawnSide;
-	void SetSpawnSide(int spawnSide)
-	{
-		m_iSpawnSide = spawnSide;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iSpawnSide;
-	int GetSpawnSide()
-	{
-		return m_iSpawnSide;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iGroupType
-	protected int m_iGroupType;
-	void SetGroupType(int groupType)
-	{
-		m_iGroupType = groupType;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iGroupType
-	int GetGroupType()
-	{
-		return m_iGroupType;
-	}
-/*
-	//------------------------------------------------------------------------------------------------
-	//! sets m_vTriggerPosition
-	protected vector m_vTriggerPosition;
-	void SetTriggerPosition(vector triggerPosition)
-	{
-		m_vTriggerPosition = triggerPosition;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_vTriggerPosition
-	vector GetTriggerPosition()
-	{
-		return m_vTriggerPosition;
-	}
-*/	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iTrigger
-	protected IEntity m_iTrigger;
-	void SetTrigger(IEntity trigger)
-	{
-		m_iTrigger = trigger;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iTrigger
-	IEntity GetTrigger()
-	{
-		return m_iTrigger;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aSpawnPositionArray
-	protected array<string> m_aSpawnPositionArray;
-	void SetSpawnPositionArray(array<string> spawnPositionArray)
-	{
-		m_aSpawnPositionArray = spawnPositionArray;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aSpawnPositionArray
-	array<string> GetSpawnPositionArray()
-	{
-		return m_aSpawnPositionArray;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_vSpawnPosition
-	protected vector m_vSpawnPosition;
-	void SetSpawnPosition(vector spawnPosition)
-	{
-		m_vSpawnPosition = spawnPosition;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_vSpawnPosition
-	vector GetSpawnPosition()
-	{
-		return m_vSpawnPosition;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_vSpawnAngle
-	protected vector m_vSpawnAngle;
-	void SetSpawnAngle(vector spawnAngle)
-	{
-		m_vSpawnAngle = spawnAngle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_vSpawnAngle
-	vector GetSpawnAngle()
-	{
-		return m_vSpawnAngle;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bCycleWaypoints
-	protected bool m_bCycleWaypoints;
-	void SetCycleWaypoints(bool cycleWaypoints)
-	{
-		m_bCycleWaypoints = cycleWaypoints;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bCycleWaypoints
-	bool GetCycleWaypoints()
-	{
-		return m_bCycleWaypoints;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bDebugLogs
-	protected bool m_bDebugLogs;
-	void SetDebugLogs(bool debugLogs)
-	{
-		m_bDebugLogs = debugLogs;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bDebugLogs
-	bool GetDebugLogs()
-	{
-		return m_bDebugLogs;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bNeutralizePersistentObjectIfGroupIsDead
-	protected bool m_bNeutralizePersistentObjectIfGroupIsDead;
-	void SetNeutralizePersistentObjectIfGroupIsDead(bool neutralizePersistentObjectIfGroupIsDead)
-	{
-		m_bNeutralizePersistentObjectIfGroupIsDead = neutralizePersistentObjectIfGroupIsDead;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bNeutralizePersistentObjectIfGroupIsDead
-	bool GetNeutralizePersistentObjectIfGroupIsDead()
-	{
-		return m_bNeutralizePersistentObjectIfGroupIsDead;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bRandomGroupSize
-	protected bool m_bRandomGroupSize;
-	void SetRandomGroupSize(bool randomGroupSize)
-	{
-		m_bRandomGroupSize = randomGroupSize;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bRandomGroupSize
-	bool GetRandomGroupSize()
-	{
-		return m_bRandomGroupSize;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iMinUnitsInGroup
-	protected int m_iMinUnitsInGroup;
-	void SetMinUnitsInGroup(int minUnitsInGroup)
-	{
-		m_iMinUnitsInGroup = minUnitsInGroup;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iMinUnitsInGroup
-	int GetMinUnitsInGroup()
-	{
-		return m_iMinUnitsInGroup;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iMaxUnitsInGroup
-	protected int m_iMaxUnitsInGroup;
-	void SetMaxUnitsInGroup(int maxUnitsInGroup)
-	{
-		m_iMaxUnitsInGroup = maxUnitsInGroup;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iMaxUnitsInGroup
-	int GetMaxUnitsInGroup()
-	{
-		return m_iMaxUnitsInGroup;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iLogUpdateInterval
-	protected int m_iLogUpdateInterval;
-	void SetLogUpdateInterval(int logUpdateInterval)
-	{
-		m_iLogUpdateInterval = logUpdateInterval;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iLogUpdateInterval
-	int GetLogUpdateInterval()
-	{
-		return m_iLogUpdateInterval;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bKeepGroupActive
-	void SetKeepGroupActive(bool keepGroupActive)
-	{
-		m_bKeepGroupActive = keepGroupActive;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bKeepGroupActive
-	protected bool m_bKeepGroupActive;
-	bool GetKeepGroupActive()
-	{
-		return m_bKeepGroupActive;
-	}
-
-	//SetLogGroupLocation(logGroupLocation);
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bLogGroupLocation
-	void SetLogGroupLocation(bool logGroupLocation)
-	{
-		m_bLogGroupLocation = logGroupLocation;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bLogGroupLocation
-	protected bool m_bLogGroupLocation;
-	bool GetLogGroupLocation()
-	{
-		return m_bLogGroupLocation;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bSuspendIfNoPlayers
-	protected bool m_bSuspendIfNoPlayers;
-	void SetSuspendIfNoPlayers(bool suspendIfNoPlayers)
-	{
-		m_bSuspendIfNoPlayers = suspendIfNoPlayers;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bSuspendIfNoPlayers
-	bool GetSuspendIfNoPlayers()
-	{
-		return m_bSuspendIfNoPlayers;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bResetGroupIfIdle
-	protected bool m_bResetGroupIfIdle;
-	void SetResetGroupIfIdle(bool resetGroupIfIdle)
-	{
-		m_bResetGroupIfIdle = resetGroupIfIdle;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bResetGroupIfIdle
-	bool GetResetGroupIfIdle()
-	{
-		return m_bResetGroupIfIdle;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bTeleportAfterSpawn
-	protected bool m_bTeleportAfterSpawn;
-	void SetTeleportAfterSpawn(bool teleportAfterSpawn)
-	{
-		m_bTeleportAfterSpawn = teleportAfterSpawn;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bTeleportAfterSpawn
-	bool GetTeleportAfterSpawn()
-	{
-		return m_bTeleportAfterSpawn;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_bUseRandomRespawnTimer
-	protected bool m_bUseRandomRespawnTimer;
-	void SetRandomRespawnTimer(bool useRandomRespawnTimer)
-	{
-		m_bUseRandomRespawnTimer = useRandomRespawnTimer;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_bUseRandomRespawnTimer
-	bool GetRandomRespawnTimer()
-	{
-		return m_bUseRandomRespawnTimer;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aTeleportPosition
-	protected array<string> m_aTeleportPosition;
-	void SetTeleportPosition(array<string> teleportPosition)
-	{
-		m_aTeleportPosition = teleportPosition;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aTeleportPosition
-	array<string> GetTeleportPosition()
-	{
-		return m_aTeleportPosition;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_aWaypointCollection
-	protected array<string> m_aWaypointCollection;
-	void SetWaypointCollection(array<string> waypointCollection)
-	{
-		m_aWaypointCollection = waypointCollection;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_aWaypointCollection
-	array<string> GetWaypointCollection()
-	{
-		return m_aWaypointCollection;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iRerunCounter
-	protected int m_iRerunCounter;
-	void SetRerunCounter(int rerunCounter)
-	{
-		m_iRerunCounter = rerunCounter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iRerunCounter
-	int GetRerunCounter()
-	{
-		return m_iRerunCounter;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iRespawnTimerMin
-	protected int m_iRespawnTimerMin;
-	void SetRespawnTimerMin(int respawnTimerMin)
-	{
-		m_iRespawnTimerMin = respawnTimerMin;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iRespawnTimerMin
-	int GetRespawnTimerMin()
-	{
-		return m_iRespawnTimerMin;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iRespawnTimerMax
-	protected int m_iRespawnTimerMax;
-	void SetRespawnTimerMax(int respawnTimerMax)
-	{
-		m_iRespawnTimerMax = respawnTimerMax;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iRespawnTimerMax
-	int GetRespawnTimerMax()
-	{
-		return m_iRespawnTimerMax;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iRespawnCount
-	protected int m_iRespawnCount;
-	void SetRespawnCount(int respawnCount)
-	{
-		m_iRespawnCount = respawnCount;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iRespawnCount
-	int GetRespawnCount()
-	{
-		return m_iRespawnCount;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iTeleportSortOrder
-	protected int m_iTeleportSortOrder;
-	void SetTeleportSortOrder(int teleportSortOrder)
-	{
-		m_iTeleportSortOrder = teleportSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iTeleportSortOrder
-	int GetTeleportSortOrder()
-	{
-		return m_iTeleportSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iCollectionSortOrder
-	protected int m_iCollectionSortOrder;
-	void SetCollectionSortOrder(int collectionSortOrder)
-	{
-		m_iCollectionSortOrder = collectionSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iCollectionSortOrder
-	int GetCollectionSortOrder()
-	{
-		return m_iCollectionSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iWaypointSortOrder
-	protected int m_iWaypointSortOrder;
-	void SetWaypointSortOrder(int waypointSortOrder)
-	{
-		m_iWaypointSortOrder = waypointSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! returns m_iWaypointSortOrder
-	int GetWaypointSortOrder()
-	{
-		return m_iWaypointSortOrder;
-	}
-
-	//------------------------------------------------------------------------------------------------
-	//! sets m_iSpawnCollections
-	protected int m_iSpawnCollections;
-	void SetSpawnCollections(int spawnCollections)
-	{
-		m_iSpawnCollections = spawnCollections;
+			Print(string.Format("[PR_SpawnPatrol] (SpawnPrefab) spawnedPrefab: %1", spawnedPrefab), LogLevel.WARNING);
+		return spawnedPrefab;
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! returns m_iSpawnCollections
-	int GetSpawnCollections()
+	//! Teleports units to position after spawning, useful for placing over water, in buildings, etc...
+	void TeleportObject(string whatToMove, string whereToMove)
 	{
-		return m_iSpawnCollections;
+		IEntity objectToTeleport = GetGame().GetWorld().FindEntityByName(whatToMove);
+		IEntity objectToTeleportTo = GetGame().GetWorld().FindEntityByName(whereToMove);
+		vector position = objectToTeleportTo.GetOrigin();
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (TeleportObject) objectToTeleport: %1  objectToTeleportTo: %2  position: %3", objectToTeleport, objectToTeleportTo, position), LogLevel.NORMAL);
+		objectToTeleport.SetOrigin(position)
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! GET ALL CHILDREN FOR WAYPOINT COLLECTION
+	//! Get all children for waypoint collection
 	void GetAllChildren(IEntity parent, notnull inout array<IEntity> allChildren)
 	{
 		if (!parent)
@@ -1871,19 +1109,6 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 	}
 
 	//------------------------------------------------------------------------------------------------
-	//! CREATE GROUP CYCLE WAYPOINT	credit to Kingsley & Zelik <discord enfusion_scripting> for ideas
-	void AddCycleWaypoint(SCR_AIGroup groupCW, vector waypointPosition, array<AIWaypoint> cycleWaypointArray, int rerunCounter)
-	{
-		Resource resource = Resource.Load("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et");
-		AIWaypointCycle waypoint = AIWaypointCycle.Cast(GetGame().SpawnEntityPrefab(resource, null, GenerateSpawnParameters(waypointPosition)));
-		waypoint.SetWaypoints(cycleWaypointArray);
-		waypoint.SetRerunCounter(rerunCounter);
-		groupCW.AddWaypoint(waypoint);
-		if (GetDebugLogs())
-			Print(("[PR_SpawnPatrol] (AddCycleWaypoint) Added cycle waypoint to groupCW: " + waypoint + ", Waypoint Queue: " + cycleWaypointArray), LogLevel.NORMAL);
-	}
-
-	//------------------------------------------------------------------------------------------------
 	//! GENERATE SPAWN PARAMETERS
 	protected EntitySpawnParams GenerateSpawnParameters(vector position)
 	{
@@ -1901,7 +1126,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 
 		if (!resource.IsValid()) //--- Validate the prefab and show error if invalid
 		{
-			Print(("[PR_SpawnPatrol] (GenerateAndValidateResource) Resource is invalid: " + resourceToLoad), LogLevel.ERROR);
+			Print(string.Format("[PR_SpawnPatrol] (GenerateAndValidateResource) Resource is invalid: %1", resourceToLoad), LogLevel.ERROR);
 			return null;
 		}
 
@@ -1911,18 +1136,11 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 	//------------------------------------------------------------------------------------------------
 	//! GET TYPE OF GROUP TO SPAWN
 	// TO DO: Add more single units and fill empty groups
-	protected string GetGroupToSpawn(/*int spawnSide, */int groupType)
+	protected string GetGroupToSpawn()
 	{
-		/*
-		USSR
-		{1A5F0D93609DA5DA}Prefabs/Groups/OPFOR/Group_USSR_ManeuverGroup.et
-		FIA
-		{EE92725E9B949C3D}Prefabs/Groups/INDFOR/Group_FIA_PlatoonHQ.et
-		{2E9C920C3ACA2C6F}Prefabs/Groups/INDFOR/Group_FIA_ReconTeam.et
-		*/
 		if (GetSpawnSide() == 0) // US
 		{
-			switch (groupType)
+			switch (GetGroupType())
 			{
 				case 0: // Man: AR (1)
 				{
@@ -2090,7 +1308,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 		{
 			if (GetSpawnSide() == 1) // USSR
 			{
-				switch (groupType)
+				switch (GetGroupType())
 				{
 					case 0: // Man: AR (1)
 					{
@@ -2258,7 +1476,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 			{
 				if (GetSpawnSide() == 2) // FIA
 				{
-					switch (groupType)
+					switch (GetGroupType())
 					{
 						case 0: // "Man: AT (1)" modded
 						{
@@ -2378,7 +1596,7 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 				{
 					if (GetSpawnSide() == 3) // CIV
 					{
-						switch (groupType)
+						switch (GetGroupType())
 						{
 							case 0: // "Businessman: Randomized (1)" modded
 							{
@@ -2432,5 +1650,634 @@ Print(string.Format("[PR_SpawnPatrol] (KeepGroupActive) GetLogUpdateCounter(): %
 			}
 		}
 		return "<ERROR>";
+	}
+
+	//! SETTERS/GETTERS
+
+	//--- Bool's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bCycleWaypoints
+	protected bool m_bCycleWaypoints;
+	void SetCycleWaypoints(bool cycleWaypoints)
+	{
+		m_bCycleWaypoints = cycleWaypoints;
+	}
+
+	bool GetCycleWaypoints()
+	{
+		return m_bCycleWaypoints;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bDebugLogs
+	protected bool m_bDebugLogs;
+	void SetDebugLogs(bool debugLogs)
+	{
+		m_bDebugLogs = debugLogs;
+	}
+
+	bool GetDebugLogs()
+	{
+		return m_bDebugLogs;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bFirstRun
+	protected bool m_bFirstRun;
+	void SetFirstRun(bool firstRun)
+	{
+		m_bFirstRun = firstRun;
+	}
+
+	bool GetFirstRun()
+	{
+		return m_bFirstRun;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bKeepGroupActive
+	protected bool m_bKeepGroupActive;
+	void SetKeepGroupActive(bool keepGroupActive)
+	{
+		m_bKeepGroupActive = keepGroupActive;
+	}
+
+	bool GetKeepGroupActive()
+	{
+		return m_bKeepGroupActive;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bLogGroupLocation
+	protected bool m_bLogGroupLocation;
+	void SetLogGroupLocation(bool logGroupLocation)
+	{
+		m_bLogGroupLocation = logGroupLocation;
+	}
+
+	bool GetLogGroupLocation()
+	{
+		return m_bLogGroupLocation;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bNeutralizePersistentObjectIfGroupIsDead
+	protected bool m_bNeutralizePersistentObjectIfGroupIsDead;
+	void SetNeutralizePersistentObjectIfGroupIsDead(bool neutralizePersistentObjectIfGroupIsDead)
+	{
+		m_bNeutralizePersistentObjectIfGroupIsDead = neutralizePersistentObjectIfGroupIsDead;
+	}
+
+	bool GetNeutralizePersistentObjectIfGroupIsDead()
+	{
+		return m_bNeutralizePersistentObjectIfGroupIsDead;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bRandomGroupSize
+	protected bool m_bRandomGroupSize;
+	void SetRandomGroupSize(bool randomGroupSize)
+	{
+		m_bRandomGroupSize = randomGroupSize;
+	}
+
+	bool GetRandomGroupSize()
+	{
+		return m_bRandomGroupSize;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bUseRandomRespawnTimer
+	protected bool m_bUseRandomRespawnTimer;
+	void SetRandomRespawnTimer(bool useRandomRespawnTimer)
+	{
+		m_bUseRandomRespawnTimer = useRandomRespawnTimer;
+	}
+
+	bool GetRandomRespawnTimer()
+	{
+		return m_bUseRandomRespawnTimer;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bResetGroupIfIdle
+	protected bool m_bResetGroupIfIdle;
+	void SetResetGroupIfIdle(bool resetGroupIfIdle)
+	{
+		m_bResetGroupIfIdle = resetGroupIfIdle;
+	}
+
+	bool GetResetGroupIfIdle()
+	{
+		return m_bResetGroupIfIdle;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bSpawnVehicle
+	protected bool m_bSpawnVehicle;
+	void SetSpawnVehicle(bool spawnVehicle)
+	{
+		m_bSpawnVehicle = spawnVehicle;
+	}
+
+	bool GetSpawnVehicle()
+	{
+		return m_bSpawnVehicle;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bSuspendIfNoPlayers
+	protected bool m_bSuspendIfNoPlayers;
+	void SetSuspendIfNoPlayers(bool suspendIfNoPlayers)
+	{
+		m_bSuspendIfNoPlayers = suspendIfNoPlayers;
+	}
+
+	bool GetSuspendIfNoPlayers()
+	{
+		return m_bSuspendIfNoPlayers;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_bTeleportAfterSpawn
+	protected bool m_bTeleportAfterSpawn;
+	void SetTeleportAfterSpawn(bool teleportAfterSpawn)
+	{
+		m_bTeleportAfterSpawn = teleportAfterSpawn;
+	}
+
+	bool GetTeleportAfterSpawn()
+	{
+		return m_bTeleportAfterSpawn;
+	}
+
+	//--- Int's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iAISkill
+	protected int m_iAISkill;
+	void SetAISkillB(int skill)
+	{
+		m_iAISkill = skill;
+	}
+
+	int GetAISkillB()
+	{
+		return m_iAISkill;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iCollectionSortOrder
+	protected int m_iCollectionSortOrder;
+	void SetCollectionSortOrder(int collectionSortOrder)
+	{
+		m_iCollectionSortOrder = collectionSortOrder;
+	}
+
+	int GetCollectionSortOrder()
+	{
+		return m_iCollectionSortOrder;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iAICombatType
+	protected int m_iAICombatType;
+	void SetCombatTypeB(int combatType)
+	{
+		m_iAICombatType = combatType;
+	}
+
+	int GetCombatTypeB()
+	{
+		return m_iAICombatType;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iAIGroupFormation
+	protected int m_iAIGroupFormation;
+	void SetGroupFormationB(int groupFormation)
+	{
+		m_iAIGroupFormation = groupFormation;
+	}
+
+	int GetGroupFormationB()
+	{
+		return m_iAIGroupFormation;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iGroupIdleCounter
+	protected int m_iGroupIdleCounter = 0;
+	void SetGroupIdleCounter(int groupIdleCounter)
+	{
+		m_iGroupIdleCounter = groupIdleCounter;
+	}
+
+	int GetGroupIdleCounter()
+	{
+		return m_iGroupIdleCounter;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iGroupType
+	protected int m_iGroupType;
+	void SetGroupType(int groupType)
+	{
+		m_iGroupType = groupType;
+	}
+
+	int GetGroupType()
+	{
+		return m_iGroupType;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iKGACounter
+	protected int m_iKGACounter = 0;
+	void SetKGACounter(int counter)
+	{
+		m_iKGACounter = counter;
+	}
+
+	int GetKGACounter()
+	{
+		return m_iKGACounter;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iLogUpdateCounter
+	protected int m_iLogUpdateCounter = 0;
+	void SetLogUpdateCounter(int logUpdateCounter)
+	{
+		m_iLogUpdateCounter = logUpdateCounter;
+	}
+
+	int GetLogUpdateCounter()
+	{
+		return m_iLogUpdateCounter;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iLogUpdateInterval
+	protected int m_iLogUpdateInterval;
+	void SetLogUpdateInterval(int logUpdateInterval)
+	{
+		m_iLogUpdateInterval = logUpdateInterval;
+	}
+
+	int GetLogUpdateInterval()
+	{
+		return m_iLogUpdateInterval;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iMaxUnitsInGroup
+	protected int m_iMaxUnitsInGroup;
+	void SetMaxUnitsInGroup(int maxUnitsInGroup)
+	{
+		m_iMaxUnitsInGroup = maxUnitsInGroup;
+	}
+
+	int GetMaxUnitsInGroup()
+	{
+		return m_iMaxUnitsInGroup;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iMinUnitsInGroup
+	protected int m_iMinUnitsInGroup;
+	void SetMinUnitsInGroup(int minUnitsInGroup)
+	{
+		m_iMinUnitsInGroup = minUnitsInGroup;
+	}
+
+	int GetMinUnitsInGroup()
+	{
+		return m_iMinUnitsInGroup;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iRerunCounter
+	protected int m_iRerunCounter;
+	void SetRerunCounter(int rerunCounter)
+	{
+		m_iRerunCounter = rerunCounter;
+	}
+
+	int GetRerunCounter()
+	{
+		return m_iRerunCounter;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iResetGroupTimer
+	protected int m_iResetGroupTimer;
+	void SetResetGroupTimer(int resetGroupTimer)
+	{
+		m_iResetGroupTimer = resetGroupTimer;
+	}
+
+	int GetResetGroupTimer()
+	{
+		return m_iResetGroupTimer;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iRespawnCount
+	protected int m_iRespawnCount;
+	void SetRespawnCount(int respawnCount)
+	{
+		m_iRespawnCount = respawnCount;
+	}
+
+	int GetRespawnCount()
+	{
+		return m_iRespawnCount;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iRespawnTimerMax
+	protected int m_iRespawnTimerMax;
+	void SetRespawnTimerMax(int respawnTimerMax)
+	{
+		m_iRespawnTimerMax = respawnTimerMax;
+	}
+
+	int GetRespawnTimerMax()
+	{
+		return m_iRespawnTimerMax;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iRespawnTimerMin
+	protected int m_iRespawnTimerMin;
+	void SetRespawnTimerMin(int respawnTimerMin)
+	{
+		m_iRespawnTimerMin = respawnTimerMin;
+	}
+
+	int GetRespawnTimerMin()
+	{
+		return m_iRespawnTimerMin;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iSpawnCollections
+	protected int m_iSpawnCollections;
+	void SetSpawnCollections(int spawnCollections)
+	{
+		m_iSpawnCollections = spawnCollections;
+	}
+
+	int GetSpawnCollections()
+	{
+		return m_iSpawnCollections;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iSpawnSide
+	protected int m_iSpawnSide;
+	void SetSpawnSide(int spawnSide)
+	{
+		m_iSpawnSide = spawnSide;
+	}
+
+	int GetSpawnSide()
+	{
+		return m_iSpawnSide;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iTeleportSortOrder
+	protected int m_iTeleportSortOrder;
+	void SetTeleportSortOrder(int teleportSortOrder)
+	{
+		m_iTeleportSortOrder = teleportSortOrder;
+	}
+
+	int GetTeleportSortOrder()
+	{
+		return m_iTeleportSortOrder;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_iWaypointSortOrder
+	protected int m_iWaypointSortOrder;
+	void SetWaypointSortOrder(int waypointSortOrder)
+	{
+		m_iWaypointSortOrder = waypointSortOrder;
+	}
+
+	int GetWaypointSortOrder()
+	{
+		return m_iWaypointSortOrder;
+	}
+
+	//--- array<string>'s ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aGroupIDArray
+	protected array<string> m_aGroupIDArray;
+	void SetGroupIDArray(array<string> groupIDArray)
+	{
+		m_aGroupIDArray = groupIDArray;
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (SetGroupIDArray) m_aGroupIDArray : %1", m_aGroupIDArray), LogLevel.NORMAL);
+	}
+
+	array<string> GetGroupIDArray()
+	{
+		return m_aGroupIDArray;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aPrefabArray
+	protected array<string> m_aPrefabArray;
+	void SetPrefabArray(array<string> prefabArray)
+	{
+		m_aPrefabArray = prefabArray;
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (SetPrefabArray) m_aPrefabArray : %1", m_aPrefabArray), LogLevel.NORMAL);
+	}
+
+	array<string> GetPrefabArray()
+	{
+		return m_aPrefabArray;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aSpawnPositionArray
+	protected array<string> m_aSpawnPositionArray;
+	void SetSpawnPositionArray(array<string> spawnPositionArray)
+	{
+		m_aSpawnPositionArray = spawnPositionArray;
+	}
+
+	array<string> GetSpawnPositionArray()
+	{
+		return m_aSpawnPositionArray;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aStringWaypointCollection
+	protected array<string> m_aStringWaypointCollection;
+	void SetStringWaypointCollection(array<string> stringWaypointCollection)
+	{
+		m_aStringWaypointCollection = stringWaypointCollection;
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (SetStringWaypointCollection) m_aStringWaypointCollection : %1", m_aStringWaypointCollection), LogLevel.NORMAL);
+	}
+
+	array<string> GetStringWaypointCollection()
+	{
+		return m_aStringWaypointCollection;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aTeleportPosition
+	protected array<string> m_aTeleportPosition;
+	void SetTeleportPosition(array<string> teleportPosition)
+	{
+		m_aTeleportPosition = teleportPosition;
+	}
+
+	array<string> GetTeleportPosition()
+	{
+		return m_aTeleportPosition;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_aWaypointCollection
+	protected array<string> m_aWaypointCollection;
+	void SetWaypointCollection(array<string> waypointCollection)
+	{
+		m_aWaypointCollection = waypointCollection;
+	}
+
+	array<string> GetWaypointCollection()
+	{
+		return m_aWaypointCollection;
+	}
+
+	//--- string's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_sGroupID
+	protected string m_sGroupID;
+	void SetGroupID(string groupID)
+	{
+		m_sGroupID = groupID;
+		if (GetDebugLogs())
+			Print(string.Format("[PR_SpawnPatrol] (SetGroupID) groupID: (%1)", m_sGroupID), LogLevel.NORMAL);
+	}
+
+	string GetGroupID()
+	{
+		return m_sGroupID;
+	}
+
+	//--- SCR_AIGroup's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_Group  SCR_AIGroup m_Group;
+	protected SCR_AIGroup m_Group;
+	void SetGroup(SCR_AIGroup group)
+	{
+		m_Group = group;
+	}
+
+	SCR_AIGroup GetGroup()
+	{
+		return m_Group;
+	}
+
+	//--- IEntity's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_PatrolVehicle
+	protected IEntity m_PatrolVehicle;
+	void SetPatrolVehicle(IEntity patrolVehicle)
+	{
+		m_PatrolVehicle = patrolVehicle;
+	}
+
+	IEntity GetPatrolVehicle()
+	{
+		return m_PatrolVehicle;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_PersistentObject
+	protected IEntity m_PersistentObject;
+	void SetPersistentObject(IEntity persistentObject)
+	{
+		m_PersistentObject = persistentObject;
+	}
+
+	IEntity GetPersistentObject()
+	{
+		return m_PersistentObject;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_Trigger
+	protected IEntity m_Trigger;
+	void SetTrigger(IEntity trigger)
+	{
+		m_Trigger = trigger;
+	}
+
+	IEntity GetTrigger()
+	{
+		return m_Trigger;
+	}
+
+	//--- vector's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_vOldVector
+	protected vector m_vOldVector;
+	void SetOldVector(vector distance)
+	{
+		m_vOldVector = distance;
+	}
+
+	vector GetOldVector()
+	{
+		return m_vOldVector;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_vSpawnAngle
+	protected vector m_vSpawnAngle;
+	void SetSpawnAngle(vector spawnAngle)
+	{
+		m_vSpawnAngle = spawnAngle;
+	}
+
+	vector GetSpawnAngle()
+	{
+		return m_vSpawnAngle;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	//! sets m_vSpawnPosition
+	protected vector m_vSpawnPosition;
+	void SetSpawnPosition(vector spawnPosition)
+	{
+		m_vSpawnPosition = spawnPosition;
+	}
+
+	vector GetSpawnPosition()
+	{
+		return m_vSpawnPosition;
+	}
+
+	//--- float's ---//
+	//------------------------------------------------------------------------------------------------
+	//! sets m_fPerceptionFactor
+	protected float m_fPerceptionFactor;
+	void SetPerceptionFactorB(float perceptionFactor)
+	{
+		m_fPerceptionFactor = perceptionFactor;
+	}
+
+	float GetPerceptionFactorB()
+	{
+		return m_fPerceptionFactor;
 	}
 }

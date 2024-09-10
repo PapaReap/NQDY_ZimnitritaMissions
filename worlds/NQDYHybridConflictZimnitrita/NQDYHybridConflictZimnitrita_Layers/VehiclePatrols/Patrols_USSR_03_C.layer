@@ -20,7 +20,7 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: AT Team (4)"
-    m_sGroupID "(USSR_VehiclePatrol_Andruhanov_s)"
+    m_sGroupID "USSR_VehiclePatrol_Andruhanov_s"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
@@ -30,8 +30,10 @@ $grp PR_AIPatrolTrigger {
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
@@ -189,7 +191,7 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: AT Team (4)"
-    m_sGroupID "(USSR_VehiclePatrol_MilitaryBarracks_nw)"
+    m_sGroupID "USSR_VehiclePatrol_MilitaryBarracks_nw"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
@@ -199,8 +201,10 @@ $grp PR_AIPatrolTrigger {
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
@@ -289,7 +293,7 @@ $grp PR_AIPatrolTrigger {
          Hierarchy "{624273864DE3B7A4}" {
          }
         }
-        coords -46.665 -1.619 -4.566
+        coords -46.366 -1.602 -5.727
         angleY 154.613
        }
        USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_03 {
@@ -300,7 +304,7 @@ $grp PR_AIPatrolTrigger {
          Hierarchy "{624273864DE3B7A4}" {
          }
         }
-        coords -535.704 -0.589 -310.582
+        coords -539.395 -0.118 -303.309
         angleY -23.904
        }
        USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_04 {
@@ -311,7 +315,7 @@ $grp PR_AIPatrolTrigger {
          Hierarchy "{624273864DE3B7A4}" {
          }
         }
-        coords -829.91 0.887 -425.055
+        coords -857.148 0.795 -379.204
         angleY -27.261
        }
        USSR_VehiclePatrol_MilitaryBarracks_nw_spawn_05 {
@@ -322,7 +326,7 @@ $grp PR_AIPatrolTrigger {
          Hierarchy "{624273864DE3B7A4}" {
          }
         }
-        coords -1499.111 -31.168 -610.184
+        coords -1500.331 -30.886 -605.779
         angleX 1.636
         angleY -13.939
         angleZ -4.545
@@ -394,7 +398,7 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: AT Team (4)"
-    m_sGroupID "(USSR_VehiclePatrol_Niscova_n)"
+    m_sGroupID "USSR_VehiclePatrol_Niscova_n"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
@@ -404,8 +408,10 @@ $grp PR_AIPatrolTrigger {
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
@@ -559,7 +565,7 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: AT Team (4)"
-    m_sGroupID "(USSR_VehiclePatrol_Niscova_n2)"
+    m_sGroupID "USSR_VehiclePatrol_Niscova_n2"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
@@ -569,8 +575,10 @@ $grp PR_AIPatrolTrigger {
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }
@@ -724,7 +732,7 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: AT Team (4)"
-    m_sGroupID "(USSR_VehiclePatrol_Niscova_s)"
+    m_sGroupID "USSR_VehiclePatrol_Niscova_s"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
@@ -734,8 +742,10 @@ $grp PR_AIPatrolTrigger {
       m_iMinUnitsInGroup 3
       m_iMaxUnitsInGroup 3
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{A4D7AA1346C36AE3}Prefabs/Vehicles/Wheeled/UAZ469/AI/UAZ469_PKM_ai.et"
      }

@@ -200,7 +200,6 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	private int groupType;
 
 	//! Group Details
-	//private string spawnPosition = "";
 	private ref array<string> spawnPosition = {};
 	private bool randomGroupSize = 0;
 	private int minUnitsInGroup = 1;
@@ -210,6 +209,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	private int logUpdateInterval = 5;
 	private bool suspendIfNoPlayers = 1;
 	private bool resetGroupIfIdle = 0;
+	private int resetGroupTimer = 0;
 	private bool spawnVehicle = 0;
 	private ref array<string> groupIDArray = {};
 	private string groupID;
@@ -241,7 +241,6 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 	protected void ResetTypes()
 	{
 		//! Group Details
-		//spawnPosition = "";
 		spawnPosition = {};
 		randomGroupSize = 0;
 		minUnitsInGroup = 1;
@@ -251,6 +250,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		logUpdateInterval = 5;
 		suspendIfNoPlayers = 1;
 		resetGroupIfIdle = 0;
+		resetGroupTimer = 0;
 		spawnVehicle = 0;
 		groupIDArray = {};
 		prefabArray = {};
@@ -266,7 +266,6 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		groupFormation = 0;
 		aISkill = 50;
 		aICombatType = 1;
-	//	m_bHoldFire = 0;
 		perceptionFactor = 1;
 		//! Teleport Group
 		teleportAfterSpawn = 0;
@@ -462,11 +461,6 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		//--- Call to spawner script on trigger activation
 		m_PR_SpawnPatrol = new PR_SpawnPatrol();
 		
-		//IEntity spawnPos = GetGame().GetWorld().FindEntityByName(spawnPosition);
-	//	vector location = m_Trigger.GetOrigin(); //trying to set directions
-	//	Print(string.Format("[PR_AIPatrolTrigger] %1 : location: %2", m_sLogMode, location), LogLevel.NORMAL);
-	//	Print(string.Format("[PR_AIPatrolTrigger] %1 : m_Trigger.GetOrigin(): %2", m_sLogMode, m_Trigger.GetOrigin()), LogLevel.NORMAL);
-		
 		//if (!spawnPos)
 		IEntity trigger = m_World.FindEntityByID(this.GetID());
 
@@ -514,7 +508,8 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			groupFormation,			// 10
 			minUnitsInGroup,		// 11
 			maxUnitsInGroup,		// 12
-			logUpdateInterval		// 13
+			logUpdateInterval,		// 13
+			resetGroupTimer			// 14
 		};
 
 		//--- Execute the AI spawning using a delayed call
@@ -524,7 +519,6 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 			false,
 			groupSide,
 			groupType,
-			//trigger.GetOrigin(),
 			trigger,
 			m_aBoolArray,
 			m_sStringArray,
@@ -548,6 +542,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : logUpdateInterval: %2", m_sLogMode, logUpdateInterval), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : suspendIfNoPlayers: %2", m_sLogMode, suspendIfNoPlayers), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : resetGroupIfIdle: %2", m_sLogMode, resetGroupIfIdle), LogLevel.NORMAL);
+		Print(string.Format("[PR_AIPatrolTrigger] %1 : resetGroupTimer: %2", m_sLogMode, resetGroupTimer), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : spawnVehicle: %2", m_sLogMode, spawnVehicle), LogLevel.NORMAL);
 		Print(string.Format("[PR_AIPatrolTrigger] %1 : prefabArray: %2", m_sLogMode, prefabArray), LogLevel.NORMAL);
 
@@ -580,7 +575,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 		{
 			foreach (PR_GroupDetails detailsInfo : groupDetails)
 			{
-				spawnPosition = detailsInfo.m_aSpawnPosition; // //m_sSpawnPosition
+				spawnPosition = detailsInfo.m_aSpawnPosition;
 				randomGroupSize = detailsInfo.m_bRandomGroupSize;
 				minUnitsInGroup = detailsInfo.m_iMinUnitsInGroup;
 				maxUnitsInGroup = detailsInfo.m_iMaxUnitsInGroup;
@@ -589,6 +584,7 @@ class PR_AIPatrolTrigger : PR_CoreTrigger
 				logUpdateInterval = detailsInfo.m_iLogUpdateInterval;
 				suspendIfNoPlayers = detailsInfo.m_bSuspendIfNoPlayers;
 				resetGroupIfIdle = detailsInfo.m_bResetGroupIfIdle;
+				resetGroupTimer = detailsInfo.m_iResetGroupTimer;
 				spawnVehicle = detailsInfo.m_bSpawnVehicle;
 				if (spawnVehicle)
 				{

@@ -736,6 +736,8 @@ $grp PR_AIPatrolTrigger {
     m_aGroupDetails {
      PR_GroupDetails "{61B93EEA9365010A}" {
       m_bKeepGroupActive 1
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
       m_bLogGroupLocation 1
      }
     }
