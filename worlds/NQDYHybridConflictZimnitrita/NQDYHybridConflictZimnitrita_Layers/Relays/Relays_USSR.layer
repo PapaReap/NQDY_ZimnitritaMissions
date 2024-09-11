@@ -1,3 +1,10 @@
+PR_AIPatrolTrigger {
+ coords 11986.086 33.409 209.332
+ TriggerShapeType Sphere
+ SphereRadius 300
+ DrawShape 1
+ ShapeColor 0 1 0.023 0.078
+}
 GenericEntity RelayTemplate : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRelayRadio.et" {
  components {
   SCR_CampaignMilitaryBaseComponent "{5C727AD73024FB00}" {

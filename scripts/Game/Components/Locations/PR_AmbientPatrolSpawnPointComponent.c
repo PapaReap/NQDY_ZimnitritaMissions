@@ -1,7 +1,7 @@
 modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 {
 	//--- PapaReap >>>
-	
+
 	static string hintSimulateGamePlayerCountForScaling1 = (
 	"This is a simulated test for estimating actual group spawn count." + "<br />" +
 	"Will output value into the 'Log Console' for evaluation." + "<br />" +
@@ -12,13 +12,13 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	"" + "<br />" +
 	""
 	);
-	
+
 	[Attribute(defvalue: "8", desc: "Simulated test for estimating actual group spawn count. Will output value into the 'Log Console'.", category: "Group Scaling")]
 	int m_iSimulateGamePlayerCountForScaling;
 
 	[Attribute(defvalue: "0", desc: "Scale group sizes based on number of players.", category: "Group Scaling")]
 	bool m_bBalanceOnPlayersCount;
-	
+
 	[Attribute(defvalue: "1", desc: "This overrides the mission header to get player count. Uses only 'Optimum Player Count For Scaling'", category: "Group Scaling")]
 	bool m_bIgnoreMissionHeader;
 
@@ -39,7 +39,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	"Optimum Player Count For Scaling: 8" + "<br />" +
 	"Min Units In Group: 4" + "<br />" +
 	"High Unit Scale: 12" + "<br />" +
-	"Actual players in mission: 5" + "<br />"  +
+	"Actual players in mission: 5" + "<br />" +
 	"Actual units spawned = 8"
 	);
 	static string hintOptimumPlayerCountForScaling3 = (
@@ -48,7 +48,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	"Optimum Player Count For Scaling: 8" + "<br />" +
 	"Min Units In Group: 4" + "<br />" +
 	"High Unit Scale: 12" + "<br />" +
-	"Actual players in mission: 11" + "<br />"  +
+	"Actual players in mission: 11" + "<br />" +
 	"Actual units spawned = 15"
 	);
 	static string hintOptimumPlayerCountForScaling = (hintOptimumPlayerCountForScaling1 + hintOptimumPlayerCountForScaling2 + hintOptimumPlayerCountForScaling3);
@@ -86,19 +86,19 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	//--- PapaReap >>>
 	[Attribute("0", UIWidgets.EditBox, "Maximum time the group will respawn. If greater than 'Respawn Period' it will pick a random time between the two. (seconds, 0 = no respawn)", "0 inf 1")]
 	protected int m_iRespawnPeriodMaximum;
-	
+
 	/* Gramps added */
-	[Attribute("0", UIWidgets.EditBox, "How many waves will the group respawn. (0 = no respawn, -1 = infinite respawn)", "-1 inf 1")]
+	[Attribute("0", UIWidgets.EditBox, "How many waves will the group respawn. (0 = no respawn (unless 'Respawn Waves Maximum' is used), -1 = infinite respawn)", "-1 inf 1")]
 	protected int m_iRespawnWaves;
-	
+
 	//--- PapaReap >>>
-	[Attribute("0", UIWidgets.EditBox, "Maximum amount of waves the group respawn. If greater than 'Respawn Waves' it will pick a random amount between the two. (0 = no respawn, -1 = infinite respawn)", "-1 inf 1")]
+	[Attribute("0", UIWidgets.EditBox, "Maximum amount of waves the group respawn. If greater than 'Respawn Waves' it will pick a random amount between the two.", "-1 inf 1")]
 	protected int m_iRespawnWavesMaximum;
 
 	//! PR SPAWN PATROL: TELEPORT TO POSITION
 	[Attribute("", desc: "Object name to respawn on. If more than one is used, a random spot will be used. Can be inside a collection also.")]
 	ref array<string> m_aRespawnPosition;
-	
+
 	[Attribute("0")]
 	protected bool m_bIsVehicleGroup;
 	/* Gramps added */
@@ -142,13 +142,13 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (RefreshPlayerList) m_aPlayers.Count(): %1", m_aPlayers.Count()), LogLevel.WARNING);
 	}
 
-    override protected void EOnInit(IEntity owner)
-    {
+	override protected void EOnInit(IEntity owner)
+	{
 		super.EOnInit(owner);
 
 		if (SCR_Global.IsEditMode())
 			UnitCalculator();
-    }
+	}
 
 	protected void UnitCalculator()
 	{
@@ -161,9 +161,9 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		if (iUnitsCalc > m_iMaxUnitsInGroup)
 			Print(string.Format("---- Maximum Unit Count has been reached [%1]. Raise 'Max Units In Group' to allow estimated spawn of [%2]! ----", m_iMaxUnitsInGroup, iUnitsCalc), LogLevel.ERROR);
 
-		Print(string.Format("---- Simulated 'Unit Spawn Count' with [%1] players in the game = [%2] units spawned ----", m_iSimulateGamePlayerCountForScaling, (Math.Min(iUnitsCalc,m_iMaxUnitsInGroup))), LogLevel.WARNING);
+		Print(string.Format("---- Simulated 'Unit Spawn Count' with [%1] players in the game = [%2] units spawned ----", m_iSimulateGamePlayerCountForScaling, (Math.Min(iUnitsCalc, m_iMaxUnitsInGroup))), LogLevel.WARNING);
 	}
-	
+
 	//SCR_AIGroup m_Group;
 	//--- PapaReap <<<
 
@@ -226,7 +226,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	{
 		return m_bFirstRun;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Finds closest player from another entity
 	protected IEntity GetClosestPlayerEntity(IEntity entityFrom, int distance)
@@ -260,7 +260,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 
 		return closestEntity;
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! Get all children for waypoint collection
 	void GetAllChildren(IEntity parent, notnull inout array<IEntity> allChildren)
@@ -294,9 +294,9 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 	{
 		return m_vSpawnPosition;
 	}
-	
+
 	//--- PapaReap <<<
-	
+
 	//------------------------------------------------------------------------------------------------
 	override void SpawnPatrol()
 	{
@@ -305,21 +305,13 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 		if (!comp)
 			return;
 
-		if (GetSpawnPosition())
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetSpawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
-		
-		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iMembersAlive: %1", m_iMembersAlive), LogLevel.WARNING);
-		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnWaves: %1", m_iRespawnWaves), LogLevel.WARNING);
+		//--- PapaReap >>>
 		if (m_iRespawnPeriodMaximum > m_iRespawnPeriod && m_iMembersAlive == -1)
-		{
 			m_iRespawnPeriod = Math.RandomIntInclusive(m_iRespawnPeriod, m_iRespawnPeriodMaximum);
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnPeriod2: %1", m_iRespawnPeriod), LogLevel.WARNING);
-		}
 
-		// set respawn position		
+		//--- set respawn position
 		if (!GetFirstRun() && m_aRespawnPosition.Count() > 0 && m_iMembersAlive == -1)
 		{
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetFirstRun()2: %1", GetFirstRun()), LogLevel.WARNING);
 			array<IEntity> spawnArray = {};
 			int spawnPositionCount = m_aRespawnPosition.Count();
 			int _i = 0;
@@ -333,8 +325,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 				{
 					spawnArray.Insert(x);
 				}
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnpointArray: %1", spawnpointArray), LogLevel.WARNING);
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnArray: %1", spawnArray), LogLevel.WARNING);
+
 				_i++;
 			}
 
@@ -345,10 +336,7 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 				{
 					IEntity player = GetClosestPlayerEntity(x, 300);
 					if (!player)
-					{
 						filteredSpawnArray.Insert(x);
-					} else
-						Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) Spawn position too close to player for spawn! Checking other positions. : %1", x), LogLevel.WARNING);
 				}
 			}
 
@@ -356,29 +344,19 @@ modded class SCR_AmbientPatrolSpawnPointComponent : ScriptComponent
 			{
 				int randomIndex = filteredSpawnArray.GetRandomIndex();
 				IEntity spawnObject = filteredSpawnArray.Get(randomIndex);
-				SetSpawnPosition(spawnObject.GetOrigin()); //= spawnObject.GetOrigin();
+				SetSpawnPosition(spawnObject.GetOrigin());
 			}
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) filteredSpawnArray: %1", filteredSpawnArray), LogLevel.WARNING);
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_aRespawnPosition: %1", m_aRespawnPosition), LogLevel.WARNING);
-			
-			if (GetSpawnPosition())
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPosition2(): %1", GetSpawnPosition()), LogLevel.WARNING);
 		}
-		
-		
+
 		if (GetFirstRun())
 		{
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetFirstRun()1: %1", GetFirstRun()), LogLevel.WARNING);
 			SetFirstRun(false);
-		
-			if (m_iRespawnWavesMaximum > m_iRespawnWaves)
-			{
+
+			if (m_iRespawnWavesMaximum > 0 && m_iRespawnWavesMaximum > m_iRespawnWaves && !m_iRespawnWaves == -1)
 				m_iRespawnWaves = Math.RandomIntInclusive(m_iRespawnWaves, m_iRespawnWavesMaximum);
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iRespawnWaves2: %1", m_iRespawnWaves), LogLevel.WARNING);
-			}
 		}
-		
-Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPosition3(): %1", GetSpawnPosition()), LogLevel.WARNING);
+		//--- PapaReap <<<
+
 		SCR_Faction faction = SCR_Faction.Cast(comp.GetAffiliatedFaction());
 
 		if (!faction)
@@ -394,7 +372,6 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 			return;
 
 		Resource prefab = Resource.Load(m_sPrefab);
-		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_sPrefab: %1", m_sPrefab), LogLevel.WARNING);
 
 		if (!prefab || !prefab.IsValid())
 			return;
@@ -425,7 +402,7 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 				if (!player)
 					continue;
 				distance = vector.DistanceSq(player.GetOrigin(), randomVec);
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) counter attack distance: %1", distance), LogLevel.WARNING);
+
 				if (distance > 55000)
 					continue;
 				playersVeryNear = true;
@@ -487,6 +464,12 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 				params.Transform[3] = waypoints[0].GetOrigin();	// < Gramps edit //waypoints.GetRandomElement().GetOrigin();
 			}
 		}
+		
+		if (GetSpawnPosition())
+		{
+			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) setting group position GetSpawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
+			params.Transform[3] = GetSpawnPosition();
+		}
 
 		m_Group = SCR_AIGroup.Cast(GetGame().SpawnEntityPrefab(prefab, null, params));
 
@@ -519,11 +502,9 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 			//--- PapaReap >>>
 			if ((m_bRandomGroupSize || m_bBalanceOnPlayersCount) && m_iMembersAlive <= 0)
 			{
-				//RefreshPlayerList(); just for testing
-
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iMembersAlive: %1", m_iMembersAlive), LogLevel.NORMAL);
+				//Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) m_iMembersAlive: %1", m_iMembersAlive), LogLevel.NORMAL);
 				int prefabUnitCount = m_Group.m_aUnitPrefabSlots.Count();
-				Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) prefabUnitCount: %1", prefabUnitCount), LogLevel.NORMAL);
+				//Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) prefabUnitCount: %1", prefabUnitCount), LogLevel.NORMAL);
 				int iUnitsToSpawn = prefabUnitCount;
 				if (m_iMinUnitsInGroup <= 0)
 					m_iMinUnitsInGroup = 1;
@@ -532,10 +513,8 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 				{
 					if (m_iUnitScaleForOptimumPlayerCount < m_iMinUnitsInGroup)
 						m_iUnitScaleForOptimumPlayerCount = m_iMinUnitsInGroup;
-	
+
 					iUnitsToSpawn = Math.Map(GetPlayersCount(), 1, Math.Max(GetMaxPlayersForGameMode(), 2), m_iMinUnitsInGroup, m_iUnitScaleForOptimumPlayerCount);
-					Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) GetPlayersCount(): %1", GetPlayersCount()), LogLevel.NORMAL);
-						//int iUnitsToSpawn = Math.Map(GetPlayersCount(), 1, GetMaxPlayersForGameMode(), Math.RandomInt(1, 3), m_iMembersAlive);
 				}
 
 				if (m_bRandomGroupSize)
@@ -606,19 +585,12 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 			//--- PapaReap <<<
 		}
 
-		if (GetSpawnPosition())
-		{
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) setting group position GetSpawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
-			m_Group.SetOrigin(GetSpawnPosition());
-		}
-		//SetSpawnPosition(m_Group.GetOrigin());
-		
 		m_Group.AddWaypoint(m_Waypoint);
 
 		if ((m_iRespawnPeriod != 0 /* Gramps added >>> */&& m_iRespawnWaves != 0) || (m_iRespawnPeriod != 0 && m_iRespawnWaves == -1)/* <<< Gramps added */)
 			m_Group.GetOnAgentRemoved().Insert(OnAgentRemoved);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//!
 	override void DeactivateGroup()
@@ -626,12 +598,11 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 		if (m_Group)
 		{
 			SetSpawnPosition(m_Group.GetOrigin());
-			Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (DeactivateGroup) spawnPosition(): %1", GetSpawnPosition()), LogLevel.WARNING);
 			m_bActive = false;
 			m_Group.DeactivateAllMembers();
 		}
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override void OnAgentRemoved()
 	{
@@ -650,10 +621,9 @@ Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (SpawnPatrol) spawnPo
 		/* <<< Gramps added */
 		m_iMembersAlive = -1;
 		m_bSpawned = false;
-		
+
 		vector clearPos;
 		SetSpawnPosition(clearPos);
-		Print(string.Format("[PR_AmbientPatrolSpawnPointComponent] (OnAgentRemoved) GetSpawnPosition()2: %1", GetSpawnPosition()), LogLevel.WARNING);
 	}
 
 	//------------------------------------------------------------------------------------------------

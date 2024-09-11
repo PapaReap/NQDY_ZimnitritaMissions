@@ -207,36 +207,115 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
     }
    }
-   $grp GenericEntity : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
-    USSR_05_Base_village_nw_APS_patrol_03 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType TEAM_MG
-       m_bBalanceOnPlayersCount 1
-       m_iMinUnitsInGroup 4
-       m_iUnitScaleForOptimumPlayerCount 8
-       m_iMaxUnitsInGroup 10
+   GenericEntity USSR_05_Base_village_nw_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    components {
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
+     }
+     Hierarchy "{624273864DE3B7A4}" {
+     }
+    }
+    coords 259.523 -3.687 117.146
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_05_Base_village_nw_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 339.131 -0.001 -204.731
+      }
+      USSR_05_Base_village_nw_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 250.281 -5.812 -493.98
+      }
+      USSR_05_Base_village_nw_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -54.2 -5.812 -654.786
+      }
+      USSR_05_Base_village_nw_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -613.048 -5.812 -500.102
+      }
+      USSR_05_Base_village_nw_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -842.989 -19.404 -118.788
+      }
+      USSR_05_Base_village_nw_sp_06 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -669.458 -21.459 271.194
+      }
+      USSR_05_Base_village_nw_sp_07 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -302.831 -2.043 402.353
       }
      }
-     coords 278.389 -3.687 123.977
-     angleY 2.411
     }
-    USSR_05_Base_village_nw_APS_patrol_02 {
-     components {
-      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-       m_eGroupType TEAM_AT
-       m_iSimulateGamePlayerCountForScaling 5
-       m_bBalanceOnPlayersCount 1
-       m_iMinUnitsInGroup 4
-       m_iUnitScaleForOptimumPlayerCount 8
-       m_iMaxUnitsInGroup 8
+   }
+   GenericEntity USSR_05_Base_village_nw_Reinforce_patrol : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+      m_eGroupType FIRETEAM
+      m_iRespawnPeriod 120
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 10
+      m_iMaxUnitsInGroup 20
+      m_iRespawnPeriodMaximum 600
+      m_iRespawnWavesMaximum 3
+      m_aRespawnPosition {
+       "USSR_05_Base_village_nw_sp"
       }
      }
-     coords -272.992 -13.791 52.08
-     angleY 2.411
+     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+      "faction affiliation" "USSR"
+     }
     }
+    coords 263.781 -3.523 119.15
+    {
+     SCR_DefendWaypoint USSR_05_Base_village_nw_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+      components {
+       Hierarchy "{6256118B646C6B13}" {
+       }
+      }
+      coords -262.477 2.958 -106.112
+      CompletionRadius 100
+     }
+    }
+   }
+   GenericEntity USSR_05_Base_village_nw_APS_patrol_02 : "{A73205DEA8361F26}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_USSR.et" {
+    components {
+     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+      m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+      m_eGroupType TEAM_AT
+      m_iSimulateGamePlayerCountForScaling 5
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 4
+      m_iUnitScaleForOptimumPlayerCount 8
+      m_iMaxUnitsInGroup 8
+     }
+    }
+    coords -272.992 -13.791 52.08
+    angleY 2.411
    }
   }
  }
@@ -325,22 +404,86 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     angleY 0.092
     angleZ -0.894
    }
-   GenericEntity USSR_02_Base_Harbor_w_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+   GenericEntity USSR_02_Base_Harbor_w_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    components {
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
+     }
+     Hierarchy "{624273864DE3B7A4}" {
+     }
+    }
+    coords 354.452 23.637 128.575
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_02_Base_Harbor_w_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 116.95 -26.166 58.389
+      }
+      USSR_02_Base_Harbor_w_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 210.313 -1.937 -542.815
+      }
+      USSR_02_Base_Harbor_w_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -135.387 -10.219 -578.164
+      }
+      USSR_02_Base_Harbor_w_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -636.982 5.55 -559.819
+      }
+      USSR_02_Base_Harbor_w_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -172.464 -26.843 198.901
+      }
+     }
+    }
+   }
+   GenericEntity USSR_02_Base_Harbor_w_Reinforce_patrol : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType FIRETEAM
-      m_bPickRandomGroupType 1
+      m_iRespawnPeriod 120
       m_bBalanceOnPlayersCount 1
       m_iMinUnitsInGroup 4
       m_iUnitScaleForOptimumPlayerCount 10
       m_iMaxUnitsInGroup 20
+      m_iRespawnPeriodMaximum 600
+      m_iRespawnWavesMaximum 3
+      m_aRespawnPosition {
+       "USSR_02_Base_Harbor_w_sp"
+      }
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
-    coords 2.586 -2.538 257.435
+    coords 358.71 23.43 130.58
+    {
+     SCR_DefendWaypoint USSR_02_Base_Harbor_w_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+      components {
+       Hierarchy "{6256118B646C6B13}" {
+       }
+      }
+      coords -368.885 -26.192 -158.069
+      CompletionRadius 100
+     }
+    }
    }
   }
  }
@@ -429,21 +572,100 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     angleY 0.092
     angleZ -0.894
    }
-   GenericEntity USSR_01_Base_SokyyivMedical_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+   GenericEntity USSR_01_Base_SokyyivMedical_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    components {
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
+     }
+     Hierarchy "{624273864DE3B7A4}" {
+     }
+    }
+    coords -63.794 3.37 327.115
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_01_Base_SokyyivMedical_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 167.248 -5.294 102.117
+      }
+      USSR_01_Base_SokyyivMedical_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -85.148 -21.707 144.719
+      }
+      USSR_01_Base_SokyyivMedical_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -329.813 -5.989 -122.232
+      }
+      USSR_01_Base_SokyyivMedical_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -309.725 14.879 -620.407
+      }
+      USSR_01_Base_SokyyivMedical_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 92.994 4.546 -691.645
+      }
+      USSR_01_Base_SokyyivMedical_sp_06 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 502.409 12.868 -437.409
+      }
+      USSR_01_Base_SokyyivMedical_sp_07 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 486.136 14.482 -109.282
+      }
+     }
+    }
+   }
+   GenericEntity USSR_01_Base_SokyyivMedical_Reinforce_patrol_01 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     components {
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType FIRETEAM
+      m_iRespawnPeriod 120
       m_bBalanceOnPlayersCount 1
       m_iMinUnitsInGroup 4
       m_iUnitScaleForOptimumPlayerCount 10
       m_iMaxUnitsInGroup 20
+      m_iRespawnPeriodMaximum 600
+      m_iRespawnWavesMaximum 3
+      m_aRespawnPosition {
+       "USSR_01_Base_SokyyivMedical_sp"
+      }
      }
      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
       "faction affiliation" "USSR"
      }
     }
     coords -59.536 3.164 329.12
+    {
+     SCR_DefendWaypoint USSR_01_Base_SokyyivMedical_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+      components {
+       Hierarchy "{6256118B646C6B13}" {
+       }
+      }
+      coords 45.728 -3.003 -314.053
+      CompletionRadius 100
+     }
+    }
    }
    Vehicle Mi8MT_unarmed_transport1 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
     coords -87.603 0.447 63.185
@@ -537,6 +759,69 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     angleY 0.092
     angleZ -0.894
    }
+   GenericEntity USSR_04_Base_Sokyyiv_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    components {
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
+     }
+     Hierarchy "{624273864DE3B7A4}" {
+     }
+    }
+    coords -69.579 16.954 390.286
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_04_Base_Sokyyiv_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -50.551 8.425 155.543
+      }
+      USSR_04_Base_Sokyyiv_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -562.61 5.08 -174.094
+      }
+      USSR_04_Base_Sokyyiv_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -38.95 4.738 268.266
+      }
+      USSR_04_Base_Sokyyiv_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 444.187 -5.482 151.744
+      }
+      USSR_04_Base_Sokyyiv_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 624.127 2.168 -239.789
+      }
+      USSR_04_Base_Sokyyiv_sp_06 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 498.593 10.068 -770.611
+      }
+      USSR_04_Base_Sokyyiv_sp_07 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 281.749 3.088 -1054.552
+      }
+     }
+    }
+   }
    $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     USSR_04_Base_Sokyyiv_APS_patrol_02 {
      components {
@@ -555,22 +840,37 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
      coords 281.241 14.105 -3.56
     }
-    USSR_04_Base_Sokyyiv_APS_patrol_03 {
+    USSR_04_Base_Sokyyiv_Reinforce_patrol {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
+       m_iRespawnPeriod 120
        m_bBalanceOnPlayersCount 1
        m_iMinUnitsInGroup 4
        m_iUnitScaleForOptimumPlayerCount 10
        m_iMaxUnitsInGroup 20
+       m_iRespawnPeriodMaximum 600
+       m_iRespawnWavesMaximum 3
+       m_aRespawnPosition {
+        "USSR_04_Base_Sokyyiv_sp"
+       }
       }
       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
        "faction affiliation" "USSR"
       }
      }
-     coords 171.839 19.386 -256.363
+     coords -65.321 17.118 392.291
+     {
+      SCR_DefendWaypoint USSR_04_Base_Sokyyiv_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+       components {
+        Hierarchy "{6256118B646C6B13}" {
+        }
+       }
+       coords 75.697 -16.647 -412.436
+       CompletionRadius 100
+      }
+     }
     }
    }
   }
@@ -660,6 +960,69 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     angleY 0.092
     angleZ -0.894
    }
+   GenericEntity USSR_03_Base_Kromzova_n_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
+    components {
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
+     }
+     Hierarchy "{624273864DE3B7A4}" {
+     }
+    }
+    coords -496.134 16.602 -129.939
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_03_Base_Kromzova_n_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 0.893 -0.363 5.896
+      }
+      USSR_03_Base_Kromzova_n_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 310.905 -13.03 447.837
+      }
+      USSR_03_Base_Kromzova_n_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 817.72 8.15 455.007
+      }
+      USSR_03_Base_Kromzova_n_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 983.91 19.745 233.913
+      }
+      USSR_03_Base_Kromzova_n_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 922.422 17.428 -56.666
+      }
+      USSR_03_Base_Kromzova_n_sp_06 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 733.595 -4.984 -326.297
+      }
+      USSR_03_Base_Kromzova_n_sp_07 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 356.717 -9.82 -499.075
+      }
+     }
+    }
+   }
    $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
     USSR_03_Base_Kromzova_n_APS_patrol_02 {
      components {
@@ -678,22 +1041,37 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      }
      coords 256.618 8.555 -72.495
     }
-    USSR_03_Base_Kromzova_n_APS_patrol_03 {
+    USSR_03_Base_Kromzova_n_Reinforce_patrol {
      components {
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
-       m_bPickRandomGroupType 1
+       m_iRespawnPeriod 120
        m_bBalanceOnPlayersCount 1
        m_iMinUnitsInGroup 4
        m_iUnitScaleForOptimumPlayerCount 10
        m_iMaxUnitsInGroup 20
+       m_iRespawnPeriodMaximum 600
+       m_iRespawnWavesMaximum 3
+       m_aRespawnPosition {
+        "USSR_03_Base_Kromzova_n_sp"
+       }
       }
       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
        "faction affiliation" "USSR"
       }
      }
-     coords -493.032 16.75 -129.28
+     coords -491.876 16.766 -127.935
+     {
+      SCR_DefendWaypoint USSR_03_Base_Kromzova_n_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+       components {
+        Hierarchy "{6256118B646C6B13}" {
+        }
+       }
+       coords 488.911 -15.491 132.854
+       CompletionRadius 100
+      }
+     }
     }
    }
    Vehicle Mi8MT_unarmed_transport2 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
@@ -888,22 +1266,126 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     angleY 0.092
     angleZ -0.894
    }
-   GenericEntity USSR_06_Base_Kromzova_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+   GenericEntity USSR_06_Base_Kromzova_sp : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     components {
-     SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
-      m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
-      m_eGroupType FIRETEAM
-      m_bPickRandomGroupType 1
-      m_bBalanceOnPlayersCount 1
-      m_iMinUnitsInGroup 4
-      m_iUnitScaleForOptimumPlayerCount 10
-      m_iMaxUnitsInGroup 20
+     RplComponent "{5A7C8AEEFC85B766}" {
+      Enabled 0
      }
-     SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
-      "faction affiliation" "USSR"
+     Hierarchy "{624273864DE3B7A4}" {
      }
     }
-    coords 106.225 -0.231 283.641
+    coords 113.57 -0.232 258.148
+    {
+     $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
+      USSR_06_Base_Kromzova_sp_01 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 64.561 0.798 117.431
+      }
+      USSR_06_Base_Kromzova_sp_02 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 318.52 0.249 -16.269
+      }
+      USSR_06_Base_Kromzova_sp_03 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 402.921 59.036 -315.979
+      }
+      USSR_06_Base_Kromzova_sp_04 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords 141.28 66.362 -618.339
+      }
+      USSR_06_Base_Kromzova_sp_05 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -265.691 53.891 -746.675
+      }
+      USSR_06_Base_Kromzova_sp_06 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -574.786 3.087 -553.982
+      }
+      USSR_06_Base_Kromzova_sp_07 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -523.517 -0.451 23.77
+      }
+      USSR_06_Base_Kromzova_sp_08 {
+       components {
+        Hierarchy "{6256118A19A85250}" {
+        }
+       }
+       coords -218.418 0.548 228.149
+      }
+     }
+    }
+   }
+   $grp GenericEntity : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+    USSR_06_Base_Kromzova_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_bPickRandomGroupType 1
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 4
+       m_iUnitScaleForOptimumPlayerCount 10
+       m_iMaxUnitsInGroup 20
+      }
+      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+       "faction affiliation" "USSR"
+      }
+     }
+     coords 106.225 -0.231 283.641
+    }
+    USSR_06_Base_Kromzova_Reinforce_patrol {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       m_eGroupType FIRETEAM
+       m_iRespawnPeriod 120
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 4
+       m_iUnitScaleForOptimumPlayerCount 10
+       m_iMaxUnitsInGroup 20
+       m_iRespawnPeriodMaximum 600
+       m_iRespawnWavesMaximum 3
+       m_aRespawnPosition {
+        "USSR_03_Base_Kromzova_sp"
+       }
+      }
+      SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+       "faction affiliation" "USSR"
+      }
+     }
+     coords 117.828 -0.068 260.153
+     {
+      SCR_DefendWaypoint USSR_06_Base_Kromzova_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+       components {
+        Hierarchy "{6256118B646C6B13}" {
+        }
+       }
+       coords -123.673 -0.126 -256.379
+       CompletionRadius 100
+      }
+     }
+    }
    }
    Vehicle Mi8MT_unarmed_transport3 : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
     coords -49.139 5.174 -86.893

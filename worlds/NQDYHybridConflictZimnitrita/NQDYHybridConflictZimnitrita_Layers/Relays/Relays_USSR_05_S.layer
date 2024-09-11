@@ -41,6 +41,15 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
    }
    $grp GenericEntity : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
     USSR_29_Relay_Detrany_lighthouse_PR_APS_patrol_01 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_iSimulateGamePlayerCountForScaling 4
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
+      }
+     }
      coords -9.501 -38.556 -113.224
      angleY 88.639
      {
@@ -134,6 +143,15 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
     }
     USSR_29_Relay_Detrany_lighthouse_PR_APS_patrol_02 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_iSimulateGamePlayerCountForScaling 4
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
+      }
+     }
      coords 53.954 -44.115 -113.93
      angleY 177.279
      {
@@ -243,6 +261,15 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      }
     }
     USSR_29_Relay_Detrany_lighthouse_PR_APS_patrol_03 {
+     components {
+      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+       m_iSimulateGamePlayerCountForScaling 4
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
+      }
+     }
      coords 3.702 -37.315 -111.71
      angleY 177.278
      {
@@ -374,6 +401,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType FIRETEAM
       m_bPickRandomGroupType 1
+      m_iSimulateGamePlayerCountForScaling 4
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 2
+      m_iUnitScaleForOptimumPlayerCount 8
+      m_iMaxUnitsInGroup 12
+      m_iGroupMultiplier 1
      }
     }
     coords 0.073 -24.683 -10.663
@@ -389,8 +422,13 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_bPickRandomGroupType 1
       m_iRespawnPeriod 200
-      m_iRespawnWaves 1
+      m_iSimulateGamePlayerCountForScaling 4
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 2
+      m_iUnitScaleForOptimumPlayerCount 8
+      m_iMaxUnitsInGroup 12
       m_iGroupMultiplier 1
+      m_iRespawnWaves 1
      }
     }
     coords 135.15 -32.628 -457.437
@@ -457,6 +495,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -0.578 0.079 9.136
@@ -467,6 +511,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 104.41 6.803 -189.585
@@ -477,6 +527,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -258.43 -6.852 -55.184
@@ -487,6 +543,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 82.794 -1.419 227.167
@@ -546,6 +608,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -13.124 -0.001 -210.397
@@ -556,7 +624,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
-       m_iRespawnPeriod 300
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 160.618 -0.74 69.076
@@ -567,6 +640,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -126.4 -0.001 59.409
@@ -576,6 +655,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 2.184 -0.001 -6.201
@@ -634,6 +719,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 14.951 0 0.912
@@ -644,6 +735,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 104.409 0 -108.724
@@ -654,6 +751,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -212.773 1.599 -55.184
@@ -664,6 +767,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 53.393 0.227 93.68
@@ -722,6 +831,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 3.204 -0.659 5.177
@@ -732,6 +847,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 104.411 13.479 -163.129
@@ -742,6 +863,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -174.639 6.224 -55.184
@@ -752,6 +879,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 2.185 -4.396 236.12
@@ -811,6 +944,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 3.969 -0.174 7.997
@@ -821,6 +960,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 132.934 -5.207 -108.726
@@ -831,6 +976,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords -126.4 1.766 -55.185
@@ -841,6 +992,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
        m_eGroupType FIRETEAM
        m_bPickRandomGroupType 1
+       m_iSimulateGamePlayerCountForScaling 4
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+       m_iUnitScaleForOptimumPlayerCount 8
+       m_iMaxUnitsInGroup 12
+       m_iGroupMultiplier 1
       }
      }
      coords 2.185 -3.462 177.637
@@ -902,6 +1059,12 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
       m_eGroupType SQUAD_RIFLE
+      m_iSimulateGamePlayerCountForScaling 4
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 2
+      m_iUnitScaleForOptimumPlayerCount 8
+      m_iMaxUnitsInGroup 12
+      m_iGroupMultiplier 1
      }
     }
     coords 4.834 -0.3 -4.441
@@ -911,8 +1074,13 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
      SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
       m_bPickRandomGroupType 1
       m_iRespawnPeriod 400
-      m_iRespawnWaves 1
+      m_iSimulateGamePlayerCountForScaling 4
+      m_bBalanceOnPlayersCount 1
+      m_iMinUnitsInGroup 2
+      m_iUnitScaleForOptimumPlayerCount 8
+      m_iMaxUnitsInGroup 12
       m_iGroupMultiplier 1
+      m_iRespawnWaves 1
      }
     }
     coords -112.96 20.091 249.8
