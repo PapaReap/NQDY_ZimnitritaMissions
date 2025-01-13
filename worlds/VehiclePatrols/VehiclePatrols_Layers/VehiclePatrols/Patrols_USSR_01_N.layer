@@ -20,15 +20,17 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: Rifle Squad (6)"
-    m_sGroupID "(USSR_VehiclePatrol_Ajvan)"
+    m_sGroupID "USSR_VehiclePatrol_Ajvan"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
        "USSR_VehiclePatrol_Ajvan_spawn"
       }
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{4C338BFE8A06DCC5}Prefabs/Vehicles/Wheeled/BTR70/AI/BTR70_ai.et"
      }
@@ -186,15 +188,17 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: Rifle Squad (6)"
-    m_sGroupID "(USSR_VehiclePatrol_Sokyyiv_e)"
+    m_sGroupID "USSR_VehiclePatrol_Sokyyiv_e"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
        "USSR_VehiclePatrol_Sokyyiv_e_spawn"
       }
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{4C338BFE8A06DCC5}Prefabs/Vehicles/Wheeled/BTR70/AI/BTR70_ai.et"
      }
@@ -361,15 +365,17 @@ $grp PR_AIPatrolTrigger {
   m_aSideUSSR {
    PR_Group_USSR "{62427386E0B4E418}" {
     m_GroupType "Group: Rifle Squad (6)"
-    m_sGroupID "(USSR_VehiclePatrol_Sokyyiv_s)"
+    m_sGroupID "USSR_VehiclePatrol_Sokyyiv_s"
     m_aGroupDetails {
      PR_GroupDetails "{624273861A219BD3}" {
       m_aSpawnPosition {
        "USSR_VehiclePatrol_Sokyyiv_s_spawn"
       }
       m_bKeepGroupActive 1
-      m_bLogGroupLocation 1
       m_bSuspendIfNoPlayers 0
+      m_bResetGroupIfIdle 1
+      m_iResetGroupTimer 30
+      m_bLogGroupLocation 1
       m_bSpawnVehicle 1
       m_aSpecificPrefabName "{4C338BFE8A06DCC5}Prefabs/Vehicles/Wheeled/BTR70/AI/BTR70_ai.et"
      }

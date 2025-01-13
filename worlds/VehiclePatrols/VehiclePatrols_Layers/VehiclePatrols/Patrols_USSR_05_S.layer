@@ -19,7 +19,7 @@ PR_AIPatrolTrigger USSR_VehiclePatrol_Stereni {
  m_aSideUSSR {
   PR_Group_USSR "{62427386E0B4E418}" {
    m_GroupType "Group: Rifle Squad (6)"
-   m_sGroupID "(USSR_VehiclePatrol_Stereni)"
+   m_sGroupID "USSR_VehiclePatrol_Stereni"
    m_aGroupDetails {
     PR_GroupDetails "{624273861A219BD3}" {
      m_aSpawnPosition {
@@ -28,8 +28,10 @@ PR_AIPatrolTrigger USSR_VehiclePatrol_Stereni {
      m_iMinUnitsInGroup 3
      m_iMaxUnitsInGroup 3
      m_bKeepGroupActive 1
-     m_bLogGroupLocation 1
      m_bSuspendIfNoPlayers 0
+     m_bResetGroupIfIdle 1
+     m_iResetGroupTimer 30
+     m_bLogGroupLocation 1
      m_bSpawnVehicle 1
      m_aSpecificPrefabName "{4C338BFE8A06DCC5}Prefabs/Vehicles/Wheeled/BTR70/AI/BTR70_ai.et"
     }

@@ -44,14 +44,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.003 -0.002 0.008
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_01_N_Lg_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.004 0.002 -0.031
@@ -103,14 +95,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.002 -0.003 0.021
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_01_N_Lg_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.003 0.001 -0.019
@@ -162,14 +146,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.007 0.005 -0.013
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_01_N_Lg_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.008 0.009 -0.052
@@ -221,14 +197,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.002 -0.001 -0.002
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_01_N_Lg_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.003 0.003 -0.041
@@ -280,14 +248,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.001 0.005 0.009
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_01_N_Lg_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.002 0.009 -0.03
@@ -1431,10 +1391,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -305.027 12.257 -54.098
-     angleX -2.245
-     angleY 146.77
-     angleZ 1.47
+     coords -305.027 10.538 -54.098
+     angleX -9.593
+     angleY 146.78
+     angleZ -0.078
      {
       GenericEntity PR_PersistObject_CP_01_N_Lg_01_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 2.895 0.001 0.593
@@ -13407,8 +13367,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -180.738 13.223 -1755.176
-     angleY -121.563
+     coords -165.421 13.07 -1710.364
+     angleX -1.583
+     angleY -95.118
+     angleZ 2.387
      {
       GenericEntity PR_PersistObject_CP_01_N_Lg_05_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 2.895 0.001 0.593
@@ -16020,7 +15982,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -2394.572 -1.244 -726.759
+     coords -2357.643 -0.512 -749.962
      angleX -0.41
      angleY -90.342
      angleZ 6.244

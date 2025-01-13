@@ -1,0 +1,707 @@
+$grp GenericEntity {
+ SupplyCache_USSR_05_Base_village_nw {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 14688.068 52.716 14755.737
+  {
+   GenericEntity : "{143D136C1F361AC4}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_400.et" {
+    coords -9.391 -2.219 133.649
+    angleY 27.525
+    {
+     GenericEntity {
+      ID "60E64490A337AA4A"
+      {
+       GenericEntity {
+        ID "60E64490A337AA47"
+        coords 1.891 1.358 1.213
+        angleY -91.247
+       }
+       GenericEntity {
+        ID "60E64490A337AA45"
+        {
+         GenericEntity {
+          ID "60E64490A3341050"
+          coords -1.673 0 1.353
+          angleY 176.906
+         }
+        }
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_01 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 4.265 0.19 -17.869
+      angleX 0.001
+      angleY 152.568
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_01_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 50
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{5DE506736DF06EAE}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_300.et" {
+    coords 479.524 -2.292 -129.911
+    angleY -167.168
+    {
+     GenericEntity {
+      ID "60E64490C1758212"
+      {
+       GenericEntity {
+        ID "60E64490C1758216"
+        coords -1.53 1.358 -1.445
+        angleY 1.841
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords -17.382 -0.934 3.597
+      angleX 0.001
+      angleY -40.264
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_02_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 50
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{87C8FA714D84DD66}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_160.et" {
+    coords 1151.08 4.884 -207.005
+    angleY -18.741
+    {
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_03 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords -22.514 -7.6 -1.548
+      angleX 0.001
+      angleY 171.309
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_03_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 50
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{88470ED38089A8E0}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_180.et" {
+    coords 1460.628 15.921 -243.777
+    angleY 131.601
+    {
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_04 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 0.728 0.199 10.59
+      angleX 0.001
+      angleY 20.967
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_04_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords -3.391 0.025 1.865
+        CompletionRadius 8
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords 499.881 -41.128 558.782
+    angleY 179.33
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords -1.861 0.536 -2.081
+        angleY 89.977
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_05 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 9.656 -0.213 8.148
+      angleX 0.001
+      angleY -26.762
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_05_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords -2.378 0 -0.549
+        CompletionRadius 10
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{BEDD7DB7AD66FCBF}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_600.et" {
+    coords -368.129 -9.561 -723.098
+    angleY 7.516
+    {
+     GenericEntity {
+      ID "60E6448E3CBF3CE7"
+      {
+       GenericEntity {
+        ID "5E6ACA2045301832"
+        coords 1.914 1.066 1.199
+        angleY -90
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_06 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords -3.921 -0.12 -0.563
+      angleX 0.001
+      angleY 145.052
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_06_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords -0.875 0 -0.362
+        CompletionRadius 8
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{E03554F412EB72B0}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_500.et" {
+    coords -567.435 -32.315 1254.581
+    angleY -82.416
+    {
+     GenericEntity {
+      ID "60E6449173A707AF"
+      coords 0 0 0.621
+      {
+       GenericEntity {
+        ID "60E6449173A707AB"
+        coords -1.521 1.358 -1.972
+        angleY 0.678
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_05_Base_village_nw_APS_patrol_07 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords -5.265 -0.079 -3.349
+      angleX 0.001
+      angleY -125.016
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_05_Base_village_nw_APS_patrol_07_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 50
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ SupplyCache_USSR_04_Base_Sokyyiv_n {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 13292.91 3.001 16193.466
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords -96.437 -0.076 84.153
+    angleX -0.001
+    angleY 179.907
+    angleZ -0.896
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.051 1.677 -0.614
+      angleX 0.001
+      angleZ 0.896
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.793 -1.676 -0.665
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.33 -0.021 0.729
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.606 -0.474 4.292
+          angleY 36.034
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.813 -1.52 2.872
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 3.366 -1.723 3.372
+        angleY 0.819
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -4.775 -1.746 -2.394
+        angleY 93.613
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.342 -1.699 -2.422
+        angleY -89.335
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.228 -1.725 -4.986
+        angleY -0.492
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords 0.209 -1.717 -3.81
+        angleY -3.43
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.211 -2.292 6.057
+        angleY 44.447
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 2.961 -1.736 1.637
+        angleY -90
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 3.121 -1.732 -1.777
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.061 -1.735 0.141
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 5.908 -1.743 11.536
+        angleY -0.097
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.932 -1.559 3.252
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 1.536 -1.725 1.691
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.274 -1.446 0.594
+        angleY -83.606
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_04_Base_Sokyyiv_n_APS_patrol_01 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 8.64 -0.06 0.512
+      angleX 0.001
+      angleY -179.907
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_04_Base_Sokyyiv_n_APS_patrol_01_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 8
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords 668.623 13.094 -62.787
+    angleY -77.213
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords -0.736 1.439 -1.343
+        angleY 2.353
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.205 0 0
+        {
+         GenericEntity {
+          ID "60E64490D77B3438"
+          coords -0.111 0 -1.204
+         }
+         GenericEntity {
+          ID "60E64490D77B343D"
+          coords -1.197 0 0.239
+         }
+         GenericEntity {
+          ID "60E64490D77B343E"
+          coords 1.536 0 -0.686
+          angleY -18.597
+         }
+        }
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_04_Base_Sokyyiv_n_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 6.433 0.058 2.29
+      angleX 0.001
+      angleY -102.694
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_04_Base_Sokyyiv_n_APS_patrol_02_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords -0.282 0 13.733
+        CompletionRadius 15
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ SupplyCache_USSR_04_Base_Sokyyiv_s {
+  components {
+   RplComponent "{60E64494539F9BA7}" {
+   }
+   Hierarchy "{60E644945CC6CB2D}" {
+   }
+  }
+  coords 13333.021 34.123 14551.265
+  angleY 138.066
+  {
+   GenericEntity : "{9A8A610353E937B4}Prefabs/Compositions/Locations/SupplyCache/Containers/v1/PR_SupplyCache_v1_Containers_1500.et" {
+    coords 2.994 -0.039 -8.216
+    angleX 0.854
+    angleY -107.592
+    angleZ -0.27
+    {
+     GenericEntity {
+      ID "60E76A929DAA1F1D"
+      coords 8.051 1.677 -0.614
+      angleX 0.001
+      angleZ 0.896
+      {
+       GenericEntity {
+        ID "60E76A929DB5D34A"
+        coords -1.79 -1.878 -0.668
+        {
+         GenericEntity {
+          ID "60E76A929DB5D34F"
+          coords -0.331 -0.077 0.729
+          angleX -3.247
+          angleY 0.353
+          angleZ -6.206
+         }
+         GenericEntity {
+          ID "60E76A929DB5D341"
+          coords -5.602 -0.992 4.285
+          angleX 4.643
+          angleY 35.174
+          angleZ -10.501
+         }
+        }
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F11"
+        coords -3.806 -2.304 2.86
+        angleX 1.448
+        angleY -7.426
+        angleZ -0.523
+       }
+       GenericEntity {
+        ID "60E76A929DB51600"
+        coords 3.365 -1.63 3.374
+        angleX -3.719
+        angleY 1.112
+        angleZ -4.5
+       }
+       GenericEntity {
+        ID "60E76A929DB5D349"
+        coords -4.773 -2.118 -2.397
+        angleX 7.353
+        angleY 93.257
+        angleZ -2.78
+       }
+       GenericEntity {
+        ID "60E76A929DB5161E"
+        coords -4.337 -2.061 -2.427
+        angleX -7.199
+        angleY -89.731
+        angleZ 3.158
+       }
+       GenericEntity {
+        ID "60E76A929DAA80BB"
+        coords 0.203 -1.546 -2.574
+        angleX -3.905
+        angleY -0.08
+        angleZ -6.02
+       }
+       GenericEntity {
+        ID "60E76A929DB5161B"
+        coords 0.023 -1.678 -0.71
+        angleX -3.61
+        angleY -3.051
+        angleZ -6.002
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B9"
+        coords -10.198 -3.489 6.039
+        angleX 6.611
+        angleY 43.516
+        angleZ -8.03
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DF"
+        coords 2.958 -1.555 1.641
+        angleX -5.187
+        angleY -90.305
+        angleZ 3.366
+       }
+       GenericEntity {
+        ID "60E76A929DAA80B6"
+        coords 3.121 -1.732 -1.777
+        angleY 176.173
+       }
+       GenericEntity {
+        ID "60E76A929DAAC528"
+        coords 3.061 -1.735 0.141
+        angleY -88.159
+       }
+       GenericEntity {
+        ID "60E76A929DAA00DA"
+        coords 9.492 -0.937 -3.822
+        angleX 3.516
+        angleY -0.105
+        angleZ -0.133
+       }
+       GenericEntity {
+        ID "60E76A929DAA00D9"
+        coords -4.923 -2.455 3.239
+        angleY -88.08
+       }
+       GenericEntity {
+        ID "60E76A929DAA00A7"
+        coords 0.791 -1.779 2.071
+        angleY 116.995
+       }
+       GenericEntity {
+        ID "60E76A929DAA1F16"
+        coords 1.276 -1.648 0.591
+        angleY -83.606
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_04_Base_Sokyyiv_s_APS_patrol_01 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+        m_eGroupType TEAM_AT
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 4.259 -0.833 7.064
+      angleX 0.601
+      angleY 149.613
+      angleZ -1.561
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_04_Base_Sokyyiv_s_APS_patrol_01_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords -12.537 -0.121 -5.247
+        CompletionRadius 70
+       }
+      }
+     }
+    }
+   }
+   GenericEntity : "{A9ED41EB602D06DA}Prefabs/Compositions/Locations/SupplyCache/v1/PR_SupplyCache_v1_200.et" {
+    coords -340.604 -6.682 140.767
+    angleY 119.651
+    {
+     GenericEntity {
+      ID "60E64490D77B3BCF"
+      {
+       GenericEntity {
+        ID "60E64490D77B3BC3"
+        coords 0.045 1.439 -1.378
+        angleY -87.367
+       }
+       GenericEntity {
+        ID "60E64490D77B3BC5"
+        coords -0.23 0 -0.001
+        {
+         GenericEntity {
+          ID "60E64490D77B3438"
+          coords 0.007 0.551 -0.612
+          angleY -93.597
+         }
+         GenericEntity {
+          ID "60E64490D77B343D"
+          coords 0.61 4.28 0.434
+          angleY 90.403
+         }
+         GenericEntity {
+          ID "60E64490D77B343E"
+          coords -0.863 0 0.366
+          angleY -18.597
+         }
+         GenericEntity {
+          ID "60E64490D77B343B"
+          coords -0.309 0 -0.709
+         }
+        }
+       }
+      }
+     }
+     GenericEntity SupplyCache_USSR_04_Base_Sokyyiv_s_APS_patrol_02 : "{9273AB931008C271}Prefabs/Systems/AmbientPatrol/AmbientPatrolSpawnpoint_FIA.et" {
+      components {
+       SCR_AmbientPatrolSpawnPointComponent "{5CCEC6036BBF3EDD}" {
+        m_sDefaultWaypointPrefab "{06B1B14B6DE3C983}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamPatrol.et"
+       }
+       SCR_FactionAffiliationComponent "{5CCEC6039525B984}" {
+        "faction affiliation" "USSR"
+       }
+      }
+      coords 2.552 -0.502 -9.307
+      angleX 0.001
+      angleY -77.624
+      angleZ -0.896
+      {
+       SCR_DefendWaypoint SupplyCache_USSR_04_Base_Sokyyiv_s_APS_patrol_02_wp_01 : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
+        components {
+         Hierarchy "{6256118B646C6B13}" {
+         }
+        }
+        coords 3.591 0 -0.015
+        CompletionRadius 8
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

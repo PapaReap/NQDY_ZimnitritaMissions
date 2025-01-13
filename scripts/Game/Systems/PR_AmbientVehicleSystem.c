@@ -3,6 +3,9 @@ modded class SCR_AmbientVehicleSystem : GameSystem
 	//------------------------------------------------------------------------------------------------
 	override protected void ProcessSpawnpoint(int spawnpointIndex)
 	{
+		if (!m_aSpawnpoints || !m_aSpawnpoints.IsIndexValid(spawnpointIndex))
+			return;
+
 		SCR_AmbientVehicleSpawnPointComponent spawnpoint = m_aSpawnpoints[spawnpointIndex];
 
 		if (!spawnpoint || spawnpoint.GetIsDepleted())
@@ -83,7 +86,7 @@ modded class SCR_AmbientVehicleSystem : GameSystem
 
 			if (vehicle && m_OnVehicleSpawned)
 				m_OnVehicleSpawned.Invoke(spawnpoint, vehicle);
-			
+
 			return;
 		}
 
@@ -96,7 +99,6 @@ modded class SCR_AmbientVehicleSystem : GameSystem
 				spawnpoint.SetDespawnTimer(currentTime.PlusMilliseconds(DESPAWN_TIMEOUT));
 			else if (currentTime.Greater(despawnT) /* Gramps added >>*/	&& !spawnpoint.IsVehiclePatrol()/*<< Gramps added */	)
 			//else if (currentTime.Greater(despawnT))
-
 				spawnpoint.DespawnVehicle();
 		}
 		else

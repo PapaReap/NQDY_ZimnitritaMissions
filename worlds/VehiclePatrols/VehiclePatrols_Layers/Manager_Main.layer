@@ -28,7 +28,7 @@ SCR_GameModeCampaign PR_GameMode_CampaignSF1 : "{AB5079F60DAECFBF}Prefabs/MP/Mod
     }
    }
    m_pConnectionInfo EDF_JsonFileDbConnectionInfo "{61B6112FB73D7BA3}" {
-    m_sDatabaseName "VehiclePatrols"
+    m_sDatabaseName "309CAC699B214127"
    }
   }
   SCR_GameModeSFManager "{60FD5A50534ED456}" {

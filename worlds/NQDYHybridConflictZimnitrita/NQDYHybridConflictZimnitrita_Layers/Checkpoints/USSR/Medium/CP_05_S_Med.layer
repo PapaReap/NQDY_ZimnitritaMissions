@@ -44,14 +44,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.002 0 -0.005
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_05_S_Med_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.003 0.004 -0.044
@@ -103,14 +95,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords 0.002 0.002 -0.012
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_05_S_Med_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords 0.001 0.006 -0.051
@@ -162,14 +146,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords 0.006 0.003 -0.006
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_05_S_Med_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords 0.005 0.007 -0.045
@@ -6282,7 +6258,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -3267.45 31.234 -5012.833
+     coords -3267.45 31.233 -5012.833
      angleX -5.186
      angleY 26.392
      angleZ 1.411
@@ -6291,7 +6267,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 0.042 0 0.01
        {
         GenericEntity : "{7C85836D444E3797}Prefabs/Compositions/Slotted/SlotRoadMedium/Checkpoint_M_USSR_01.et" {
-         coords -0.692 -0.052 0.801
+         coords -0.693 0.002 0.796
          angleX 8.374
          angleY -151.013
          angleZ -0.44

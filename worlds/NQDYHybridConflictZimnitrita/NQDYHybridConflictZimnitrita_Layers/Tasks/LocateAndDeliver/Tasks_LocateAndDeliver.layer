@@ -141,11 +141,6 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
          SCR_ScenarioFrameworkActionPlaySound "{61B25CC00A543D59}" {
           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
          }
-         SCR_ScenarioFrameworkActionDeleteEntity "{61B25CC4ECFE58F9}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{61B25CC4F6286089}" {
-           m_sEntityName "TaskLocateAndDeliver_01"
-          }
-         }
          SCR_ScenarioFrameworkActionDeleteEntity "{61B25CC4F2CFF448}" {
           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61B25CC4FB7DD225}" {
            m_sEntityName "Pers_TaskLocateAndDeliver_01"
@@ -355,11 +350,6 @@ GenericEntity Area_LocateAndDeliver_01 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFram
         m_aTriggerActionsOnFinish {
          SCR_ScenarioFrameworkActionPlaySound "{61634CC39E19E8BB}" {
           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-         }
-         SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3AF84D298}" {
-          m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3B3FC882E}" {
-           m_sEntityName "TaskLocateAndDeliver_01_Deliver"
-          }
          }
          SCR_ScenarioFrameworkActionDeleteEntity "{61634CC3ED53FF9D}" {
           m_Getter SCR_ScenarioFrameworkGetEntityByName "{61634CC3F1406655}" {

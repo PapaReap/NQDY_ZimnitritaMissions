@@ -502,7 +502,6 @@ PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_Master {
    }
   }
  }
- m_iPlayerDistanceToSpawnTask 600
  m_bUseRandomTasks 1
  m_iRandomTaskCount -1
  m_bUseRandomDelayBetweenTasksTimer 1
@@ -612,12 +611,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4994620AB689}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Airport"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{61610678DC6D443B}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -840,49 +833,49 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -129.748 9.956 -60.428
+       coords -128.844 9.924 -56.926
       }
       TaskDeliverIntel_Airport_move_02 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -129.018 5.76 -64.041
+       coords -128.618 5.484 -62.745
       }
       TaskDeliverIntel_Airport_move_03 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -131.176 5.744 -57.711
+       coords -128.864 5.738 -56.888
       }
       TaskDeliverIntel_Airport_move_04 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -125.361 1.948 -53.547
+       coords -123.224 1.948 -54.098
       }
       TaskDeliverIntel_Airport_move_05 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -119.812 1.948 -59.006
+       coords -121.098 1.539 -60.763
       }
       TaskDeliverIntel_Airport_move_06 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -122.424 1.948 -62.601
+       coords -121.718 1.536 -61.139
       }
       TaskDeliverIntel_Airport_move_07 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -130.409 1.96 -64.276
+       coords -127.888 1.948 -63.956
       }
       TaskDeliverIntel_Airport_move_08 {
        components {
@@ -917,63 +910,63 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -71.969 5.151 -96.109
+       coords -71.969 5.208 -96.109
       }
       TaskDeliverIntel_Airport_move_13 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -72.021 5.151 -96.227
+       coords -72.021 5.208 -96.227
       }
       TaskDeliverIntel_Airport_move_14 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -70.177 5.151 -92.792
+       coords -70.02 5.208 -92.664
       }
       TaskDeliverIntel_Airport_move_15 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -75.941 5.152 -116.848
+       coords -75.941 5.209 -116.848
       }
       TaskDeliverIntel_Airport_move_16 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -73.95 5.151 -121.054
+       coords -73.95 5.208 -121.054
       }
       TaskDeliverIntel_Airport_move_17 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -74.077 1.951 -119.989
+       coords -74.077 2.008 -119.989
       }
       TaskDeliverIntel_Airport_move_18 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -77.566 2.061 -115.924
+       coords -77.566 2.119 -115.924
       }
       TaskDeliverIntel_Airport_move_19 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -41.822 5.151 -96.65
+       coords -41.822 5.208 -96.65
       }
       TaskDeliverIntel_Airport_move_20 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -66.758 5.151 -90.967
+       coords -66.533 5.208 -90.737
       }
       TaskDeliverIntel_Airport_move_22 {
        components {
@@ -987,21 +980,21 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -111.819 1.531 -108.583
+       coords -113.381 1.276 -110.455
       }
       TaskDeliverIntel_Airport_move_24 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -122.323 1.551 -95.368
+       coords -123.939 1.147 -96.325
       }
       TaskDeliverIntel_Airport_move_25 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -122.949 1.554 -88.842
+       coords -120.018 1.148 -93.84
       }
       TaskDeliverIntel_Airport_move_26 {
        components {
@@ -1022,14 +1015,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -182.876 1.05 -92.733
+       coords -169.497 1.05 -95.731
       }
       TaskDeliverIntel_Airport_move_29 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -40.158 5.151 -100.172
+       coords -40.158 5.208 -100.172
       }
       TaskDeliverIntel_Airport_move_21 {
        components {
@@ -1043,7 +1036,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords 13.521 1.95 -148.1
+       coords 13.522 1.95 -148.1
       }
       TaskDeliverIntel_Airport_move_32 {
        components {
@@ -1057,14 +1050,14 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -48.947 2.045 -100.349
+       coords -48.947 2.102 -100.349
       }
       TaskDeliverIntel_Airport_move_34 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -41.831 1.951 -96.79
+       coords -41.724 2.008 -96.818
       }
       TaskDeliverIntel_Airport_move_35 {
        components {
@@ -1194,12 +1187,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Gruwice_WT"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F0F3B853C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{6161402F1BE18878}" {
@@ -1665,12 +1652,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Szarlota"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F3C873D3A}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_Szarlota"
@@ -2127,12 +2108,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4994730FC1D2}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Sartava"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F4113CC9C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -2598,12 +2573,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F4994730FC1D2}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Kromzova"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F4BDF2EE0}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_Kromzova"
@@ -3067,12 +3036,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_LakeCamp"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F519F463C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -3551,12 +3514,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Niscova_se"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F4F275A74}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -4078,12 +4035,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F49958720A79B}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_ExcavationSite"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F5E86B64C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_ExcavationSite"
@@ -4503,11 +4454,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F49958C9FB423}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C566E66855E3}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C566E89EBE84}" {
-         m_sEntityName "TaskDeliverIntel_Detrany"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F620E92B1}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -5050,12 +4996,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F49947EDAC911}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Stereni"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F5AA0E243}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -5619,12 +5559,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Varpadany"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F71A0B03B}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_Varpadany"
@@ -6097,11 +6031,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F499594959888}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{615854B244F55C30}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{615854B24EE01B29}" {
-         m_sEntityName "TaskDeliverIntel_ZimitritaFalls_ne"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F68F3406F}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_ZimitritaFalls_ne"
@@ -6546,11 +6475,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995AF8D07E3}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C566E66855E3}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C566E89EBE84}" {
-         m_sEntityName "TaskDeliverIntel_Nienia"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402E82A3A170}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -7013,12 +6937,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F49959F7AC19C}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_MyrislavIndustry"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F6DFEED0F}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -7567,12 +7485,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Airport_s"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F3AE65B1C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -8286,12 +8198,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F4995A68816D0}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_Airport_sx2"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F6790947C}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_Airport_sx2"
@@ -8841,7 +8747,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -8901,11 +8806,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F4995BA929D53}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C566E66855E3}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C566E89EBE84}" {
-         m_sEntityName "TaskDeliverIntel_NiscovaFarm"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402E87EA74E1}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -9369,11 +9269,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       m_aTriggerActionsOnFinish {
        SCR_ScenarioFrameworkActionPlaySound "{615F499709C18D46}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
-       }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C566E66855E3}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C566E89EBE84}" {
-         m_sEntityName "TaskDeliverIntel_Sokyyiv"
-        }
        }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F75919F81}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
@@ -9935,11 +9830,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F499709C18D46}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C566E66855E3}" {
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C566E89EBE84}" {
-         m_sEntityName "TaskDeliverIntel_Vrana"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402F79892AC9}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_Vrana"
@@ -10363,98 +10253,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
   }
   coords 12292.955 32 8686.095
-  Flags 2097155
   {
-   $grp GenericEntity {
-    TaskDeliverIntel_IndustrialZone_move_02 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -21.184 13.231 13.093
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_03 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -14.954 13.043 5.132
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_04 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -25.176 13.103 -2.32
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_05 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -40.572 9.221 3.122
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_06 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -41.35 9.204 -5.136
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_07 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -41.368 9.204 0.544
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_08 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -31.969 9.11 7.847
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_09 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -20.552 9.203 0.27
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_10 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -28.021 9.11 14.83
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_11 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -31.557 1.102 21.173
-     Flags 2097155
-    }
-    TaskDeliverIntel_IndustrialZone_move_12 {
-     components {
-      Hierarchy "{613802B54F5287D4}" {
-      }
-     }
-     coords -63.205 1.218 67.629
-     Flags 2097155
-    }
-   }
    PR_SpawnTaskTrigger TaskTrg_TaskDeliverIntel_IndustrialZone {
     coords 0.756 0 0.066
     Flags 2097155
@@ -10496,7 +10295,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
    PR_TaskOptimizerTrigger Opt_TaskDeliverIntel_IndustrialZone {
     coords 10.409 0 0.117
-    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 2
     ShapeColor 0 0.502 0.502 0.098
@@ -10525,11 +10323,9 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
       Pers_Opt_TaskDeliverIntel_IndustrialZone {
        coords 0.001 -0.019 0.136
-       Flags 2097155
       }
       Pers_Fail_TaskDeliverIntel_IndustrialZone {
        coords 0.146 -0.341 -0.415
-       Flags 2097155
       }
      }
     }
@@ -10552,12 +10348,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        SCR_ScenarioFrameworkActionPlaySound "{615F499469EBCF37}" {
         m_sSound "SOUND_HUD_TASK_SUCCEEDED"
        }
-       SCR_ScenarioFrameworkActionDeleteEntity "{6152C57B5941F368}" {
-        m_iMaxNumberOfActivations 1
-        m_Getter SCR_ScenarioFrameworkGetEntityByName "{6152C57B6A89530F}" {
-         m_sEntityName "TaskDeliverIntel_IndustrialZone"
-        }
-       }
        SCR_ScenarioFrameworkActionDeleteEntity "{6161402FDC697974}" {
         m_Getter SCR_ScenarioFrameworkGetEntityByName "{61610678E6514B56}" {
          m_sEntityName "Pers_TaskDeliverIntel_IndustrialZone"
@@ -10570,7 +10360,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     coords -0.044 0 0.046
-    Flags 2097155
     {
      GenericEntity SlotDelivery_TaskDeliverIntel_IndustrialZone {
       ID "5E74C909218B71FF"
@@ -10588,7 +10377,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
       }
       coords 1.477 0 8.971
-      Flags 2097155
      }
      GenericEntity SlotPick_TaskDeliverIntel_IndustrialZone {
       ID "5E74C909218B7182"
@@ -10621,13 +10409,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       angleX -0.274
       angleY -22.478
       angleZ -0.132
-      Flags 2097155
      }
     }
    }
    GenericEntity Pers_TaskDeliverIntel_IndustrialZone : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords 0.12 0 -1.003
-    Flags 2097155
    }
    GenericEntity Layer_TaskDeliverIntel_AI_IndustrialZone : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
     components {
@@ -10637,12 +10423,10 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     coords 3.613 0 -1.256
-    Flags 2097155
     {
      $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
       Layer_TaskDeliverIntel_AI_IndustrialZone_01 {
        coords 0 0 0
-       Flags 2097155
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          SlotAI_TaskDeliverIntel_IndustrialZone_01_01_LFT {
@@ -10651,8 +10435,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
             m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
            }
           }
-          coords -67.924 0 -37.942
-          Flags 2097155
+          coords -67.925 0 -37.942
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_02_WR {
           components {
@@ -10660,8 +10443,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
             m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
            }
           }
-          coords -16.528 0 134.844
-          Flags 2097155
+          coords -16.529 0 134.844
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_03_LFT {
           components {
@@ -10669,9 +10451,8 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
             m_sObjectToSpawn "{BB2F645E78FF3750}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_Fireteam.et"
            }
           }
-          coords -63.244 13.719 203.172
+          coords -63.245 0 203.172
           angleY -179.102
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_04_LFT {
           components {
@@ -10680,7 +10461,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 84.042 0 92.316
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_05_LRG {
           components {
@@ -10689,7 +10469,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 18.122 0 -37.525
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_06_WR {
           components {
@@ -10699,7 +10478,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -143.337 0 132.586
           angleY 178.77
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_01_07_WR {
           components {
@@ -10708,7 +10486,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -134.346 0 -4.968
-          Flags 2097155
          }
         }
        }
@@ -10721,7 +10498,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords -6.586 0.567 -0.478
-       Flags 2097155
        {
         $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
          SlotAI_TaskDeliverIntel_IndustrialZone_02_01_LFTS {
@@ -10731,7 +10507,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 55.102 -0.567 -107.398
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_02_WR {
           components {
@@ -10740,7 +10515,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 50.219 -0.567 167.245
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_03_LFTS {
           components {
@@ -10749,7 +10523,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords 155.189 -0.567 -106.123
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_04_LFTS {
           components {
@@ -10759,7 +10532,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           }
           coords -146.463 -0.786 6.623
           angleZ 0.123
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_05_LRGS {
           components {
@@ -10768,7 +10540,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -31.835 -0.567 82.023
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_06_WR {
           components {
@@ -10780,7 +10551,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
           angleX -9.303
           angleY 0.367
           angleZ -2.267
-          Flags 2097155
          }
          SlotAI_TaskDeliverIntel_IndustrialZone_02_07_WR {
           components {
@@ -10789,7 +10559,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
            }
           }
           coords -34.409 -0.567 -58.029
-          Flags 2097155
          }
         }
        }
@@ -10799,24 +10568,98 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
    }
    GenericEntity TaskDeliverIntel_MoveCollection_IndustrialZone : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     coords -33.304 0.011 83.349
-    Flags 2097155
     {
      $grp GenericEntity {
+      TaskDeliverIntel_IndustrialZone_move_02 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 49.484 1.058 -58.252
+      }
+      TaskDeliverIntel_IndustrialZone_move_03 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 60.245 1.062 -23.275
+      }
+      TaskDeliverIntel_IndustrialZone_move_04 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 67.015 1.067 -20.34
+      }
+      TaskDeliverIntel_IndustrialZone_move_05 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 105.388 1.148 -12.251
+      }
+      TaskDeliverIntel_IndustrialZone_move_06 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 109.353 1.148 -15.649
+      }
+      TaskDeliverIntel_IndustrialZone_move_07 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 103.685 1.139 -32.684
+      }
+      TaskDeliverIntel_IndustrialZone_move_08 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 112.684 1.186 -69.599
+      }
+      TaskDeliverIntel_IndustrialZone_move_09 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 95.444 1.349 -92.343
+      }
+      TaskDeliverIntel_IndustrialZone_move_10 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 73.476 1.048 -185.977
+      }
+      TaskDeliverIntel_IndustrialZone_move_11 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 62.94 1.254 -188.841
+      }
+      TaskDeliverIntel_IndustrialZone_move_12 {
+       components {
+        Hierarchy "{613802B54F5287D4}" {
+        }
+       }
+       coords 71.006 1.254 -190.021
+      }
       TaskDeliverIntel_IndustrialZone_move_01 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
        coords 67.058 1.18 -20.461
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_13 {
        components {
         Hierarchy "{613802B54F5287D4}" {
         }
        }
-       coords -81.104 1.273 6.747
-       Flags 2097155
+       coords -81.104 1.593 6.747
       }
       TaskDeliverIntel_IndustrialZone_move_14 {
        components {
@@ -10824,7 +10667,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 22.968 1.259 -121.548
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_15 {
        components {
@@ -10832,7 +10674,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 19.494 1.519 -107.848
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_16 {
        components {
@@ -10840,7 +10681,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 27.101 9.064 -109.215
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_17 {
        components {
@@ -10848,7 +10688,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 22.307 9.065 -111.567
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_18 {
        components {
@@ -10856,7 +10695,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 20.012 9.065 -114.825
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_19 {
        components {
@@ -10864,7 +10702,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 19.842 9.065 -118.751
-       Flags 2097155
       }
       TaskDeliverIntel_IndustrialZone_move_20 {
        components {
@@ -10872,7 +10709,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
         }
        }
        coords 23.601 12.791 -118.922
-       Flags 2097155
       }
      }
     }

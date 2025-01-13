@@ -1,6 +1,9 @@
 $grp PR_AIPatrolTrigger {
  SPT_CP_05_S_Sm_01 {
-  coords 13161.327 30.93 8860.455
+  coords 13161.326 30.931 8860.455
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -51,7 +54,10 @@ $grp PR_AIPatrolTrigger {
   }
  }
  SPT_CP_05_S_Sm_02 {
-  coords 13160.784 30.929 8861.237
+  coords 13160.784 30.928 8861.237
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -102,7 +108,10 @@ $grp PR_AIPatrolTrigger {
   }
  }
  SPT_CP_05_S_Sm_03 {
-  coords 13161.886 30.943 8860.736
+  coords 13161.886 30.941 8860.736
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -153,7 +162,10 @@ $grp PR_AIPatrolTrigger {
   }
  }
  SPT_CP_05_S_Sm_04 {
-  coords 13160.494 30.914 8860.208
+  coords 13160.494 30.916 8860.208
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -204,7 +216,10 @@ $grp PR_AIPatrolTrigger {
   }
  }
  SPT_CP_05_S_Sm_05 {
-  coords 13161.348 30.942 8861.88
+  coords 13161.348 30.941 8861.88
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -255,7 +270,10 @@ $grp PR_AIPatrolTrigger {
   }
  }
  SPT_CP_05_S_Sm_06 {
-  coords 13161.064 30.934 8861.56
+  coords 13161.064 30.935 8861.56
+  angleX 0.447
+  angleY -0.007
+  angleZ -0.895
   TriggerShapeType Sphere
   SphereRadius 1
   "Polyline Height" 10
@@ -307,7 +325,8 @@ $grp PR_AIPatrolTrigger {
  }
 }
 PR_RandomizerTrigger CP_05_S_Sm_Random {
- coords 13149.198 30.79 8859.864
+ coords 13149.197 30.791 8859.863
+ angleZ -0.448
  TriggerShapeType Sphere
  ShapeColor 0.046 0 1 0.078
  TriggerActivationType "First change"
@@ -403,10 +422,9 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
        coords 0.648 0.07 0.803
        {
         GenericEntity : "{9483333BFD9E2D0F}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_USSR_01.et" {
-         coords -0.879 -0.071 -0.674
-         angleX -1.788
+         coords -0.879 -0.07 -0.672
          angleY 177.305
-         angleZ 0.084
+         angleZ -0.001
          {
           GenericEntity {
            ID "5CC6B48B9C8C2BA0"
@@ -1275,7 +1293,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
     Enabled 0
    }
   }
-  coords 13148.638 30.785 8860.646
+  coords 13148.638 30.787 8860.646
+  angleZ -0.448
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     CP_05_S_Sm_02_01 {
@@ -1286,19 +1305,22 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 831.662 67.71 -7896.344
-     angleX 2
-     angleY 151.957
-     angleZ -0.052
+     coords 831.611 61.206 -7896.344
+     angleX 1.79
+     angleY 151.959
+     angleZ -0.446
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
-       coords 0.648 0.07 0.803
+       coords 0.648 -0.009 0.8
+       angleX -0.185
+       angleY -0.002
+       angleZ 0.605
        {
         GenericEntity : "{9483333BFD9E2D0F}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_USSR_01.et" {
-         coords -0.879 -0.071 -0.674
-         angleX -1.788
-         angleY 177.305
-         angleZ 0.084
+         coords -0.88 -0.003 -0.672
+         angleX -0.156
+         angleY 177.322
+         angleZ 0.613
          {
           GenericEntity {
            ID "5CC6B48B9C8C2BA0"
@@ -1386,10 +1408,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 457.52 30.568 -7547.952
-     angleX 1.717
+     coords 457.493 26.993 -7547.952
+     angleX 1.843
      angleY -163.559
-     angleZ 0.507
+     angleZ 0.077
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1486,10 +1508,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1832.397 50.828 -7986.538
-     angleX -4.747
-     angleY 131.717
-     angleZ -0.044
+     coords 1832.286 36.541 -7986.538
+     angleX -5.081
+     angleY 131.719
+     angleZ -0.341
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1574,10 +1596,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1455.727 12.287 -6835.224
-     angleX -2.128
-     angleY -146.739
-     angleZ -2.464
+     coords 1455.64 0.912 -6835.224
+     angleX -1.396
+     angleY -146.785
+     angleZ -3.584
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1674,10 +1696,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1260.015 15.58 -6763.128
-     angleX -1.586
-     angleY 163.284
-     angleZ 0.943
+     coords 1259.939 5.734 -6763.128
+     angleX -1.714
+     angleY 163.283
+     angleZ 0.515
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1774,10 +1796,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 341.733 -16.207 -6262.765
-     angleX 2.81
-     angleY 64.97
-     angleZ -0.325
+     coords 341.713 -18.874 -6262.765
+     angleX 2.404
+     angleY 64.971
+     angleZ -0.135
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1874,10 +1896,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1254.454 17.604 -6047.326
-     angleX -0.999
-     angleY -156.844
-     angleZ 0.06
+     coords 1254.378 7.802 -6047.326
+     angleX -0.823
+     angleY -156.845
+     angleZ -0.352
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_07 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -1974,10 +1996,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 236.675 -14.775 -5531.492
-     angleX 1.745
-     angleY 77.115
-     angleZ -0.399
+     coords 236.661 -16.623 -5531.492
+     angleX 1.309
+     angleY 77.117
+     angleZ -0.299
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_08 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2074,10 +2096,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 201.066 -15.893 -5526.39
-     angleX -4.14
-     angleY -120.874
-     angleZ 0.912
+     coords 201.054 -17.458 -5526.39
+     angleX -4.365
+     angleY -120.876
+     angleZ 0.529
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_02_09 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2175,7 +2197,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
     Enabled 0
    }
   }
-  coords 13149.476 30.793 8859.83
+  coords 13149.477 30.793 8859.83
+  angleZ -0.448
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     CP_05_S_Sm_03_01 {
@@ -2186,10 +2209,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -829.87 -25.428 -5498.146
-     angleX 1.26
-     angleY 39.504
-     angleZ -0.121
+     coords -829.817 -18.861 -5498.146
+     angleX 0.345
+     angleY 39.5
+     angleZ 0.285
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2286,10 +2309,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -454.251 -21.864 -5864.401
-     angleX 2.486
-     angleY 7.484
-     angleZ 1.679
+     coords -454.224 -18.32 -5864.401
+     angleX 2.429
+     angleY 7.482
+     angleZ 2.122
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2386,10 +2409,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -242.581 -19.774 -5008.183
-     angleX -2.605
-     angleY -28.249
-     angleZ -0.123
+     coords -242.566 -17.875 -5008.183
+     angleX -2.394
+     angleY -28.248
+     angleZ 0.27
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2486,7 +2509,7 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1206.623 17.295 -5431.577
+     coords 1206.55 7.87 -5431.577
      angleX 1.405
      angleY 154.806
      angleZ -0.167
@@ -2586,10 +2609,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1358.106 22.319 -5529.029
-     angleX 0.787
+     coords 1358.024 11.711 -5529.029
+     angleX 1
      angleY -151.554
-     angleZ 0.426
+     angleZ 0.033
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2686,8 +2709,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1347.461 22.676 -5130.65
+     coords 1347.379 12.151 -5130.65
+     angleX -0.447
      angleY 92.915
+     angleZ -0.023
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2784,8 +2809,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1737.241 22.645 -5056.256
-     angleY -26.691
+     coords 1737.135 9.075 -5056.256
+     angleX 0.201
+     angleY -26.69
+     angleZ 0.4
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_07 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2882,8 +2909,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2217.418 22.645 -5276.416
-     angleY 67.416
+     coords 2217.282 5.324 -5276.416
+     angleX -0.413
+     angleY 67.415
+     angleZ 0.172
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_08 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -2980,10 +3009,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1982.152 33.632 -7079.21
-     angleX 2.205
-     angleY 45.542
-     angleZ 0.97
+     coords 1982.03 18.144 -7079.21
+     angleX 1.886
+     angleY 45.535
+     angleZ 1.283
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_09 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3080,10 +3109,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1134.514 14.604 -6705.461
-     angleX -5.859
-     angleY 174.298
-     angleZ -0.311
+     coords 1134.445 5.745 -6705.461
+     angleX -5.904
+     angleY 174.299
+     angleZ -0.754
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_03_10 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3181,7 +3210,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
     Enabled 0
    }
   }
-  coords 13149.449 30.794 8861.613
+  coords 13149.449 30.793 8861.612
+  angleZ -0.448
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     CP_05_S_Sm_04_01 {
@@ -3192,10 +3222,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 947.297 12.277 -6604.05
-     angleX -1.799
-     angleY 26.404
-     angleZ 0.605
+     coords 947.239 4.882 -6604.05
+     angleX -1.998
+     angleY 26.4
+     angleZ 1.006
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3292,10 +3322,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 802.213 -1.636 -6369.119
-     angleX -0.296
-     angleY -95.937
-     angleZ -7.133
+     coords 802.164 -7.901 -6369.119
+     angleX 0.143
+     angleY -95.992
+     angleZ -7.179
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3392,10 +3422,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 68.16 -21.997 -6225.833
-     angleX 7.035
-     angleY -80.628
-     angleZ 3.854
+     coords 68.156 -22.553 -6225.833
+     angleX 7.475
+     angleY -80.598
+     angleZ 3.93
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3492,10 +3522,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -266.136 -19.325 -6930.47
-     angleX -3.402
-     angleY 20.711
-     angleZ 0.148
+     coords -266.12 -17.376 -6930.469
+     angleX -3.301
+     angleY 20.713
+     angleZ 1.142
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3592,10 +3622,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 355.532 -15.534 -6025.688
-     angleX -4.526
-     angleY -125.826
-     angleZ -1.689
+     coords 355.511 -18.306 -6025.688
+     angleX -4.164
+     angleY -125.838
+     angleZ -1.949
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3692,10 +3722,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -392.56 -22.309 -5410.161
-     angleX 0.131
-     angleY -167.789
-     angleZ -2.718
+     coords -392.536 -19.25 -5410.161
+     angleX 0.225
+     angleY -167.794
+     angleZ -3.155
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3792,10 +3822,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -1062.352 -25.457 -5160.309
-     angleX -0.986
+     coords -1062.287 -17.161 -5160.309
+     angleX -1.415
      angleY 106.599
-     angleZ 0.173
+     angleZ 0.045
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_07 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3892,10 +3922,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -1270.614 -17.944 -4973.161
-     angleX -1.751
-     angleY 20.834
-     angleZ 4.59
+     coords -1270.536 -8.032 -4973.161
+     angleX -1.91
+     angleY 20.82
+     angleZ 5.009
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_08 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -3992,10 +4022,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2783.628 1.782 -6441.403
-     angleX -10.54
-     angleY 94.646
-     angleZ 3.999
+     coords 2783.459 -19.945 -6441.402
+     angleX -10.983
+     angleY 94.615
+     angleZ 3.969
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_04_09 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4093,7 +4123,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
     Enabled 0
    }
   }
-  coords 13149.216 30.793 8858.799
+  coords 13149.216 30.791 8858.799
+  angleZ -0.448
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     CP_05_S_Sm_05_01 {
@@ -4104,10 +4135,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 3060.125 -22.579 -6475.875
-     angleX -6.059
+     coords 3059.938 -46.479 -6475.875
+     angleX -5.947
      angleY -165.534
-     angleZ 0.278
+     angleZ -0.153
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4204,10 +4235,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2806.499 2.187 -6292.108
-     angleX -6.297
-     angleY 100.955
-     angleZ -0.31
+     coords 2806.328 -19.723 -6292.107
+     angleX -6.737
+     angleY 100.958
+     angleZ -0.395
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4304,8 +4335,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2593.731 22.645 -5213.762
-     angleY -66.662
+     coords 2593.572 2.386 -5213.762
+     angleX 0.411
+     angleY -66.661
+     angleZ 0.177
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4402,8 +4435,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2428.099 22.645 -5107.547
-     angleY -146.548
+     coords 2427.95 3.68 -5107.547
+     angleX 0.247
+     angleY -146.55
+     angleZ -0.373
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4500,8 +4535,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2270.575 22.645 -4879.269
-     angleY 151.848
+     coords 2270.437 4.911 -4879.269
+     angleX -0.211
+     angleY 151.85
+     angleZ -0.395
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4598,8 +4635,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2037.654 22.645 -4936.292
-     angleY -35.134
+     coords 2037.529 6.73 -4936.292
+     angleX 0.258
+     angleY -35.132
+     angleZ 0.366
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4696,8 +4735,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 2130.253 22.645 -5560.117
+     coords 2130.122 6.007 -5560.117
+     angleX -0.071
      angleY 9.148
+     angleZ 0.442
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_07 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4794,9 +4835,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 3026.892 -18.169 -5057.946
+     coords 3026.707 -41.812 -5057.946
+     angleX 0.001
      angleY -0.032
-     angleZ 0.448
+     angleZ 0.895
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_08 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4893,10 +4935,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 752.477 6.751 -5459.3
-     angleX 0.445
+     coords 752.431 0.876 -5459.3
      angleY 83.594
-     angleZ -0.05
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_09 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -4993,10 +5033,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1335.45 22.67 -5021.671
-     angleX -0.446
-     angleY 84.768
-     angleZ 0.041
+     coords 1335.368 12.243 -5021.671
+     angleX -0.891
+     angleY 84.767
+     angleZ 0.082
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_10 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5093,10 +5133,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -172.437 -18.721 -7354.233
-     angleX 1.567
-     angleY -161.389
-     angleZ -3.246
+     coords -172.427 -17.381 -7354.233
+     angleX 1.71
+     angleY -161.398
+     angleZ -3.671
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_11 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5193,10 +5233,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -256.15 -19.603 -7021.443
-     angleX -3.217
-     angleY -150.341
-     angleZ 0.227
+     coords -256.134 -17.594 -7021.442
+     angleX -2.995
+     angleY -150.342
+     angleZ -0.162
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_05_12 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5294,7 +5334,8 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
     Enabled 0
    }
   }
-  coords 13149.745 30.796 8860.149
+  coords 13149.745 30.795 8860.148
+  angleZ -0.448
   {
    $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_EmptyComposition.et" {
     CP_05_S_Sm_06_01 {
@@ -5305,10 +5346,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -286.704 -23.499 -5128.607
-     angleX -1.607
-     angleY 84.391
-     angleZ 1.955
+     coords -286.686 -21.265 -5128.607
+     angleX -2.052
+     angleY 84.376
+     angleZ 2
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5405,10 +5446,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -382.109 -28.528 -5481.158
-     angleX 1.911
-     angleY -11.085
-     angleZ 5.083
+     coords -381.716 -25.651 -5484.885
+     angleX 1.194
+     angleY -10.98
+     angleZ 6.132
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5505,10 +5546,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords -90.452 -25.874 -6485.177
-     angleX 4.599
-     angleY 121.022
-     angleZ -2.443
+     coords -90.446 -25.157 -6485.177
+     angleX 4.217
+     angleY 121.04
+     angleZ -2.671
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5605,10 +5646,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 616.061 -4.933 -6447.075
-     angleX 0.355
+     coords 616.024 -9.743 -6447.075
+     angleX 0.4
      angleY -174.225
-     angleZ 0.936
+     angleZ 0.49
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_04 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5705,10 +5746,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 590.274 -7.858 -6203.315
-     angleX -2.236
+     coords 590.238 -12.466 -6203.314
+     angleX -1.789
      angleY -91.432
-     angleZ 0.056
+     angleZ 0.045
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_05 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5805,8 +5846,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1100.221 11.985 -6361.867
-     angleY -52.708
+     coords 1100.154 3.392 -6361.867
+     angleX 0.356
+     angleY -52.706
+     angleZ 0.271
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -5903,10 +5946,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 979.608 7.955 -6290.828
-     angleX 4.77
-     angleY 104.447
-     angleZ -0.615
+     coords 979.548 0.297 -6290.828
+     angleX 4.337
+     angleY 104.452
+     angleZ -0.726
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_07 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -6003,10 +6046,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1809.533 30.414 -6641.518
-     angleX 1.296
-     angleY 111.225
-     angleZ -3.333
+     coords 1809.423 16.281 -6641.517
+     angleX 0.881
+     angleY 111.25
+     angleZ -3.495
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_08 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803
@@ -6103,10 +6146,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617C344895152D08}" {
       }
      }
-     coords 1069.777 29.112 -7376.065
-     angleX -1.845
-     angleY 14.771
-     angleZ -0.024
+     coords 1069.712 20.737 -7376.065
+     angleX -3.051
+     angleY 14.749
+     angleZ 1.046
      {
       GenericEntity PR_PersistObject_CP_05_S_Sm_06_09 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 0.648 0.07 0.803

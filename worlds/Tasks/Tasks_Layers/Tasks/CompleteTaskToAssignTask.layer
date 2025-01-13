@@ -1,0 +1,150 @@
+PR_SpawnTaskTrigger {
+ coords 1234.197 37.869 2830.416
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ TM3 {
+  coords 1123.133 39 2689.664
+  angleY 54.383
+  Flags 2097155
+  {
+   GenericEntity LayerTaskMove_TM3 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Task move 3"
+      m_sTaskDescription "Move here"
+     }
+    }
+    coords -1.076 0 -4.74
+    Flags 2097155
+    {
+     GenericEntity SlotMoveTo_TM3 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence PLAYER
+         }
+        }
+       }
+      }
+      coords 0.122 0.01 -0.784
+      Flags 2097155
+     }
+    }
+   }
+  }
+ }
+ TM1 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesDuringRuntime 1
+   }
+  }
+  coords 1073.134 39 2671.793
+  angleY 54.383
+  Flags 2097155
+  {
+   GenericEntity LayerTaskMove_TM1 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_sTaskTitle "Task move 1"
+      m_sTaskDescription "Move here in order to spawn Task move 2"
+     }
+    }
+    coords -1.076 0 -4.739
+    Flags 2097155
+    {
+     GenericEntity SlotMoveTo_TM1 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence PLAYER
+         }
+        }
+       }
+      }
+      coords 0.122 0 -0.784
+      Flags 2097155
+     }
+    }
+   }
+   SCR_ScenarioFrameworkLogicCounter LogicCounter_TM1 : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+    coords 0 0 0
+    Flags 2097155
+    m_aInputs {
+     SCR_ScenarioFrameworkLogicInput "{5C6E789C0E8E60D3}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "LayerTaskMove_TM1"
+      }
+     }
+    }
+    m_aActions {
+     SCR_ScenarioFrameworkActionSpawnObjects "{5C6E789C2AFCCA60}" {
+      m_aNameOfObjectsToSpawnOnActivation {
+       "LayerTaskMove_TM2"
+      }
+     }
+    }
+   }
+  }
+ }
+ TM2 {
+  coords 1094.385 39 2680.997
+  angleY 54.383
+  Flags 2097155
+  {
+   GenericEntity LayerTaskMove_TM2 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_bShowDebugShapesDuringRuntime 1
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_sTaskTitle "Task move 2"
+      m_sTaskDescription "Move here in order to spawn Task move 3"
+     }
+    }
+    coords -1.076 0 -4.739
+    Flags 2097155
+    {
+     GenericEntity SlotMoveTo_TM2 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_eActivationPresence PLAYER
+         }
+        }
+       }
+      }
+      coords 0.122 0 -0.784
+      Flags 2097155
+     }
+    }
+   }
+   SCR_ScenarioFrameworkLogicCounter LogicCounter_TM2 : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+    coords -17.654 0.009 -26.772
+    Flags 2097155
+    m_aInputs {
+     SCR_ScenarioFrameworkLogicInput "{5C6E789C0E8E60D3}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "LayerTaskMove_TM2"
+      }
+     }
+    }
+    m_aActions {
+     SCR_ScenarioFrameworkActionSpawnObjects "{5C6E789C2AFCCA60}" {
+      m_aNameOfObjectsToSpawnOnActivation {
+       "LayerTaskMove_TM3"
+      }
+     }
+    }
+   }
+  }
+ }
+}

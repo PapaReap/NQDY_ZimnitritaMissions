@@ -1,0 +1,561 @@
+GenericEntity Layer_TaskAreaPatrol_Andruhanov_02 : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+ coords 12829.878 41.376 9833.922
+ angleX -6.682
+ angleY 54.4
+ angleZ -0.148
+ Flags 2097155
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Area_AP_Andruhanov_01 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesDuringRuntime 1
+   }
+  }
+  coords 12207.261 41.625 9897.404
+  angleY 54.383
+  {
+   $grp PR_SpawnTaskTrigger {
+    TaskTrg_Area_Patrol_01 {
+     coords 69.148 0 -52.953
+     angleY -54.383
+     TriggerShapeType Sphere
+     SphereRadius 0
+     DrawShape 1
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 20
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_TaskAreaPatrol_Andruhanov_01"
+     m_ActivationPresence ANY_CHARACTER
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61675A2931C0BF95}" {
+       m_bOverrideActivationPresence 1
+      }
+     }
+     m_aIndividualTasks {
+      PR_TaskDetails "{613802B2DA10B658}" {
+       m_sTaskName "TaskAreaPatrol_Andruhanov_01_Parent"
+      }
+     }
+     m_iRandomTaskCount -1
+     m_iDelayTimerBetweenEachTaskMin 8
+     m_iDelayTimerBetweenEachTaskMax 20
+    }
+    TaskTrg_Area_Patrol_2 {
+     coords 81.475 0 -54.597
+     angleY -108.766
+     Flags 2097155
+     TriggerShapeType Sphere
+     SphereRadius 0
+     DrawShape 1
+     ShapeColor 0.046 0 1 0.078
+     TriggerActivationType "First change"
+     PeriodicQueries 1
+     UpdatePeriod 20
+     m_bDebugLogs 1
+     m_bUsePersistence 1
+     m_sPersistentObject "Pers_Area_Patrol_01"
+     m_ActivationPresence ANY_CHARACTER
+     m_aOverrideOptions {
+      PR_OverrideTriggerActivation "{61675A2931C0BF95}" {
+       m_bOverrideActivationPresence 1
+      }
+     }
+     m_aIndividualTasks {
+      PR_TaskDetails "{613802B2DA10B658}" {
+       m_sTaskName "LayerTask1"
+      }
+     }
+     m_iMaxPlayerDistanceToSpawnTask 500
+     m_iRandomTaskCount -1
+     m_iDelayTimerBetweenEachTaskMin 8
+     m_iDelayTimerBetweenEachTaskMax 20
+    }
+   }
+   PR_TaskOptimizerTrigger Opt_TaskAreaPatrol_Andruhanov_01 {
+    coords 79.242 0 -58.149
+    angleY -54.383
+    TriggerShapeType Sphere
+    SphereRadius 20
+    DrawShape 1
+    ShapeColor 0 0.502 0.502 0.098
+    TriggerActivationType "First change"
+    PeriodicQueries 1
+    UpdatePeriod 5
+    m_bDebugLogs 1
+    m_bUsePersistence 1
+    m_sPersistentObject "Pers_Opt_TaskAreaPatrol_Andruhanov_01"
+    m_bNeutralizePersistentObject 1
+    m_aOverrideOptions {
+     PR_OverrideTriggerActivation "{61917DF60E955557}" {
+      m_bOverrideActivationPresence 1
+      m_bActivateIfObjectMissing 1
+      m_sMissingObjectName "Pers_TaskAreaPatrol_Andruhanov_01"
+     }
+    }
+    m_iDelayTimerMin 5
+    m_sTaskName "Opt_TaskAreaPatrol_Andruhanov_01"
+    m_PlayerXPTaskReward "Move (40)"
+    m_fXPMultiplier 3
+    m_sTaskFailObject "Pers_Fail_TaskAreaPatrol_Andruhanov_01"
+    {
+     $grp GenericEntity : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+      Pers_Opt_TaskAreaPatrol_Andruhanov_01 {
+       coords -12.062 -0.001 -7.016
+      }
+      Pers_Fail_TaskAreaPatrol_Andruhanov_01 {
+       coords -12.105 0 -7.254
+      }
+     }
+    }
+   }
+   GenericEntity TaskAreaPatrol_Andruhanov_01_Parent : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_eActivationType ON_TRIGGER_ACTIVATION
+      m_aActivationActions {
+       SCR_ScenarioFrameworkActionPlaySound "{64462C9C39A77F5F}" {
+        m_sSound "SOUND_HUD_TASK_CREATED"
+       }
+      }
+      m_sTaskTitle "Patrol Andruhanov"
+      m_sTaskDescription "Follow the Assigned tasks and"
+      m_bPlaceMarkerOnSubjectSlot 0
+      m_aTriggerActionsOnFinish {
+       SCR_ScenarioFrameworkActionDeleteEntity "{64467B1D1C93B4C5}" {
+        m_Getter SCR_ScenarioFrameworkGetEntityByName "{64467B1D291D6F06}" {
+         m_sEntityName "Pers_TaskAreaPatrol_Andruhanov_01"
+        }
+       }
+      }
+     }
+    }
+    coords 439.086 32.582 414.646
+    angleX -0.448
+    angleY -54.39
+    angleZ -4.467
+    {
+     GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+      components {
+       SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+        m_bShowDebugShapesDuringRuntime 1
+        m_aPlugins {
+         SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+          m_fAreaRadius 0
+          m_eActivationPresence SPECIFIC_PREFAB_NAME
+          m_fUpdateRate 50000
+          m_fMinimumPlayersNeededPercentage 1
+          m_fActivationCountdownTimer 500
+         }
+        }
+        m_aActionsOnCreated {
+         SCR_ScenarioFrameworkActionSpawnObjects "{64462C9C90E1FF78}" {
+          m_aNameOfObjectsToSpawnOnActivation {
+           "TaskAreaPatrol_Andruhanov_01_01"
+          }
+         }
+        }
+       }
+      }
+      coords 0.915 0.156 -1.109
+     }
+    }
+   }
+   GenericEntity Pers_TaskAreaPatrol_Andruhanov_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
+    coords 138.44 -1.16 696.243
+    angleY -54.383
+   }
+   GenericEntity Layer_TaskAreaPatrol_Andruhanov_01 : "{5AF3BFDA2EAE56EA}Prefabs/ScenarioFramework/Components/LayerTask.et" {
+    components {
+     SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+      m_sTaskTitle "Task Partol areas"
+     }
+    }
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+      TaskAreaPatrol_Andruhanov_01_01 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C843578739C}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_01"
+         m_sTaskDescription "Move here in order to spawn AP 2"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C846888DB48}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+          SCR_ScenarioFrameworkSetVariable "{64462C80B477EFA6}" {
+           m_sVariableName "TaskAreaPatrol_Andruhanov_01_01_var"
+           m_sVariableValue "1"
+          }
+         }
+        }
+       }
+       coords 284.85 0 -77.776
+       angleY 54.383
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_01 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+            }
+           }
+           m_aActionsOnCreated {
+            SCR_ScenarioFrameworkActionSpawnObjects "{64462CB0113DA5B0}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "TaskAreaPatrol_Andruhanov_01_02"
+             }
+            }
+           }
+          }
+         }
+         coords 0.123 0 -0.783
+        }
+       }
+      }
+      TaskAreaPatrol_Andruhanov_01_02 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_SpawnChildren RANDOM_ONE
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C8446934915}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_02"
+         m_sTaskDescription "Move here in order to spawn AP 2"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C84738D5088}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+          SCR_ScenarioFrameworkSetVariable "{64462C80C2535954}" {
+           m_sVariableName "TaskAreaPatrol_Andruhanov_01_02_var"
+           m_sVariableValue "1"
+          }
+         }
+        }
+       }
+       coords 252.505 13.468 150.8
+       angleX 0.261
+       angleY 0.002
+       angleZ 0.364
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_02 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+             m_aCustomTriggerConditions {
+              SCR_CustomTriggerConditionsGeneric "{64462CB2C7E86952}" {
+               m_aGenericConditions {
+                SCR_ScenarioFrameworkVariableValueCondition "{64462CB2CBCA6D3B}" {
+                 m_sVariableName "TaskAreaPatrol_Andruhanov_01_01_var"
+                 m_sVariableValueToCheck "1"
+                }
+               }
+              }
+             }
+            }
+           }
+           m_aActionsOnCreated {
+            SCR_ScenarioFrameworkActionSpawnObjects "{64462CB029B21407}" {
+             m_aNameOfObjectsToSpawnOnActivation {
+              "TaskAreaPatrol_Andruhanov_01_03"
+             }
+            }
+           }
+          }
+         }
+         coords -0.669 -0.006 0.562
+         angleX -0.261
+         angleY 0.002
+         angleZ -0.364
+        }
+       }
+      }
+      TaskAreaPatrol_Andruhanov_01_03 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_SpawnChildren RANDOM_ONE
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C844C79AC8D}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_03"
+         m_sTaskDescription "Move here in order to spawn AP 2"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C8479459CAC}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+          SCR_ScenarioFrameworkSetVariable "{64462C80D1967A5C}" {
+           m_sVariableName "TaskAreaPatrol_Andruhanov_01_03_var"
+           m_sVariableValue "1"
+          }
+          SCR_ScenarioFrameworkActionSpawnObjects "{64467B1E77C02358}" {
+           m_aNameOfObjectsToSpawnOnActivation {
+            "TaskAreaPatrol_Andruhanov_01_04"
+           }
+          }
+         }
+        }
+       }
+       coords 29.395 -0.125 375.796
+       angleY -54.383
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_03 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+             m_aCustomTriggerConditions {
+              SCR_CustomTriggerConditionsGeneric "{64462CB295760496}" {
+               m_aGenericConditions {
+                SCR_ScenarioFrameworkVariableValueCondition "{64462CB29DD55525}" {
+                 m_sVariableName "TaskAreaPatrol_Andruhanov_01_02_var"
+                 m_sVariableValueToCheck "1"
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+         coords -80.493 0 52.148
+        }
+       }
+      }
+      TaskAreaPatrol_Andruhanov_01_06 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C82AD657759}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_06"
+         m_sTaskDescription "Move here in order to spawn Task TaskKill_HVT_DarkForest"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C82FB8B7B60}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+         }
+        }
+       }
+       coords -113.424 12.594 -547.794
+       angleY 3.543
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_06 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+            }
+           }
+          }
+         }
+         coords 0.122 0 -0.784
+        }
+       }
+      }
+      TaskAreaPatrol_Andruhanov_01_05 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C8295A9056C}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_05"
+         m_sTaskDescription "Move here in order to spawn Task AP_01_06"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C82EC5C6EC4}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+          SCR_ScenarioFrameworkActionSpawnObjects "{6445691EA7A8F984}" {
+           m_aNameOfObjectsToSpawnOnActivation {
+            "TaskAreaPatrol_Andruhanov_01_06"
+           }
+          }
+         }
+        }
+       }
+       coords -197.176 0 -76.213
+       angleY -54.66
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_05 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+            }
+           }
+          }
+         }
+         coords 0.123 0 -0.784
+        }
+       }
+      }
+      TaskAreaPatrol_Andruhanov_01_04 {
+       components {
+        SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+         m_bShowDebugShapesDuringRuntime 1
+         m_eActivationType ON_TRIGGER_ACTIVATION
+         m_aActivationActions {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C828DA3A0AA}" {
+           m_sSound "SOUND_HUD_TASK_CREATED"
+          }
+         }
+         m_sTaskTitle "Task move AP_01_04"
+         m_sTaskDescription "Move here in order to spawn Task AP_01_05"
+         m_aTriggerActionsOnFinish {
+          SCR_ScenarioFrameworkActionPlaySound "{64462C82DB8E4157}" {
+           m_sSound "SOUND_HUD_TASK_SUCCEEDED"
+          }
+          SCR_ScenarioFrameworkActionSpawnObjects "{6445691F7BB1FBD3}" {
+           m_aNameOfObjectsToSpawnOnActivation {
+            "TaskAreaPatrol_Andruhanov_01_05"
+           }
+          }
+         }
+        }
+       }
+       coords -515.898 -16.362 76.509
+       angleX 0.886
+       angleY -108.717
+       angleZ -0.466
+       {
+        GenericEntity SlotMoveTo_TaskAreaPatrol_Andruhanov_01_04 : "{A44004A770A5D8BE}Prefabs/ScenarioFramework/Components/SlotMoveTo.et" {
+         components {
+          SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+           m_bShowDebugShapesDuringRuntime 1
+           m_aPlugins {
+            SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+             m_eActivationPresence PLAYER
+            }
+           }
+          }
+         }
+         coords 0.122 0 -0.784
+        }
+       }
+      }
+     }
+    }
+   }
+   SCR_ScenarioFrameworkLogicCounter LogicCounter_TaskAreaPatrol_Andruhanov_01 : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+    coords 0 0 0
+    m_aInputs {
+     SCR_ScenarioFrameworkLogicInput "{5C6E789C0E8E60D3}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_01"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{6445691258325B71}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_02"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{644569108DCE4DAA}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_03"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{64467B1ED16A7872}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_04"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{64467B1ED688B411}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_05"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{64467B1ED62A39A2}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "TaskAreaPatrol_Andruhanov_01_06"
+      }
+     }
+    }
+    m_aActions {
+     SCR_ScenarioFrameworkActionChangeTaskState "{644569098B5B9ED8}" {
+      m_Getter SCR_ScenarioFrameworkGetTask "{6445690989428428}" {
+       m_sLayerTaskName "TaskAreaPatrol_Andruhanov_01_Parent"
+      }
+     }
+    }
+    m_iCountTo 6
+   }
+  }
+ }
+ Area_Patrol_02 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesDuringRuntime 1
+   }
+  }
+  coords 1238.796 38 2717.134
+  angleY 54.383
+  Flags 2097155
+  {
+   SCR_ScenarioFrameworkLogicCounter LogicCounter_AP_02 : "{6C1792C71DCAFD55}Prefabs/ScenarioFramework/Components/LogicCounter.et" {
+    coords 0 0 0
+    Flags 2097155
+    m_aInputs {
+     SCR_ScenarioFrameworkLogicInput "{5C6E789C0E8E60D3}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "LayerTaskMove_AP_02_01"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{6445691258325B71}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "LayerTaskMove_AP_02_02"
+      }
+     }
+     SCR_ScenarioFrameworkLogicInput "{644569108DCE4DAA}" {
+      m_InputAction SCR_ScenarioFrameworkActionInputOnTaskEventIncreaseCounter "{5C6E789C0D96C223}" {
+       m_sTaskLayerName "LayerTaskMove_AP_02_03"
+      }
+     }
+    }
+    m_aActions {
+     SCR_ScenarioFrameworkActionSpawnObjects "{5C6E789C2AFCCA60}" {
+      m_aNameOfObjectsToSpawnOnActivation {
+       "TaskKill_HVT_DarkForest"
+      }
+     }
+    }
+    m_iCountTo 3
+   }
+  }
+ }
+}

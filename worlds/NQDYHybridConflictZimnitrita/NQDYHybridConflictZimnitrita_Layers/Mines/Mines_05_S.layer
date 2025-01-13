@@ -18,7 +18,6 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
  }
  m_aPrefabDetails {
   PR_PrefabDetails "{6174709767F5E7C6}" {
-   m_PrefabType "AT Mine USSR"
    m_aObjectLocationsToSpawnOn {
     "Set_01_S_Mines"
    }
@@ -26,7 +25,6 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
    m_fRandomPercentage 40
   }
   PR_PrefabDetails "{6174709A6CA8B8AF}" {
-   m_PrefabType "AT Mine USSR"
    m_aObjectLocationsToSpawnOn {
     "Set_02_S_Mines"
    }
@@ -34,7 +32,6 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
    m_fRandomPercentage 40
   }
   PR_PrefabDetails "{61756167A74DDA5B}" {
-   m_PrefabType "AT Mine USSR"
    m_aObjectLocationsToSpawnOn {
     "Set_03_S_Mines"
    }
@@ -79,14 +76,14 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 8203.115 -51.032 -2549.158
+       coords 8203.114 -51.032 -2549.158
       }
       Set_01_S_Mine_05 {
        components {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 8305.026 -36.992 -2455.702
+       coords 8305.025 -36.992 -2455.702
       }
       Set_01_S_Mine_01 {
        components {
@@ -100,14 +97,14 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 8082.007 -39.856 -2404.477
+       coords 8082.007 -39.855 -2404.477
       }
       Set_01_S_Mine_07 {
        components {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 8031.327 -16.067 -2273.222
+       coords 8031.327 -16.066 -2273.222
       }
       Set_01_S_Mine_08 {
        components {
@@ -153,21 +150,21 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 7095.405 -2.181 -1120.804
+       coords 7095.405 -2.18 -1120.804
       }
       Set_02_S_Mine_04 {
        components {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 7097.731 -2.321 -1111.477
+       coords 7097.731 -2.322 -1111.477
       }
       Set_02_S_Mine_05 {
        components {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 7089.632 -1.979 -1102.081
+       coords 7089.224 -1.98 -1097.309
       }
       Set_02_S_Mine_01 {
        components {
@@ -206,7 +203,7 @@ PR_SpawnPrefabTrigger Mines_05_S_Trigger {
         Hierarchy "{6174708CC8E64666}" {
         }
        }
-       coords 7253.1 -65.926 -482.506
+       coords 7253.1 -65.927 -482.506
       }
       Set_03_S_Mine_05 {
        components {

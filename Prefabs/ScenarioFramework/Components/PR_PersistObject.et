@@ -163,7 +163,5 @@ GenericEntity : "{CD00FFBAFD036BE2}Prefabs/Weapons/Core/Explosives_base.et" {
   RplComponent "{61755BB46F935B68}" {
    "Rpl State Override" Runtime
   }
-  Hierarchy "{61755BB46F935B76}" {
-  }
  }
 }

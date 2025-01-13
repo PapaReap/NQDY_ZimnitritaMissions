@@ -42,9 +42,13 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 	protected ref array<ref PR_TaskType> m_aTaskTypesFilter;
 
 	//! PR Task Spawner: Tasks - Spawner - How far away from the task layer does any player need to be to spawn task. -1 will not use the distance check. (meters)
-	[Attribute("-1", desc: "How far away from the task layer does any player need to be to spawn task. -1 will not use the distance check. (meters)  ", category: "PR Task Spawner: Tasks - Spawner")]
-	protected int m_iPlayerDistanceToSpawnTask;
+	[Attribute("-1", desc: "If any player is closer than the minimum distance, task will not be given. -1 will not use the distance check. (meters)  ", category: "PR Task Spawner: Tasks - Spawner")]
+	protected int m_iMinPlayerDistanceToSpawnTask;
 
+	//! PR Task Spawner: Tasks - Spawner - How far away from the task layer does any player need to be to spawn task. -1 will not use the distance check. (meters)
+	[Attribute("-1", desc: "If no players are closer than the maximum distance, task will not be given. -1 will not use the distance check. (meters)  ", category: "PR Task Spawner: Tasks - Spawner")]
+	protected int m_iMaxPlayerDistanceToSpawnTask;
+	
 	//! PR Task Spawner: Tasks - Spawner - Pick random tasks from all avaliable task list above.
 	[Attribute("false", UIWidgets.CheckBox,"Pick random tasks from all avaliable tasks from list above.  ", category: "PR Task Spawner: Tasks - Spawner")]
 	protected bool m_bUseRandomTasks;
@@ -52,6 +56,10 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 	//! PR Task Spawner: Tasks - Spawner - Amount of delay before spawning task
 	[Attribute("1", desc: "Amount of random tasks to pick. 'Use Random Tasks' must be checked. -1 will use all avaliable tasks from list above.  ", category: "PR Task Spawner: Tasks - Spawner")]
 	protected int m_iRandomTaskCount;
+	
+	//! PR Task Spawner: Tasks - Spawner - Maximum amount of active tasks at any given time
+	[Attribute("-1", desc: "Maximum amount of active tasks at any given time. -1 will not set a limit on active tasks.  ", category: "PR Task Spawner: Tasks - Spawner")]
+	protected int m_iMaximumActiveTasks;
 
 	//! PR Task Spawner: Tasks - Spawner - Use random delay between tasks timer: Uses min and max values below.
 	[Attribute("false", UIWidgets.CheckBox,"Use random delay between tasks timer: Uses min and max values below.  ", category: "PR Task Spawner: Tasks - Spawner")]
@@ -552,7 +560,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 
 	//------------------------------------------------------------------------------------------------
 	//! sets m_bNeutralizePersistentTaskObject;
-	protected void SetNeutralizePersistentTaskObjectArray	(bool neutralizePersistentTaskObject)
+	protected void SetNeutralizePersistentTaskObjectArray(bool neutralizePersistentTaskObject)
 	{
 		m_bNeutralizePersistentTaskObject.Insert(neutralizePersistentTaskObject);
 	}
@@ -1220,21 +1228,188 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 		if (!layer)
 			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : No layer exists! Check tasks.", m_sTriggerName, sTaskName), LogLevel.ERROR);
 
+	//	SCR_ScenarioFrameworkLayerTask layerT = SCR_ScenarioFrameworkLayerTask.Cast(layer.FindComponent(SCR_ScenarioFrameworkLayerTask));
+		
+	//	Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : layerT: %3", m_sTriggerName, sTaskName, layer.GetLayerTask()), LogLevel.WARNING);
+		// TODO: Set task timer, set max tasks at once
+		
+		
+		// >>> checking variables
+	//	SCR_ScenarioFrameworkSystem scenarioFrameworkSystem = SCR_ScenarioFrameworkSystem.GetInstance();
+	//	if (!scenarioFrameworkSystem)
+			//return false;
+		
+	//	string outValue;
+		//scenarioFrameworkSystem.GetVariable(m_sVariableName, outValue);
+	//	scenarioFrameworkSystem.GetVariable(sTaskName);
+		
+		//if (outValue.IsEmpty())
+			//return false;
+		
+		//return outValue == m_sVariableValueToCheck;
+		// <<<
+		
+		SCR_ScenarioFrameworkSystem scenarioFrameworkSystem = SCR_ScenarioFrameworkSystem.GetInstance();
+		if (!scenarioFrameworkSystem)
+			return;
+		string varName = sTaskName + "_var";
+		scenarioFrameworkSystem.SetVariableValue(varName, "1");
+		
+		string value;
+		
+		scenarioFrameworkSystem.GetVariable(varName, value);
+		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : %3 value: %4", m_sTriggerName, sTaskName, varName, scenarioFrameworkSystem.GetVariable(varName, value)), LogLevel.WARNING);
+		/*
+	//------------------------------------------------------------------------------------------------
+	//! Create a new global variable at the scenario
+	void CreateVariableValue(string key, string value)
+	{
+		m_VariableMap.Insert(key, value);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Set a value to global variable at the scenario
+	void SetVariableValue(string key, string value)
+	{
+		m_VariableMap.Set(key, value);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Get value of given variable
+	bool GetVariable(string key, out string value)
+	{
+		if(key.IsEmpty())
+		{
+			Print(string.Format("Variable %1 is not set in this scenario", key), LogLevel.NORMAL);
+			return false;
+		}
+		
+		return m_VariableMap.Find(key, value);
+	}
+		*/
+		
+		
+		// >>> maybe useful for something
+		// attempt to filter used tasks
+		
+		SCR_BaseTaskManager taskManager = GetTaskManager();
+		if (!taskManager)
+			return;
+		
+		array<SCR_BaseTask> activeTasks = {};
+		array<SCR_BaseTask> finishedTasks = {};
+		taskManager.GetTasks(activeTasks);
+		taskManager.GetFinishedTasks(finishedTasks);
+		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks activeTasks: %2", m_sTriggerName, activeTasks), LogLevel.WARNING);
+		
+		//SCR_BaseTask GetTask(int taskID)
+		foreach (SCR_BaseTask task : activeTasks)
+		{
+			if (!task)
+				continue;
+			
+			SCR_ScenarioFrameworkLayerTask taskLayer;
+			string sTaskLayerName = "";
+			if (SCR_ScenarioFrameworkTask.Cast(task))
+			{
+				taskLayer = SCR_ScenarioFrameworkTask.Cast(task).GetLayerTask();
+				if (taskLayer)
+				{
+					sTaskLayerName = taskLayer.GetOwner().GetName();
+					//if (taskLayer.GetLayerTaskResolvedBeforeLoad())
+					//	return;
+					//if (sTaskName == sTaskLayerName)
+					//{
+						// do enter task infos here, maybe make array of used tasknames for max active tasks, remove on complete
+						Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : sTaskLayerName: %2, sTaskName: %3", m_sTriggerName, sTaskLayerName, sTaskName), LogLevel.WARNING);
+					//}
+				}
+			} 	
+			
+		//	IEntity taskChild = task.GetParent();
+		//	Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskChild: %2", m_sTriggerName, taskChild), LogLevel.NORMAL);
+		//	int c = 0;
+		//	while (taskChild)
+		//	{
+				//IEntity childToDelete = taskChild;
+		//		taskChild = taskChild.GetSibling();
+		//		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskChild: %2  + c %3", m_sTriggerName, taskChild, c), LogLevel.NORMAL);
+				//delete childToDelete;
+		//	}
+			
+//			layer.GetTasks();
+		//	Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks taskManager.GetTask(task.GetTaskID()): %2", m_sTriggerName, taskManager.GetTask(task.GetTaskID())), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks task.GetTitle(): %2", m_sTriggerName, task.GetTitle()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks task.GetTaskID(): %2", m_sTriggerName, task.GetTaskID()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks task.GetTaskState(): %2", m_sTriggerName, task.GetTaskState()), LogLevel.NORMAL);
+			
+			//if (task.GetTaskState() == SCR_TaskState.FINISHED && task.GetTitle().Contains("Intel"))
+			//{
+			//	foundIntel = true;		
+			//	for(int i = 0; i < playerCount; i++)
+			//	{
+			//		SecureIntelCombatOps(players[i]);
+			//	}
+			//	break;
+			//}
+		}
+		
+		foreach (SCR_BaseTask task : finishedTasks)
+		{
+			if (!task)
+				continue;
+			
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : finishedTasks task.GetTitle(): %2", m_sTriggerName, task.GetTitle()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : finishedTasks task.GetTaskID(): %2", m_sTriggerName, task.GetTaskID()), LogLevel.NORMAL);
+			Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : finishedTasks task.GetTaskState(): %2", m_sTriggerName, task.GetTaskState()), LogLevel.NORMAL);
+		}
+		
+		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : activeTasks: %2", m_sTriggerName, activeTasks), LogLevel.NORMAL);
+		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : finishedTasks: %2", m_sTriggerName, finishedTasks), LogLevel.NORMAL);
+		
+		// <<< maybe useful for something
+		
 		IEntity player;
 		bool firstRun = false;
-		if (m_iPlayerDistanceToSpawnTask > -1)
+		bool minDistanceCheck = true;
+		bool maxDistanceCheck = true;
+		
+		if (m_iMinPlayerDistanceToSpawnTask > -1 || m_iMaxPlayerDistanceToSpawnTask > -1)
 		{
 			IEntity layerTask = GetGame().GetWorld().FindEntityByName(sTaskName);
-			player = GetClosestPlayerEntity(layerTask, m_iPlayerDistanceToSpawnTask);
-			if (player)
+			
+			if (m_iMinPlayerDistanceToSpawnTask > -1)
+			{
+				player = GetClosestPlayerEntity(layerTask, m_iMinPlayerDistanceToSpawnTask);
+				
+				if (player)
+				{
+					//firstRun = true;
+					minDistanceCheck = false;
+					Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : A player is too close to spawn task! Aquiring new tasks.", m_sTriggerName, sTaskName), LogLevel.WARNING);
+				}
+			}
+			
+			if (m_iMaxPlayerDistanceToSpawnTask > -1)
+			{
+				player = GetClosestPlayerEntity(layerTask, m_iMaxPlayerDistanceToSpawnTask);
+				
+				if (!player)
+				{
+					maxDistanceCheck = false;
+					Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : All players are too far to spawn task! Aquiring new tasks.", m_sTriggerName, sTaskName), LogLevel.WARNING);
+				}
+			}
+			
+			if (!minDistanceCheck || !maxDistanceCheck)
 			{
 				firstRun = true;
-				Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : A player is too close to spawn task! Aquiring new tasks.", m_sTriggerName, sTaskName), LogLevel.WARNING);
 			}
 		}
 
 		int playerCount = GetGame().GetPlayerManager().GetPlayerCount();
-		if (playerCount > 0 && !player)
+		//if (playerCount > 0 && !player)
+		if (playerCount > 0 && minDistanceCheck && maxDistanceCheck)
 		{
 			//--- Cleanup persistent task object
 			if (!m_bUseTaskPool && object)
@@ -1301,6 +1476,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 				}
 			}
 
+			// Init task
 			if (layer)
 			{
 				GetGame().GetCallqueue().CallLater(layer.Init, 1000, false, null, eActivationType);
@@ -1322,11 +1498,14 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 			//--- stir the tasks up again
 			GetTasksFinal();
 			m_aTaskCollectionsArray = GetIndividualTasksToSpawnOnActivation();
-			if (m_aTaskCollectionsArray.Count() == 1)
+			if (m_aTaskCollectionsArray.Count() == 1 || (!m_bUseRandomTasks && m_aTaskCollectionsArray.Count() > 1))
 				delay = 60000;
+			
+			Print(string.Format("[PR_SpawnTaskTrigger] %1 : (FinalCheckForPlayersBeforeTask) delay: %2", m_sLogMode, delay), LogLevel.WARNING);
 			Print(string.Format("[PR_SpawnTaskTrigger] %1 : (FinalCheckForPlayersBeforeTask) m_aTaskCollectionsArray: %2", m_sLogMode, m_aTaskCollectionsArray), LogLevel.WARNING);
 			GetGame().GetCallqueue().CallLater(SpawnObjects, delay, false, m_aTaskCollectionsArray, SCR_ScenarioFrameworkEActivationType.ON_TRIGGER_ACTIVATION, firstRun);
-			if (!player)
+			//if (!player)
+			if (playerCount < 1 && minDistanceCheck && maxDistanceCheck)
 				Print(string.Format("[PR_SpawnTaskTrigger] %1 : (FinalCheckForPlayersBeforeTask) sTaskName: %2 : No players active, waiting for players to join!", m_sLogMode, sTaskName), LogLevel.WARNING);
 		}
 	}
@@ -1631,16 +1810,16 @@ class PR_TaskType
 
 enum PR_TASK_ESFTaskType
 {
-	"None" = 0, 						// 0
+	"None" = 0, 					// 0
 	"Deliver - All" = 1, 			// 1		{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTaskDeliver.et
 	"Deliver - Intel" = 2, 			// 2		{31180485D450A1A1}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverIntel.et
 	"Deliver - Vehicle" = 3, 		// 3		{BBB4E7BB4416F6B3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDeliverVehicles.et
 	"Destroy" = 4, 					// 4		{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et || {265A8A1492CB6189}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDestroy.et
-	"Defend - All" = 5, 				// 5		{775C493CE872C3A5}Prefabs/ScenarioFramework/Components/LayerTaskDefend.et
+	"Defend - All" = 5, 			// 5		{775C493CE872C3A5}Prefabs/ScenarioFramework/Components/LayerTaskDefend.et
 	"Defend - Area" = 6, 			// 6		{2B0E0A06A4475EA3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDefendArea.et
 	"Defend - Area and Target" = 7,	// 7		{18B9A717BAE9FF57}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDefendAreaAndTarget.et
 	"Defend - Target" = 8, 			// 8		{A651662FD0667288}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskDefendTarget.et
-	"Kill" = 9, 						// 9		{2008B4EE6C4D528E}Prefabs/ScenarioFramework/Components/LayerTaskKill.et || {B506343A3BF60DB3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskKill.et
+	"Kill" = 9, 					// 9		{2008B4EE6C4D528E}Prefabs/ScenarioFramework/Components/LayerTaskKill.et || {B506343A3BF60DB3}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskKill.et
 	"Clear Area" = 10, 				// 10	{CDC0845AD90BA073}Prefabs/ScenarioFramework/Components/LayerTaskClearArea.et || {C248387C4E5A9DE8}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskClearArea.et
 	"Move" = 11, 					// 11	{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et || {3512D2F2BF47D345}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskMove.et
 	"Exfil" = 12, 					// 12	{172146470FF780EB}Prefabs/ScenarioFramework/Compositions/LayerTasks/TaskExfil.et

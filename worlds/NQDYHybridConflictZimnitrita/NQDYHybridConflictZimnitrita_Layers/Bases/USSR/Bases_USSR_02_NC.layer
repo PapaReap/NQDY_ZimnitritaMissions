@@ -987,7 +987,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
     }
    }
   }
-  coords 13966.992 49.563 12452.006
+  coords 13993.209 49.563 12434.237
   {
    GenericEntity USSR_07_Base_Airport_APS_patrol_01 {
     ID "5CCED514A5908822"
@@ -1002,7 +1002,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 0 -0.001 38.585
+    coords 23.334 0.001 29.692
+    angleX -0.448
    }
    GenericEntity USSR_07_Base_Airport_APS_patrolBackup_01 {
     ID "606078EE23DE48AC"
@@ -1018,14 +1019,15 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
       "faction affiliation" "USSR"
      }
     }
-    coords 31.469 -0.001 209.806
+    coords 17.121 0.021 212.444
+    angleX -0.895
    }
    GenericEntity USSR_07_Base_Airport_PR_APS_Patrol_01 : "{514F05948917EF83}Prefabs/Systems/AmbientPatrol/PR_AmbientPatrolSpawnpoint_Patrol_USSR.et" {
-    coords 82.633 1.843 -340.298
+    coords 82.633 1.344 -340.3
     {
      SCR_AIWaypoint USSR_07_Base_Airport_WP_01 {
       ID "60E2393A8223D17F"
-      coords 14.724 -0.5 -15.782
+      coords 14.724 0 -15.782
       CompletionRadius 2
      }
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
@@ -1034,10 +1036,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 358.578 -0.502 192.63
-       angleX 6.218
+       coords 358.578 0 192.63
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_03 {
@@ -1045,10 +1045,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 353.291 -0.5 429.041
-       angleX 6.218
+       coords 353.291 0 429.041
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_04 {
@@ -1056,10 +1054,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 86.051 -0.499 663.389
-       angleX 6.218
+       coords 86.051 0 663.389
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_05 {
@@ -1067,10 +1063,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords 5.198 -1.843 839.45
-       angleX 6.218
+       coords 5.198 -1.344 839.45
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_06 {
@@ -1078,10 +1072,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -290.754 -1.844 550.583
-       angleX 6.218
+       coords -290.754 -1.344 550.583
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_07 {
@@ -1089,10 +1081,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -388.851 -1.844 26.204
-       angleX 6.218
+       coords -388.851 -1.344 26.204
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_08 {
@@ -1100,10 +1090,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -345.384 -1.843 14.163
-       angleX 6.218
+       coords -345.384 -1.344 14.163
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_09 {
@@ -1111,10 +1099,10 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -293.672 -1.7 -99.132
-       angleX 6.218
-       angleY -0.39
-       angleZ -3.598
+       coords -293.672 -0.384 -99.132
+       angleX -0.9
+       angleY -0.279
+       angleZ -0.891
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_10 {
@@ -1122,10 +1110,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -120.034 0.092 -70.53
-       angleX 6.218
+       coords -120.034 0 -70.53
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 1
       }
       USSR_07_Base_Airport_WP_11 {
@@ -1133,10 +1119,8 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{60E2393A8529B0B0}" {
         }
        }
-       coords -95.889 -0.5 -86.188
-       angleX 6.218
+       coords -95.889 0 -86.188
        angleY -0.39
-       angleZ -3.598
        CompletionRadius 2
       }
      }
@@ -1145,7 +1129,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        Hierarchy "{61C80B04B616753C}" {
        }
       }
-      coords -33.168 -0.5 -45.62
+      coords -33.168 0 -45.62
      }
     }
    }
@@ -1217,7 +1201,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
      Hierarchy "{624273864DE3B7A4}" {
      }
     }
-    coords 268.272 1.342 -436.79
+    coords 268.272 1.344 -436.791
     {
      $grp SCR_AIWaypoint : "{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et" {
       USSR_07_Base_Airport_sp_01 {
@@ -1225,49 +1209,55 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords -80.893 -1.343 830.725
+       coords -80.893 -4.505 830.726
       }
       USSR_07_Base_Airport_sp_02 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords -637.292 -1.342 877.331
+       coords -637.292 1.94 877.332
+       angleX -4.339
+       angleY 0.747
+       angleZ -9.781
       }
       USSR_07_Base_Airport_sp_03 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords -864.305 8.018 326.151
+       coords -864.305 11.08 326.152
+       angleX -3.128
+       angleY 0.073
+       angleZ -1.345
       }
       USSR_07_Base_Airport_sp_04 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords -438.372 -0 -162.566
+       coords -438.372 0 -162.565
       }
       USSR_07_Base_Airport_sp_05 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords -130.296 -0.018 -178.709
+       coords -130.296 0 -178.708
       }
       USSR_07_Base_Airport_sp_06 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords 285.675 0.001 11.767
+       coords 285.675 0 11.768
       }
       USSR_07_Base_Airport_sp_07 {
        components {
         Hierarchy "{6256118A19A85250}" {
         }
        }
-       coords 840.8 0.001 306.679
+       coords 840.8 0 306.68
       }
      }
     }
@@ -1287,7 +1277,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords 198.673 1.343 -624.925
+     coords 141.024 1.344 -517.154
     }
     USSR_07_Base_Airport_APS_patrol_03 {
      components {
@@ -1304,7 +1294,7 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords 411.406 1.342 -598.046
+     coords 382.212 1.344 -432.659
     }
     USSR_07_Base_Airport_Reinforce_patrol {
      components {
@@ -1326,14 +1316,14 @@ $grp GenericEntity : "{1391CE8C0E255636}Prefabs/Systems/MilitaryBase/ConflictMil
        "faction affiliation" "USSR"
       }
      }
-     coords 272.529 1.136 -434.785
+     coords 272.529 1.344 -434.786
      {
       SCR_DefendWaypoint USSR_07_Base_Airport_Reinforce_patrol_01_wp : "{3AB6B883AF54D965}Prefabs/AI/Waypoints/AIWaypoint_Defend_ConflictBaseTeamBackup.et" {
        components {
         Hierarchy "{6256118B646C6B13}" {
         }
        }
-       coords -281.376 -3.237 441.402
+       coords -281.376 -1.344 441.403
        CompletionRadius 100
       }
      }

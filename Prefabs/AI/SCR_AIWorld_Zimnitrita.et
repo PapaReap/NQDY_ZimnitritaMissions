@@ -38,49 +38,6 @@ SCR_AIWorld {
    MinDistanceBetweenCovers 1.25
    CoverLineProbeStep 0.625
   }
-  NavmeshWorldComponent "{61CB362050D9E743}" {
-   WorldSettings NavmeshWorldParams "{61CB362050D9E741}" {
-    TileSize 51
-   }
-   NavmeshSettings NavmeshWorld "{61CB362050D9E747}" {
-    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" : "{43CE6A21F4C7E552}Config/Navmesh/Navmesh_GM_Zimnitrita_Soldier.conf" {
-    }
-    RecastConfig NavmeshRecastConfig "{61CB362050D9E4BA}" {
-     CellSize 0.15
-     WalkableHeight 3
-     WalkableClimb 0.9
-     WalkableRadius 0
-    }
-    NavmeshProject "LowRes"
-    AbsoluteAreas {
-     "Water"
-    }
-    FilterObjectDuringGeneration 1
-   }
-  }
-  NavmeshWorldComponent "{61CB362050D9E4BF}" {
-   WorldSettings NavmeshWorldParams "{61CB362050D9E4BD}" {
-    TileSize 51
-   }
-   NavmeshSettings NavmeshWorld "{61CB362050D9E4B2}" {
-    NavmeshFilesConfig BaseNavmeshFilesConfig "{610ECD2394DCF6C6}" : "{85227B19147B1336}Config/Navmesh/Navmesh_LowRes_GM_Zimnitrita_Soldier.conf" {
-    }
-    RecastConfig NavmeshRecastConfig "{61CB362050D9E4AA}" {
-     CellHeight 0.1
-     WalkableSlopeAngle 50
-     WalkableHeight 1.8
-     MaxSimplificationError 1.8
-    }
-    UsePathSmoothing 0
-    NavmeshProject "Soldiers"
-    AbsoluteAreas {
-     "Water"
-    }
-    UseNavmeshStreaming 1
-    LowResolutionNavmesh "LowRes"
-    GenerateCoverPoints 1
-   }
-  }
   NavmeshWorldComponent "{61CB362050D9E4AF}" {
    Enabled 0
    WorldSettings NavmeshWorldParams "{61CB362050D9E4AD}" {
@@ -103,6 +60,49 @@ SCR_AIWorld {
     UseNavmeshStreaming 1
     LowResolutionNavmesh "LowRes"
     "Destructible Area Type" "Destructible"
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E4BF}" {
+   WorldSettings NavmeshWorldParams "{61CB362050D9E4BD}" {
+    TileSize 51
+   }
+   NavmeshSettings NavmeshWorld "{61CB362050D9E4B2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{610ECD2394DCF6C6}" {
+    }
+    RecastConfig NavmeshRecastConfig "{61CB362050D9E4AA}" {
+     CellHeight 0.1
+     WalkableSlopeAngle 50
+     WalkableHeight 1.8
+     MaxSimplificationError 1.8
+    }
+    UsePathSmoothing 0
+    NavmeshProject "Soldiers"
+    AbsoluteAreas {
+     "Water"
+    }
+    UseNavmeshStreaming 1
+    LowResolutionNavmesh "LowRes"
+    GenerateCoverPoints 1
+   }
+  }
+  NavmeshWorldComponent "{61CB362050D9E743}" {
+   WorldSettings NavmeshWorldParams "{61CB362050D9E741}" {
+    TileSize 51
+   }
+   NavmeshSettings NavmeshWorld "{61CB362050D9E747}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+    }
+    RecastConfig NavmeshRecastConfig "{61CB362050D9E4BA}" {
+     CellSize 0.15
+     WalkableHeight 3
+     WalkableClimb 0.9
+     WalkableRadius 0
+    }
+    NavmeshProject "LowRes"
+    AbsoluteAreas {
+     "Water"
+    }
+    FilterObjectDuringGeneration 1
    }
   }
   SCR_AISettingsComponent "{61CB362050D9E49A}" {

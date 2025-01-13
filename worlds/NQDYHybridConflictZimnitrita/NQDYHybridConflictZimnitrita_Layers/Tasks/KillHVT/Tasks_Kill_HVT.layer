@@ -679,10 +679,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          m_sMissingObjectName "Pers_TaskKill_HVT_ZimitritaFalls_Deliver2"
         }
        }
-       m_iDelayTimerMin 10
+       m_iDelayTimerMin 15
        m_sTaskName "Opt_TaskKill_HVT_ZimitritaFalls_Deliver"
        m_PlayerXPTaskReward "Deliver Supplies (40)"
        m_fXPMultiplier 1.25
+       m_bUseTaskFailObject 1
        m_sTaskFailObject "Pers_Fail_TaskKill_HVT_ZimitritaFalls_Deliver"
        m_aRemovePrefabDetails {
         PR_RemovePrefabFilter "{61917DF7D7EFE342}" {
@@ -3402,10 +3403,11 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          m_sMissingObjectName "Pers_TaskKill_HVT_Sartava_Sawmill_Deliver2"
         }
        }
-       m_iDelayTimerMin 10
+       m_iDelayTimerMin 15
        m_sTaskName "Opt_TaskKill_HVT_Sartava_Sawmill_Deliver"
        m_PlayerXPTaskReward "Deliver Supplies (40)"
        m_fXPMultiplier 1.25
+       m_bUseTaskFailObject 1
        m_sTaskFailObject "Pers_Fail_TaskKill_HVT_Sartava_Sawmill_Deliver"
        m_aRemovePrefabDetails {
         PR_RemovePrefabFilter "{61917DF7D7EFE342}" {

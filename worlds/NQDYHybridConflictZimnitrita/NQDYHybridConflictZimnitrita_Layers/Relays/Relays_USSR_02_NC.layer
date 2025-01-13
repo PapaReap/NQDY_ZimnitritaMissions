@@ -234,7 +234,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
     "faction affiliation" "USSR"
    }
   }
-  coords 15006.897 50.906 12241.184
+  coords 14981.965 50.906 12225.625
   angleY -9.196
   {
    GenericEntity {
@@ -276,7 +276,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_iMaxUnitsInGroup 12
       }
      }
-     coords -6.104 0.001 121.901
+     coords -6.105 -0 121.901
      angleY 3.442
     }
     USSR_09_Relay_Airport_tower_APS_ussr_patrol_02 {
@@ -292,8 +292,10 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_iMaxUnitsInGroup 12
       }
      }
-     coords 277.007 0.156 -32.993
+     coords 277.006 0.099 -32.993
+     angleX -0.045
      angleY 3.442
+     angleZ -0.445
     }
     USSR_09_Relay_Airport_tower_APS_ussr_patrol_03 {
      components {
@@ -308,7 +310,7 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_iMaxUnitsInGroup 12
       }
      }
-     coords -178.377 -0.002 -78.61
+     coords -178.378 -0 -78.61
      angleY 3.442
     }
     USSR_09_Relay_Airport_tower_APS_ussr_patrol_04 {
@@ -324,8 +326,10 @@ $grp GenericEntity : "{522DCD528AE27052}Prefabs/Systems/MilitaryBase/ConflictRel
        m_iMaxUnitsInGroup 12
       }
      }
-     coords -30.205 -0.005 -181.649
-     angleY 3.442
+     coords -30.206 0.153 -181.649
+     angleX 4.26
+     angleY 3.276
+     angleZ -2.235
     }
    }
   }

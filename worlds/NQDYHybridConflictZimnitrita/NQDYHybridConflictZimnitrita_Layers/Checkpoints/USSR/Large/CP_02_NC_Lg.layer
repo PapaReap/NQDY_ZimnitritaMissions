@@ -44,14 +44,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.004 -0.001 0
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_02_NC_Lg_01 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.005 0.003 -0.039
@@ -103,14 +95,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords -0.002 -0.001 0
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_02_NC_Lg_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords -0.003 0.003 -0.039
@@ -162,14 +146,6 @@ $grp PR_AIPatrolTrigger {
     }
     coords 0.004 0.002 0
     CompletionRadius 10
-    m_DefendPresets {
-     SCR_DefendWaypointPreset "{58D6884489389713}" {
-      m_bUseTurrets 1
-     }
-     SCR_DefendWaypointPreset "{58D688448899BCA0}" {
-      m_bUseTurrets 1
-     }
-    }
    }
    GenericEntity PR_PersistObject_SPT_CP_02_NC_Lg_03 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
     coords 0.003 0.006 -0.04
@@ -656,10 +632,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -1447.685 32.829 897.196
-     angleX 2.436
-     angleY -102.161
-     angleZ -1.439
+     coords -1444.54 32.802 892.91
+     angleX -5.623
+     angleY -101.75
+     angleZ -2.925
      {
       GenericEntity PR_PersistObject_CP_02_NC_Lg_01_02 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 2.895 0.001 0.593
@@ -2268,10 +2244,10 @@ $grp GenericEntity : "{8EC6DDE0FF5C1DD6}Prefabs/Compositions/Misc/CombatOps/CP_E
       Hierarchy "{617E0258963C50E2}" {
       }
      }
-     coords -596.065 20.54 -1595.913
-     angleX -14.503
-     angleY 170.044
-     angleZ -11.408
+     coords -596.065 22.111 -1595.913
+     angleX -15.103
+     angleY 170.182
+     angleZ -12.562
      {
       GenericEntity PR_PersistObject_CP_02_NC_Lg_01_06 : "{55E5E3FD9F531935}Prefabs/ScenarioFramework/Components/PR_PersistObject.et" {
        coords 2.895 0.001 0.593
