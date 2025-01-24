@@ -31,6 +31,11 @@ SCR_GameModeCampaign PR_GameMode_CampaignSF1 : "{AB5079F60DAECFBF}Prefabs/MP/Mod
     m_sDatabaseName "309CAC699B214127"
    }
   }
+  SCR_EditorRespawnBriefingComponent "{646878C69DAFBC65}" {
+   m_sJournalConfigPath "{6E314FC97BCFA00F}Configs/Journal/Journal_CO_Zimnitrita.conf"
+   m_Info SCR_UIInfo "{646878C6B843B499}" {
+   }
+  }
   SCR_GameModeSFManager "{60FD5A50534ED456}" {
    m_bDynamicDespawn 1
   }

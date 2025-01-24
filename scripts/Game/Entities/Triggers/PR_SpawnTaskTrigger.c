@@ -58,7 +58,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 	protected int m_iRandomTaskCount;
 	
 	//! PR Task Spawner: Tasks - Spawner - Maximum amount of active tasks at any given time
-	[Attribute("-1", desc: "Maximum amount of active tasks at any given time. -1 will not set a limit on active tasks.  ", category: "PR Task Spawner: Tasks - Spawner")]
+	[Attribute("-1", desc: "Maximum amount of active tasks at any given time. -1 will not set a limit on active tasks. (Not enabled yet)  ", category: "PR Task Spawner: Tasks - Spawner")]
 	protected int m_iMaximumActiveTasks;
 
 	//! PR Task Spawner: Tasks - Spawner - Use random delay between tasks timer: Uses min and max values below.
@@ -237,7 +237,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 
 				array<string> combinedArray = {};
 				array<string> combinedBaseArray = {};
-				string callSign;
+				//string callSign;
 
 				if (moveSectionTo.Count() > 0)
 				{
@@ -930,7 +930,7 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 				{
 					SCR_Faction faction;
 					SCR_MilitaryBaseCallsign callsignInfo;
-					string callsignNameOnly;
+					//string callsignNameOnly;
 					SCR_CampaignMilitaryBaseComponent hq;
 					hq = mainBase.GetMainBase();
 					IEntity owner;
@@ -1061,10 +1061,10 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 	protected void FilterControlPoints(string name, SCR_MilitaryBaseComponent base)
 	{
 		int index;
-		int id;
+		//int id;
 		SCR_Faction faction;
 		SCR_MilitaryBaseCallsign callsignInfo;
-		string callsign;
+		//string callsign;
 
 		index = m_aControlPoints.Find(name);
 		if (index == -1)
@@ -1368,8 +1368,9 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 		Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : finishedTasks: %2", m_sTriggerName, finishedTasks), LogLevel.NORMAL);
 		
 		// <<< maybe useful for something
-		
-		IEntity player;
+		//IEntity player;
+		IEntity playerMin;
+		IEntity playerMax;
 		bool firstRun = false;
 		bool minDistanceCheck = true;
 		bool maxDistanceCheck = true;
@@ -1380,9 +1381,9 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 			
 			if (m_iMinPlayerDistanceToSpawnTask > -1)
 			{
-				player = GetClosestPlayerEntity(layerTask, m_iMinPlayerDistanceToSpawnTask);
+				playerMin = GetClosestPlayerEntity(layerTask, m_iMinPlayerDistanceToSpawnTask);
 				
-				if (player)
+				if (playerMin)
 				{
 					//firstRun = true;
 					minDistanceCheck = false;
@@ -1392,23 +1393,70 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 			
 			if (m_iMaxPlayerDistanceToSpawnTask > -1)
 			{
-				player = GetClosestPlayerEntity(layerTask, m_iMaxPlayerDistanceToSpawnTask);
+				playerMax = GetClosestPlayerEntity(layerTask, m_iMaxPlayerDistanceToSpawnTask);
 				
-				if (!player)
+				if (!playerMax)
 				{
 					maxDistanceCheck = false;
 					Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : All players are too far to spawn task! Aquiring new tasks.", m_sTriggerName, sTaskName), LogLevel.WARNING);
 				}
 			}
 			
+			//--- No task, check if another can be found
 			if (!minDistanceCheck || !maxDistanceCheck)
 			{
 				firstRun = true;
+
+				m_aTaskCollectionsArray = GetIndividualTasksToSpawnOnActivation();
+				
+				if (m_aTaskCollectionsArray.Count() > 0)
+				{
+					int _i = 0;
+					bool found = false;
+
+					while ( (m_aTaskCollectionsArray.Count() > _i) && (!found) )
+					{
+						minDistanceCheck = false;
+						maxDistanceCheck = false;	
+						
+						string taskToCheck = m_aTaskCollectionsArray.Get(_i);
+						IEntity layerTaskToCheck = GetGame().GetWorld().FindEntityByName(taskToCheck);
+						if (layerTaskToCheck)
+						{
+							if (m_iMinPlayerDistanceToSpawnTask > -1)
+							{
+								playerMin = GetClosestPlayerEntity(layerTaskToCheck, m_iMinPlayerDistanceToSpawnTask);
+								if (!playerMin)
+									minDistanceCheck = true;
+							}
+							
+							if (m_iMaxPlayerDistanceToSpawnTask > -1)
+							{
+								playerMax = GetClosestPlayerEntity(layerTaskToCheck, m_iMaxPlayerDistanceToSpawnTask);
+								
+								if (playerMax)
+									maxDistanceCheck = true;
+							}
+							
+							if (minDistanceCheck && maxDistanceCheck)
+							{
+								found = true;
+								firstRun = false;
+								sTaskName = taskToCheck;
+								object = GetGame().GetWorld().FindEntityByName(sTaskName);
+								layer = SCR_ScenarioFrameworkLayerBase.Cast(object.FindComponent(SCR_ScenarioFrameworkLayerBase));
+								Print(string.Format("[PR_SpawnTaskTrigger] (FinalCheckForPlayersBeforeTask): Trigger: %1 : taskName: %2 : New task Aquired.", m_sTriggerName, sTaskName), LogLevel.WARNING);
+							}
+						}
+						
+						_i++;
+					}
+				}
 			}
 		}
 
 		int playerCount = GetGame().GetPlayerManager().GetPlayerCount();
-		//if (playerCount > 0 && !player)
+
 		if (playerCount > 0 && minDistanceCheck && maxDistanceCheck)
 		{
 			//--- Cleanup persistent task object
@@ -1492,14 +1540,17 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 		}
 		else
 		{
-			int delay = 1000;
+			//int delay = 1000;
+			int delay = 60000;
 			GetGame().GetCallqueue().Remove(FinalCheckForPlayersBeforeTask);
 			GetGame().GetCallqueue().Remove(SpawnObjects);
 			//--- stir the tasks up again
 			GetTasksFinal();
 			m_aTaskCollectionsArray = GetIndividualTasksToSpawnOnActivation();
-			if (m_aTaskCollectionsArray.Count() == 1 || (!m_bUseRandomTasks && m_aTaskCollectionsArray.Count() > 1))
-				delay = 60000;
+			//if (m_aTaskCollectionsArray.Count() == 1 || (!m_bUseRandomTasks && m_aTaskCollectionsArray.Count() > 1))
+			//	delay = 60000;
+			if (firstRun)
+				delay = 300000;
 			
 			Print(string.Format("[PR_SpawnTaskTrigger] %1 : (FinalCheckForPlayersBeforeTask) delay: %2", m_sLogMode, delay), LogLevel.WARNING);
 			Print(string.Format("[PR_SpawnTaskTrigger] %1 : (FinalCheckForPlayersBeforeTask) m_aTaskCollectionsArray: %2", m_sLogMode, m_aTaskCollectionsArray), LogLevel.WARNING);
@@ -1698,8 +1749,8 @@ class PR_SpawnTaskTrigger : PR_CoreTrigger
 		//	int radiusSq;
 			Faction playerFaction;
 			IEntity playerEntity;
-			bool isAssignee;
-			int assigneeID;
+			//bool isAssignee;
+			//int assigneeID;
 			SCR_EXPRewards rewardID;
 
 		//	if (m_TargetBase.GetType() == SCR_ECampaignBaseType.RELAY)

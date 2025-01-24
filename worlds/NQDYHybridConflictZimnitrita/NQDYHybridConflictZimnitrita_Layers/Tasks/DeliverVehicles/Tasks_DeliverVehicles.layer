@@ -202,6 +202,8 @@ $grp PR_SpawnTaskTrigger {
     }
    }
   }
+  m_iMinPlayerDistanceToSpawnTask 1000
+  m_iMaxPlayerDistanceToSpawnTask 7000
   m_bUseRandomTasks 1
   m_iRandomTaskCount -1
   m_bUseRandomDelayBetweenTasksTimer 1

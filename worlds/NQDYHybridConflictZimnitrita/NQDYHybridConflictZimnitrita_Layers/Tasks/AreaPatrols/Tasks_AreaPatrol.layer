@@ -1,3 +1,52 @@
+PR_SpawnTaskTrigger TaskTrg_TaskAreaPatrol_Master {
+ coords 5199.272 196.291 9383.626
+ TriggerShapeType Sphere
+ SphereRadius 1
+ ShapeColor 0.046 0 1 0.078
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 50
+ m_bRefreshToggle 1
+ m_bDebugLogs 1
+ m_bNeutralizePersistentObject 0
+ m_aOverrideOptions {
+  PR_OverrideTriggerActivation "{61675A2F3B135B7A}" {
+   m_bOverrideActivationPresence 1
+  }
+ }
+ m_bUseRandomDelayTimer 1
+ m_iDelayTimerMin 1800
+ m_iDelayTimerMax 3600
+ m_aIndividualTasks {
+  PR_TaskDetails "{61634CCE49B6A3CA}" {
+   m_sTaskName "TaskAreaPatrol_Airport_01_Parent"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskAreaPatrol_Airport_01"
+  }
+  PR_TaskDetails "{64706759C54117A5}" {
+   m_sTaskName "TaskAreaPatrol_Andruhanov_01_Parent"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskAreaPatrol_Andruhanov_01"
+  }
+  PR_TaskDetails "{64706759CAEEB98B}" {
+   m_sTaskName "TaskAreaPatrol_Gruwice_01_Parent"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskAreaPatrol_Gruwice_01"
+  }
+  PR_TaskDetails "{64706759CAA5DD7B}" {
+   m_sTaskName "TaskAreaPatrol_IndustrialZone_01_Parent"
+   m_bUsePersistentTask 1
+   m_sPersistentTaskObject "Pers_TaskAreaPatrol_IndustrialZone_01"
+  }
+ }
+ m_iMinPlayerDistanceToSpawnTask 1000
+ m_iMaxPlayerDistanceToSpawnTask 7000
+ m_bUseRandomTasks 1
+ m_iRandomTaskCount -1
+ m_bUseRandomDelayBetweenTasksTimer 1
+ m_iDelayTimerBetweenEachTaskMin 3600
+ m_iDelayTimerBetweenEachTaskMax 10800
+}
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  Area_AP_Andruhanov_01 {
   components {
@@ -9,6 +58,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
   angleY 54.383
   {
    PR_SpawnTaskTrigger TaskTrg_TaskAreaPatrol_Andruhanov_01 {
+    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 0
     DrawShape 1
@@ -2321,6 +2371,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
   angleY 54.383
   {
    PR_SpawnTaskTrigger TaskTrg_TaskAreaPatrol_Gruwice_01 {
+    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 0
     DrawShape 1
@@ -4653,6 +4704,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
   angleY 54.383
   {
    PR_SpawnTaskTrigger TaskTrg_TaskAreaPatrol_IndustrialZone_01 {
+    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 0
     DrawShape 1
@@ -6991,6 +7043,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
   angleY 54.383
   {
    PR_SpawnTaskTrigger TaskTrg_TaskAreaPatrol_Airport_01 {
+    Flags 2097155
     TriggerShapeType Sphere
     SphereRadius 0
     DrawShape 1
@@ -7524,7 +7577,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     Layer_TaskAreaPatrol_Airport_01_01 {
-     coords 301.787 -0 581.308
+     coords 301.787 0 581.308
      angleY 54.383
      {
       GenericEntity TaskAreaPatrol_Airport_01_01 : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
@@ -7817,7 +7870,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     Layer_TaskAreaPatrol_Airport_01_02 {
-     coords 134.296 -0 -101.328
+     coords 134.296 0 -101.328
      angleX 0.261
      angleY 0.002
      angleZ 0.364
@@ -7891,7 +7944,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
                   m_sObjectToSpawn "{FF11E1D5DF21702B}Prefabs/Systems/AmbientPatrol/Loiter_Large/PR_AmbientPatrolSpawnpoint_USSR_Loiter_RandomGroup_scaled.et"
                  }
                 }
-                coords 64.748 -0 67.235
+                coords 64.748 0 67.235
                }
                SlotAI_TaskAreaPatrol_Airport_01_02_03_03_WR {
                 components {
@@ -7899,7 +7952,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
                   m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
                  }
                 }
-                coords 106.366 -0 -43.94
+                coords 106.366 0 -43.94
                 angleY 178.77
                }
                SlotAI_TaskAreaPatrol_Airport_01_02_03_04_WR {
@@ -7908,7 +7961,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
                   m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
                  }
                 }
-                coords 36.406 -0 -66.226
+                coords 36.406 0 -66.226
                }
                SlotAI_TaskAreaPatrol_Airport_01_02_03_06_CIVR {
                 components {
@@ -7947,7 +8000,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
                   m_sObjectToSpawn "{4138FD2E82F6E645}Prefabs/Systems/AmbientPatrol/Wait/PR_AmbientPatrolSpawnpoint_USSR_Wait_RandomOneUnit.et"
                  }
                 }
-                coords 97.971 -0 -61.665
+                coords 97.971 0 -61.665
                }
                SlotAI_TaskAreaPatrol_Airport_01_02_02_03_LRGS {
                 components {
@@ -8416,7 +8469,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
      }
     }
     Layer_TaskAreaPatrol_Airport_01_04 {
-     coords 493.719 -0 -31.614
+     coords 493.719 0 -31.614
      angleX 0.886
      angleY -108.717
      angleZ -0.466

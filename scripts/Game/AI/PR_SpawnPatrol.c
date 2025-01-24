@@ -49,7 +49,7 @@ class PR_SpawnPatrol
 		IEntity persistentObject
 	)
 	{
-		string spawnLocationObject;
+		//string spawnLocationObject;
 
 		SetSpawnSide(spawnSide);
 		SetGroupType(groupType);

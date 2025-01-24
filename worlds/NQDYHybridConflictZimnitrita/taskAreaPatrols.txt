@@ -1,125 +1,148 @@
+*** TASKS_AREAPATROL ***
 
-Patrol Eastern Andruhanov
-Follow the given 
+*** Area_AP_Airport_01 ***
+TaskAreaPatrol_Airport_01_Parent
+Patrol Airport & it's Surroundings
+There are signs of unrest at the Airport and it's Surroundings.<br />
+With rumors of Russian presence in the area, you will be given orders to sweep the area in search of Russian operatives.<br />
+Follow your assigned patrols in the order you were given.<br />
+Stay frosty during your patrol sweep throughout the city in search of opposition.
 
+TaskAreaPatrol_Airport_01_00
+Patrol Airport - Briefing
+Move into building for briefing on your patrol route.
 
-*** TASKS_KILLHVT ***
-Eliminate HVT Haukkavuori
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
-His last know location was in the hills, south of Haukkavuori.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Moderate.<br />
-Bringing him back alive is not a option.
+TaskAreaPatrol_Airport_01_01
+Patrol Airport - 1
+Move patrol to area and confirm clear.
 
-Eliminate HVT Kiiskinkyla Ship
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
-His location is the aboard the cargo ship Gronzny, east of Kiiskinkyla.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: High.<br />
-Bringing him back alive is not a option.
+TaskAreaPatrol_Airport_01_02
+Patrol Airport - 2
+Move patrol to area and confirm clear.
 
-Eliminate HVT Kippariniemi
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
-His location is the around the area of Kippariniemi.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Low.<br />
-Bringing him back alive is not a option.
+TaskAreaPatrol_Airport_01_03
+Patrol Airport - 3
+Move patrol to area and confirm clear.
 
-Eliminate HVT Lounatjarvi
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
-His last known location is near the lake Lounatjarvi.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Unknown.<br />
-Bringing him back alive is not a option.
+TaskAreaPatrol_Airport_01_04
+Patrol Airport - 4
+Move patrol to area and confirm clear.
 
-Eliminate HVT Lounatkorkia
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
-His last known location is south of the community of Lounatkyla.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Unknown.<br />
-Bringing him back alive is not a option.
+TaskAreaPatrol_Airport_01_05
+Patrol Airport - 5
+Move patrol to area and confirm clear.
 
-Eliminate HVT Lounatkorkia (Silo)
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an researcher that is doing development of weapons of mass destruction.<br />
-His location is the area south of the community of Lounatkyla.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Unknown.<br />
-Bringing him back alive is not a option.
-
-Eliminate HVT Makiinpaallys (Silo)
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an researcher that is doing development of weapons of mass destruction.<br />
-His location is the around the area of Makiinpaallys.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Unknown.<br />
-Bringing him back alive is not a option.
-
-Eliminate HVT Pahalampi
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is known for smuggling arms to the local resistence. While he himself isn't known to bare arms, his known associates should be well armed.<br />
-His last known location is near the lake Pahalampi.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Unknown.<br />
-Bringing him back alive is not a option.
-
-Eliminate HVT Suurlinna
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an officer that is responsible for the deaths of many local townsfolk.<br />
-His location is the around the area of Suurlinna.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: High.<br />
-Bringing him back alive is not a option.
-
-Eliminate HVT Vahasomerikonlahti
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an murderer disguised as a medic, he is anything but a medic with the blood he has on his hands.<br />
-He is hiding out in the area of Vahasomerikonlahti.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Moderate.<br />
-Bringing him back alive is not a option.
-
-Eliminate HVT Valikallio
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an RTO Operator. He's responsible for relaying comms to help coordinated assaults on nearby forces, he must be stopped.<br />
-He is hiding out in the area of Valikallio.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Moderate.<br />
-Bringing him back alive is not a option.
-	// EXTRA TASK
-	Deliver RTO Radio Valikallio
-Now that you have elimated the RTO Operator, recover his radio backpack and deliver it to base %2 for further evaluation.
+TaskAreaPatrol_Airport_01_06
+Patrol Airport - 6
+Move patrol to area and confirm clear.
 
 
-Eliminate HVT Alttarkallio
-Recovered intel suggests we have found the location of a new HVT.<br />
-The HVT is an RTO Operator. He's responsible for relaying comms to help coordinated assaults on nearby forces, he must be stopped.<br />
-He is hiding out in the woods east of Alttarkallio.<br />
-Your objective is to locate and neutralize this HVT.<br />
-Resistance Probability: Moderate.<br />
-Bringing him back alive is not a option.
-	// EXTRA TASK
-	Deliver RTO Radio Alttarkallio
-Now that you have elimated the RTO Operator, recover his radio backpack and deliver it to base %2 for further evaluation.
+*** Area_AP_Andruhanov_01 ***
+Patrol City of Andruhanov
+There are signs of unrest in the city of Andruhanov.<br />
+With rumors of Russian presence in the area, you will be given orders to sweep the area in search of Russian operatives.<br />
+Follow your assigned patrols in the order you were given.<br />
+Stay frosty during your patrol sweep throughout the city in search of opposition.
+
+TaskAreaPatrol_Andruhanov_01_00
+Patrol Andruhanov - Briefing
+Move into building for briefing on your patrol route.
+
+TaskAreaPatrol_Andruhanov_01_01
+Patrol Andruhanov - 1
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Andruhanov_01_02
+Patrol Andruhanov - 2
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Andruhanov_01_03
+Patrol Andruhanov - 3
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Andruhanov_01_04
+Patrol Andruhanov - 4
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Andruhanov_01_05
+Patrol Andruhanov - 5
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Andruhanov_01_06
+Patrol Andruhanov - 6
+Move patrol to area and confirm clear.
 
 
-*** TASKS_DELIVERINTEL ***
+*** Area_AP_Gruwice_01 ***
+Patrol City of Gruwice
+There are signs of unrest in the city of Gruwice.<br />
+With rumors of Russian presence in the area, you will be given orders to sweep the area in search of Russian operatives.<br />
+Follow your assigned patrols in the order you were given.<br />
+Stay frosty during your patrol sweep throughout the city in search of opposition.
+
+TaskAreaPatrol_Gruwice_01_00
+Patrol Gruwice - Briefing
+Move into building for briefing on your patrol route.
+
+TaskAreaPatrol_Gruwice_01_01
+Patrol Gruwice - 1
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Gruwice_01_02
+Patrol Gruwice - 2
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Gruwice_01_03
+Patrol Gruwice - 3
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Gruwice_01_04
+Patrol Gruwice - 4
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Gruwice_01_05
+Patrol Gruwice - 5
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_Gruwice_01_06
+Patrol Gruwice - 6
+Move patrol to area and confirm clear.
 
 
+*** Area_AP_IndustrialZone_01 ***
+Patrol Industrial Zone
+There are signs of unrest in and around the Industrial Zone.<br />
+With rumors of Russian presence in the area, you will be given orders to sweep the area in search of Russian operatives.<br />
+Follow your assigned patrols in the order you were given.<br />
+Stay frosty during your patrol sweep throughout the city in search of opposition.
 
-*** TASKS DELIVER VEHICLES ***
-TaskDeliverVehicles_Friendly_01
-Deliver vehicles %1
-Deliver 1x M151A2 any variant and 1x M923A1 transport any variant to base %1.
-Important! Exit vehicle quickly after delivery complete, vehicles will be removed with everything in them.
-They are hot items, and won't last long!
+TaskAreaPatrol_IndustrialZone_01_00
+Patrol Industrial Zone - Briefing
+Move into building for briefing on your patrol route.
 
-{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et
+TaskAreaPatrol_IndustrialZone_01_01
+Patrol Industrial Zone - 1
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_IndustrialZone_01_02
+Patrol Industrial Zone - 2
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_IndustrialZone_01_03
+Patrol Industrial Zone - 3
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_IndustrialZone_01_04
+Patrol Industrial Zone - 4
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_IndustrialZone_01_05
+Patrol Industrial Zone - 5
+Move patrol to area and confirm clear.
+
+TaskAreaPatrol_IndustrialZone_01_06
+Patrol Industrial Zone - 6
+Move patrol to area and confirm clear.
 
 
 

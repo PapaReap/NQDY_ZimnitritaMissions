@@ -224,7 +224,8 @@ PR_SpawnTaskTrigger TaskTrg_TaskKill_HVT_Master {
    }
   }
  }
- m_iPlayerDistanceToSpawnTask 600
+ m_iMinPlayerDistanceToSpawnTask 1000
+ m_iMaxPlayerDistanceToSpawnTask 7000
  m_bUseRandomTasks 1
  m_iRandomTaskCount -1
  m_bUseRandomDelayBetweenTasksTimer 1
@@ -277,7 +278,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -807,7 +807,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          }
         }
        }
-       m_iPlayerDistanceToSpawnTask 300
        m_iRandomTaskCount -1
        m_bUseRandomDelayBetweenTasksTimer 1
        m_iDelayTimerBetweenEachTaskMin 10
@@ -1596,7 +1595,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -1944,7 +1942,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -2254,7 +2251,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -2659,7 +2655,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -3002,7 +2997,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
          }
         }
        }
-       m_iPlayerDistanceToSpawnTask 300
        m_iRandomTaskCount -1
        m_bUseRandomDelayBetweenTasksTimer 1
        m_iDelayTimerBetweenEachTaskMin 10
@@ -3539,7 +3533,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -4104,7 +4097,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -5484,7 +5476,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -6665,7 +6656,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
@@ -7578,7 +7568,6 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       }
      }
     }
-    m_iPlayerDistanceToSpawnTask 300
     m_iRandomTaskCount -1
     m_bUseRandomDelayBetweenTasksTimer 1
     m_iDelayTimerBetweenEachTaskMin 10
